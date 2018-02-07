@@ -1,0 +1,11 @@
+.MainHeader{
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  &__logo-container{
+    width: 30%;
+  }
+  &__nav{
+    width: 70%;
+  }
+}

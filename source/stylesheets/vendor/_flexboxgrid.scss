@@ -4,7 +4,12 @@
   margin-left: auto;
   width: 90rem;
 }
-
+.container.l{
+  width: 90rem;
+}
+.container.m{
+  width: 75rem;
+}
 .container-fluid {
   padding-right: 2rem;
   padding-left: 2rem;
@@ -498,9 +503,9 @@
   }
 }
 
-@media only screen and (min-width: 64rem) {
+@media only screen and (min-width: 74rem) {
   .container {
-    width: 65rem;
+    width: 75rem;
   }
 
   .col-md,

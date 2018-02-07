@@ -1,6 +1,12 @@
 .Nav{
+  &_items{
+    display: flex;
+  }
   &__item{
-    font-family: 'Avenir';
-    font-style: oblique;
+    flex: 1;
+    text-align: center;
+    &:last-child{
+      flex: 2;
+    }
   }
 }
