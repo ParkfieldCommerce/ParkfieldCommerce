@@ -1,12 +1,33 @@
 .Nav{
   &_items{
     display: flex;
+    justify-content: flex-end;
   }
   &__item{
-    flex: 1;
-    text-align: center;
+    margin-right: 40px;
     &:last-child{
-      flex: 2;
+      margin-right: 0px;
+    }
+  }
+  &__link{
+    position: relative;
+    font-weight: 800;
+    color: $navigation-link;
+    &:after{
+      content:'';
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 1px;
+      background-color: $navigation-link;
+      transition: width .3s;
+    }
+    &:hover{
+      &:after{
+        width: 100%;
+      }
     }
   }
 }

@@ -1,6 +1,5 @@
 a{
   font-family: 'Avenir';
-  font-weight: 800;
   font-style: normal;
   text-decoration: none;
 }
@@ -19,6 +18,35 @@ li{
   border: 1px solid white;
 }
 
+.Btn--animatedLeft{
+  position: relative;
+  span{
+    color: $btn-animatedLeftMain;
+    position: relative;
+    z-index: 2;
+    transition: color .3s;
+  }
+  &:after{
+    z-index: 1;
+    content:'';
+    display: block;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $btn-animatedLeftMain;
+    transition: width .3s;
+  }
+  &:hover{
+    span{
+      color: $btn-animatedLeftSub;
+    }
+    &:after{
+      width: 100%;
+    }
+  }
+}
 
 
 
