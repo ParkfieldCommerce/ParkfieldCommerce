@@ -1,7 +1,61 @@
-.test{
-	position:relative;
-}
+.BlogGrid{
+	display:flex;
+	flex-flow:row wrap;
+	&__container{
+		display:flex;
+	}
+	&__container--1{
+		width:41.9%;
+		align-items:center;
+	}
+	&__container--2{
+		width:58.1%;
+	}
+	&__container--3{
+		width:43.4%;
+		align-items:center;
+		img{
+			width:100%;
+		}
+	}
+	&__container--4{
+		width:56.6%;
+		flex-flow:row wrap;
+	}
 
-.testing{
-	position:absolute;
+	&__item--1{
+		margin:0 auto;
+	}
+	&__item--3{
+		width:100%;
+		background-size:cover;
+		background-position: center center;
+		background-repeat:no-repeat;
+		max-height:307px;
+		height:50%;
+	}
+	&__item--5{
+		height:50%;
+	}
+
+	@media screen and (max-width:600px){
+		&__container--1{
+			width:100%;
+		}
+		&__container--2{
+			width:100%;
+		}
+		&__container--3{
+			display:none;
+		}
+		&__container--4{
+			width:100%;
+		}
+		&__item--3{
+			display:none;
+		}
+		&__item--5{
+			margin:0 auto;
+		}
+	}
 }
