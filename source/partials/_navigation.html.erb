@@ -1,23 +1,17 @@
+<% main_nav_links = dato.main_nav_links.sort_by {|main_nav_link| main_nav_link.position} %>
+<span class="Nav__hamburger"></span>
 <nav class="Nav MainHeader__nav">
-  <span class="Nav__hamburger"></span>
   <ul class="Nav_items">
-    <li class="Nav__item">
-      <a class="Nav__link" href="#">Work</a>
-    </li>
-    <li class="Nav__item">
-      <a class="Nav__link" href="#">About</a>
-    </li>
-    <li class="Nav__item">
-      <a class="Nav__link" href="#">Migration</a>
-    </li>
-    <li class="Nav__item">
-      <a class="Nav__link" href="#">Marketing</a>
-    </li>
-    <li class="Nav__item">
-      <a class="Nav__link" href="#">Services</a>
-    </li>
-    <li class="Nav__item">
-      <a class="Btn Btn--animatedLeft" href="#"><span>Get a free quote</span></a>
-    </li>
+    <% main_nav_links.each do |main_nav_link| %>
+      <% unless main_nav_link.button == true %>
+      <li class="Nav__item">
+        <a class="Nav__link" href="<%= main_nav_link.url %>"><%= main_nav_link.text %></a>
+      </li>
+      <% else %>
+      <li class="Nav__item">
+        <a class="Btn Btn--animatedLeft" href="<%= main_nav_link.url %>"><span><%= main_nav_link.text %></span></a>
+      </li>
+      <% end %>
+    <% end %>
   </ul>
 </nav>

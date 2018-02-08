@@ -32,13 +32,19 @@
   }
 }
 @include maxQuery(1000px){
+.MainHeader{
+  position: relative;
+}
 .Nav{
   display: none;
 }
 .Nav__hamburger{
+  position: absolute;
+  z-index: 2;
   display: block;
   width: 25px;
   height: 1px;
-  color: black;
+  background-color: white;
+  right: 0;
 }
 }
