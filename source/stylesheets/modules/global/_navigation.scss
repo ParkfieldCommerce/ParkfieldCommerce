@@ -31,3 +31,14 @@
     }
   }
 }
+@include maxQuery(1000px){
+.Nav{
+  display: none;
+}
+.Nav__hamburger{
+  display: block;
+  width: 25px;
+  height: 1px;
+  color: black;
+}
+}

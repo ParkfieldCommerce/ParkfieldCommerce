@@ -1,0 +1,17 @@
+@mixin minQuery($resolution){
+  @media screen and (min-width: $resolution){
+    @content;
+  }
+}
+
+@mixin maxQuery($resolution){
+  @media screen and (max-width: $resolution){
+    @content;
+  }
+}
+
+@mixin minmaxQuery($min, $max){
+  @media screen and (min-width: $min) and (max-width: $max){
+    @content;
+  }
+}

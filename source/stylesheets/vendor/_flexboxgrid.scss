@@ -3,6 +3,8 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
+  padding-right: 2rem;
+  padding-left: 2rem;
 }
 
 .container-fluid {
@@ -268,9 +270,6 @@
 }
 
 @media only screen and (min-width: 48em) {
-  .container {
-    width: 49rem;
-  }
 
   .col-sm,
   .col-sm-1,
@@ -498,10 +497,8 @@
   }
 }
 
-@media only screen and (min-width: 64em) {
-  .container {
-    width: 65rem;
-  }
+@media only screen and (min-width: 62.4em) {
+
 
   .col-md,
   .col-md-1,
@@ -730,9 +727,7 @@
 }
 
 @media only screen and (min-width: 75em) {
-  .container {
-    width: 76rem;
-  }
+
 
   .col-lg,
   .col-lg-1,
