@@ -1,40 +1,45 @@
+<% firstArticle = dato.articles.first %>
+<% secondArticle = dato.articles[1] %>
+<% firstImage = dato.homepage_blog_section.image %>
+
 <div class="BlogGrid">
 	<div class="BlogGrid__container BlogGrid__container--1">
 		<div class="BlogGrid__item--1 col-lg-8 col-md-8 col-sm-10 col-xs-10">
+
 			<div class="BlogGrid__item__heading--1">
-				<h2>Lorem ipsum dolor</h2>		
+				<h2><%= firstArticle.heading %></h2>		
 			</div>
 			<div class="BlogGrid__item__date--1">
-				<p>Jan. 29 2017</p>
+				<p><%= firstArticle.date %></p>
 			</div>
 			<div class="BlogGrid__item__author--1">
-				<p>Richard Emanuel</p>
+				<p><%= firstArticle.author %></p>
 			</div>
 			<div class="BlogGrid__item__content--1">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.  consectetur adipiscing elit.</p>
+				<p><%= firstArticle.body %></p>
 			</div>
 			<div class="BlogGrid__item__button--1">
-				<a href="/">Read More</a>
+				<a href="<%= firstArticle.handle %>">Read More</a>
 			</div>
-		</div>
+		</div>      
 	</div>
 
 
 	<div class="BlogGrid__container BlogGrid__container--2">
 		<div class="BlogGrid__container BlogGrid__container--3">
-			 <img src="/images/rectangle-1.png">
+			 <img src='<%= firstImage.url %>' >
 		</div>
 		<div class="BlogGrid__container BlogGrid__container--4">
 			<div class="BlogGrid__item BlogGrid__item--3" style="background-image: url('/images/rectangle-2.png')">		
 				<div class="BlogGrid__item BlogGrid__item--4 col-lg-10 col-md-8 col-sm-10 col-xs-10">
 					<div class="BlogGrid__item__heading--2">
-						<h2>Lorem ipsum dolor</h2>
+						<h2><%= secondArticle.heading %></h2>
 					</div>
 					<div class="BlogGrid__item__date--2">
-						<p>Jan. 29 2017</p>
+						<p><%= secondArticle.date %></p>
 					</div>
 					<div class="BlogGrid__item__author--2">
-						<p>Richard Emanuel</p>
+						<p><%= secondArticle.author %></p>
 					</div>
 				</div>
 			</div>

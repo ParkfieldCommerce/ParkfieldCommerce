@@ -1,6 +1,7 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
+
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
@@ -12,6 +13,9 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+
+activate :directory_indexes
+activate :livereload
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
@@ -41,7 +45,7 @@ page '/*.txt', layout: false
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :development do
-  activate :livereload
+	activate :dato, live_reload: true
 end
 
 configure :build do
