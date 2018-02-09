@@ -8,12 +8,13 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title || "Parkfield Commerce" %></title>
     <%= stylesheet_link_tag "app" %>
-    <%= javascript_include_tag "app" %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="container m">
     <%= partial './partials/header/header' %>
     </div>
     <%= yield %>
+    <%= javascript_include_tag "app" %>
   </body>
 </html>

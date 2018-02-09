@@ -1,3 +1,12 @@
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Avenir';
+  font-weight: 800;
+  color: $heading;
+  margin-bottom: 30px; 
+}
 h1{
   font-size: 3rem;
 }
@@ -10,13 +19,26 @@ h3{
 h4{
   font-size: 1.125rem;
 }
-p{
+h5 {
+  font-family: 'Avenir-Roman';
   font-size: 1.125rem;
+  color: $minor-heading;
+}
+h6 {
+  font-family: 'Avenir-Roman';
+  font-size: 1.5rem;
+  color: $minor-heading;
+}
+p{
+  font-family: 'Avenir-Roman';
+  font-size: 1.125rem;
+  color: $body;
 }
 a{
   font-family: 'Avenir';
   font-style: normal;
   text-decoration: none;
+
 }
 ul{
   margin: 0px;
