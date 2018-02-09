@@ -1,0 +1,58 @@
+<% firstArticle = dato.articles.first %>
+<% secondArticle = dato.articles[1] %>
+<% if secondArticle.image != nil %>
+	<% secondArticleImage = secondArticle.image %>
+<% end %>
+
+<% if dato.homepage_blog_section.image != nil %>
+<% firstImage = dato.homepage_blog_section.image %>
+<% end %>
+<div class="BlogGrid">
+	<div class="BlogGrid__container BlogGrid__container--1">
+		<div class="BlogGrid__item--1 col-lg-8 col-md-8 col-sm-10 col-xs-10">
+
+			<div class="BlogGrid__item__heading--1">
+				<h2><%= firstArticle.heading %></h2>		
+			</div>
+			<div class="BlogGrid__item__date--1">
+				<p><%= firstArticle.date %></p>
+			</div>
+			<div class="BlogGrid__item__author--1">
+				<p><%= firstArticle.author %></p>
+			</div>
+			<div class="BlogGrid__item__content--1">
+				<p><%= firstArticle.body %></p>
+			</div>
+			<div class="BlogGrid__item__button--1">
+				<a href="/articles/<%= firstArticle.handle %>">Read More</a>
+			</div>
+		</div>      
+	</div>
+
+
+	<div class="BlogGrid__container BlogGrid__container--2">
+		<div class="BlogGrid__container BlogGrid__container--3">
+			 <img src='<%= firstImage.url %>' >
+		</div>
+		<div class="BlogGrid__container BlogGrid__container--4">
+			<div class="BlogGrid__item BlogGrid__item--3" style="background-image: url('<%= secondArticleImage.url %>')">		
+				<div class="BlogGrid__item BlogGrid__item--4 col-lg-10 col-md-8 col-sm-10 col-xs-10">
+					<div class="BlogGrid__item__heading--2">
+						<h2><%= secondArticle.heading %></h2>
+					</div>
+					<div class="BlogGrid__item__date--2">
+						<p><%= secondArticle.date %></p>
+					</div>
+					<div class="BlogGrid__item__author--2">
+						<p><%= secondArticle.author %></p>
+					</div>
+				</div>
+			</div>
+			<div class="BlogGrid__item BlogGrid__item--5">
+				<div class="BlogGrid__item__twitterFeed col-lg-10 col-md-8 col-sm-10 col-xs-10">
+					<p>We are proud to announce the launch of our newest client store @TheHourShop They offer a fantastic range of vintage designer barware and glassware via their @Shopify store...</p>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>

@@ -3,23 +3,21 @@
   margin-right: auto;
   margin-left: auto;
   max-width: 100%;
-  padding-right: 2rem;
-  padding-left: 2rem;
 }
-
 .container-fluid {
   padding-right: 2rem;
   padding-left: 2rem;
 }
 
-.container.l,
-.container-fluid.l {
- width: 1440px;
-}
 .container.m,
-.container-fluid.m {
- width: 1200px;
+.container-fluid.m{
+  width:1200px;
 }
+.container.l,
+.container-fluid.l{
+  width:1440px;
+}
+
 
 .row {
   box-sizing: border-box;
