@@ -46,7 +46,7 @@
 		align-items:center;
 	}
 
-	@include maxQuery(800px){
+	@include maxQuery(950px){
 		&__container--1{
 			width:100%;
 		}
@@ -86,6 +86,7 @@
 		align-items:center;
 		justify-content:center;
 		border:1px solid black;		
+		margin-bottom:19.96px;
 	}
 	&__twitterFeed{
 		margin:0 auto;
@@ -101,13 +102,14 @@
 		color:white;
 	}
 
-	@include maxQuery(800px){
+	@include maxQuery(950px){
 		&__twitterFeed{
 			margin-top:40px;
 			margin-bottom:40px;
 		}
 		&__button--1{
 			height:47px;
+			margin-bottom:0px;
 		}
 	}
 }
