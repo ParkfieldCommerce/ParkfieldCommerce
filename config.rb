@@ -17,19 +17,13 @@ page '/*.txt', layout: false
 activate :directory_indexes
 activate :livereload
 
+activate :external_pipeline,
+   name: :webpack,
+   command: build? ?  "yarn run build" : "yarn run start",
+   source: "build",
+   latency: 1 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
-
-# Proxy pages
-# https://middlemanapp.com/advanced/dynamic-pages/
-
-# proxy(
-#   '/this-page-has-no-template.html',
-#   '/template-file.html',
-#   locals: {
-#     which_fake_page: 'Rendering a fake page with a local variable'
-#   },
-# )
 
 # Helpers
 # Methods defined in the helpers block are available in templates
@@ -60,9 +54,20 @@ configure :development do
   end
 end
 
-
-
 configure :build do
+  activate :dato, live_reload: true
   activate :minify_css
   activate :minify_javascript
+  dato.tap do |dato|
+    dato.case_studies.each do |caseStudy|
+      proxy "/case-studies/#{caseStudy.handle}/index.html", "case-study.html", 
+      locals: { caseStudy: caseStudy },
+      ignore: true
+    end
+    dato.articles.each do |article|
+      proxy "/articles/#{article.handle}/index.html", "article.html", 
+      locals: { article: article },
+      ignore: true
+    end
+  end
 end
