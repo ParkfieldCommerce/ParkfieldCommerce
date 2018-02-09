@@ -45,7 +45,7 @@ activate :livereload
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :development do
-	activate :dato, live_reload: true
+  activate :dato, live_reload: true
 end
 
 configure :build do

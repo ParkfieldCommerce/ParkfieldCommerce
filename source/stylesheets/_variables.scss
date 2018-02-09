@@ -1,4 +1,15 @@
+/* Colors */
+$logo-color: white;
+$logo-color-mobile: black;
+
+$navigation-link: white;
+$navigation-button: white;
+
+$btn-animatedLeftMain: white; 
+$btn-animatedLeftSub: black; 
 /* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:800');
+
 @font-face {
   font-family: "Avenir";
   src: url("../fonts/Avenir-Light.ttf") format("truetype");

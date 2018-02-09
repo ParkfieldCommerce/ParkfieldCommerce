@@ -3,9 +3,18 @@
   align-items: center;
   padding-top: 40px;
   &__logo-container{
-    width: 30%;
+    width: 14%;
+  }
+  &__logo{
+    color: $logo-color;
+    font-family: 'Montserrat';
+    font-weight: 800;
   }
   &__nav{
-    width: 70%;
+    width: 86%;
+  }
+  @include maxQuery(1000px){
+    padding: 0px;
+    height: 50px;
   }
 }
