@@ -46,7 +46,21 @@ activate :livereload
 
 configure :development do
   activate :dato, live_reload: true
+  dato.tap do |dato|
+    dato.case_studies.each do |caseStudy|
+      proxy "/case-studies/#{caseStudy.handle}/index.html", "case-study.html", 
+      locals: { caseStudy: caseStudy },
+      ignore: true
+    end
+    dato.articles.each do |article|
+      proxy "/articles/#{article.handle}/index.html", "article.html", 
+      locals: { article: article },
+      ignore: true
+    end
+  end
 end
+
+
 
 configure :build do
   activate :minify_css
