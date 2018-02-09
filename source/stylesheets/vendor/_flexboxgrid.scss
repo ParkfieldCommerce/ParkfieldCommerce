@@ -12,6 +12,15 @@
   padding-left: 2rem;
 }
 
+.container.l,
+.container-fluid.l {
+ width: 1440px;
+}
+.container.m,
+.container-fluid.m {
+ width: 1200px;
+}
+
 .row {
   box-sizing: border-box;
   display: -webkit-box;
