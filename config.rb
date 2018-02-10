@@ -1,10 +1,13 @@
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
-
+activate :directory_indexes
+activate :livereload
 
 activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
+
+
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -14,14 +17,8 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-activate :directory_indexes
-activate :livereload
 
-activate :external_pipeline,
-   name: :webpack,
-   command: build? ?  "yarn run build" : "yarn run start",
-   source: "build",
-   latency: 1 
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 
@@ -39,6 +36,8 @@ activate :external_pipeline,
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :development do
+  require 'sprockets/es6'
+
   activate :dato, live_reload: true
   dato.tap do |dato|
     dato.case_studies.each do |caseStudy|
@@ -57,7 +56,7 @@ end
 configure :build do
   activate :dato, live_reload: true
   activate :minify_css
-  activate :minify_javascript
+  #activate :minify_javascript
   dato.tap do |dato|
     dato.case_studies.each do |caseStudy|
       proxy "/case-studies/#{caseStudy.handle}/index.html", "case-study.html", 
