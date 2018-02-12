@@ -1,0 +1,13 @@
+<div class="Hero">
+<% if locals.has_key? :type %>
+<div class="Hero__image" style="background-image: url('<%= image.url %>');">
+  <div class="Hero__text">
+    <h1 class="Hero__text__heading"><%= heading %></h1>
+    <div class="Hero__text__partners">Certified Partners</div>
+    <img src="<%= dato.homepage_hero.partners.url %>" alt="">
+  </div>
+</div>
+<% else %>
+do this other thing
+<% end %>
+</div>

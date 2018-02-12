@@ -1,4 +1,6 @@
 .MainHeader{
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
   padding-top: 40px;

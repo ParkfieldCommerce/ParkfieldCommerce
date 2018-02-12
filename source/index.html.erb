@@ -1,10 +1,14 @@
 ---
 title: ParkfieldCommerce - E-Commerce Web Design Agency
 ---
-
-<img style="width: 100%; margin-top: -70px; z-index: -1; position: relative;" src="./images/DSC_3523.png" alt="">
-<!-- <div class="container l">
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'homepage',
+    image: dato.homepage_hero.image,
+    heading: dato.homepage_hero.heading
+  } 
+%>
+<div class="container l">
 <%= partial './partials/global/skewedBanner' %>
 <%= partial './partials/homepage/blog-grid' %>
-  sub
-</div> -->
+</div>

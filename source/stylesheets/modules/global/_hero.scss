@@ -1,0 +1,30 @@
+.Hero{
+  &__image{
+    position: relative;
+    z-index: 1;
+    display: block;
+    min-height: 550px;
+    height: 98vh;
+    width: 100%;
+    margin-top: -70px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+}
+
+.Hero__text{
+  text-align: center;
+  &__heading{color: white;}
+  &__partners{
+    color: white;
+    font-family: 'Avenir-Roman';
+    font-size: 1.125rem;
+  }
+}
