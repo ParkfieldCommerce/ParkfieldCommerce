@@ -1,4 +1,9 @@
 /* Colors */
+// base colors
+$heading: #231F20;
+$minor-heading: #FFFFFF;
+$body: #979797;
+// heading colors
 $logo-color: white;
 $logo-color-mobile: black;
 
@@ -9,6 +14,13 @@ $btn-animatedLeftMain: white;
 $btn-animatedLeftSub: black; 
 
 $skewed-banner: #4C54B0;
+
+/* Screen Sizes */
+$xs: 600px;
+$s: 768px;
+$m: 1200px;
+$l: 1440px; 
+
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Montserrat:800');
 
