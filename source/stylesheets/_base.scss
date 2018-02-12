@@ -1,3 +1,7 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%; }
+
 body{
   font-family: 'Avenir';
 }
@@ -9,6 +13,7 @@ h4 {
   font-weight: 800;
   color: $heading;
   margin-bottom: 30px; 
+  line-height: 1.25;
 }
 h1{
   font-size: 3rem;
@@ -36,6 +41,7 @@ p{
   font-family: 'Avenir-Roman';
   font-size: 1.125rem;
   color: $body;
+  line-height: 1.5;
 }
 a{
   font-family: 'Avenir';

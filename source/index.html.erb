@@ -10,7 +10,15 @@ title: ParkfieldCommerce - E-Commerce Web Design Agency
     heading: dato.homepage_hero.heading
   } 
 %>
-<div class="container l">
-<%= partial './partials/global/skewedBanner' %>
+<div class="container m">
+
+
+<%= partial './partials/global/skewedBanner',
+  locals:{
+    type:'homepage',
+    heading: dato.homepage_skewed_banner.heading,
+    body: dato.homepage_skewed_banner.body
+  }
+ %>
 <%= partial './partials/homepage/blog-grid' %>
 </div>

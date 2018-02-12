@@ -1,5 +1,32 @@
-<div class="container m">
-	<div class="SkewedBanner">
-
-	</div>
+<% if locals.has_key? :type %>
+  <% modifier = 'homepage' %>
+<% else %>
+  <% modifier = 'general' %>
+<% end %>
+<% if modifier == 'homepage' %>
+<div class="SkewedBanner SkewedBanner--homepage">
+  <div class="SkewedBanner__row row">
+    <div class="SkewedBanner__heading small-offset-1 small-10 large-offset-1 large-3">
+      <h3><%= heading %></h3>
+    </div>
+    <div class="SkewedBanner__body small-offset-1 small-10 large-6">
+      <%= body %>
+    </div>
+  </div>
 </div>
+<% else %>
+<div class="SkewedBanner SkewedBanner--general">
+  <div class="SkewedBanner__row row">
+    <div class="SkewedBanner__text small-offset-1 small-10">
+      <h3>
+        <span class="SkewedBanner__source"><%= quoteSource %></span>
+        <span class="SkewedBanner__title"><%= quoteSourceTitle %></span>
+      </h3>
+      <div class="SkewedBanner__body">
+      <%= quoteSourceBody %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>
+
