@@ -2,6 +2,10 @@
   display: flex;
   align-items: center;
   padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: background-color .3s;
+  background-color: transparent;
   &__logo-container{
     width: 14%;
   }
@@ -9,12 +13,28 @@
     color: $logo-color;
     font-family: 'Montserrat';
     font-weight: 800;
+    font-size: 1.5rem;
+    transition: color .3s;
   }
   &__nav{
     width: 86%;
   }
   @include maxQuery(1000px){
-    padding: 0px;
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
     height: 50px;
+    background-color: white;
+    position: relative;
+    &__logo{
+      color: $logo-color-mobile;
+    }
+  }
+}
+
+.MainHeader.nav-is-open{
+  background-color: black;
+  .MainHeader__logo{
+    color: $logo-color;
   }
 }

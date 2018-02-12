@@ -1,3 +1,6 @@
+body{
+  font-family: 'Avenir';
+}
 h1,
 h2,
 h3,
@@ -38,7 +41,6 @@ a{
   font-family: 'Avenir';
   font-style: normal;
   text-decoration: none;
-
 }
 ul{
   margin: 0px;
@@ -83,6 +85,18 @@ li{
       width: 100%;
     }
   }
+}
+
+.Btn--ghost{
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+.Btn--filled{
+  background-color: white;
+  color: black;
+  border: 1px solid white;
 }
 
 

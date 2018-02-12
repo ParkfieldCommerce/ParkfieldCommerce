@@ -1,17 +1,26 @@
 <% main_nav_links = dato.main_nav_links.sort_by {|main_nav_link| main_nav_link.position} %>
-<span id="MobileNavTrigger" class="Nav__hamburger"></span>
+<div id="MobileNavTrigger" class="Nav__hamburger Nav__hamburger">
+  <i></i><i></i><i></i>
+</div>
 <nav class="Nav MainHeader__nav">
-  <ul class="Nav_items">
+  <ul class="Nav__items">
     <% main_nav_links.each do |main_nav_link| %>
       <% unless main_nav_link.button == true %>
       <li class="Nav__item">
         <a class="Nav__link" href="<%= main_nav_link.url %>"><%= main_nav_link.text %></a>
       </li>
       <% else %>
-      <li class="Nav__item">
+      <li class="Nav__item Nav__item--button">
         <a class="Btn Btn--animatedLeft" href="<%= main_nav_link.url %>"><span><%= main_nav_link.text %></span></a>
       </li>
       <% end %>
     <% end %>
   </ul>
+  <div class="Nav__mobile-section">
+    <span class="Nav__mobile-section__heading">
+      Get a free quote
+    </span>
+    <a href="#" class="Nav__mobile-section__button Btn Btn--filled">Call Us</a>
+    <a href="#" class="Nav__mobile-section__button Btn Btn--ghost">Send a message</a>
+  </div>
 </nav>

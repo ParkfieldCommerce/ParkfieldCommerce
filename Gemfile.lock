@@ -120,9 +120,9 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
-    middleman-sprockets (4.0.0.rc.1)
-      middleman-core (>= 4.0.0.rc.1)
-      sprockets (~> 3.0)
+    middleman-sprockets (4.0.0)
+      middleman-core (~> 4.0)
+      sprockets (>= 3.0)
     mime-types (2.99.3)
     minitest (5.11.3)
     multipart-post (2.0.0)
@@ -187,4 +187,4 @@ DEPENDENCIES
   wdm (~> 0.1)
 
 BUNDLED WITH
-   1.16.0
+   1.16.1
