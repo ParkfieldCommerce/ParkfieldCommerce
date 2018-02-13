@@ -1,0 +1,76 @@
+<% HomeCaseStudyItem0 = dato.homepage_case_studies[0] %>
+<% HomeCaseStudyItem1 = dato.homepage_case_studies[1] %>
+<% HomeCaseStudyItem2 = dato.homepage_case_studies[2] %>
+<% HomeCaseStudyItem3 = dato.homepage_case_studies[3] %>
+<% HomeCaseStudyItem4 = dato.homepage_case_studies[4] %>
+
+<div class="CaseStudyGrid">
+  <div class="CaseStudyGrid__container CaseStudyGrid__container--whole">
+    <div class="CaseStudyGrid__container CaseStudyGrid__container--two-thirds">
+      <div class="CaseStudyGrid__container CaseStudyGrid__container--whole">
+        <div class="CaseStudyGrid__item CaseStudyGrid__item--small CaseStudyGrid__item--0">
+          <% link_to(HomeCaseStudyItem0.url, { :class => 'CaseStudyGrid__item__image-wrap'}) do %>
+            <%= image_tag HomeCaseStudyItem0.background.url, alt: HomeCaseStudyItem0.background.alt ,class: 'CaseStudyGrid__item__background' %>
+            <%= image_tag HomeCaseStudyItem0.logo.url, alt: HomeCaseStudyItem0.logo.alt, class: 'CaseStudyGrid__item__logo' %>
+          <% end %>
+        </div>
+        <div class="CaseStudyGrid__item CaseStudyGrid__item--small CaseStudyGrid__item--1">
+          <% link_to(HomeCaseStudyItem1.url, { :class => 'CaseStudyGrid__item__image-wrap'}) do %>
+            <%= image_tag HomeCaseStudyItem1.background.url, alt: HomeCaseStudyItem1.background.alt ,class: 'CaseStudyGrid__item__background' %>
+            <%= image_tag HomeCaseStudyItem1.logo.url, alt: HomeCaseStudyItem1.logo.alt, class: 'CaseStudyGrid__item__logo' %>
+          <% end %>
+        </div>
+      </div>
+      <div class="CaseStudyGrid__item CaseStudyGrid__item--big CaseStudyGrid__item--2">
+        <% link_to(HomeCaseStudyItem2.url, { :class => 'CaseStudyGrid__item__image-wrap'}) do %>
+          <%= image_tag HomeCaseStudyItem2.background.url, alt: HomeCaseStudyItem2.background.alt ,class: 'CaseStudyGrid__item__background' %>
+          <%= image_tag HomeCaseStudyItem2.logo.url, alt: HomeCaseStudyItem2.logo.alt, class: 'CaseStudyGrid__item__logo' %>
+        <% end %>
+      </div>
+    </div>
+    <div class="CaseStudyGrid__container CaseStudyGrid__container--one-third">
+      <div class="CaseStudyGrid__item CaseStudyGrid__item--tall CaseStudyGrid__item--3">
+        <% link_to(HomeCaseStudyItem3.url, { :class => 'CaseStudyGrid__item__image-wrap'}) do %>
+          <%= image_tag HomeCaseStudyItem3.background.url, alt: HomeCaseStudyItem3.background.alt ,class: 'CaseStudyGrid__item__background' %>
+          <%= image_tag HomeCaseStudyItem3.logo.url, alt: HomeCaseStudyItem3.logo.alt, class: 'CaseStudyGrid__item__logo' %>
+        <% end %>
+      </div>
+      <div class="CaseStudyGrid__item CaseStudyGrid__item--small CaseStudyGrid__item--4">
+        <% link_to(HomeCaseStudyItem4.url, { :class => 'CaseStudyGrid__item__image-wrap'}) do %>
+          <%= image_tag HomeCaseStudyItem4.background.url, alt: HomeCaseStudyItem4.background.alt ,class: 'CaseStudyGrid__item__background' %>
+          <%= image_tag HomeCaseStudyItem4.logo.url, alt: HomeCaseStudyItem4.logo.alt, class: 'CaseStudyGrid__item__logo' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="CaseStudyGridMobile">
+  <div class="CaseStudyGridMobile__item">
+  <% link_to(HomeCaseStudyItem0.url, { :class => 'CaseStudyGridMobile__item__image-wrap'}) do %>
+    <%= image_tag HomeCaseStudyItem0.background.url, alt: HomeCaseStudyItem0.background.alt ,class: 'CaseStudyGridMobile__item__background' %>
+  <% end %>
+  <%= link_to HomeCaseStudyItem0.heading, HomeCaseStudyItem0.url, :class=>"CaseStudyGridMobile__link Link--animated" %>
+  </div>
+
+  <div class="CaseStudyGridMobile__item">
+  <% link_to(HomeCaseStudyItem1.url, { :class => 'CaseStudyGridMobile__item__image-wrap'}) do %>
+    <%= image_tag HomeCaseStudyItem1.background.url, alt: HomeCaseStudyItem1.background.alt ,class: 'CaseStudyGridMobile__item__background' %>
+  <% end %>
+  <%= link_to HomeCaseStudyItem1.heading, HomeCaseStudyItem1.url, :class=>"CaseStudyGridMobile__link Link--animated" %>
+  </div>
+
+  <div class="CaseStudyGridMobile__item">
+  <% link_to(HomeCaseStudyItem2.url, { :class => 'CaseStudyGridMobile__item__image-wrap'}) do %>
+    <%= image_tag HomeCaseStudyItem2.background.url, alt: HomeCaseStudyItem2.background.alt ,class: 'CaseStudyGridMobile__item__background' %>
+  <% end %>
+  <%= link_to HomeCaseStudyItem2.heading, HomeCaseStudyItem2.url, :class=>"CaseStudyGridMobile__link Link--animated" %>
+  </div>
+
+  <div class="CaseStudyGridMobile__item">
+  <% link_to(HomeCaseStudyItem4.url, { :class => 'CaseStudyGridMobile__item__image-wrap'}) do %>
+    <%= image_tag HomeCaseStudyItem4.background.url, alt: HomeCaseStudyItem4.background.alt ,class: 'CaseStudyGridMobile__item__background' %>
+  <% end %>
+  <%= link_to HomeCaseStudyItem3.heading, HomeCaseStudyItem3.url, :class=>"CaseStudyGridMobile__link Link--animated" %>
+  </div>
+</div>

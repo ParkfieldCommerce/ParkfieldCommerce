@@ -26,8 +26,8 @@
 .SkewedBanner--homepage{
   margin-top: -100px;
   &:after{
-    height: 200px;
-    bottom: -160px;
+    height: 225px;
+    bottom: -190px;
   }
   @include maxQuery($s){
     width: 90%;
@@ -39,7 +39,19 @@
 
 .SkewedBanner--homepage .SkewedBanner{
   &__row{
+    display: flex;
+    flex-flow: row wrap;
     padding-top: 70px;
+    max-width: 100%;
+  }
+
+  &__heading{
+    width: 25%;
+    margin-left: 0;
+  }
+  &__body{
+    width: 65%;
+    margin-left: 10%;
   }
   &__heading h3{
     margin-top: 0;
@@ -50,10 +62,25 @@
     color: white;
     font-size: 1.25rem;
   }
+  @include minmaxQuery($s,1100px){
+    &__row{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
   @include maxQuery($s){
     &__row{
       padding-top: 35px;
       padding-bottom: 60px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &__heading{
+      width: 100%;
+    }
+    &__body{
+      margin-left: 0;
+      width: 100%;
     }
     &__heading h3{
       font-size: 1.5rem;
@@ -66,9 +93,7 @@
 
 .SkewedBanner--general{
   margin-top: -50px;
-  &__row{
-    padding-top: 35px;
-  }
+
   &:after{
     height: 100px;
     bottom: -30px;
@@ -82,17 +107,29 @@
 }
 
 .SkewedBanner--general .SkewedBanner{
+  &__row{
+    padding-top: 35px;
+  }
+
   &__source,
   &__title,
   &__body p{
     color: white;
   }
+  
+  &__source{
+    font-size: 1.125rem;
+  }
+
+  &__title{
+    font-size: 1.125rem;
+    font-weight: normal;
+  }
+
   &__body p{
     font-size: 1.25rem;
   }
-  &__title{
-    font-weight: normal;
-  }
+  
   @include maxQuery($s){
     &__row{
       padding-top: 25px;

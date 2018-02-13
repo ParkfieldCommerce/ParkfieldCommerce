@@ -5,12 +5,14 @@
 <% end %>
 <% if modifier == 'homepage' %>
 <div class="SkewedBanner SkewedBanner--homepage">
-  <div class="SkewedBanner__row row">
-    <div class="SkewedBanner__heading small-offset-1 small-10 large-offset-1 large-3">
-      <h3><%= heading %></h3>
-    </div>
-    <div class="SkewedBanner__body small-offset-1 small-10 large-6">
-      <%= body %>
+  <div class="container s">
+    <div class="SkewedBanner__row">
+      <div class="SkewedBanner__heading">
+        <h3><%= heading %></h3>
+      </div>
+      <div class="SkewedBanner__body">
+        <%= body %>
+      </div>
     </div>
   </div>
 </div>
