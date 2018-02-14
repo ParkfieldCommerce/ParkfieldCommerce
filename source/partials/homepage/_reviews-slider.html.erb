@@ -1,0 +1,31 @@
+<div class="ReviewsSliderSection space-120 mobile-space-60">
+  <div class="ReviewsSliderController">
+  <% dato.reviews.each do |review | %>
+    <button class="ReviewsSliderController__button">
+      <%= image_tag review.logo.url %>
+      <div class="ReviewsSliderController__timer"></div>
+    </button>  
+  <% end %>
+  </div>
+  <div class="ReviewsSlider js-ReviewsSlider">
+  <% dato.reviews.each do |review | %>
+    <div class="ReviewsSlider__slide">
+      <button class="ReviewsSlider__button">
+        <%= image_tag review.logo.url, :class => "ReviewsSlider_logo" %>
+        <div class="ReviewsSlider__timer"></div>
+      </button>
+      <div class="ReviewsSlider_body">
+        <%= review.body %>
+      </div>
+      <h4>
+        <span class="ReviewsSlider__source">
+          <%= review.source %>
+        </span>
+        <span class="ReviewsSlider__title">
+          <%= review.source_title %>
+        </span>
+      </h4>
+    </div>
+  <% end %>
+  </div>
+</div>

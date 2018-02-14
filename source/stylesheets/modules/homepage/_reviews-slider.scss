@@ -1,0 +1,22 @@
+.ReviewsSliderController,
+.ReviewsSlider{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  &__button{
+    background-color: transparent;
+    border: none;
+    position: relative;
+  }
+  &__timer{
+    display: block;
+    height: 1px;
+    width: 0%;
+    max-width: 100%;
+    transition: opacity .3s;
+    background-color: white;
+  }
+}
+.ReviewsSliderSection{
+  background-color: black;
+}
