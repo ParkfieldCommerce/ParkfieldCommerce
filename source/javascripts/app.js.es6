@@ -5,8 +5,15 @@ class Theme{
 
   init(){
     this.initMobileNavigation();
+    this.initCaseStudySlider();
   }
+  initCaseStudySlider(){
+    $('.CaseStudy__challenge__slider__container--1').slick({
 
+    centerPadding: ($('.slider').find('>div').outerWidth() / 2) + 'px',
+    slidesToShow: 1,
+    variableWidth: true    });
+  }
   initMobileNavigation(){
     let mobileTrigger = document.querySelector('#MobileNavTrigger');
     let header = document.querySelector('.MainHeader');
@@ -22,6 +29,7 @@ class Theme{
       }
     });
   }
+
 }
 
 const Parkfield = new Theme();

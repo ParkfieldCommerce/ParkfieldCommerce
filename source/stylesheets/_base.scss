@@ -86,5 +86,36 @@ li{
 }
 
 
+.Btn--animatedLeft--reverse{
+  position: relative;
+  span{
+    color: $btn-animatedLeftSub;
+    position: relative;
+    z-index: 2;
+    transition: color .3s;
+  }
+  &:after{
+    z-index: 1;
+    content:'';
+    display: block;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $btn-animatedLeftSub;
+    transition: width .3s;
+  }
+  &:hover{
+    span{
+      color: $btn-animatedLeftMain;
+    }
+    &:after{
+      width: 100%;
+    }
+  }
+}
+
+
 
 
