@@ -13,6 +13,7 @@
 .center{
   text-align: center;
 }
+
 .space-90 {
 	margin-top: 90px;
 }
@@ -21,4 +22,9 @@
 }
 .space-150 {
   margin-top: 150px;
+}
+.mobile-space-60{
+  @media screen and (max-width: $s){
+    margin-top: 60px;
+  }
 }
