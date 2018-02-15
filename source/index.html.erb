@@ -26,7 +26,8 @@ pageClass: Homepage
 <div class="container m">
   <%= partial './partials/homepage/our-services' %>
 </div>
-<div class="ReviewBlogContainer">
+<div class="ReviewBlogContainerBackground js-ReviewBlogContainerBackground space-120 mobile-space-60" data-turn="0">
+  <div class="ReviewBlogContainerBackgroundAlt js-ReviewBlogContainerBackgroundAlt" data-turn="1"></div>
   <div class="container l">
     <%= partial './partials/homepage/reviews-slider' %>
     <%= partial './partials/homepage/blog-grid' %>

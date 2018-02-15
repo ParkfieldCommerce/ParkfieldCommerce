@@ -1,23 +1,24 @@
-<div class="ReviewsSliderSection space-120 mobile-space-60">
+<div class="ReviewsSliderSection">
   <div class="ReviewsSliderController">
   <% dato.reviews.each do |review | %>
-    <button class="ReviewsSliderController__button">
+    <button class="ReviewsSliderController__button js-ReviewsSliderController__button" data-bg="<%= review.background.url%>">
       <%= image_tag review.logo.url %>
-      <div class="ReviewsSliderController__timer"></div>
+      <div class="ReviewsSliderController__timer js-ReviewsSlider__timer"></div>
     </button>  
   <% end %>
   </div>
   <div class="ReviewsSlider js-ReviewsSlider">
   <% dato.reviews.each do |review | %>
     <div class="ReviewsSlider__slide">
-      <button class="ReviewsSlider__button">
+      <div class="ReviewsSlider__content">
+      <button class="ReviewsSlider__button js-ReviewsSlider__button" data-bg="<%= review.background.url%>">
         <%= image_tag review.logo.url, :class => "ReviewsSlider_logo" %>
-        <div class="ReviewsSlider__timer"></div>
+        <div class="ReviewsSlider__timer js-ReviewsSlider__timer"></div>
       </button>
-      <div class="ReviewsSlider_body">
+      <div class="ReviewsSlider__body">
         <%= review.body %>
       </div>
-      <h4>
+      <h4 class="right">
         <span class="ReviewsSlider__source">
           <%= review.source %>
         </span>
@@ -25,6 +26,7 @@
           <%= review.source_title %>
         </span>
       </h4>
+      </div>
     </div>
   <% end %>
   </div>

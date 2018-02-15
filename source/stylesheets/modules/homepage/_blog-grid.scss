@@ -1,4 +1,6 @@
 .BlogGrid{
+  position: relative;
+  z-index: 2;
 	display:flex;
 	flex-flow:row wrap;
 	&__container{

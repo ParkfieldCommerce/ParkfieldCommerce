@@ -44,6 +44,7 @@
     &__links,
     &__description{
       width: 100%;
+      align-items: flex-end;
     }
     &__heading{
       margin-top: 0px;
@@ -55,6 +56,9 @@
     &__link-container:first-child,
     &__link-container:nth-child(2){
       margin-bottom: 40px;
+    }
+    &__link{
+      display: inline-block;
     }
   }
 }
