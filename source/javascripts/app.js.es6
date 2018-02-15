@@ -26,12 +26,16 @@ class Theme{
 
   initReviewsSlider(){
     const ReviewsSlider = $('.js-ReviewsSlider');
-    const desktopButtons = $('.js-ReviewsSliderController__button');
-    const mobileButtons = $('.js-ReviewsSlider__button');
-
     const slideTime = 6000; //10 seconds
     const incrementInterval = 10 //1 second change bar value
     const changePercentage = (incrementInterval/slideTime) * 100;
+
+    if($(window).width() < 1000){        
+      var buttonSet = $('.js-ReviewsSlider__button');;
+    }else{
+      var buttonSet = $('.js-ReviewsSliderController__button');;
+    }
+
     function changeReviewBackground(url){
       const reviewBackground = $('.js-ReviewBlogContainerBackground');
       const reviewBackgroundAlt = $('.js-ReviewBlogContainerBackgroundAlt');
@@ -49,23 +53,16 @@ class Theme{
     }
 
     function reverseWidthTimer(currentSlide){
-      if($(window).width() < 1000){        
-        var buttonSet = mobileButtons;
-      }else{
-        var buttonSet = desktopButtons;
-      }
       //Reset All Button Widths to 0
       $(buttonSet).each((index, button)=>{
         $(button).find('.js-ReviewsSlider__timer').width(0);
       });
 
       let currentButton = buttonSet[currentSlide];
-      changeReviewBackground($(currentButton).data('bg'));
       const currentButtonTimer = $(currentButton).find('.js-ReviewsSlider__timer');
-      currentButtonTimer.width('100%');
       let timer = setInterval(()=>{ 
         var currentPercentage = currentButtonTimer.width() / currentButtonTimer.parent().width() * 100;
-        currentButtonTimer.width((currentPercentage - changePercentage) + '%');
+        currentButtonTimer.width((currentPercentage + changePercentage) + '%');
       }, incrementInterval);
 
       setTimeout(()=>{
@@ -76,6 +73,8 @@ class Theme{
 
     if(ReviewsSlider.length > 0){//If slider exists initialize
       ReviewsSlider.on('init', function(slick){
+        let currentButton = buttonSet[0];
+        changeReviewBackground($(currentButton).data('bg'));
         reverseWidthTimer(0);
       });
 
@@ -83,9 +82,14 @@ class Theme{
         reverseWidthTimer(currentSlide);
       });
 
+      ReviewsSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        let nextButton = buttonSet[nextSlide];
+        changeReviewBackground($(nextButton).data('bg'));
+      });
+
       ReviewsSlider.slick({
         arrows:false,
-        fade: false,
+        fade: true,
         autoplay: true,
         pauseOnHover: false,
         autoplaySpeed: slideTime + 1000,
