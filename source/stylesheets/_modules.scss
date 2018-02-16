@@ -1,11 +1,14 @@
 /* Homepage */
 @import './modules/global/navigation';
 @import './modules/global/newsletter';
-@import './modules/homepage/hero';
+@import './modules/global/hero';
+@import './modules/global/quote';
+@import './modules/global/skewed-banner';
 @import './modules/homepage/case-study-grid';
+@import './modules/homepage/our-services';
 @import './modules/homepage/video-banner';
 @import './modules/homepage/statistics';
-@import './modules/homepage/reviews-banner';
+@import './modules/homepage/reviews-slider';
 @import './modules/homepage/blog-grid';
 @import './modules/global/skewed-banner';
 @import './modules/case-study/case-study.scss';

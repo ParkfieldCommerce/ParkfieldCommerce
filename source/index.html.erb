@@ -1,10 +1,38 @@
 ---
 title: ParkfieldCommerce - E-Commerce Web Design Agency
+pageClass: Homepage
 ---
-
-<img style="width: 100%; margin-top: -70px; z-index: -1; position: relative;" src="./images/DSC_3523.png" alt="">
-<div class="container l">
-<%= partial './partials/global/skewedBanner' %>
-<%= partial './partials/homepage/blog-grid' %>
-  <!--sub-->
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'homepage',
+    mobile_image: dato.homepage_hero.mobile_image,
+    med_image: dato.homepage_hero.med_image,
+    large_image: dato.homepage_hero.large_image,
+    heading: dato.homepage_hero.heading
+  } 
+%>
+<div class="container m">
+<%= partial './partials/global/skewedBanner',
+  locals:{
+    type:'homepage',
+    heading: dato.homepage_skewed_banner.heading,
+    body: dato.homepage_skewed_banner.body
+  }
+ %>
+<div class="container s">
+<%= partial './partials/homepage/case-study-grid' %>
 </div>
+</div>
+<div class="container m">
+  <%= partial './partials/homepage/our-services' %>
+</div>
+<div class="ReviewBlogContainerBackground js-ReviewBlogContainerBackground space-120 mobile-space-60" data-turn="0">
+  <div class="ReviewBlogContainerBackgroundAlt js-ReviewBlogContainerBackgroundAlt" data-turn="1"></div>
+  <div class="container l">
+    <%= partial './partials/homepage/reviews-slider' %>
+    <%= partial './partials/homepage/blog-grid' %>
+  </div>
+</div>
+
+
+

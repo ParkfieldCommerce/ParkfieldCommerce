@@ -1,0 +1,53 @@
+.Hero{
+  &__image{
+    position: relative;
+    z-index: 1;
+    display: block;
+    min-height: 550px;
+    height: 98vh;
+    width: 100%;
+    margin-top: -70px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  &__text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  @include maxQuery($s){
+    &__image{
+      min-height: 290px;
+      margin-top: 0px;
+      height: auto;
+    }
+  }
+}
+
+.Hero__text{
+  text-align: center;
+  width: 100%;
+  &__heading{
+    color: white;
+    margin-bottom: 46px;
+  }
+  &__partners{
+    margin-bottom: 21px;
+    color: white;
+    font-family: 'Avenir-Roman';
+    font-size: 1.125rem;
+  }
+  @include maxQuery($s){
+    &__heading{
+      font-size: 1.5rem;
+    }
+    &__partners{
+      font-size: .75rem;
+    }
+    img{
+      max-width: 200px;
+    }
+  }
+}

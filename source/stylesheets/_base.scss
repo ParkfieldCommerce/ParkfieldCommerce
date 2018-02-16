@@ -1,3 +1,10 @@
+html {
+  box-sizing: border-box;
+  font-size: 100%; }
+
+body{
+  font-family: 'Avenir';
+}
 h1,
 h2,
 h3,
@@ -6,6 +13,7 @@ h4 {
   font-weight: 800;
   color: $heading;
   margin-bottom: 30px; 
+  line-height: 1.25;
 }
 h1{
   font-size: 3rem;
@@ -33,6 +41,7 @@ p{
   font-family: 'Avenir-Roman';
   font-size: 1.125rem;
   color: $body;
+  line-height: 1.5;
 }
 a{
   font-family: 'Avenir';
@@ -85,7 +94,6 @@ li{
   }
 }
 
-
 .Btn--animatedLeft--reverse{
   position: relative;
   span{
@@ -116,6 +124,54 @@ li{
   }
 }
 
+.Btn--ghost{
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+}
 
+.Btn--filled{
+  background-color: white;
+  color: black;
+  border: 1px solid white;
+}
+
+.Link--animated{
+  position: relative;
+  font-weight: 800;
+  color: $navigation-link;
+  &:after{
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: $navigation-link;
+    transition: width .3s;
+  }
+  &:hover{
+    &:after{
+      width: 100%;
+    }
+  }
+}
+
+.Link--underline{
+  position: relative;
+  font-weight: 800;
+  color: $link;
+  &:after{
+    content:'';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $link;
+  }
+}
 
 

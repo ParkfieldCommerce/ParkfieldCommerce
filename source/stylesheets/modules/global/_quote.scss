@@ -1,0 +1,12 @@
+.GetQuoteBanner{
+  text-align: center;
+  &__Btn--email{
+    background-color: black;
+    color: white;
+    font-weight: 800;
+  }
+  &__Btn--phone{
+    color: black;
+    border-color: black;
+  }
+}

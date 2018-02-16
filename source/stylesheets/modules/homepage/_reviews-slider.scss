@@ -1,0 +1,82 @@
+.ReviewsSliderController,
+.ReviewsSlider{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  &__button{
+    background-color: transparent;
+    border: none;
+    position: relative;
+  }
+  &__timer{
+    display: block;
+    height: 1px;
+    width: 0%;
+    max-width: 100%;
+    transition: opacity .3s;
+    background-color: white;
+  }
+}
+.ReviewsSliderSection{
+  position: relative;
+  z-index: 2;
+}
+.ReviewsSlider{
+  &__button{
+    display: none;
+  }
+  &__slide{
+    text-align: center;
+  }
+  &__content{
+    margin: 0 auto;
+    max-width: 90%
+  }
+  &__body p{
+    font-size: 2.25rem;
+    color: white;
+  }
+  &__source{
+    font-size: 1.5rem;
+    color: white;
+  }
+  &__title{
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: white;
+  }
+  @include maxQuery($m){
+    &__button{display: inline-block;}
+    &__body p{
+      font-size: 1.5rem;
+    }
+    h4{
+      margin-bottom: 0px;
+      text-align: center;
+    }
+    &__source,
+    &__title{
+      font-size: 1.125rem;
+    }
+  }
+  @include maxQuery($s){
+    &__button{display: inline-block;}
+    &__body p{
+      font-size: 1.125rem;
+    }
+    h4{
+      text-align: center;
+    }
+    &__source,
+    &__title{
+      font-size: .875rem;
+    }
+  }
+}
+.ReviewsSliderController{
+  display: flex;
+  margin-bottom: 64px;
+  @include maxQuery(1000px){
+    display: none;
+  }
+}

@@ -1,0 +1,37 @@
+<% if locals.has_key? :type %>
+<style>
+  .Hero__image--homepage{
+    background-image: url('<%= large_image.url %>');
+  }
+  @media screen and (max-width: 1200px){
+    .Hero__image--homepage{
+      background-image: url('<%= med_image.url %>');
+    } 
+  }
+  @media screen and (max-width: 768px){
+    .Hero__image--homepage{
+      background-image: url('<%= mobile_image.url %>');
+    } 
+  }
+</style>
+<% end %>
+
+<div class="Hero">
+<% if locals.has_key? :type %>
+<div class="Hero__image Hero__image--homepage">
+  <div class="Hero__text">
+    <h1 class="Hero__text__heading"><%= heading %></h1>
+    <div class="Hero__text__partners">Certified Partners</div>
+    <img src="<%= dato.homepage_hero.partners.url %>" alt="">
+  </div>
+</div>
+<% else %>
+<div class="Hero__image Hero__image--other" style="background-image: url('<%= large_image.url %>');">
+  <div class="Hero__text">
+    <h1 class="Hero__text__heading"><%= heading %></h1>
+    <div class="Hero__text__partners">Certified Partners</div>
+    <img src="<%= dato.homepage_hero.partners.url %>" alt="">
+  </div>
+</div>
+<% end %>
+</div>

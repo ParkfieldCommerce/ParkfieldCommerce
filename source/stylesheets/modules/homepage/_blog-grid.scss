@@ -1,4 +1,6 @@
 .BlogGrid{
+  position: relative;
+  z-index: 2;
 	display:flex;
 	flex-flow:row wrap;
 	&__container{
@@ -23,8 +25,11 @@
 		width:56.6%;
 		flex-flow:row wrap;
 	}
-
+  
 	&__item--1{
+    max-width: 100%;
+    width: 410px;
+    padding: 0px 10px;
 		margin:0 auto;
 	}
 	&__item--3{
@@ -34,18 +39,28 @@
 		background-repeat:no-repeat;
 		max-height:307px;
 		height:50%;
+    display: flex;
+    align-items: center;
 	}
 	&__item--4{
+    width: 370px;
+    padding: 0px 10px;
+    max-width: 100%;
 		margin:0 auto;
-		margin-top:30px;
 	}
 	&__item--5{
 		height:50%;
+    width: 100%;
 		background-color:#1DA1F3;
 		display:flex;
 		align-items:center;
 	}
-
+  &__item__twitterFeed{
+    width: 370px;
+    padding: 0px 10px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
 	@include maxQuery(950px){
 		&__container--1{
 			width:100%;
@@ -62,6 +77,8 @@
 		&__item--1{
 			margin-top:54px;
 			margin-bottom:60px;
+      padding: 0px;
+      width: 90%;
 		}
 		&__item--3{
 			display:none;
@@ -70,35 +87,42 @@
 			margin:0 auto;
 			height:auto;
 		}
+    &__item__twitterFeed{
+      width: 90%;
+    }
 	}
 }
 
 
 .BlogGrid__item{
+  &__heading--1 h3{
+    margin: 0px;
+  }
 	&__content--1{
 		margin-bottom:40px;
 	}
-	&__button--1{
-		max-width:157px;
-		width:100%;
-		height:53px;
-		display:flex;
-		align-items:center;
-		justify-content:center;
-		border:1px solid black;		
-		margin-bottom:19.96px;
+  &__date--1 p{
+    color: black;
+  }
+  &__author--1 p{
+    color: black;
+  }
+	&__link--1{
+    margin-top: 45px;
+		display:inline-block;
 	}
 	&__twitterFeed{
 		margin:0 auto;
 		p{color:white;}
 	}
-	&__heading--2{
+	&__heading--2 h3{
+		color:white;
+    margin: 0px;
+	}
+	&__date--2 p{
 		color:white;
 	}
-	&__date--2{
-		color:white;
-	}
-	&__author--2{
+	&__author--2 p{
 		color:white;
 	}
 
