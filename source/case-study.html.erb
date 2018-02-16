@@ -13,27 +13,27 @@
 <% caseStudyPages3 = caseStudy.webpage_images[2] %>
 <% caseStudySlider1 = caseStudy.slider[0] %>
 <% caseStudySlider2 = caseStudy.slider[1] %>
+	<%= partial './partials/global/hero', 
+  locals:{
+    mobile_image: caseStudy.banner_image,
+    med_image: caseStudy.banner_image,
+    large_image: caseStudy.banner_image,
+    heading: caseStudy.heading
+  } 
+%>
+<div class="CaseStudy__gray">
+<div class="container m">
+<%= partial './partials/global/skewedBanner',
+  locals:{
+    quoteSource: caseStudy.quote_source,
+    quoteSourceTitle: caseStudy.quote_source_title,
+    quoteSourceBody: caseStudy.quote_source_body
+  }
+ %>
+</div>
+</div>
 
 <div class="CaseStudy">
-	<div class="CaseStudy__banner__container--1">
-		<div class="CaseStudy__banner__image--1">
-			<img class="CaseStudy__banner" src="<%= caseStudy.banner_image.url %>">				
-		</div>
-
-		<div class="CaseStudy__banner__container--2 CaseStudy__gray">
-			<div class="container m">
-			<div class="row">
-				<div class="CaseStudy__banner__container--3 SkewedBanner small-11">
-					<div class="CaseStudy__banner__text__container--1 large-10 medium-10 small-10">
-						<p class="CaseStudy__banner__text__p--1"><%= caseStudy.quote_source%>, <span><%= caseStudy.quote_source_title %></span></p>
-							<div class="CaseStudy__banner__text--3"><%= caseStudy.quote_source_body %></div>
-						</div>
-					</div>
-				</div>	
-			</div>
-		</div>
-	</div>
-	
 	<div class="CaseStudy__overview CaseStudy__gray">
 		<div class="CaseStudy__overview__container--1">
 			<div class="row">
