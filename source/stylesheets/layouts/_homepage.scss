@@ -6,6 +6,21 @@
   .ReviewBlogContainerBackground{
     position: relative;
     padding-top: 75px;
+    &:after{
+      content:'';
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,.4);
+    }
+  }
+  .ReviewBlogContainerBackground .container{
+    position: relative;
+    z-index: 2;
   }
   .ReviewBlogContainerBackgroundAlt{
     position: absolute;

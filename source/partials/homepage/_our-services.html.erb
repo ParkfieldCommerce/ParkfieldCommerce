@@ -2,7 +2,7 @@
   <ul class="OurServices__links">
     <% dato.homepage_service_section.links.each do |link| %>
     <li class="OurServices__link-container">
-      <%= link_to link.text, link.url, :class => "OurServices__link Link--animated" %>
+      <%= link_to link.text, link.url, :class => "OurServices__link Link--underline" %>
     </li>
     <% end %>
   </ul>

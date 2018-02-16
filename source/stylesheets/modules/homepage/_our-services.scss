@@ -15,17 +15,7 @@
     width: 50%;
   }
   &__link{
-    color: black;
     font-size: 1.5rem;
-    &:after{
-      background-color: black;
-      width: 90%;
-    }
-    &:hover{
-      &:after{
-        width: 90%;
-      }
-    }
   }
   @include maxQuery(1200px){
     padding: 0px 10px;
@@ -45,6 +35,7 @@
     &__description{
       width: 100%;
       align-items: flex-end;
+      justify-content: space-between;
     }
     &__heading{
       margin-top: 0px;
@@ -52,6 +43,9 @@
     &__body p{
       font-size: .875rem;
       margin-bottom: 60px;
+    }
+    &__link-container{
+      width: 49%;
     }
     &__link-container:first-child,
     &__link-container:nth-child(2){

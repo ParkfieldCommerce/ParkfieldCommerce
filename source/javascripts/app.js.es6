@@ -103,7 +103,7 @@ class Theme{
         }]
       });
 
-      desktopButtons.each(function(i, button){
+      buttonSet.each(function(i, button){
         $(this).on('click', ()=>{
           ReviewsSlider.slick('slickGoTo', i);
         });
