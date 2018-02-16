@@ -1,0 +1,8 @@
+<% quoteBanner = dato.quote_banner %>
+<div class="GetQuoteBanner">
+  <h3><%= quoteBanner.heading %></h3>
+  <div class="GetQuoteBanner__btns">
+    <%= link_to quoteBanner.email_button_text, quoteBanner.email_button_url, :class=>"GetQuoteBanner__Btn GetQuoteBanner__Btn--email Btn Btn--filled" %>
+    <%= link_to quoteBanner.phone_button_text, quoteBanner.phone_button_url, :class=>"GetQuoteBanner__Btn GetQuoteBanner__Btn--phone Btn Btn--ghost" %>
+  </div>
+</div>
