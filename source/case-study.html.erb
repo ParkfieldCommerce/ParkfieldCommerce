@@ -19,19 +19,20 @@
 		<div class="CaseStudy__banner__image--1">
 			<img class="CaseStudy__banner" src="<%= caseStudy.banner_image.url %>">				
 		</div>
-		
+
 		<div class="CaseStudy__banner__container--2 CaseStudy__gray">
 			<div class="container m">
-				<div class="SkewedBanner medium-10">
-					<div class="CaseStudy__banner__text--1 large-10 medium-10">
+			<div class="row">
+				<div class="CaseStudy__banner__container--3 SkewedBanner small-11">
+					<div class="CaseStudy__banner__text__container--1 large-10 medium-10 small-10">
 						<p class="CaseStudy__banner__text__p--1"><%= caseStudy.quote_source%>, <span><%= caseStudy.quote_source_title %></span></p>
-						<div class="CaseStudy__banner__text--3"><%= caseStudy.quote_source_body %></div>		
+							<div class="CaseStudy__banner__text--3"><%= caseStudy.quote_source_body %></div>
+						</div>
 					</div>
-				</div>		
+				</div>	
 			</div>
 		</div>
 	</div>
-
 	
 	<div class="CaseStudy__overview CaseStudy__gray">
 		<div class="CaseStudy__overview__container--1">
@@ -78,7 +79,7 @@
 		</div>
 	</div>
 	
-	<div class="CaseStudy__solution__container--1 space-120 ">
+	<div class="CaseStudy__solution__container--1 space-120 mobile-space-60 ">
 		<div class="container m ">
 			<div class="CaseStudy__solution__container--2">
 				<div class="row">
@@ -97,7 +98,7 @@
 		</div>
 	</div>
 
-	<div class="CaseStudy__result__container--1 CaseStudy__gray">
+	<div class="CaseStudy__result__container--1 CaseStudy__gray mobile-space-padding-60">
 		<div class="container m">
 			<div class="row">
 				<div class="large-9 medium-10 small-10">
@@ -117,11 +118,23 @@
 					</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="large-9 medium-10 small-10">
+					<div class="CaseStudy__rate__container--3">
+						<% caseStudy.award_image.each do |image| %>
+						<div class="caseStudy__rate__container--2 large-3 medium-6 small-6">
+							<img src="<%= image.url %>">
+						</div>
+						<% end %>
+
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	
 	<div class="container m">
-		<div class="row space-90 CaseStudy__form__container--1">
+		<div class="row space-90 mobile-space-60 CaseStudy__form__container--1">
 				<div class="CaseStudy CaseStudy__form__container--2 large-12 medium-10 small-12">
 					<form>
 						<h3>Let's talk about your project</h3>
@@ -135,7 +148,7 @@
 		</div>
 	</div>
 
-	<div class="space-120 CaseStudy__banner__container--1" style="width:100%; height:398px;background-image:url('<%= banner.url %>'); background-position:center center; background-repeat:no-repeat;">
+	<div class="space-120 mobile-space-60 CaseStudy__banner__container--1" style="width:100%; height:398px;background-image:url('<%= banner.url %>'); background-position:center center; background-repeat:no-repeat;">
 		<div class="container m">
 			<div class=" row">
 				<div class="CaseStudy CaseStudy__banner__logo__container">

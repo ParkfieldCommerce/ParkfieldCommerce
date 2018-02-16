@@ -25,3 +25,15 @@
 .padding-120{
 	padding-top:120px;
 }
+
+.mobile-space-60{
+  @media screen and (max-width: $s){
+    margin-top: 60px;
+  }
+}
+.mobile-space-padding-60{
+  @media screen and (max-width: $s){
+    padding-top: 60px;
+  }
+
+}
