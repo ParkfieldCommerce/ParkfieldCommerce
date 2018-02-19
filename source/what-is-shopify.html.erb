@@ -1,0 +1,34 @@
+---
+title: ParkfieldCommerce - What is Shopify?
+pageClass: Whatis
+---
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'whatis',
+    large_image: dato.what_is_shopify.background,
+    heading: dato.what_is_shopify.hero_heading,
+    subHeadingImage: dato.what_is_shopify.hero_subheading_image
+  } 
+%>
+<div class="container m">
+<%= partial './partials/global/skewedBanner',
+  locals:{
+    type:'whatis',
+    heading: dato.what_is_shopify.skewed_banner_heading,
+    body: dato.what_is_shopify.skewed_banner_body,
+    stats: dato.what_is_shopify.skewed_banner_stats
+  }
+ %>
+</div>
+<% dato.what_is_shopify.content_block.each do |block| %>
+  <%= partial './partials/global/image-text',
+    locals:{
+      imagePosition: block.image_on_left,
+      altBackground: block.alt_background,
+      heading: block.heading,
+      body: block.body,
+      image: block.image
+    }
+   %>
+<% end %>
+<%= partial './partials/global/consultationBanner' %>

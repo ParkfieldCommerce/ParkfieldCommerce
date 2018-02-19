@@ -1,0 +1,123 @@
+.ImageText{
+  .container{
+    display: flex;
+    justify-content: space-between;
+  }
+  &--alt-bg{
+    background-color: $dark-bg;
+  }
+  &__image{
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    img{
+      vertical-align: middle;
+      width: 100%;
+    }
+  }
+  &__text{
+    width: 50%;
+    max-width: 100%;
+  }
+  &__heading{
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+  h4{
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  p{
+    margin-top: 0;
+    margin-bottom: 40px;
+    &:last-child{
+      margin-bottom: 0px;
+    }
+  }
+  &__body-grid{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+    p{
+      margin-bottom: 0px;
+    }
+    div{
+      width: 50%;
+      margin-bottom: 40px;
+    }
+    div:nth-last-child(1),
+    div:nth-last-child(2){
+      margin-bottom: 0px;
+    }
+  }
+}
+
+.ImageText--image-left .ImageText{
+  &__text{
+    padding-left: 90px;
+  }
+}
+
+.ImageText--image-right .ImageText{
+  &__text{
+    padding-right: 90px;
+  }
+}
+
+@include maxQuery(1200px){
+  .ImageText{
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@include maxQuery($s){
+  .ImageText--image-right .container{
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .ImageText--image-left .container{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ImageText{
+    &__text,
+    &__image{
+      width: 90%;
+      margin: 0 auto;
+    }
+    &__image{
+      margin-bottom: 30px;
+    }
+    &__heading{
+      font-size: 1.125rem;
+    }
+    h4{
+      margin-bottom: 10px;
+    }
+    p{
+      margin-bottom: 30px;
+    }
+    h4, p{
+      font-size: .875rem;
+    }
+    &__body-grid{
+      margin-bottom: 0px;
+      div,
+      div:nth-last-child(1),
+      div:nth-last-child(2){
+        width: 100%;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  .ImageText--image-right .ImageText__text,
+  .ImageText--image-right .ImageText__image{
+    padding-right: 0;
+  }
+  .ImageText--image-left .ImageText__text,
+  .ImageText--image-left .ImageText__image{
+    padding-left: 0;
+  }
+}

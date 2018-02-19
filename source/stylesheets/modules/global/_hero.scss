@@ -4,7 +4,7 @@
     z-index: 1;
     display: block;
     min-height: 550px;
-    height: 98vh;
+    height: 88vh;
     width: 100%;
     margin-top: -70px;
     background-size: cover;
@@ -50,4 +50,10 @@
       max-width: 200px;
     }
   }
+}
+
+.Hero__image--homepage{}
+.Hero__image--casestudy,
+.Hero__image--whatis{
+  height: 70vh;
 }

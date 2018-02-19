@@ -5,6 +5,10 @@
 	width: 100%;
   h3{
     margin-top: 0px;
+    color: white;
+  }
+  p{
+    color: white;
   }
 	&:after {
 		content: "";
@@ -93,7 +97,6 @@
 
 .SkewedBanner--general{
   margin-top: -50px;
-
   &:after{
     height: 100px;
     bottom: -30px;
@@ -133,7 +136,7 @@
   @include maxQuery($s){
     &__row{
       padding-top: 25px;
-      padding-bottom: 50px;
+      padding-bottom: 40px;
     }
     &__source,
     &__title{
@@ -141,6 +144,79 @@
       font-size: 1.25rem;
     }
     &__body p{
+      font-size: .875rem;
+    }
+  }
+}
+
+.SkewedBanner--whatis .SkewedBanner{
+  &__flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__row{
+    justify-content: center;
+  }
+  &__heading{
+    margin-bottom: 25px;
+  }
+  &__body p{
+    margin: 0px;
+  }
+  &__body--stats{
+    display: flex;
+  }
+  &__stat{
+    font-size: 2.25rem;
+  }
+  &__label{
+    font-size: 1.5rem;
+  }
+}
+@include maxQuery(1000px){
+.SkewedBanner--whatis .SkewedBanner{
+  &__flex{
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  &__text{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+}
+@include maxQuery($s){
+  .SkewedBanner--whatis .small-12{
+    display: block;
+    flex: unset;
+    width: 100%;
+  }
+  .SkewedBanner--whatis .small-6,
+  .SkewedBanner--whatis .small-5,{
+    max-width: 100%;
+    width: 100%;
+    flex: unset;
+  }
+  .SkewedBanner--whatis .SkewedBanner{
+    &__text{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &__heading{
+      font-size: 1.5rem;
+    }
+    &__body--stats{
+      margin-top: 30px;
+      div{
+        width: 33.333%;
+      }
+    }
+    &__stat{
+      display: block;
+      font-size: 1.5rem;
+    }
+    &__label{
       font-size: .875rem;
     }
   }

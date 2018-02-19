@@ -1,4 +1,4 @@
-<% if locals.has_key? :type %>
+<% if type == 'homepage' %>
 <style>
   .Hero__image--homepage{
     background-image: url('<%= large_image.url %>');
@@ -17,20 +17,27 @@
 <% end %>
 
 <div class="Hero">
-<% if locals.has_key? :type %>
+<% if type == 'homepage' %>
 <div class="Hero__image Hero__image--homepage">
   <div class="Hero__text">
     <h1 class="Hero__text__heading"><%= heading %></h1>
     <div class="Hero__text__partners">Certified Partners</div>
-    <img src="<%= dato.homepage_hero.partners.url %>" alt="">
+    <img src="<%= subHeadingImage.url %>" alt="<%= subHeadingImage.alt %>">
   </div>
 </div>
-<% else %>
-<div class="Hero__image Hero__image--other" style="background-image: url('<%= large_image.url %>');">
+<% elsif type == 'caseStudy' %>
+<div class="Hero__image Hero__image--casestudy" style="background-image: url('<%= large_image.url %>');">
   <div class="Hero__text">
     <h1 class="Hero__text__heading"><%= heading %></h1>
-    <div class="Hero__text__partners">Certified Partners</div>
-    <img src="<%= dato.homepage_hero.partners.url %>" alt="">
+    <div class="Hero__builtwith">
+      Built with
+    </div>
+  </div>
+</div>
+<% elsif type == 'whatis' %>
+<div class="Hero__image Hero__image--whatis" style="background-image: url('<%= large_image.url %>');">
+  <div class="Hero__text">
+    <h1 class="Hero__text__heading"><%= heading %></h1>
   </div>
 </div>
 <% end %>

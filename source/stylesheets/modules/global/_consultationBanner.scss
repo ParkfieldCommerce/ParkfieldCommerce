@@ -1,0 +1,13 @@
+.ConsultationBanner{
+  background-color: $skewed-banner;
+  text-align: center;
+  &__heading{
+    color: white;
+  }
+  &__body{
+    p{
+      font-size: 1.5rem;
+      color: white;
+    }
+  }
+}

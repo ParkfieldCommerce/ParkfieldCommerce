@@ -1,0 +1,8 @@
+.Whatis{
+  .SkewedBanner{
+    margin-bottom: 30px;
+    @include maxQuery($s){
+      margin-bottom: 0;
+    }
+  }
+}

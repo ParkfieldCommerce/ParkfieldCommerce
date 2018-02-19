@@ -1,9 +1,4 @@
-<% if locals.has_key? :type %>
-  <% modifier = 'homepage' %>
-<% else %>
-  <% modifier = 'general' %>
-<% end %>
-<% if modifier == 'homepage' %>
+<% if type == 'homepage' %>
 <div class="SkewedBanner SkewedBanner--homepage">
   <div class="container s">
     <div class="SkewedBanner__row">
@@ -16,7 +11,7 @@
     </div>
   </div>
 </div>
-<% else %>
+<% elsif type == 'caseStudy' %>
 <div class="SkewedBanner SkewedBanner--general">
   <div class="SkewedBanner__row row">
     <div class="SkewedBanner__text small-offset-1 small-10">
@@ -26,6 +21,26 @@
       </h3>
       <div class="SkewedBanner__body">
       <%= quoteSourceBody %>
+      </div>
+    </div>
+  </div>
+</div>
+<% elsif type == 'whatis' %>
+<div class="SkewedBanner SkewedBanner--general SkewedBanner--whatis">
+  <div class="SkewedBanner__row row">
+    <div class="small-10 SkewedBanner__flex">
+      <div class="SkewedBanner__text small-12">
+        <h3 class="SkewedBanner__heading"><%= heading %></h3>
+      </div>
+      <div class="SkewedBanner__text small-6">
+        <div class="SkewedBanner__body">
+        <%= body %>
+        </div>
+      </div>
+      <div class="SkewedBanner__text small-5">
+        <div class="SkewedBanner__body SkewedBanner__body--stats">
+        <%= stats %>
+        </div>
       </div>
     </div>
   </div>
