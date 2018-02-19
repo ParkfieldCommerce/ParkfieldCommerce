@@ -1,0 +1,256 @@
+$migration-color-1: #4C54B0;
+.migration-page{
+	background-color:#e5e5e5;
+}
+	.background-gray{
+		background-color:#E5E5E5;
+	}
+.Migration{
+	height:100vh;
+	display:flex;
+	align-items:center;
+	&__text__hover--1{
+		height:50px;
+		width:180px;
+		background-color:$migration-color-1;
+		color:white;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		position:absolute;
+		left:50%;
+		top:-40px;
+		transform:translate(-50%, -50%);
+	}
+	&__text__hover--1:after{
+		content: '';
+		display:block;
+		background-color:$migration-color-1;
+		padding:14px;
+		position:absolute;
+		left:35%;
+		top:22%;
+    transform-origin: center;
+    transform: translate(50%, 50%) rotate(45deg);
+    z-index:-1;
+	}
+	&__downarrow--1{
+		margin-right:10px;
+	}
+	&__downarrow--2{
+		margin-right:10px;
+	}
+	&__active{
+		display:flex!important;
+		flex-flow:row wrap;
+	}
+	&__text__container--1{
+		display:flex;
+		align-items:baseline;
+		justify-content:center;
+	}
+	&__text__container--2{
+		position:relative;
+	}
+	&__text__container--3{
+		display:flex;
+		align-items:baseline;
+		justify-content:center;
+	}
+	&__text__container--4{
+		position:relative;
+	}
+	&__text--1{
+		font-size:3rem;
+		font-weight:800;
+		color:black;
+	}
+	&__text--2{
+		border-bottom:3px solid $migration-color-1;
+		min-width:150px;
+		width: auto;
+		min-height:55px;
+		margin-left:10px;
+		margin-right:10px;
+		font-size:3rem;
+		font-weight:800;
+		color:$migration-color-1;
+		margin-bottom:-15px;
+	}
+	&__text--3{
+		font-size:3rem;
+		font-weight:800;
+		color:black;
+	}
+	&__text--4{
+		font-size:3rem;
+		font-weight:800;
+		color:black;
+	}
+	&__text--5{
+		border-bottom:3px solid $migration-color-1;
+		min-width:250px;
+		width:auto;
+		min-height:55px;
+		margin-left:10px;
+		margin-right:10px;
+		font-size:3rem;
+		font-weight:800;
+		color:$migration-color-1;
+		margin-bottom:-15px;
+	}
+	&__text__list--1{
+		display:none;
+		position:absolute;
+		font-size:1.5rem;
+		background-color:white;
+		margin-left:10px;
+		text-align:center;
+		top:58px;
+		width:100%;
+	}
+	&__text__list--1 li{
+		width:100%;
+		padding:22px 0;
+		padding-right:.5px;
+		color:$migration-color-1;
+		font-weight:800;
+		&:hover{
+			background-color:$migration-color-1;
+			color:white;
+		}		
+	}
+	&__text__list--1 li:first-child{
+		padding:0;
+	}
+	&__text__list--2{
+		display:none;
+
+	}
+	&__text__list--3{
+		display:none;
+		position:absolute;
+		font-size:1.5rem;
+		background-color:white;
+		margin-left:10px;
+		text-align:center;
+		top:58px;
+		width:100%;
+	}
+	&__text__list--3 li{
+		width:100%;
+		padding:22px 0;
+		padding-right:.5px;
+		color:$migration-color-1;
+		font-weight:800;
+		&:hover{
+			background-color:$migration-color-1;
+			color:white;
+		}
+	}
+	&__text__list--3 li:first-child{
+		padding:0;
+	}
+	&__text__list--4{
+		display:none;
+	}
+	@media screen and (max-width:850px){
+		&__downarrow--1{
+
+		}		
+		&__downarrow--2{
+
+		}
+		&__downarrow--1 svg{
+
+			width:20px;
+			height:10px;
+		}
+		&__downarrow--2 svg{
+
+			width:20px;
+			height:10px;
+		}
+		&__text--1{
+			font-size:2rem;
+		}
+		&__text--2{
+			min-width:150px;
+			font-size:2rem;
+			min-height:30px;
+		}
+		&__text--3{
+			font-size:2rem;
+		}
+		&__text--4{
+			font-size:2rem;
+		}
+		&__text--5{
+			font-size:2rem;
+			min-width:150px;
+			min-height:30px;
+		}
+	}
+	@media screen and (max-width:$s){
+		&__text__hover--1{
+			display:none;
+		}
+		&__text--1{
+			font-size:1.125rem;
+		}
+		&__text--2{
+			min-width:100px;
+			font-size:1.125rem;
+		}
+		&__text--3{
+			font-size:1.125rem;
+		}
+		&__text--4{
+			font-size:1.125rem;
+		}
+		&__text--5{
+			font-size:1.125rem;
+			min-width:150px;
+		}
+		&__text__list--1{
+			font-size:1.125rem;
+			top:33px;
+		}
+		&__text__list--3{
+			font-size:1.125rem;
+			top:33px;
+		}
+	}
+	@media screen and (max-width:375px){
+
+		&__text--1{
+			font-size:1rem;
+		}
+		&__text--2{
+			min-width:100px;
+			font-size:1rem;
+			margin-left:5px;
+			margin-right:5px;
+		}
+		&__text--3{
+			font-size:1rem;
+		}
+		&__text--4{
+			font-size:1rem;
+		}
+		&__text--5{
+			font-size:1rem;
+			min-width:150px;
+			margin-left:3px;
+			margin-right:3px;
+		}
+		&__text__list--1{
+			font-size:1rem;
+			top:33px;
+		}
+		&__text__list--3{
+			font-size:1rem;
+			top:33px;
+		}
+	}
+}
