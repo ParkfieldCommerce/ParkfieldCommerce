@@ -2,6 +2,9 @@
 	display:flex;
 	align-items:center;
 	flex-flow:row wrap;
+  img{
+    vertical-align: middle;
+  }
 	&__gray{
 		background-color:#FAFAFA;
 	}
@@ -20,7 +23,6 @@
 		}
 		&__image--1 img{
 			width:100%;
-			vertical-align: middle;
 		}
 		&__text__container--1{
 			margin:0 auto;

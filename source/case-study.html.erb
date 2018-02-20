@@ -1,9 +1,6 @@
 
 
-<% firstSection = caseStudy.content_block[1] %>
 
-<% resultHeading = caseStudy.result_heading %>
-<% resultBody = caseStudy.result_body %>
 <% banner = caseStudy.next_study_banner %>
 <% bannerLogo = caseStudy.next_study_logo %>
 <% caseStudyContent1 = caseStudy.content_block[0] %>
@@ -13,11 +10,12 @@
 <% caseStudyPages3 = caseStudy.webpage_images[2] %>
 <% caseStudySlider1 = caseStudy.slider[0] %>
 <% caseStudySlider2 = caseStudy.slider[1] %>
+<% resultHeading = caseStudy.result_heading %>
+<% resultBody = caseStudy.result_body %>
+<%= resultStats = caseStudy.results_stat %>
 	<%= partial './partials/global/hero', 
   locals:{
     type:'caseStudy',
-    mobile_image: caseStudy.banner_image,
-    med_image: caseStudy.banner_image,
     large_image: caseStudy.banner_image,
     heading: caseStudy.heading
   } 
@@ -111,7 +109,7 @@
 			<div class="row">
 				<div class="large-9 medium-10 small-10">
 					<div class="CaseStudy__rate__container--1">
-						<% caseStudy.results_stat.each do |stat| %>
+						<% resultStats.each do |stat| %>
 						<div class="CaseStudy__rate__container--2 large-3 medium-6 small-6">
 							<p class="CaseStudy__rate__title--1"><%= stat.percentage %></p>
 							<p class="CaseStudy__rate__body--1"><%= stat.label %></p>
@@ -128,7 +126,6 @@
 							<img src="<%= image.url %>">
 						</div>
 						<% end %>
-
 					</div>
 				</div>
 			</div>
