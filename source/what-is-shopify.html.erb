@@ -31,4 +31,9 @@ pageClass: Whatis
     }
    %>
 <% end %>
+<%= partial './partials/whatis/platform-features',
+  locals:{
+    dataBlocks: dato.what_is_shopify.features
+  }
+ %>
 <%= partial './partials/global/consultationBanner' %>

@@ -1,0 +1,19 @@
+<div class="PlatformFeatures padding-120 padding-bottom-120">
+<div class="container m">
+<% dataBlocks.each do |block| %>
+  <div class="PlatformFeature">
+    <%= image_tag block.image.url, alt: block.image.alt, class:"PlatformFeature__image" %>
+    <div class="PlatformFeature__text">
+      <% link_to block.link_url do%>
+      <h2 class="PlatformFeature__heading">
+        <%= block.heading %>
+        </h2>
+      <% end %>
+      <div class="PlatformFeature__body">
+        <%= block.body %>
+      </div>
+    </div>
+  </div>
+<% end %>
+</div>
+</div>

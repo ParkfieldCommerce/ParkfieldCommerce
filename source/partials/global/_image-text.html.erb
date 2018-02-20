@@ -13,7 +13,7 @@
   </div>
   <% unless imagePosition %>
     <div class="ImageText__image">
-      <%= image_tag image.url %>
+      <%= image_tag(image.url, alt: image.alt) %>
     </div>
   <% end %>
   </div>

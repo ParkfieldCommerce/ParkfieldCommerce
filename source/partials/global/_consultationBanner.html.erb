@@ -1,9 +1,12 @@
 <div class="ConsultationBanner padding-90 padding-bottom-90">
   <div class="container s">
-  <h3 class="ConsultationBanner__heading"><%= dato.consultation_banner.heading %></h3>
-  <div class="ConsultationBanner__body">
-    <%= dato.consultation_banner.body %>
+  <div class="ConsultationBanner__content">
+    <h3 class="ConsultationBanner__heading"><%= dato.consultation_banner.heading %></h3>
+    <div class="ConsultationBanner__body">
+      <%= dato.consultation_banner.body %>
+    </div>
+    <%= link_to dato.consultation_banner.link_text, dato.consultation_banner.link_url, :class=>"ConsultationBanner__button Btn Btn--filled" %>
+    </div>
   </div>
-  <%= link_to dato.consultation_banner.link_text, dato.consultation_banner.link_url, :class=>"ConsultationBanner__Btn Btn Btn--filled" %>
-  </div>
+  <%= image_tag dato.consultation_banner.image.url, alt: dato.consultation_banner.image.alt, class:"ConsultationBanner__image" %>
 </div>
