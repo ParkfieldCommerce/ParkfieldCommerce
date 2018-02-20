@@ -81,10 +81,11 @@ class Theme {
     $('.FilterBtn').on('click touch', function() {
       var category = $(this).data('category');
       if (category == 'All') {
-        $('.brand').not(':eq(0)').show();
+        $('.brand').velocity({opacity: 0}, {display: 'none'});
+        $('.brand').not('.category-all').velocity({opacity: 0.5}, {display: 'block'});
       } else {
-        $('.brand').hide();
-        $('.brand[data-category="' + category + '"]').show();
+        $('.brand').velocity({opacity: 0}, {display: 'none'});
+        $('.brand[data-category="' + category + '"]').velocity({opacity: 0.5}, {display: 'block'});
       }
     });
     // ===========================================================
