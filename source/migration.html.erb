@@ -1,0 +1,141 @@
+---
+layout: migration-layout
+---
+
+
+
+<div class="Migration background-gray">
+	<div class="container m">
+		<div class="row">
+			<div class="large-12 medium-12 small-12">
+				<div class="Migration__text__container--1">
+					<p class="Migration__text--1">I use</p>
+					<div class="Migration__text__container--2 js__container--2">
+						<div class="Migration__text__hover--1">Start Here</div>
+						<div class="Migration__text--2 js__text__list--2">
+							
+						</div>
+
+
+						<div class="Migration__text__list--1 js-visible-select-1">
+							<li data-value=""></li>
+							<% dato.migration.migration_from.each do |migration| %>
+							<li data-value="<%= migration.text.rstrip %>" > <%= migration.text =%> </li>
+							<% end %>
+						</div>
+						
+						<select class="Migration__text__list--2 js-hidden-select-1">
+							<option value=""></option>
+
+							<% dato.migration.migration_from.each do |migration| %>
+							<option value="<%= migration.text.rstrip %>" > <%= migration.text =%> </option>
+							<% end %>
+
+						</select>
+					</div>
+						<div class="Migration__downarrow--1">
+						<%= partial './partials/global/svg-icons',
+						  locals:{
+						    icon: 'down-arrow'
+						  }
+						%>
+						</div>
+					<p class="Migration__text--3">
+						to manage my store
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="large-12 medium-12 small-12">
+				<div class="Migration__text__container--3">
+					<p class="Migration__text--4">I want to switch to</p>
+					<div class="Migration__text__container--4 js__container--4">
+						<div class="Migration__text--5 js__text__list--4">
+						</div>
+
+
+
+						<div class="Migration__text__list--3 js-visible-select-2">
+							<li data-value=""></li>
+
+							<% dato.migration.migration_to.each do |migration| %>
+							<li data-value="<%= migration.text.delete(' ') %>" > <%= migration.text =%> </li>
+							<% end %>
+						</div>
+						
+						<select class="Migration__text__list--4 js-hidden-select-2" >
+							<option value=""></option>
+
+							<% dato.migration.migration_to.each do |migration| %>
+							<option value="<%= migration.text.delete(' ') %>" > <%= migration.text =%> </option>
+							<% end %>
+						</select>
+						</div>
+						<div class="Migration__downarrow--2">
+						<%= partial './partials/global/svg-icons',
+						  locals:{
+						    icon: 'down-arrow'
+						  }
+						%>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+	$('.js-hidden-select-1').val('');
+	$('.js-hidden-select-2').val('');
+
+	$('.js__container--2').click(function(){
+		$('.js-visible-select-1').toggleClass('Migration__active');
+	});
+
+	$('.js-visible-select-1 li').click(function(){
+		$('.js__text__list--2').text($(this).text());
+		$('.Migration__text__hover--1').fadeOut();
+	});
+	$('.js__container--4').click(function(){
+		$('.js-visible-select-2').toggleClass('Migration__active');
+	});
+
+	$('.js-visible-select-2 li').click(function(){
+		$('.js__text__list--4').text($(this).text());
+	});
+
+	function checkSelects(){
+		var hiddenSelect1Value = $('.js-hidden-select-1').val();
+		var hiddenSelect2Value = $('.js-hidden-select-2').val();
+		if (hiddenSelect1Value != '' && hiddenSelect2Value != ''){
+			$('.Migration .container').fadeOut('slow', function(){
+			location.href = '/' + hiddenSelect1Value + '-to-' + hiddenSelect2Value; 
+
+			});
+		}
+		console.log(hiddenSelect1Value);
+		console.log(hiddenSelect2Value == '');
+
+	}
+	//On fake change, change real select values
+  $('.js-visible-select-1 li').on('click',function (e) {
+    var target = $(this).data('value');
+    $('.js-hidden-select-1').val(target);
+    checkSelects();
+  });
+
+  $('.js-visible-select-2 li').on('click',function (e) {
+    var target = $(this).data('value');
+    $('.js-hidden-select-2').val(target);
+    checkSelects();
+  });
+
+
+});
+
+
+</script>
