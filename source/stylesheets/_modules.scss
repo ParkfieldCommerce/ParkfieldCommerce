@@ -1,4 +1,5 @@
 /* Homepage */
+// ================Global================
 @import './modules/global/navigation';
 @import './modules/global/newsletter';
 @import './modules/global/hero';
@@ -8,12 +9,20 @@
 @import './modules/global/skewed-banner';
 @import './modules/global/consultationBanner';
 @import './modules/global/skewed-banner';
+
+// ==================Homepage==================
 @import './modules/homepage/case-study-grid';
 @import './modules/homepage/our-services';
 @import './modules/homepage/video-banner';
 @import './modules/homepage/statistics';
 @import './modules/homepage/reviews-slider';
 @import './modules/homepage/blog-grid';
+
+// ==================Migration==================
 @import './modules/migration/migration.scss';
+
+// ==================Case Study==================
 @import './modules/case-study/case-study.scss';
+
+// ==================What Is?????==================
 @import './modules/whatis/platform-features.scss';
