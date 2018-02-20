@@ -53,7 +53,9 @@ configure :development do
 end
 
 configure :build do
-  activate :dato, live_reload: true
+  activate :dato, 
+  live_reload: true,
+  token: ENV['DATO_API_TOKEN']
   activate :minify_css
   #activate :minify_javascript
   dato.tap do |dato|
