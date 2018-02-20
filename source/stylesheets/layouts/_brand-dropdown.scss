@@ -85,7 +85,7 @@
       padding: 30px;
       display: flex;
       flex-flow: row wrap;
-      align-items: flex-start;
+      align-content: flex-start;
       height: 100%;
     }
 
@@ -97,7 +97,7 @@
       opacity: 0.5;
       transition: all 0.5s cubic-bezier(.25,.46,.45,.94);
       width: 20%;
-      height: 25%;
+      height: 160px;
 
       &:hover {
         opacity: 1;
@@ -110,11 +110,11 @@
 
       .logo {
         position: absolute;
-        top: 1%;
-        right: 1%;
-        left: 1%;
-        bottom: 1%;
-        margin: 0 15% 10%;
+        top: 5%;
+        right: 5%;
+        left: 5%;
+        bottom: 5%;
+        margin: 0 15%;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
