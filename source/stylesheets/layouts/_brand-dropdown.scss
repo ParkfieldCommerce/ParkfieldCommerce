@@ -1,7 +1,7 @@
 .BrandDropdown {
   text-align: center;
   position: absolute;
-  z-index: 600;
+  z-index: 2;
   display: block;
   padding: 0;
   height: 100vh;
@@ -9,13 +9,17 @@
   left: 0;
   right: 0;
   background-color: #000;
+  @include maxQuery(1000px) {
+    display: none;
+  }
 
   .FilteredList {
     position: absolute;
-    top: 0;
+    top: 110px;
     left: 0;
     right: 0;
     z-index: 200;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 
     ul {
       display: flex;
@@ -69,7 +73,7 @@
 
   .BrandsWrapper {
     position: absolute;
-    top: 80px;
+    top: 180px;
     right: 0;
     left: 0;
     bottom: 0;
@@ -97,7 +101,7 @@
       opacity: 0.5;
       transition: all 0.5s cubic-bezier(.25,.46,.45,.94);
       width: 20%;
-      height: 160px;
+      height: 25%;
 
       &:hover {
         opacity: 1!important;
