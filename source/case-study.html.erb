@@ -9,24 +9,27 @@
 <% webpageImage2 = caseStudy.webpage_images[1] %>
 <% webpageImage3 = caseStudy.webpage_images[2] %>
 
-	<%= partial './partials/global/hero', 
+<%= partial './partials/global/hero', 
   locals:{
     type:'caseStudy',
-    large_image: caseStudy.banner_image,
-    heading: caseStudy.heading
+    mobile_image: caseStudy.banner_gallery[0],
+    med_image: caseStudy.banner_gallery[1],
+    large_image: caseStudy.banner_gallery[2],
+    heading: caseStudy.heading,
+    isShopify: caseStudy.platform
   } 
 %>
 <div class="CaseStudy__gray">
-<div class="container m">
-<%= partial './partials/global/skewedBanner',
-  locals:{
-    type:'caseStudy',
-    quoteSource: caseStudy.quote_source,
-    quoteSourceTitle: caseStudy.quote_source_title,
-    quoteSourceBody: caseStudy.quote_source_body
-  }
- %>
-</div>
+	<div class="container m">
+	<%= partial './partials/global/skewedBanner',
+	  locals:{
+	    type:'caseStudy',
+	    quoteSource: caseStudy.quote_source,
+	    quoteSourceTitle: caseStudy.quote_source_title,
+	    quoteSourceBody: caseStudy.quote_source_body
+	  }
+	 %>
+	</div>
 </div>
 
 <div class="CaseStudy">

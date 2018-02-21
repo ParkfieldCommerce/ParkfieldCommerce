@@ -1,44 +1,55 @@
-<% if type == 'homepage' %>
+<%= 
+#must pass in local variables mobile_image, med_image, large_image, type, heading
+#Case Study Requires: isShopify
+#Homepage/Generic Requires: subHeadingImage 
+
+=%>
 <style>
-  .Hero__image--homepage{
+  .Hero__image{
     background-image: url('<%= large_image.url %>');
   }
   @media screen and (max-width: 1200px){
-    .Hero__image--homepage{
+    .Hero__image{
       background-image: url('<%= med_image.url %>');
     } 
   }
   @media screen and (max-width: 768px){
-    .Hero__image--homepage{
+    .Hero__image{
       background-image: url('<%= mobile_image.url %>');
     } 
   }
 </style>
-<% end %>
 
 <div class="Hero">
 <% if type == 'homepage' %>
-<div class="Hero__image Hero__image--homepage">
-  <div class="Hero__text">
+  <div class="Hero__image Hero__image--homepage">
+  </div>
+  <div class="Hero__text Hero__text--homepage">
     <h1 class="Hero__text__heading"><%= heading %></h1>
     <div class="Hero__text__partners">Certified Partners</div>
     <img src="<%= subHeadingImage.url %>" alt="<%= subHeadingImage.alt %>">
   </div>
-</div>
 <% elsif type == 'caseStudy' %>
-<div class="Hero__image Hero__image--casestudy" style="background-image: url('<%= large_image.url %>');">
-  <div class="Hero__text">
+  <div class="Hero__image Hero__image--casestudy">
+  </div>
+  <div class="Hero__text Hero__text--casestudy">
     <h1 class="Hero__text__heading"><%= heading %></h1>
-    <div class="Hero__builtwith">
-      Built with
+    <div class="Hero__text__builtwith">
+      <p>Built with</p> <% if isShopify == true %> <%= image_tag dato.platform.shopify.url %> <% else %> <%= image_tag dato.platform.big_commerce.url %> <% end %>
     </div>
   </div>
-</div>
 <% elsif type == 'whatis' %>
-<div class="Hero__image Hero__image--whatis" style="background-image: url('<%= large_image.url %>');">
-  <div class="Hero__text">
+  <div class="Hero__image Hero__image--whatis" style="background-image: url('<%= large_image.url %>');">
+  </div>
+  <div class="Hero__text Hero__text-whatis">
     <h1 class="Hero__text__heading"><%= heading %></h1>
   </div>
-</div>
+<% else %>
+  <div class="Hero__image Hero__image--generic">
+  </div>
+  <div class="Hero__text Hero__text--generic">
+    <h1 class="Hero__text__heading"><%= heading %></h1>
+    <img src="<%= subHeadingImage.url %>" alt="<%= subHeadingImage.alt %>">
+  </div>
 <% end %>
 </div>

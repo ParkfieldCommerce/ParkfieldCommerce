@@ -5,7 +5,9 @@ pageClass: Whatis
 <%= partial './partials/global/hero', 
   locals:{
     type:'whatis',
-    large_image: dato.what_is_shopify.background,
+    mobile_image: dato.what_is_shopify.hero_banner_gallery[0],
+    med_image: dato.what_is_shopify.hero_banner_gallery[1],
+    large_image: dato.what_is_shopify.hero_banner_gallery[2],
     heading: dato.what_is_shopify.hero_heading,
     subHeadingImage: dato.what_is_shopify.hero_subheading_image
   } 

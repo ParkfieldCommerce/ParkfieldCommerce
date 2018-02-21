@@ -1,4 +1,5 @@
-.Hero{
+.Hero{    
+  position: relative;
   &__image{
     position: relative;
     z-index: 1;
@@ -13,9 +14,21 @@
   }
   &__text{
     position: absolute;
+    z-index:4;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+  }
+  &:after{
+    content:'';
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background-color:rgba(0,0,0,.3);
+    z-index:2;
   }
   @include maxQuery($s){
     &__image{
@@ -51,7 +64,18 @@
     }
   }
 }
-
+.Hero__text{
+  &__builtwith{    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  &__builtwith p{
+      color:white;
+      margin:0;
+      margin-top:5px;
+  }
+}
 .Hero__image--homepage{}
 .Hero__image--casestudy,
 .Hero__image--whatis{

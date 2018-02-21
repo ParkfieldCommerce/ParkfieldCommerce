@@ -5,9 +5,9 @@ pageClass: Homepage
 <%= partial './partials/global/hero', 
   locals:{
     type:'homepage',
-    mobile_image: dato.homepage_hero.mobile_image,
-    med_image: dato.homepage_hero.med_image,
-    large_image: dato.homepage_hero.large_image,
+    mobile_image: dato.homepage_hero.banner_gallery[0],
+    med_image: dato.homepage_hero.banner_gallery[1],
+    large_image: dato.homepage_hero.banner_gallery[2],
     heading: dato.homepage_hero.heading,
     subHeadingImage: dato.homepage_hero.partners
   } 
