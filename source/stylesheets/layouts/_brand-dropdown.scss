@@ -9,9 +9,6 @@
   left: 0;
   right: 0;
   background-color: #000;
-  @include maxQuery(1000px) {
-    display: none;
-  }
 
   .FilteredList {
     position: absolute;
@@ -20,6 +17,12 @@
     right: 0;
     z-index: 200;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+    @include maxQuery(1000px) {
+      top: 50px;
+    }
+    @include maxQuery(600px) {
+      display: none;
+    }
 
     ul {
       display: flex;
@@ -84,6 +87,10 @@
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 
+    @include maxQuery(1000px) {
+      top: 100px;
+    }
+
     .inner {
       overflow: hidden;
       padding: 30px;
@@ -102,6 +109,12 @@
       transition: all 0.5s cubic-bezier(.25,.46,.45,.94);
       width: 20%;
       height: 25%;
+      @include maxQuery(1000px) {
+        width: 33.3333%;
+      }
+      @include maxQuery(600px) {
+        width: 50%;
+      }
 
       &:hover {
         opacity: 1!important;
