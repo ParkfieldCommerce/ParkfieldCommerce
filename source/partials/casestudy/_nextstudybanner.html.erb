@@ -1,0 +1,31 @@
+<% nextStudyBanner = caseStudy.next_study_banner %>
+<% nextStudyBannerLogo = caseStudy.next_study_logo %>
+<% nextUrl = dato.case_studies.first.handle %>
+<% nextFound = false %>
+<% dato.case_studies.each do |nextCaseStudy| %>
+	<% if nextFound == true %>
+		<% nextUrl = nextCaseStudy.handle %>
+		<% break %>
+	<% end %>
+	<% if caseStudy.handle == nextCaseStudy.handle %>
+		<% nextFound = true %>
+	<% end %>
+<% end %>
+
+
+<div class="space-120 mobile-space-60 CaseStudy__nextBanner__container--1" style="width:100%; height:398px;background-image:url('<%= nextStudyBanner.url %>'); background-position:center center; background-repeat:no-repeat;">
+	<div class="container m">
+		<div class=" row">
+			<div class="CaseStudy CaseStudy__nextBanner__logo__container">
+				<div class="large-12">
+					<div class="CaseStudy CaseStudy__nextBanner__logo__container__content--1">
+						<div class="CaseStudy__nextBanner__logo__container--2">
+		    		<%= image_tag nextStudyBannerLogo.url, alt: nextStudyBannerLogo.alt, class:"CaseStudy__banner__logo" %>
+		    		</div>
+						<a href="/case-studies/<%= nextUrl %>" class="CaseStudy__nextBanner__link Link--underline">Next Case Study</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

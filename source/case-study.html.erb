@@ -1,18 +1,14 @@
 
 
 
-<% banner = caseStudy.next_study_banner %>
-<% bannerLogo = caseStudy.next_study_logo %>
-<% caseStudyContent1 = caseStudy.content_block[0] %>
-<% caseStudyContent2 = caseStudy.content_block[1] %>
-<% caseStudyPages1 = caseStudy.webpage_images[0] %>
-<% caseStudyPages2 = caseStudy.webpage_images[1] %>
-<% caseStudyPages3 = caseStudy.webpage_images[2] %>
-<% caseStudySlider1 = caseStudy.slider[0] %>
-<% caseStudySlider2 = caseStudy.slider[1] %>
-<% resultHeading = caseStudy.result_heading %>
-<% resultBody = caseStudy.result_body %>
-<%= resultStats = caseStudy.results_stat %>
+
+<% overviewBlock = caseStudy.content_block[0] %>
+<% challengeBlock = caseStudy.content_block[1] %>
+<% solutionBlock = caseStudy.content_block[2] %>
+<% webpageImage1 = caseStudy.webpage_images[0] %>
+<% webpageImage2 = caseStudy.webpage_images[1] %>
+<% webpageImage3 = caseStudy.webpage_images[2] %>
+
 	<%= partial './partials/global/hero', 
   locals:{
     type:'caseStudy',
@@ -38,30 +34,30 @@
 		<div class="CaseStudy__overview__container--1">
 			<div class="row">
 				<div class="CaseStudy__overview__image__container--1 large-6 medium-6 small-10">
-					<img class="CaseStudy__overview__image--1" src="<%= caseStudyContent1.image_gallery[0].url %>">
-					<img class="CaseStudy__overview__image--2" src="<%= caseStudy.overview_mobile_image.url %>">
+			    <%= image_tag overviewBlock.image_gallery[0].url, alt: overviewBlock.image_gallery[0].alt, class:"CaseStudy__overview__image--1" %>
+			    <%= image_tag overviewBlock.image_gallery[1].url, alt: overviewBlock.image_gallery[1].alt, class:"CaseStudy__overview__image--2" %>
 				</div>
 				<div class="CaseStudy__overview__text__container--1 large-6 medium-6">
 					<div class="CaseStudy__overview__text__container--2">
-					<h2><%= caseStudyContent1.heading %></h2>
-					<div> <%= caseStudyContent1.body %></div>
+					<h2><%= overviewBlock.heading %></h2>
+					<div> <%= overviewBlock.body %></div>
 				</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="CaseStudy__challenge" style="width:100%; display:none">
+	<div class="CaseStudy__challenge" style="width:100%;">
 		<div class="container m CaseStudy__challenge__container--1">
 			<div class="CaseStudy__challenge__text large-6">
-				<h2><%= caseStudy.challenge_heading %></h2>
-				<div class=""><%= caseStudy.challenge_body %></div>
+				<h2><%= challengeBlock.heading %></h2>
+				<div class=""><%= challengeBlock.body %></div>
 			</div>
 		</div>
 		<div class="CaseStudy__challenge__slider__container--1 large-6">
-			<% caseStudy.slider.each do |image| %>
+			<% challengeBlock.image_gallery.each do |image| %>
 			<div class="test">
-				<img src="<%= image.url %>">
+			 <%= image_tag image.url, alt: image.alt %>
 			</div>
 			<% end %>	
 		</div>
@@ -71,9 +67,9 @@
 		<div class="">
 			<div class="row">
 				<div class="CaseStudy__pages__container--2 large-12 medium-12 small-10">
-					<img class="CaseStudy__pages__hide--2" src="<%= caseStudyPages1.url%>">
-					<img class="CaseStudy__pages__hide--1" src="<%= caseStudyPages2.url%>">
-					<img class="CaseStudy__pages__hide--3" src="<%= caseStudyPages3.url%>">
+			    <%= image_tag webpageImage1.url, alt: webpageImage1.alt, class:"CaseStudy__pages__hide--2" %>
+			    <%= image_tag webpageImage2.url, alt: webpageImage2.alt, class:"CaseStudy__pages__hide--1" %>
+			    <%= image_tag webpageImage3.url, alt: webpageImage3.alt, class:"CaseStudy__pages__hide--3" %>
 				</div>
 			</div>
 		</div>
@@ -84,81 +80,21 @@
 			<div class="CaseStudy__solution__container--2">
 				<div class="row">
 					<div class="CaseStudy__solution__image__container--1 large-6 medium-10 small-10">
-						<% if caseStudyContent2.image_gallery.length == 1 %>
-						<img class="CaseStudy__solution__image--1" src="<%= caseStudyContent2.image_gallery[0].url %>" alt="<%= caseStudyContent2.image_gallery[0].alt%>">
+						<% if solutionBlock.image_gallery.length == 1 %>
+		    		<%= image_tag solutionBlock.image_gallery[0].url, alt: solutionBlock.image_gallery[0].alt, class:"CaseStudy__solution__image--1" %>
 						<% else %>
 						<% end %>
 					</div>
 					<div class="CaseStudy__solution__text__container--1 large-6 medium-10 small-10">
-						<h2><%= caseStudyContent2.heading %></h2>
-						<div><%= caseStudyContent2.body %></div>
+						<h2><%= solutionBlock.heading %></h2>
+						<div><%= solutionBlock.body %></div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="CaseStudy__result__container--1 CaseStudy__gray mobile-space-padding-60">
-		<div class="container m">
-			<div class="row">
-				<div class="large-9 medium-10 small-10">
-					<h2 class="CaseStudy__result__title--1 "><%= resultHeading %></h2>
-					<div class="CaseStudy__result__body--1"><%= resultBody %></div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="large-9 medium-10 small-10">
-					<div class="CaseStudy__rate__container--1">
-						<% resultStats.each do |stat| %>
-						<div class="CaseStudy__rate__container--2 large-3 medium-6 small-6">
-							<p class="CaseStudy__rate__title--1"><%= stat.percentage %></p>
-							<p class="CaseStudy__rate__body--1"><%= stat.label %></p>
-						</div>
-						<% end %>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="large-9 medium-10 small-10">
-					<div class="CaseStudy__rate__container--3">
-						<% caseStudy.award_image.each do |image| %>
-						<div class="caseStudy__rate__container--2 large-3 medium-6 small-6">
-							<img src="<%= image.url %>">
-						</div>
-						<% end %>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<div class="container m">
-		<div class="row space-90 mobile-space-60 CaseStudy__form__container--1">
-				<div class="CaseStudy CaseStudy__form__container--2 large-12 medium-10 small-12">
-					<form>
-						<h3>Let's talk about your project</h3>
-						<div class="CaseStudy__form__container--3">
-							<input type="email" value="" placeholder="Enter your email address" name="contact[email]" id="Email" aria-label="Join the fête! Sign up here" autocorrect="off" autocapitalize="off">
-							<button type="submit" class="Btn--animatedLeft--reverse" value="Submit"><span>Next</span></button>
-						</div>
-						<a href="" class="hidden-desktop Btn--animatedLeft--reverse"><span>Call (888) 244 9905</span></a>
-					</form>
-				</div>
-		</div>
-	</div>
-
-	<div class="space-120 mobile-space-60 CaseStudy__banner__container--1" style="width:100%; height:398px;background-image:url('<%= banner.url %>'); background-position:center center; background-repeat:no-repeat;">
-		<div class="container m">
-			<div class=" row">
-				<div class="CaseStudy CaseStudy__banner__logo__container">
-					<div class="large-12">
-						<div class="CaseStudy CaseStudy__banner__logo__container__content--1">
-							<img class="CaseStudy__banner__logo" src="<%= bannerLogo.url %>">
-							<a href="" class="">Next Case Study</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	<%= partial './partials/casestudy/results' %>
+	<%= partial './partials/casestudy/email-form' %>
+	<%= partial './partials/casestudy/nextstudybanner' %>
 </div>

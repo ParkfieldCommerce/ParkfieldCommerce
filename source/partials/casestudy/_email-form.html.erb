@@ -1,0 +1,17 @@
+<% emailTitle = dato.case_study_email_form.title %>
+<% emailPhone = dato.case_study_email_form.phone %>
+
+<div class="container m">
+	<div class="row space-90 mobile-space-60 CaseStudy__form__container--1">
+			<div class="CaseStudy CaseStudy__form__container--2 large-12 medium-10 small-12">
+				<form>
+					<h3> <%= emailTitle %> </h3>
+					<div class="CaseStudy__form__container--3">
+						<input type="email" value="" placeholder="Enter your email address" name="contact[email]" id="Email" aria-label="" autocorrect="off" autocapitalize="off">
+						<button type="submit" class="Btn--animatedLeft--reverse" value="Submit"><span>Next</span></button>
+					</div>
+					<a href="tel:<%= emailPhone %>" class="hidden-desktop Btn--animatedLeft--reverse"><span><%= emailPhone %></span></a>
+				</form>
+			</div>
+	</div>
+</div>
