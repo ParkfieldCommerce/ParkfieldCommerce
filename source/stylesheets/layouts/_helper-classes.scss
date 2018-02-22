@@ -22,6 +22,9 @@
 .space-120 {
 	margin-top: 120px;
 }
+.space-bottom-120{
+  margin-bottom: 120px;
+}
 .space-150 {
   margin-top: 150px;
 }
@@ -43,7 +46,11 @@
     margin-bottom: 0px;
   } 
 }
-
+.mobile-space-30{
+  @media screen and (max-width: $s){
+    margin-top: 30px;
+  }
+}
 .mobile-space-60{
   @media screen and (max-width: $s){
     margin-top: 60px;

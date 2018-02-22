@@ -16,13 +16,11 @@
     <%= javascript_include_tag "/javascripts/vendor/slick.min" %>
 
   </head>
-  <body>
+  <body class="<%= current_page.data.pageClass %>">
     <div class="container m">
     <%= partial './partials/header/header' %>
     </div>
-    <div class="<%= current_page.data.pageClass %>">
     <%= yield %>
-    </div>
     <%= javascript_include_tag "app" %>
   </body>
 </html>
