@@ -12,6 +12,16 @@ class Theme {
 
   initBrandDropdown() {
 
+    // isMobile Catch
+    var isMobile = {
+      Android: function() { return navigator.userAgent.match(/Android/i); },
+      BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); },
+      iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+      Opera: function() { return navigator.userAgent.match(/Opera Mini/i); },
+      Windows:  function() { return navigator.userAgent.match(/IEMobile/i); },
+      any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
+    };
+
     // ===========================================================
     // Hover effects - see global/brand-dropdown.scss for more
     // ===========================================================
@@ -31,15 +41,14 @@ class Theme {
           $target = $('.BrandImage[data-hover="' + bgImage + '"]');
         if ($target && !$this.hasClass('active'))
           $target.removeClass('visible');
-      })
-      .on('click', '.brand', function() {
-        var $this = $(this);
-
-        $this.addClass('active');
-        $this.siblings().addClass('no-hover');
-        $brands_overlay.addClass('hide');
       });
-    // ===========================================================
+      // .on('click', '.brand', function() {
+      //   var $this = $(this);
+      //
+      //   $this.addClass('active');
+      //   $this.siblings().addClass('no-hover');
+      //   $brands_overlay.addClass('hide');
+      // });
     // ===========================================================
 
     // ===========================================================
@@ -64,7 +73,7 @@ class Theme {
       return unique_array
     }
     var newArraylist = removeDuplicates(getCategoryList());
-    // Build HTML
+    // Build UL/LI
     function makeUL(array) {
       var list = document.createElement('ul');
       for (var i = 0; i < array.length; i++) {
@@ -76,19 +85,47 @@ class Theme {
       }
       return list;
     }
-    $('#FilteredList').append(makeUL(newArraylist));
-    // Filter Functions
-    $('.FilterBtn').on('click touch', function() {
-      var category = $(this).data('category');
-      if (category == 'All') {
-        $('.brand').velocity({opacity: 0}, {display: 'none'});
-        $('.brand').not('.category-all').velocity({opacity: 0.5}, {display: 'block'});
-      } else {
-        $('.brand').velocity({opacity: 0}, {display: 'none'});
-        $('.brand[data-category="' + category + '"]').velocity({opacity: 0.5}, {display: 'block'});
+    // Build Select/Option
+    function makeSelect(array) {
+      var list = document.createElement('select');
+      for (var i = 0; i < array.length; i++) {
+        var item = document.createElement('option');
+        item.appendChild(document.createTextNode(array[i]));
+        item.setAttribute('data-category', array[i]);
+        list.appendChild(item);
       }
-    });
-    // ===========================================================
+      return list;
+    }
+
+    if (isMobile.any()) {
+      $('#FilteredList').append(makeSelect(newArraylist));
+      $('#FilteredList select').prepend('<option disabled selected>Filter By</option>');
+      // Mobile Filter Functions
+      $('#FilteredList select').on('change', function() {
+          var filterData = $(this).val();
+          if (filterData == 'All') {
+            $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
+            $('.brand').not('.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
+          } else {
+            $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
+            $('.brand[data-category="' + filterData + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
+          }
+      });
+    } else {
+      $('#FilteredList').append(makeUL(newArraylist));
+      // Filter Functions
+      $('.FilterBtn').on('click touch', function() {
+        var category = $(this).data('category');
+
+        if (category == 'All') {
+          $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
+          $('.brand').not('.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
+        } else {
+          $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
+          $('.brand[data-category="' + category + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
+        }
+      });
+    }
     // ===========================================================
   }
 

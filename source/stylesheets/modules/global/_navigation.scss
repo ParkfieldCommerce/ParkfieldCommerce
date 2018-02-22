@@ -107,7 +107,7 @@
   }
   .MainHeader.nav-is-open .Nav{
     height: calc(100vh - 75px);
-    padding-top: 50%;
+    padding-top: 50px;
     &__hamburger i{
       background-color: $logo-color;
     }
