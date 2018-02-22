@@ -38,12 +38,14 @@ configure :development do
   require 'sprockets/es6'
 
   activate :dato, live_reload: true
+  activate :pagination
   dato.tap do |dato|
     dato.case_studies.each do |caseStudy|
       proxy "/case-studies/#{caseStudy.handle}/index.html", "case-study.html", 
       locals: { caseStudy: caseStudy },
       ignore: true
     end
+    paginate dato.articles, "/news", "/news.html", per_page: 1
     dato.articles.each do |article|
       proxy "/articles/#{article.handle}/index.html", "article.html", 
       locals: { article: article },
