@@ -61,6 +61,26 @@
 		}
 	}
 	&__challenge{
+			display:flex;
+			flex-flow:row wrap;
+			align-items:center;
+			min-height:600px;
+			&__container--1.container{
+			}
+			&__slider__container--1{
+				position:absolute;
+				left:50%;
+			}
+			&__arrows__container{
+				display:flex;
+				margin-left:85px;
+			}
+			&__left-arrow{
+				margin-right:45px;
+			}
+			&__right-arrow{
+				margin-left:45px;
+			}
 	}
 	&__pages{
 		&__container--1{
@@ -244,6 +264,11 @@
 				height:341px;
 			}
 		}
+		&__challenge{
+			&__text{
+				margin-left:25px;
+			}
+		}
 		&__overview{
 			&__image--1 img{
 				width:100%;
@@ -280,6 +305,7 @@
 	}
 	@include maxQuery(1024px){
 		&__overview{
+			padding-top:60px;
 			&__image--1{
 				width:100%;
 			}
@@ -296,6 +322,27 @@
 		&__rate{
 			&__container--3{
 				display:none;
+			}
+		}
+		&__challenge{
+			&__slider__container--1{
+				position:relative;
+				width:100%;
+				left:auto;
+			}
+			&__arrows__container{
+				display:flex;
+				justify-content:center;
+				margin-left:0px;
+			}
+			&__text{
+		    margin: 0 auto;
+			}
+			&__left-arrow{
+				margin-right:45px;
+			}
+			&__right-arrow{
+				margin-left:45px;
 			}
 		}
 		&__solution{
@@ -345,13 +392,15 @@
 		}
 		&__challenge{
 			&__container--1{
-				display:none;
+				//display:none;
 			}
 			&__text{
-				display:none;
+				//display:none;
+				margin:0 auto;
 			}
 			&__slider__container--1{
-				display:none;
+
+				//display:none;
 			}
 		}
 		&__pages{

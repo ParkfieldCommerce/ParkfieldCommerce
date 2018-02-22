@@ -11,7 +11,7 @@ layout: migration-layout
 				<div class="Migration__text__container--1">
 					<p class="Migration__text--1">I use</p>
 					<div class="Migration__text__container--2 js__container--2">
-						<div class="Migration__text__hover--1">Start Here</div>
+						<div class="Migration__text__hover--1">Start here</div>
 						<div class="Migration__text--2 js__text__list--2">
 							
 						</div>
@@ -98,8 +98,11 @@ $(document).ready(function(){
 
 	$('.js-visible-select-1 li').click(function(){
 		$('.js__text__list--2').text($(this).text());
-		$('.Migration__text__hover--1').fadeOut();
 	});
+	$('.js__container--2').click(function(){
+		$('.Migration__text__hover--1').fadeOut();
+
+	})
 	$('.js__container--4').click(function(){
 		$('.js-visible-select-2').toggleClass('Migration__active');
 	});
@@ -113,7 +116,7 @@ $(document).ready(function(){
 		var hiddenSelect2Value = $('.js-hidden-select-2').val();
 		if (hiddenSelect1Value != '' && hiddenSelect2Value != ''){
 			$('.Migration .container').fadeOut('slow', function(){
-			location.href = '/' + hiddenSelect1Value + '-to-' + hiddenSelect2Value; 
+			location.href = '/' + hiddenSelect1Value + '-to-' + hiddenSelect2Value + '-migration'; 
 
 			});
 		}

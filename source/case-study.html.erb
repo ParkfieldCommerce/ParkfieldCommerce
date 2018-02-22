@@ -9,6 +9,7 @@
 <% webpageImage2 = caseStudy.webpage_images[1] %>
 <% webpageImage3 = caseStudy.webpage_images[2] %>
 
+
 <%= partial './partials/global/hero', 
   locals:{
     type:'caseStudy',
@@ -19,6 +20,7 @@
     isShopify: caseStudy.platform
   } 
 %>
+
 <div class="CaseStudy__gray">
 	<div class="container m">
 	<%= partial './partials/global/skewedBanner',
@@ -33,7 +35,7 @@
 </div>
 
 <div class="CaseStudy">
-	<div class="CaseStudy__overview CaseStudy__gray">
+	<div class="CaseStudy__overview CaseStudy__gray mobile-space-60">
 		<div class="CaseStudy__overview__container--1">
 			<div class="row">
 				<div class="CaseStudy__overview__image__container--1 large-6 medium-6 small-10">
@@ -50,23 +52,39 @@
 		</div>
 	</div>
 
-	<div class="CaseStudy__challenge" style="width:100%;">
+	<div class="CaseStudy__challenge space-120 mobile-space-60" style="width:100%;">
 		<div class="container m CaseStudy__challenge__container--1">
-			<div class="CaseStudy__challenge__text large-6">
+			<div class="CaseStudy__challenge__text large-5 medium-10 small-10 ">
 				<h2><%= challengeBlock.heading %></h2>
 				<div class=""><%= challengeBlock.body %></div>
 			</div>
 		</div>
+
 		<div class="CaseStudy__challenge__slider__container--1 large-6">
-			<% challengeBlock.image_gallery.each do |image| %>
-			<div class="test">
-			 <%= image_tag image.url, alt: image.alt %>
+			
+			
+
+			<div class="CaseStudy__challenge__slider__container--2">
+				<% challengeBlock.image_gallery.each do |image| %>
+					<div class="test">
+					 <%= image_tag image.url, alt: image.alt %>
+					</div>
+				<% end %>	
 			</div>
-			<% end %>	
+
+			<div class="CaseStudy__challenge__arrows__container">
+				<div class="CaseStudy__challenge__left-arrow">
+				<%= partial './partials/global/svg-icons', locals:{icon: 'left-arrow'} %>
+				</div>
+			
+				<div class="CaseStudy__challenge__right-arrow">
+				<%= partial './partials/global/svg-icons', locals:{icon: 'right-arrow'} %>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="CaseStudy__pages__container--1 CaseStudy__gray padding-120">
+	<div class="CaseStudy__pages__container--1 CaseStudy__gray padding-120 space-120 mobile-space-60">
 		<div class="">
 			<div class="row">
 				<div class="CaseStudy__pages__container--2 large-12 medium-12 small-10">

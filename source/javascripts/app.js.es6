@@ -93,11 +93,19 @@ class Theme {
   }
 
   initCaseStudySlider() {
-    $('.CaseStudy__challenge__slider__container--1').slick({
-
-      centerPadding: ($('.slider').find('>div').outerWidth() / 2) + 'px',
+    $('.CaseStudy__challenge__slider__container--2').slick({
       slidesToShow: 1,
-      variableWidth: true
+      centerPadding: ($('.CaseStudy__challenge__slider__container--2').find('.test').outerWidth() / 2) + 'px',
+      variableWidth: true,
+      nextArrow: '.CaseStudy__challenge__right-arrow',
+      prevArrow: '.CaseStudy__challenge__left-arrow',
+      responsive: [
+      {
+        breakpoint:768,
+        settings:{
+          centerMode: true,
+        }
+      }]
     });
   }
   initMobileNavigation() {

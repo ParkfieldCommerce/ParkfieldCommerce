@@ -1,9 +1,50 @@
 $migration-color-1: #4C54B0;
 .migration-page{
-	background-color:#e5e5e5;
+	background-color:#fafafa;	
+}
+.migration-page .MainHeader{
+	&__logo{
+		color:black;
+	}
+}
+.migration-page .Nav{
+	&__link{
+		color:black;
+	}
+	&__item--button a{
+		border:1px solid black;
+		  position: relative;
+  background-color:transparent;
+  span{
+    color: $btn-animatedLeftSub;
+    position: relative;
+    z-index: 2;
+    transition: color .3s;
+  }
+  &:after{
+    z-index: 1;
+    content:'';
+    display: block;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $btn-animatedLeftSub;
+    transition: width .3s;
+  }
+  &:hover{
+    span{
+      color: $btn-animatedLeftMain;
+    }
+    &:after{
+      width: 100%;
+    }
+  }
+	}
 }
 	.background-gray{
-		background-color:#E5E5E5;
+		background-color:#fafafa;
 	}
 .Migration{
 	height:100vh;
@@ -35,7 +76,7 @@ $migration-color-1: #4C54B0;
     z-index:-1;
 	}
 	&__downarrow--1{
-		margin-right:10px;
+		margin-right:15px;
 	}
 	&__downarrow--2{
 		margin-right:10px;
@@ -73,7 +114,7 @@ $migration-color-1: #4C54B0;
 		margin-left:10px;
 		margin-right:10px;
 		font-size:3rem;
-		font-weight:800;
+		font-weight:500;
 		color:$migration-color-1;
 		margin-bottom:-15px;
 	}
@@ -95,7 +136,7 @@ $migration-color-1: #4C54B0;
 		margin-left:10px;
 		margin-right:10px;
 		font-size:3rem;
-		font-weight:800;
+		font-weight:500;
 		color:$migration-color-1;
 		margin-bottom:-15px;
 	}
