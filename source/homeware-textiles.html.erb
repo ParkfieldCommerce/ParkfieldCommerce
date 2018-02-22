@@ -1,0 +1,20 @@
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'homewareTextiles',
+    mobile_image: dato.homeware_textile.banner_gallery[0],
+    med_image: dato.homeware_textile.banner_gallery[1],
+    large_image: dato.homeware_textile.banner_gallery[2],
+    heading: dato.homeware_textile.banner_heading,
+    subHeading: dato.homeware_textile.banner_subheading,
+    subHeadingImage: dato.homeware_textile.banner_subheading_image
+  } 
+%>
+
+
+<div class="HomewareTextiles">
+	<div class="HomewareTextiles__container--1 container l">
+		<% dato.homeware_textile.company.first(2).each do |company| %>
+		<%= partial '/partials/homeware-textiles/homeware-case-study',locals: { company: company} %>
+		<% end %>
+	</div>
+</div>
