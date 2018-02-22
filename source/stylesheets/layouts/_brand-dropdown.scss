@@ -18,10 +18,21 @@
     z-index: 200;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     @include maxQuery(1000px) {
-      top: 50px;
+      top: 80px;
+      border: 0;
     }
-    @include maxQuery(600px) {
-      display: none;
+
+    select {
+      color: #fff;
+      background: transparent;
+      border: 1px solid #fff;
+      border-radius: 0;
+      padding: 4px 40px 4px 29px;
+      opacity: 0.5;
+      &:focus {
+        opacity: 1;
+        transition: 0.4s;
+      }
     }
 
     ul {
@@ -88,11 +99,11 @@
     -webkit-backface-visibility: hidden;
 
     @include maxQuery(1000px) {
-      top: 100px;
+      top: 130px;
     }
 
     .inner {
-      overflow: hidden;
+      overflow: auto;
       padding: 30px;
       display: flex;
       flex-flow: row wrap;
@@ -111,9 +122,11 @@
       height: 25%;
       @include maxQuery(1000px) {
         width: 33.3333%;
+        height: 150px;
       }
       @include maxQuery(600px) {
         width: 50%;
+        height: 100px;
       }
 
       &:hover {
