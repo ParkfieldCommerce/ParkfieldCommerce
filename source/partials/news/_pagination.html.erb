@@ -1,0 +1,13 @@
+<% fullPages = dataToPaginate.length / paginateBy %>
+<% leftoverPages = dataToPaginate.length % paginateBy %>
+<% fullPages.times do |i|%>
+  <% if i == 0 %>
+    <a href="/news"><%= i+1 %></a>
+  <% else %>
+    <a href="/news/page/<%= i+1 %>"><%= i+1 %></a>
+  <% end %>
+
+  <% if i == fullPages -1 && leftoverPages > 0%>
+    <a href="/news/page/<%= i+2 %>"><%= i + 2 %></a>
+  <% end %>
+<% end %>

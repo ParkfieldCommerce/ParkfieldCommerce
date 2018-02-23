@@ -3,14 +3,14 @@ title: ParkfieldCommerce - News
 pageClass: News
 ---
 <div class="container m">
-<h1 class="News__heading space-120 space-bottom-120 mobile-space-30 mobile-space-bottom-60">News</h1>
-<div class="row">
-<% items.each do |article| %>
-  <div class="small-12 medium-6 News__article-container space-bottom-90 mobile-space-bottom-60">
-  <%= partial './partials/news/article-listing', locals:{article:article}%>
+  <h1 class="News__heading space-120 space-bottom-120 mobile-space-30 mobile-space-bottom-60">News</h1>
+  <div class="row">
+  <% items.each do |article| %>
+    <div class="small-12 medium-6 News__article-container space-bottom-90 mobile-space-bottom-60">
+    <%= partial './partials/news/article-listing', locals:{article:article}%>
+    </div>
+  <% end %>
   </div>
-<% end %>
-</div>
-<a href="<%= pager.previous_page ? pager.page_path(pager.previous_page) : '' %>">Previous</a> 
-<a href="<%= pager.next_page ? pager.page_path(pager.next_page) : '' %>">Next</a> 
+  <%= partial './partials/news/pagination', locals:{dataToPaginate:dato.articles, paginateBy: 4} %>
+
 </div>
