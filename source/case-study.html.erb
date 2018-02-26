@@ -92,9 +92,15 @@
 		<div class="">
 			<div class="row">
 				<div class="CaseStudy__pages__container--2 large-12 medium-12 small-10">
+          <% if webpageImage1 != nil %>
 			    <%= image_tag webpageImage1.url, alt: webpageImage1.alt, class:"CaseStudy__pages__hide--2" %>
+          <% end %>
+          <% if webpageImage2 != nil %>
 			    <%= image_tag webpageImage2.url, alt: webpageImage2.alt, class:"CaseStudy__pages__hide--1" %>
+          <% end %>
+          <% if webpageImage3 != nil %>
 			    <%= image_tag webpageImage3.url, alt: webpageImage3.alt, class:"CaseStudy__pages__hide--3" %>
+          <% end %>
 				</div>
 			</div>
 		</div>
