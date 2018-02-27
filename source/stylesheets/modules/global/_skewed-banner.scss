@@ -149,6 +149,66 @@
   }
 }
 
+.SkewedBanner--migrationpage .SkewedBanner{
+  &__row{
+    align-items:center;
+    max-width:100%;
+    width:958px;
+  }
+  &__heading{
+
+  }
+  &__text{
+
+  }
+  &__list p{
+    line-height:28px;
+    margin:0;
+    font-weight:500;
+  }
+  &__offset{
+    margin-left:0px;
+    margin-right:8.33333%;
+  }
+  &__percent{
+    display:flex;
+    justify-content:space-between;
+  }
+  &__percent h3{ 
+    margin:0; 
+    font-weight:100;
+  }
+  &__percent h2{ 
+    margin:0;
+    color:white;
+    font-weight:100; 
+  }
+  @include maxQuery(1025px){
+    &__offset{
+      margin:0 auto;
+      margin-top:25px;
+    }
+    &__text{
+      margin:0 auto;
+    }
+    &__percent{
+      margin-top:33px;
+    }
+  }
+  @include maxQuery($s){
+    &__list{display:none;}
+    &__offset{margin-top:33px;}
+    &__heading{
+      font-size:1.5rem;
+      margin-bottom:0px;
+    }
+    &__percent{width:100%;}
+    &__percent h3{font-size:1.5rem;}
+    &__percent h2{font-size:.875rem;}
+  }
+}
+
+
 .SkewedBanner--whatis .SkewedBanner{
   &__flex{
     display: flex;

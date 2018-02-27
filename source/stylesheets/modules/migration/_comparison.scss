@@ -1,0 +1,35 @@
+.Comparison{
+	margin-top:120px;
+	&__container{
+	}
+	&__row{
+		justify-content:center;
+		align-items:center;
+		max-width:100%;
+		width:958px;
+		border-bottom:1px solid #E0E0E0;
+	}
+	&__left{
+		text-align:left;
+	}
+	&__left h2{
+		margin-left:30px;
+	}
+	&__left h4{
+		margin-left:30px;
+		margin-bottom:17px;
+		margin-top:17px;
+	}
+	&__center{
+		text-align:center;
+	}
+	&__center img{
+		vertical-align: middle;
+	}
+	&__right{
+		text-align:center;
+	}
+	&__right img{
+		vertical-align: middle;
+	}
+}

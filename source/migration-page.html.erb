@@ -1,0 +1,40 @@
+---
+title: ParkfieldCommerce - Migration From and To
+pageClass: MigrationPages
+---
+
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'migrationPage',
+    mobile_image: migrationPage.banner_gallery[0],
+    med_image: migrationPage.banner_gallery[1],
+    large_image: migrationPage.banner_gallery[2],
+    heading: migrationPage.banner_heading,
+    subHeading: migrationPage.banner_subheading,
+    subHeadingImage: migrationPage.banner_subheading_image
+  } 
+%>
+
+<div class="container m">
+<%= partial './partials/global/skewedBanner',
+  locals:{
+    type:'migrationPage',
+    reasonTitle: migrationPage.reason_title,
+    reasonList: migrationPage.reason_list,
+    percent: migrationPage.percent
+  }
+ %>
+</div>
+
+
+<div class="container m">
+<%= partial './partials/migration-pages/comparison',
+  locals:{
+    type:'migrationPage',
+    comparisonTitle: migrationPage.migration_platform_name,
+    platformFromImage: migrationPage.migration_platform_image[0],
+    platformToImage: migrationPage.migration_platform_image[1],
+    platformContent: migrationPage.comparison
+  }
+ %>
+</div>
