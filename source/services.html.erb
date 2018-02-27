@@ -1,0 +1,49 @@
+---
+layout: layout
+pageClass: services-page
+---
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'generic',
+    mobile_image: dato.service_page.banner[0],
+    med_image: dato.service_page.banner[1],
+    large_image: dato.service_page.banner[2],
+    heading: dato.service_page.heading,
+    subHeadingImage: dato.service_page.subheading_image
+  } 
+%>
+<div class="container l">
+	<div class="space-90 mobile-space-60 space-bottom-90 mobile-space-bottom-30">
+	<%= partial './partials/services/_service-description.html.erb', 
+		locals: {
+			heading: dato.service_page.service_description[0].heading,
+			body: dato.service_page.service_description[0].body,
+			modifier: nil
+		} 
+	%>
+	</div>
+</div>
+
+<div class="container l">
+	<div class="space-90 mobile-space-60 space-bottom-90">
+	<%= partial './partials/services/_service-description.html.erb', 
+		locals: {
+			heading: dato.service_page.service_description[1].heading,
+			body: dato.service_page.service_description[1].body,
+			modifier: '--larger-text'
+		} 
+	%>
+</div>
+</div>
+
+<div class="container l">
+	<div class="space-90 mobile-space-60 space-bottom-90 mobile-space-bottom-30">
+	<%= partial './partials/services/_service-description.html.erb', 
+		locals: {
+			heading: dato.service_page.service_description[2].heading,
+			body: dato.service_page.service_description[2].body,
+			modifier: '--larger-text'
+		} 
+	%>
+</div>
+</div>

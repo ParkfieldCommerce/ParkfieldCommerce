@@ -1,0 +1,66 @@
+.ServiceDescription {
+	display: flex;
+	&__heading {
+		width: 50%;
+	}
+	&__body {
+		width: 50%;
+		h4 {
+			margin: 1.875rem 0 0.9375rem;
+		}
+		p {
+			margin: 0;
+		}
+	}
+}
+
+.ServiceDescription__heading {
+	h2 {
+		display: inline-block;
+		position: relative;
+		color: $heading;
+		padding-bottom: 5px;
+		margin: 0;
+		&:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 90%;
+			height: 1px;
+			background-color: black;
+		}
+	}
+}
+
+
+@include maxQuery($s){
+	.ServiceDescription {
+		flex-direction: column;
+		max-width: 90%;
+		margin: 0 auto;
+		&__heading {
+			width: 100%;
+			h2 {
+				font-size: 1.125rem;
+				padding: 0;
+				margin: 0 0 1.25rem;
+			}
+		}
+		&__body {
+			width: 100%;
+			p {
+				font-size: 0.875rem;	
+			}
+			h4 {
+				margin-bottom: 0.625rem;
+				font-size: 0.875rem;
+			}
+		}
+	}
+	.ServiceDescription--larger-text .ServiceDescription{
+		&__heading h2{
+			font-size: 1.5rem;
+		}
+	}
+}
