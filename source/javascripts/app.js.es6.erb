@@ -8,6 +8,7 @@ class Theme {
     this.initCaseStudySlider();
     this.initReviewsSlider();
     this.initBrandDropdown();
+    this.initHomeWareTextilesPage();
   }
 
   initBrandDropdown() {
@@ -91,7 +92,6 @@ class Theme {
     // ===========================================================
     // ===========================================================
   }
-
   initCaseStudySlider() {
     $('.CaseStudy__challenge__slider__container--2').slick({
       slidesToShow: 1,
@@ -123,7 +123,6 @@ class Theme {
       }
     });
   }
-
   initReviewsSlider() {
     const ReviewsSlider = $('.js-ReviewsSlider');
     const slideTime = 6000; //10 seconds
@@ -209,7 +208,42 @@ class Theme {
       });
     }
   }
+  initHomeWareTextilesPage(){
+    if(window.location.pathname == '/homeware-textiles'){
+      let companies = [];
+      let company = '';
+      //Get Company Data
+      <% dato.homeware_textile_companies.each_with_index do |company, index| %>
+        <% next if index < 2 %>
+        company = `
+          <%= partial '/partials/homeware-textiles/homeware-case-study',locals: { company: company} %>
+        `
+        companies.push(company);
+      <% end %>
+
+      console.log(companies);
+      $('.js-loadButton').click(function(){
+        let startIndex = $(this).data('start');
+        let endIndex = startIndex + 2;
+        console.log(startIndex);
+        console.log(endIndex);
+
+        console.log(companies);
+        companies.forEach((company, index) => {
+
+          if(index >= startIndex && index <= endIndex){
+            $('.js-companyList').append(company);
+            $(this).data('start', endIndex);
+          }
+          if(index >= companies.length - 1){
+            $(this).remove();            
+          }
+        });
+      });
+    }
+  }
 }
+
 
 const Parkfield = new Theme();
 Parkfield.init();

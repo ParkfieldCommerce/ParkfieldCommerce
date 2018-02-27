@@ -1,4 +1,11 @@
 .HomewareCaseStudy{
+	&__main__title{
+		font-size:3rem;
+		margin:0;
+	}
+	&__title__image{
+		margin-top:60px;
+	}
 	&__container{
 		display:flex;
 		align-items:center;
@@ -9,8 +16,63 @@
 	&__container__size--3{
 		margin:0 auto;
 	}
+	&__Awards{
+	}
 	&__text{
 		max-width:444px;
+	}
+	&__text--1{
+		font-size:1.125rem;
+		line-height:21px;
+
+    font-family: 'Avenir-Roman';
+    color:#979797;
+	}
+	&__text--2 .row{
+		justify-content:center;
+		text-align:center;
+	}
+	&__text--3{
+		font-size:1.5rem;
+    font-family: 'Avenir-Roman';
+    color:#979797;
+    line-height:28px;
+	}
+	&__title{
+		margin-bottom:0px;
+	}
+	&__title--1{
+		max-width:338px;
+		margin-top:0px;
+	}
+	&__title--3{
+		display:none;
+	}
+	&__description{
+		color:#231F20;
+		margin-top:15px;
+		margin-bottom:0px;
+	}
+	&__quote{
+		margin-top:30px;
+		font-size:1.125rem;
+		line-height:21px;
+    font-family: 'Avenir-Roman';
+    color:#979797;
+	}
+	&__button{
+		width:100%;
+	}
+	&__loadButton{
+		cursor:pointer;
+    display:inline;
+    font-family: 'Avenir-Roman';
+    font-size:1.125rem;
+    line-height:21px;
+	}
+	&__link{
+		margin-top:45px;
+		font-weight:500;
 	}
 	&__image--1{
 		position:relative;
@@ -22,9 +84,26 @@
 	}
 	&__image--3{
 		width:100%;
+		vertical-align:bottom;
+	}
+	&__image--4{
+		width:100%;
+	}
+	&__image--5{
+		margin-top:45px;
+	}
+	&__image__container{
+		margin:0 auto;
+		display:none;
 	}
 	&__container--3{
 		display:none;
+	}
+	&__button{
+		padding-top:47px;
+	}
+	&__background:nth-child(even){
+		background-color:#FAFAFA;
 	}
 	@media screen and (max-width:1480px){
 		&__text{
@@ -38,6 +117,13 @@
 		}
 	}
 	@media screen and (max-width:1025px){
+		&__title--1{
+			max-width:100%;
+		}
+		&__awards .row{
+			text-align:center;
+			justify-content:center;
+		}
 		&__text{
 			max-width:inherit;
 		}
@@ -63,12 +149,52 @@
 		}
 	}
 	@media screen and (max-width:$s){
+		&__main__title{
+			font-size:1.5rem;
+			margin:0;
+		}
+		&__title__image{
+			display:none;
+		}
+		&__mobile__logo{
+			margin-top:12px;
+		}
+		&__awards{
+			display:none;
+		}
 		&__text{
 			margin:0 auto;
+		}
+		&__button{
+			margin-top:30px;
+			padding-top:0px;
+		}
+		&__image__container{
+			display:block;
+		}
+		&__text--2{
+			padding-bottom:0;
+			background-color:white;
 		}
 		&__title{
 			font-size:1.125rem;
 			margin-bottom:0px;
+			display:none;
+		}
+		&__title--2{
+			display:none;
+		}
+		&__title--3{
+			display:inline-block;
+			margin-bottom:0px;
+			font-size:1.125rem;
+			margin-top:0px;
+		}
+		&__title--3 a:visited{
+			color:#231F20;
+		}
+		&__text--3{
+			display:none;
 		}
 		&__quote{
 			display:none;
@@ -80,6 +206,20 @@
 		}
 		&__link{
 			display:none;
+		}
+		&__container--1{
+			margin-top:0px;
+		}
+		&__loadButton{
+	  	font-family: 'Avenir-Roman';
+	  	font-size:.875rem;
+	  	line-height:21px;
+		}
+		&__image--5{
+			margin-top:0px;
+		}
+		&__rows{
+			padding-top:40px;
 		}
 	}
 }
