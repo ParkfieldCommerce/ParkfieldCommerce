@@ -1,0 +1,36 @@
+
+<div class="HomewareCaseStudy__background HomewareCaseStudy__rows padding-120 mobile-space-padding-0 ">
+<div class="HomewareCaseStudy__row--1 row">
+	<div class="HomewareCaseStudy__container large-5 medium-12 small-11 ">
+		<div class="HomewareCaseStudy__text">
+			<h3 class="HomewareCaseStudy__title"><%= company.site_name %></h3>
+			<h3 class="HomewareCaseStudy__title--3 Link--underline"><a href="case-studies/<%= company.case_study_link.handle%>"><%= company.site_name %></a></h3>
+			<p class="HomewareCaseStudy__description"><%= company.description %></p>
+			<div class="HomewareCaseStudy__quote"><%= company.quote %></div>
+			<div class="HomewareCaseStudy__link">
+				<a class="HomewareCaseStudy__link Link--underline" href="case-studies/<%= company.case_study_link.handle %>">Read case study</a>
+			</div>
+		</div>
+	</div>
+	
+	<div class="HomewareCaseStudy__container--2 large-7 medium-5 small-5 ">
+		<div class="HomewareCaseStudy__image--1">
+    <%= image_tag company.site_images[0].url, alt: company.site_images[0].alt, class:"HomewareCaseStudy__image--3" %>
+		</div>
+		<div class="HomewareCaseStudy__image--2 ">
+		<%= image_tag company.site_images[1].url, alt: company.site_images[1].alt, class:"HomewareCaseStudy__image--3" %>
+		</div>
+	</div>
+
+	<div class="HomewareCaseStudy__container--3 large-7 medium-12 small-12 ">
+		<div class="HomewareCaseStudy__container--4 row">
+			<div class="HomewareCaseStudy__image--4 medium-5 small-5">
+	    <%= image_tag company.site_images[2].url, alt: company.site_images[0].alt, class:"HomewareCaseStudy__image--3" %>
+			</div>
+			<div class="HomewareCaseStudy__image--5 medium-5 small-5 ">
+			<%= image_tag company.site_images[3].url, alt: company.site_images[1].alt, class:"HomewareCaseStudy__image--3" %>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

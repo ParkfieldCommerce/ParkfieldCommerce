@@ -16,7 +16,7 @@
     <%= javascript_include_tag "/javascripts/vendor/slick.min" %>
 
   </head>
-  <body class="migration-page">
+  <body class="<%= current_page.data.pageClass %>">
     <div class="migration__container container m">
     <%= partial './partials/header/header' %>
     </div>
