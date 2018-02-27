@@ -30,7 +30,7 @@
 		<%= partial 'partials/homeware-textiles/title-text' , locals:{descriptionHeading: descriptionHeading, descriptionBody: descriptionBody, descriptionLogo: descriptionLogo} %>	
 		</div>
 		<div class="HomewareCaseStudy__list js-companyList">
-			<% dato.homeware_textile_companies.first(2).each do |company| %>
+			<% dato.homeware_textile_companies.first(3).each do |company| %>
 			<%= partial '/partials/homeware-textiles/homeware-case-study',locals: { company: company} %>
 			<% end %>
 		</div>
