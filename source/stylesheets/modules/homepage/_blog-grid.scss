@@ -61,8 +61,29 @@
     max-width: 100%;
     margin: 0 auto;
   }
+  @include maxQuery(1300px){
+    &__container--1{
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+    &__container--3{
+      display: none;
+    }
+    &__container--4{
+      width: 100%;
+    }
+    &__item--3{
+      max-height: initial;
+      height: auto;
+    }
+    &__item--5{
+      height: auto;
+    }
+  }
 	@include maxQuery(950px){
 		&__container--1{
+      padding-top: 0px;
+      padding-bottom: 0px;
 			width:100%;
 		}
 		&__container--2{
@@ -102,6 +123,7 @@
 		margin-bottom:40px;
 	}
   &__date--1 p{
+    margin-top: 0px;
     color: black;
   }
   &__author--1 p{
@@ -118,6 +140,7 @@
 	&__heading--2 h3{
 		color:white;
     margin: 0px;
+    font-size: 2rem;
 	}
 	&__date--2 p{
 		color:white;
@@ -125,7 +148,6 @@
 	&__author--2 p{
 		color:white;
 	}
-
 	@include maxQuery(950px){
 		&__twitterFeed{
 			margin-top:40px;

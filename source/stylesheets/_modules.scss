@@ -24,7 +24,7 @@
 // ==================Case Study==================
 @import './modules/case-study/case-study.scss';
 
-// =================What Is?????=================
+// ==================What Is?????==================
 @import './modules/whatis/platform-features.scss';
 
 // =============Homeware & Textiles==============
@@ -32,3 +32,7 @@
 
 // =============Services========================
 @import './modules/services/service-description.scss';
+
+// ==================News==================
+@import './modules/news/article-listing.scss';
+@import './modules/news/pagination.scss';

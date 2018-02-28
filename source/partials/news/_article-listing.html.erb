@@ -1,0 +1,17 @@
+<div class="ArticleListing">
+  <div class="ArticleListing__image">
+  <a href="/articles/<%= article.handle %>">
+  <%= image_tag article.image.url, :alt=> article.image.alt, :class=>"ArticleListing__image" %>
+  </a>
+  </div>
+  <div class="ArticleListing__text">
+  <a href="/articles/<%= article.handle %>">
+    <h2 class="ArticleListing__heading"><%= article.heading %></h2>
+  </a>
+  <p class="ArticleListing__info">
+    <span class="ArticleListing__author">By <%= article.author %></span>
+    <span class="ArticleListing__dash">-</span>
+    <span class="ArticleListing__date"><%= article.date.strftime('%b %-d ,%Y') %></span>
+  </p>
+  </div>
+</div>
