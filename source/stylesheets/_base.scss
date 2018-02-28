@@ -42,6 +42,9 @@ p{
   font-size: 1.125rem;
   color: $body;
   line-height: 1.5;
+  @include maxQuery($s){
+    font-size: 0.875rem;
+  } 
 }
 a{
   font-family: 'Avenir';

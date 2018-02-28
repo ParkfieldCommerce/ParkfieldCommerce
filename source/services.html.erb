@@ -1,6 +1,6 @@
 ---
 layout: layout
-pageClass: services-page
+pageClass: ServicesPage
 ---
 <%= partial './partials/global/hero', 
   locals:{
@@ -24,6 +24,8 @@ pageClass: services-page
 	</div>
 </div>
 
+<%= image_tag dato.service_page.service_banner.url, alt: dato.service_page.service_banner.alt, class:"ServicesPage__banner" %>
+
 <div class="container l">
 	<div class="space-90 mobile-space-60 space-bottom-90">
 	<%= partial './partials/services/_service-description.html.erb', 
@@ -46,4 +48,9 @@ pageClass: services-page
 		} 
 	%>
 </div>
+</div>
+
+<div class="ServicesPage__CaptionedImage__container">
+	<%= image_tag dato.service_page.captioned_image.url, alt: dato.service_page.captioned_image.alt, class:"ServicesPage__captionedImage" %>
+	<p class="ServicesPage__captionedImageText"><%= dato.service_page.captioned_image.title %></p>
 </div>

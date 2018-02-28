@@ -1,7 +1,35 @@
-.services-page {
+.ServicesPage {
 	.container.l {
 		max-width: 100%;
 		width: 67rem;
 		margin: 0 auto;
 	}
+	.Hero__text {
+		width: 560px;
+		max-width: 100%;
+	}
+	&__banner {
+		width: 100%;
+	}
+	&__CaptionedImage__container {
+		display: flex;
+		flex-direction: column;
+	}
+	&__captionedImage {
+		width: 57%;
+		margin-left: auto;
+		@include maxQuery($s){
+			width: 100%;
+		}
+	}
+	&__captionedImageText {
+		width: 57%;
+		margin-left: auto;
+		font-size: 0.875rem;
+		@include maxQuery($s){
+			width: 95%;
+		}
+	}
+	
 }
+
