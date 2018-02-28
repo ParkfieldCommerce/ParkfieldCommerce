@@ -1,0 +1,83 @@
+.Service{
+	&__content{
+		display:flex;
+		align-items:center;
+	}
+	&__block:nth-child(n+4){
+		margin-top:80px;
+	}
+	&__title{
+		margin-top:0px;
+		margin-bottom:60px;
+	}
+	&__title__container{
+		justify-content:center;
+	}
+	&__text{
+		margin-left:30px;
+	}
+	&__text h2{
+		margin:0;
+		font-family: 'Avenir-Roman';
+	}
+	&__text p{
+		margin:0;
+		font-family: 'Avenir-Roman';
+		line-height:21px;
+		margin-top:16px;
+	}
+	&__image{
+		max-width:79px;
+		width:100%;
+		text-align:center;
+	}
+	&__button{
+		margin-top:60px;
+		display:inline-block;
+		width:152px;
+		min-height:33px;
+		max-width:100%;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		&:visited{
+			color:white;
+		}
+	}
+	@include maxQuery($m){
+		&__block:nth-child(n+3){
+			margin-top:50px;
+		}
+	}
+	@include maxQuery($s){
+		&__content{
+			flex-flow:row wrap;
+			justify-content:center;
+			text-align: center;
+		}
+		&__text{
+			margin-top:16px;
+			margin-left:0px;
+			width:100%;
+		}
+		&__text h2{
+			font-size:.875rem;
+		}
+		&__text p{
+			display:none;
+		}
+		&__image{
+			min-height:69px;
+			height:100%;
+		}
+		&__button{
+			&__row{
+				justify-content:center;
+			}
+			&__container{
+				display:flex;
+				justify-content:center;
+			}
+		}
+	}
+}

@@ -23,6 +23,10 @@
 	&__center{
 		text-align:center;
 	}
+	&__center p{
+		color:#231F20;
+		font-weight:100;
+	}
 	&__center img{
 		vertical-align: middle;
 	}
@@ -31,5 +35,47 @@
 	}
 	&__right img{
 		vertical-align: middle;
+	}
+	@include minQuery(640px){
+		&__hidden{
+			display:none;
+		}
+	}
+	@include maxQuery($xs){
+		&__container{
+			margin:0 auto;
+			margin-top:50px;
+		}
+		&__from__logo{
+			width:100%;
+			width:100px;
+			max-width:100%;
+		}
+		&__to__logo{
+			max-width:100px;
+			width:75px;
+			max-width:100%;
+		}
+		&__left h2{
+			margin-left:15px;
+			margin-bottom:40px;
+		}
+		&__left h4{
+			font-size:.75rem;
+			margin-top:14px;
+			margin-bottom:14px;
+			margin-left:15px;
+		}
+		&__center p{
+			font-size:.75rem;
+		}
+		&__unchecked{
+			width:16px;
+			height:16px;
+		}
+		&__checked{
+			width:16px;
+			height:16px;
+		}
 	}
 }
