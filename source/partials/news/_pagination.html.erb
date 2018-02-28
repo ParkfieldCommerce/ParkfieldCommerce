@@ -1,13 +1,26 @@
+<div class="Pagination">
 <% fullPages = dataToPaginate.length / paginateBy %>
 <% leftoverPages = dataToPaginate.length % paginateBy %>
 <% fullPages.times do |i|%>
   <% if i == 0 %>
-    <a href="/news"><%= i+1 %></a>
+    <% if isCurrentNewsPage("/news/",pager.page_path) %>
+      <%= link_to "#{i+1}", "/news/", class:"Pagination__link Pagination__link--active" %>
+    <% else %>
+      <%= link_to "#{i+1}", "/news", class:"Pagination__link" %>
+    <% end %>
   <% else %>
-    <a href="/news/page/<%= i+1 %>"><%= i+1 %></a>
+    <% if isCurrentNewsPage("/news/page/#{i+1}/",pager.page_path) %>
+      <%= link_to "#{i+1}", "/news/page/#{i+1}/", class:"Pagination__link Pagination__link--active" %>
+    <% else %>
+      <%= link_to "#{i+1}", "/news/page/#{i+1}/", class:"Pagination__link" %>
+    <% end %>
   <% end %>
-
   <% if i == fullPages -1 && leftoverPages > 0%>
-    <a href="/news/page/<%= i+2 %>"><%= i + 2 %></a>
+    <% if isCurrentNewsPage("/news/page/#{i+2}/",pager.page_path) %>
+      <%= link_to "#{i+2}", "/news/page/#{i+2}/", class:"Pagination__link Pagination__link--active" %>
+    <% else %>
+      <%= link_to "#{i+2}", "/news/page/#{i+2}/", class:"Pagination__link" %>
+    <% end %>
   <% end %>
 <% end %>
+</div>

@@ -40,7 +40,11 @@
 .padding-bottom-120{
   padding-bottom: 120px;
 }
-
+.mobile-space-0{
+  @media screen and (max-width: $s){
+    margin-top: 0px;
+  } 
+}
 .mobile-space-bottom-0{
   @media screen and (max-width: $s){
     margin-bottom: 0px;

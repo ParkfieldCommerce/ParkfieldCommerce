@@ -11,6 +11,7 @@ pageClass: News
     </div>
   <% end %>
   </div>
-  <%= partial './partials/news/pagination', locals:{dataToPaginate:dato.articles, paginateBy: 4} %>
-
+  <div class="space-90 space-bottom-90 mobile-space-0 mobile-space-bottom-60 center">
+  <%= partial './partials/news/pagination', locals:{dataToPaginate:dato.articles, paginateBy: 8} %>
+  </div>
 </div>
