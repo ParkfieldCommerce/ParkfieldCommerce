@@ -40,14 +40,24 @@ pageClass: MigrationPages
 </div>
 
 <div class="background-gray space-120 mobile-space-60">
-<div class="container m ">
-<%= partial './partials/migration-pages/services',
+  <div class="container m ">
+  <%= partial './partials/migration-pages/services',
+    locals:{
+      type:'migrationPage',
+      servicesTitle: migrationPage.migration_services_title,
+      servicesBlock: migrationPage.services,
+      servicesButton: migrationPage.button_title,
+      servicesButtonLink: migrationPage.button_link
+    }
+   %>
+  </div>
+</div>
+
+<div class="container m">
+  <%= partial './partials/migration-pages/slider',
   locals:{
     type:'migrationPage',
-    servicesTitle: migrationPage.migration_services_title,
-    servicesBlock: migrationPage.services,
-    servicesButton: migrationPage.button_title,
-    servicesButtonLink: migrationPage.button_link
+    sliderBlock: migrationPage.slider
   }
  %>
-</div></div>
+</div>
