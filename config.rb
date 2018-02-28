@@ -25,11 +25,15 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def isCurrentNewsPage(pageLink, currentPage)
+    if(pageLink == currentPage)
+      return true
+    else
+      return false
+    end
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
@@ -38,12 +42,14 @@ configure :development do
   require 'sprockets/es6'
 
   activate :dato, live_reload: true
+  activate :pagination
   dato.tap do |dato|
     dato.case_studies.each do |caseStudy|
       proxy "/case-studies/#{caseStudy.handle}/index.html", "case-study.html", 
       locals: { caseStudy: caseStudy },
       ignore: true
     end
+    paginate dato.articles, "/news", "/news.html", per_page: 8
     dato.articles.each do |article|
       proxy "/articles/#{article.handle}/index.html", "article.html", 
       locals: { article: article },
