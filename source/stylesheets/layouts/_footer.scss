@@ -3,14 +3,142 @@
 }
 
 .FooterDesktop {
-	&__logo {
-
-	}
+	padding: 90px 0 108px;
 	&__content {
 		display: flex;
-
-		.column1 {
-			
+		justify-content: space-between;
+	}
+	&__column {
+		width: 140px;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		h2,h4 {
+			color: $footer-text;
+			margin: 90px 0 40px;
 		}
+		p {
+			color: $footer-text;
+			line-height: 23px;
+			margin: 0;
+			padding-bottom: 40px;
+		}
+		a {
+			font-family: 'Avenir-Roman';
+			font-size: 1.125rem;
+			color: $footer-text;
+			padding-bottom: 20px;
+		}
+	}
+	&--column1 {
+		width: 22%;
+		a {
+			display: inline-table;
+			position: relative;
+			font-family: 'Avenir';
+			font-weight: 800;
+			margin-bottom: 25px;
+			padding-bottom: 3px;
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				width: 90%;
+				height: 1px;
+				background-color: $footer-text;
+				transition: width 0.3s;
+			}
+			&:hover:after {
+				width: 100%;
+			}
+		}
+	}
+	&__bottom {
+		display: flex;
+		align-items: center;
+		.copyright {
+			width: 30%;
+			p {
+				color: $footer-text;
+				line-height: 23px;
+			}
+		}
+		.images {
+			width: 70%;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+}
+
+.FooterMobile {
+	display: none;
+	width: 310px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 60px 0 42px;
+	text-align: center;
+	h2 {
+		color: $footer-text;
+		padding-bottom: 30px;
+		margin: 0;
+	}
+	&__links {
+		display: flex;
+		margin-bottom: 40px;
+		a {
+			display: block;
+			font-family: 'Avenir';
+			font-weight: 800;
+			height: 45px;
+			width: 152px;
+			line-height: 45px;
+			text-align: center;
+			border: 1px solid $footer-text;
+			&:first-child {
+				background-color: $footer-text;
+				color: $footer-bg;
+				margin-right: 5px;
+			}
+			&:last-child {
+				background-color: transparent;
+				color: $footer-text;
+			}
+		}
+	}
+	&__bottom {
+		display: flex;
+		justify-content: center;
+		text-align: left;
+		p {
+			margin: 0;
+			color: $footer-text;
+			font-size: 0.875rem;
+			line-height: 25px;
+			margin-left: 14px;
+		}
+	}
+}
+
+@include maxQuery($m){
+	.FooterDesktop {
+		padding: 90px 10px 108px;
+	}
+}
+
+@include maxQuery(1000px){
+	.FooterDesktop--column1 {
+		width: 25%;
+	}
+}
+
+@include maxQuery(900px) {
+	.FooterDesktop {
+		display: none;
+	}
+	.FooterMobile {
+		display: block;
 	}
 }
