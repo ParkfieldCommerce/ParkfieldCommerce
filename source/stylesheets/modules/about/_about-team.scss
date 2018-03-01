@@ -17,17 +17,25 @@
 			color: $body;
 			margin: 0 0 9px 0;
 		}
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 	&__members {
 		display: flex;
+		flex-flow: row wrap;
 	}
 	&__member-wrapper {
 		width: 25%;
 		position: relative;
-		margin-right: 8px;
+		padding-right: 8px;
+		box-sizing: border-box;
+		@include maxQuery(1000px){
+			width: 33.33%;
+		}
 		&:hover {
 			.AboutTeam__overlay {
-				height: 100%;
+				height: 97%;
 			}
 		}
 	}
@@ -39,7 +47,7 @@
 		bottom: 4px;
 		left: 0;
 		height: 0;
-		width: 100%;
+		width: 95%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -56,5 +64,44 @@
 	&__member-name {
 		font-weight: 800;
 	}
+	&__mobile {
+		display: none;
+		flex-flow: row wrap;
+	}
+	&__memberImageWrapMobile {
+		width: 33.33%;
+		padding-right: 5px;
+		box-sizing: border-box;
+	}
+	&__memberImageMobile {
+		width: 100%;
+	}
+}
 
+@include maxQuery($s){
+	.AboutTeam {
+		flex-direction: column;
+		&__desktop {
+			display: none;
+		}
+		&__mobile {
+			display: flex;
+		}
+		&__heading {
+			width: 100%;
+			h3 {
+				font-size: 1.5rem;
+				margin-bottom: 20px;	
+			}
+		}
+		&__content {
+			width: 100%;
+		}
+		&__overlay {
+			display: none;
+		}
+		&__team h4{
+			display: none;
+		}
+	}
 }

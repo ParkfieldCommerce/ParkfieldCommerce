@@ -4,3 +4,30 @@
 		margin: 60px 0;
 	}
 }
+
+.AboutPage__image {
+	display: flex;
+	align-items: center;
+	margin-bottom: 120px;
+	@include maxQuery($s){
+		margin-bottom: 60px;
+	}
+	.AboutImage {
+		width: 75%;
+		margin-left: auto;
+		@include maxQuery($s){
+			width: 100%;
+		}
+	}
+}
+
+.grey-bg {
+	background-color: $grey-bg;
+}
+
+.Partners {
+	padding: 120px 0;
+	@include maxQuery($s){
+		display: none;
+	}
+}

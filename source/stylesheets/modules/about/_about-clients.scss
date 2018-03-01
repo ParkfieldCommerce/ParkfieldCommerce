@@ -1,0 +1,33 @@
+.AboutClients {
+	max-width: 90%;
+	margin: 0 auto;
+	display: none;
+	@include maxQuery($s){
+		display: block;
+	}
+	h2 {
+		margin: 0;
+		padding-bottom: 60px;
+	}
+	&__brands {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+	&__brand {
+		width: 50%;
+		text-align: left;
+		margin-bottom: 60px;
+	}
+	&__button {
+		display: block;
+		height: 45px;
+		width: 100%;
+		font-weight: 800;
+		font-size: 0.875rem;
+		line-height: 45px;
+		text-align: center;
+		color: $about-page-btn-text;
+		background-color: $about-page-btn;
+	}
+}

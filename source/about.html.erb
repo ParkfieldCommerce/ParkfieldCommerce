@@ -30,3 +30,45 @@ pageClass: AboutPage
 		<%= partial './partials/about/about-team' %>
 	</div>
 </div>
+
+<div class="container m">
+	<div class="space-bottom-90 mobile-space-bottom-60">
+	<%= partial './partials/global/title-and-text', 
+		locals: {
+			heading: dato.about_page.about_description[1].heading,
+			body: dato.about_page.about_description[1].body,
+			modifier: '--about-page-text'
+		} 
+	%>
+	</div>
+</div>
+
+<div class="AboutPage__image">
+	<%= image_tag dato.about_page.about_image.url, alt: dato.about_page.about_image.alt, class:"AboutImage" %>
+</div>
+
+<div class="grey-bg">
+	<div class="container m">
+		<div class="Partners">
+		<%= partial './partials/global/title-and-text', 
+			locals: {
+				heading: dato.about_page.about_description[2].heading,
+				body: dato.about_page.about_description[2].body,
+				modifier: '--about-page-text'
+			} 
+		%>
+		</div>
+	</div>
+</div>
+
+<div class="grey-bg">
+	<div class="container m">
+		<%= partial './partials/about/about-partners' %>
+	</div>
+</div>
+
+<div class="container m">
+	<div class="mobile-space-bottom-60">
+		<%= partial './partials/about/about-clients' %>
+	</div>
+</div>
