@@ -13,3 +13,20 @@ pageClass: AboutPage
     subHeadingImage: nil
   } 
 %>
+<div class="container m">
+	<div class="space-90 mobile-space-60 mobile-space-bottom-60">
+	<%= partial './partials/global/title-and-text', 
+		locals: {
+			heading: dato.about_page.about_description[0].heading,
+			body: dato.about_page.about_description[0].body,
+			modifier: '--about-page-text'
+		} 
+	%>
+	</div>
+</div>
+
+<div class="container m">
+	<div class="space-120">
+		<%= partial './partials/about/about-team' %>
+	</div>
+</div>

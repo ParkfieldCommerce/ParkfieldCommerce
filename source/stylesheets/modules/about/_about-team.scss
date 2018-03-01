@@ -1,0 +1,60 @@
+.AboutTeam {
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+	&__heading {
+		width: 40%;
+		h3 {
+			margin: 0;
+		}
+	}
+	&__content {
+		width: 60%;
+	}
+	&__team {
+		margin-bottom: 20px;
+		h4 {
+			color: $body;
+			margin: 0 0 9px 0;
+		}
+	}
+	&__members {
+		display: flex;
+	}
+	&__member-wrapper {
+		width: 25%;
+		position: relative;
+		margin-right: 8px;
+		&:hover {
+			.AboutTeam__overlay {
+				height: 100%;
+			}
+		}
+	}
+	&__member-image {
+		max-width: 100%;
+	}
+	&__overlay {
+		position: absolute;
+		bottom: 4px;
+		left: 0;
+		height: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: left;
+		background-color: $about-img-hover;
+		overflow: hidden;
+		transition: height 0.3s;
+		span {
+			font-size: 1.125rem;
+			color: $about-img-hover-text;
+			padding: 7.5px 16px;
+		}
+	}
+	&__member-name {
+		font-weight: 800;
+	}
+
+}

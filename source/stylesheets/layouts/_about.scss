@@ -1,0 +1,6 @@
+.space-120 {
+	margin: 120px 0;
+	@include maxQuery($s){
+		margin: 60px 0;
+	}
+}
