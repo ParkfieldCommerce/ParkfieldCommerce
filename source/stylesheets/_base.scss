@@ -61,7 +61,9 @@ li{
   margin: 0px;
   list-style: none;
 }
-
+img{
+  max-width: 100%;
+}
 .Btn{
   padding: 13px 18px;
   border: 1px solid white;
@@ -143,7 +145,7 @@ li{
 .Link--animated{
   position: relative;
   font-weight: 800;
-  color: $navigation-link;
+  a{color: $navigation-link;}
   &:after{
     content:'';
     display: block;
@@ -165,7 +167,7 @@ li{
 .Link--underline{
   position: relative;
   font-weight: 800;
-  color: $link;
+  a{color: $link;}
   &:after{
     content:'';
     display: block;

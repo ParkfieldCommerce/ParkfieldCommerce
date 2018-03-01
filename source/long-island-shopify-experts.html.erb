@@ -1,0 +1,25 @@
+---
+title: ParkfieldCommerce - Long Island Shopify Experts
+pageClass: LIExperts
+---
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'homewareTextiles',
+    mobile_image: dato.li_shopify_expert.banner_gallery[0],
+    med_image: dato.li_shopify_expert.banner_gallery[1],
+    large_image: dato.li_shopify_expert.banner_gallery[2],
+    heading: dato.li_shopify_expert.banner_heading,
+    subHeading: dato.li_shopify_expert.banner_subheading,
+    subHeadingImage: dato.li_shopify_expert.banner_subheading_image
+  } 
+%>
+<div class="LIExperts__logos center space-90 space-bottom-120 mobile-space-30 mobile-space-bottom-30">
+<% dato.li_shopify_expert.website_logos.each do |logo | %>
+  <%= image_tag logo.url, class:"LIExperts__website-logos" %>
+<% end %>
+</div>
+<% dato.li_shopify_experts_companies.first(3).each do |company| %>
+<%= partial '/partials/homeware-textiles/homeware-case-study',locals: { company: company} %>
+<% end %>
+<%= partial './partials/global/consultationBanner' %>
+
