@@ -1,4 +1,4 @@
-.ServiceDescription {
+.Description {
 	display: flex;
 	max-width: 90%;
 	margin: 0 auto;
@@ -16,7 +16,7 @@
 	}
 }
 
-.ServiceDescription__heading {
+.Description__heading {
 	h2 {
 		display: inline-block;
 		position: relative;
@@ -37,7 +37,7 @@
 
 
 @include maxQuery($s){
-	.ServiceDescription {
+	.Description {
 		flex-direction: column;
 		&__heading {
 			width: 100%;
@@ -58,8 +58,8 @@
 			}
 		}
 	}
-	.ServiceDescription--larger-text .ServiceDescription{
-		&__heading h2{
+	.Description--larger-text {
+		.Description__heading h2{
 			font-size: 1.5rem;
 		}
 	}

@@ -9,6 +9,7 @@
 @import './modules/global/skewed-banner';
 @import './modules/global/consultationBanner';
 @import './modules/global/skewed-banner';
+@import './modules/global/title-and-text';
 
 // ==================Homepage==================
 @import './modules/homepage/case-study-grid';
@@ -29,9 +30,6 @@
 
 // =============Homeware & Textiles==============
 @import './modules/homeware-textiles/homeware-textiles.scss';
-
-// =============Services========================
-@import './modules/services/service-description.scss';
 
 // ==================News==================
 @import './modules/news/article-listing.scss';

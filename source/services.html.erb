@@ -14,7 +14,7 @@ pageClass: ServicesPage
 %>
 <div class="container l">
 	<div class="space-90 mobile-space-60 space-bottom-90 mobile-space-bottom-30">
-	<%= partial './partials/services/_service-description.html.erb', 
+	<%= partial './partials/global/title-and-text', 
 		locals: {
 			heading: dato.service_page.service_description[0].heading,
 			body: dato.service_page.service_description[0].body,
@@ -28,7 +28,7 @@ pageClass: ServicesPage
 
 <div class="container l">
 	<div class="space-90 mobile-space-60 space-bottom-90">
-	<%= partial './partials/services/_service-description.html.erb', 
+	<%= partial './partials/global/title-and-text', 
 		locals: {
 			heading: dato.service_page.service_description[1].heading,
 			body: dato.service_page.service_description[1].body,
@@ -40,7 +40,7 @@ pageClass: ServicesPage
 
 <div class="container l">
 	<div class="space-90 mobile-space-60 space-bottom-90 mobile-space-bottom-30">
-	<%= partial './partials/services/_service-description.html.erb', 
+	<%= partial './partials/global/title-and-text', 
 		locals: {
 			heading: dato.service_page.service_description[2].heading,
 			body: dato.service_page.service_description[2].body,

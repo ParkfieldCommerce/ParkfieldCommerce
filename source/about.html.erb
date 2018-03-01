@@ -1,0 +1,15 @@
+---
+layout: layout
+pageClass: AboutPage
+---
+
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'generic',
+    mobile_image: dato.about_page.banner[0],
+    med_image: dato.about_page.banner[1],
+    large_image: dato.about_page.banner[2],
+    heading: dato.about_page.banner_heading,
+    subHeadingImage: nil
+  } 
+%>

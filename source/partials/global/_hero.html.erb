@@ -57,7 +57,9 @@
   </div>
   <div class="Hero__text Hero__text--generic">
     <h1 class="Hero__text__heading"><%= heading %></h1>
+    <% unless subHeadingImage.nil? %>
     <img src="<%= subHeadingImage.url %>" alt="<%= subHeadingImage.alt %>">
+    <% end %>
   </div>
 <% end %>
 </div>
