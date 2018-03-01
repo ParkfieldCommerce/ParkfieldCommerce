@@ -1,0 +1,10 @@
+<div class="AboutPartners">
+	<div class="AboutPartners__brands">
+		<% dato.about_page.partner_brands.each do | brand |%>
+		<div class="AboutPartners__brand">
+			<%= image_tag brand.url, alt: brand.alt, class:"AboutPartners__brand-image" %>
+		</div>
+		<% end %>
+	</div>
+	<a href="<%= dato.about_page.button_link %>" class="AboutPartners__button"><%= dato.about_page.button_text %></a>
+</div>

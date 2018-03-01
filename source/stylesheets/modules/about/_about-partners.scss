@@ -1,0 +1,30 @@
+.AboutPartners {
+	max-width: 90%;
+	margin: 0 auto;
+	padding-bottom: 90px;
+	@include maxQuery($s){
+		display: none;
+	}
+	&__brands {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+	}
+	&__brand {
+		width: 25%;
+		text-align: center;
+		margin-bottom: 90px;
+	}
+	&__button {
+		display: block;
+		height: 60px;
+		width: 182px;
+		margin: 0 auto;
+		line-height: 60px;
+		font-weight: 800;
+		font-size: 1.125rem;
+		text-align: center;
+		color: $about-page-btn-text;
+		background-color: $about-page-btn;
+	}
+}
