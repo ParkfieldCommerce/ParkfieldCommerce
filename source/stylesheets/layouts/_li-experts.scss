@@ -1,0 +1,42 @@
+.LIExperts{
+  .Hero__text--homewareTextile{
+    top: 60%;
+  }
+  .Hero__text--homewareTextile .HomewareCaseStudy__title__image{
+    margin-top: 50px;
+  }
+  &__logos{
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+  &__website-logos{
+    margin: 0 auto;
+  }
+  &__website-logos:first-child{
+    display: none;
+  }
+  &__website-logos:last-child{
+    display: block;
+  }
+  @include maxQuery($s){
+    .Hero__text--homewareTextile{
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      top: 50%;
+    }
+    .Hero__text--homewareTextile .HomewareCaseStudy__title__image{
+      display: block;
+      margin-top: 0px;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__website-logos:last-child{
+      display: none;
+    }
+    &__website-logos:first-child{
+      display: block;
+    }
+  }
+}
