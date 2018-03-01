@@ -12,46 +12,41 @@ class Theme {
   }
 
   initBrandDropdown() {
+    const brandOverlay = document.querySelector('.BrandDropdown');
+    if (brandOverlay) {
 
-    // isMobile Catch
-    var isMobile = {
-      Android: function() { return navigator.userAgent.match(/Android/i); },
-      BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); },
-      iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-      Opera: function() { return navigator.userAgent.match(/Opera Mini/i); },
-      Windows:  function() { return navigator.userAgent.match(/IEMobile/i); },
-      any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
-    };
+      // isMobile Catch
+      const isMobile = {
+        Android: () => { return navigator.userAgent.match(/Android/i); },
+        BlackBerry: () => { return navigator.userAgent.match(/BlackBerry/i); },
+        iOS: () => { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+        Opera: () => { return navigator.userAgent.match(/Opera Mini/i); },
+        Windows:  () => { return navigator.userAgent.match(/IEMobile/i); },
+        any: () => { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
+      };
 
-    // ===========================================================
-    // Hover effects - see global/brand-dropdown.scss for more
-    // ===========================================================
-    var $brands_overlay = $('.BrandDropdown'),
-      $brands_wrap = $brands_overlay.children('.BrandsWrapper');
+      // Hover Effects
+      let brandsWrap = document.querySelector('.BrandDropdown > .BrandsWrapper');
 
-    $brands_wrap
-      .on('mouseenter', '.brand', function() {
-        var bgImage = $(this).data('target'),
-          $target = $('.BrandImage[data-hover="' + bgImage + '"]');
-        if ($target)
-          $target.addClass('visible');
-      })
-      .on('mouseleave', '.brand', function() {
-        var $this = $(this),
-          bgImage = $this.data('target'),
-          $target = $('.BrandImage[data-hover="' + bgImage + '"]');
-        if ($target && !$this.hasClass('active'))
-          $target.removeClass('visible');
-      });
-      // .on('click', '.brand', function() {
-      //   var $this = $(this);
-      //
-      //   $this.addClass('active');
-      //   $this.siblings().addClass('no-hover');
-      //   $brands_overlay.addClass('hide');
-      // });
-    // ===========================================================
+      brandsWrap
+        .on('mouseenter', '.brand', function() {
+          var bgImage = $(this).data('target'),
+            $target = $('.BrandImage[data-hover="' + bgImage + '"]');
+          if ($target)
+            $target.addClass('visible');
+        })
+        .on('mouseleave', '.brand', function() {
+          var $this = $(this),
+            bgImage = $this.data('target'),
+            $target = $('.BrandImage[data-hover="' + bgImage + '"]');
+          if ($target && !$this.hasClass('active'))
+            $target.removeClass('visible');
+        });
 
+    } else {
+      console.log('false');
+    }
+    
     // ===========================================================
     // Category Filter
     // ===========================================================
@@ -273,7 +268,7 @@ class Theme {
             $(this).data('start', endIndex);
           }
           if(index >= companies.length - 1){
-            $(this).remove();            
+            $(this).remove();
           }
         });
       });
