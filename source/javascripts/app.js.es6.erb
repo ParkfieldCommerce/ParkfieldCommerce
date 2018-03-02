@@ -91,9 +91,19 @@ class Theme {
         }
         return list;
       }
+      // Not Function
+      function not(selector, filter) {
+        try {
+          return document.querySelectorAll(selector + ":not(" + filter + ")");
+        } catch (e) {
+          console.log("something goes wrong");
+          return null;
+        }
+      }
       // New Array without duplicates
       const newArraylist = removeDuplicates(getCategoryList());
 
+      // For Mobile, build a select with the new Array
       if (isMobile.any()) {
         let filteredList = document.getElementById('FilteredList');
         filteredList.appendChild(makeSelect(newArraylist));
@@ -111,53 +121,41 @@ class Theme {
 
         // Mobile Filter Functions
         filterSelect.addEventListener('change', (event) => {
-          let thisTarget = event.target;
-          let value = thisTarget.value;
+          let targetVal = event.target.value;
+          let brand = document.querySelectorAll('.brand');
 
-          console.log(value);
+          if(targetVal == 'All') {
+            brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+            not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+          } else {
+            brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+            document.querySelectorAll('.brand[data-category="' + targetVal + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+          }
         });
-
       } else {
+        // Build Ul for Desktop
+        let filteredList = document.getElementById('FilteredList');
+        filteredList.appendChild(makeUL(newArraylist));
+        let filterBtn = document.querySelector('#FilteredList ul');
 
+        filterBtn.addEventListener('click', (e) => {
+          if (e.target.className === 'FilterBtn') {
+            let category = e.target.dataset.category;
+            let brand = document.querySelectorAll('.brand');
+
+            if (category == "All") {
+              brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+              not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+            } else {
+              brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+              document.querySelectorAll('.brand[data-category="' + category + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+            }
+          }
+        });
       }
-
     }
-
-    // ===========================================================
-    // Category Filter
-    // ===========================================================
-
-    // if (isMobile.any()) {
-    //   $('#FilteredList').append(makeSelect(newArraylist));
-    //   $('#FilteredList select').prepend('<option disabled selected>Filter By</option>');
-    //   // Mobile Filter Functions
-    //   $('#FilteredList select').on('change', function() {
-    //       var filterData = $(this).val();
-    //       if (filterData == 'All') {
-    //         $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
-    //         $('.brand').not('.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
-    //       } else {
-    //         $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
-    //         $('.brand[data-category="' + filterData + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
-    //       }
-    //   });
-    // } else {
-    //   $('#FilteredList').append(makeUL(newArraylist));
-    //   // Filter Functions
-    //   $('.FilterBtn').on('click touch', function() {
-    //     var category = $(this).data('category');
-    //
-    //     if (category == 'All') {
-    //       $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
-    //       $('.brand').not('.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
-    //     } else {
-    //       $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
-    //       $('.brand[data-category="' + category + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
-    //     }
-    //   });
-    // }
-    // ===========================================================
   }
+
   initCaseStudySlider() {
     $('.CaseStudy__challenge__slider__container--2').slick({
       slidesToShow: 1,
