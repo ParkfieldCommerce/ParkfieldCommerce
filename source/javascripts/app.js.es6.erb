@@ -12,123 +12,150 @@ class Theme {
   }
 
   initBrandDropdown() {
+    const brandOverlay = document.querySelector('.BrandDropdown');
+    if (brandOverlay) {
 
-    // isMobile Catch
-    var isMobile = {
-      Android: function() { return navigator.userAgent.match(/Android/i); },
-      BlackBerry: function() { return navigator.userAgent.match(/BlackBerry/i); },
-      iOS: function() { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
-      Opera: function() { return navigator.userAgent.match(/Opera Mini/i); },
-      Windows:  function() { return navigator.userAgent.match(/IEMobile/i); },
-      any: function() { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
-    };
+      // isMobile Catch
+      var isMobile = {
+        Android: () => { return navigator.userAgent.match(/Android/i); },
+        BlackBerry: () => { return navigator.userAgent.match(/BlackBerry/i); },
+        iOS: () => { return navigator.userAgent.match(/iPhone|iPad|iPod/i); },
+        Opera: () => { return navigator.userAgent.match(/Opera Mini/i); },
+        Windows:  () => { return navigator.userAgent.match(/IEMobile/i); },
+        any: () => { return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows()); }
+      };
 
-    // ===========================================================
-    // Hover effects - see global/brand-dropdown.scss for more
-    // ===========================================================
-    var $brands_overlay = $('.BrandDropdown'),
-      $brands_wrap = $brands_overlay.children('.BrandsWrapper');
+      // Hover Effects
+      let brandsWrap = document.querySelector('.BrandDropdown > .BrandsWrapper');
 
-    $brands_wrap
-      .on('mouseenter', '.brand', function() {
-        var bgImage = $(this).data('target'),
-          $target = $('.BrandImage[data-hover="' + bgImage + '"]');
-        if ($target)
-          $target.addClass('visible');
-      })
-      .on('mouseleave', '.brand', function() {
-        var $this = $(this),
-          bgImage = $this.data('target'),
-          $target = $('.BrandImage[data-hover="' + bgImage + '"]');
-        if ($target && !$this.hasClass('active'))
-          $target.removeClass('visible');
-      });
-      // .on('click', '.brand', function() {
-      //   var $this = $(this);
-      //
-      //   $this.addClass('active');
-      //   $this.siblings().addClass('no-hover');
-      //   $brands_overlay.addClass('hide');
-      // });
-    // ===========================================================
-
-    // ===========================================================
-    // Category Filter
-    // ===========================================================
-
-    // Get Category list and create an Array
-    var getCategoryList = function() {
-      var category = $('.BrandsWrapper .brand').map(function() {
-        return $(this).data('category')
-      });
-      return category.toArray();
-    };
-    // Remove duplicates from the Array
-    function removeDuplicates(arr) {
-      let unique_array = []
-      for (let i = 0; i < arr.length; i++) {
-        if (unique_array.indexOf(arr[i]) == -1) {
-          unique_array.push(arr[i])
-        }
-      }
-      return unique_array
-    }
-    var newArraylist = removeDuplicates(getCategoryList());
-    // Build UL/LI
-    function makeUL(array) {
-      var list = document.createElement('ul');
-      for (var i = 0; i < array.length; i++) {
-        var item = document.createElement('li');
-        item.appendChild(document.createTextNode(array[i]));
-        item.setAttribute('data-category', array[i]);
-        item.classList.add('FilterBtn');
-        list.appendChild(item);
-      }
-      return list;
-    }
-    // Build Select/Option
-    function makeSelect(array) {
-      var list = document.createElement('select');
-      for (var i = 0; i < array.length; i++) {
-        var item = document.createElement('option');
-        item.appendChild(document.createTextNode(array[i]));
-        item.setAttribute('data-category', array[i]);
-        list.appendChild(item);
-      }
-      return list;
-    }
-
-    if (isMobile.any()) {
-      $('#FilteredList').append(makeSelect(newArraylist));
-      $('#FilteredList select').prepend('<option disabled selected>Filter By</option>');
-      // Mobile Filter Functions
-      $('#FilteredList select').on('change', function() {
-          var filterData = $(this).val();
-          if (filterData == 'All') {
-            $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
-            $('.brand').not('.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
-          } else {
-            $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
-            $('.brand[data-category="' + filterData + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
+      brandsWrap.addEventListener('mouseover', (event) => {
+        let hoveredTarget = event.target;
+        if (hoveredTarget.matches('.brand')) {
+          let dataTarget = hoveredTarget.dataset.target;
+          let bgImage = document.querySelector('.BrandImage[data-hover="' + dataTarget + '"]');
+          if (bgImage) {
+            bgImage.classList.add('visible');
           }
-      });
-    } else {
-      $('#FilteredList').append(makeUL(newArraylist));
-      // Filter Functions
-      $('.FilterBtn').on('click touch', function() {
-        var category = $(this).data('category');
-
-        if (category == 'All') {
-          $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
-          $('.brand').not('.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
-        } else {
-          $('.brand').velocity({opacity: 0}, {display: 'none'}, {duration: 1000});
-          $('.brand[data-category="' + category + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 1000});
         }
       });
+      brandsWrap.addEventListener('mouseout', (event) => {
+        let hoveredTarget = event.target;
+        if (hoveredTarget.matches('.brand')) {
+          let dataTarget = hoveredTarget.dataset.target;
+          let bgImage = document.querySelector('.BrandImage[data-hover="' + dataTarget + '"]');
+          if (bgImage && !hoveredTarget.classList.contains('active')) {
+            bgImage.classList.remove('visible');
+          }
+        }
+      });
+
+      // Category Filter Functions
+      // Get Category list and create an Array
+      const getCategoryList = () => {
+        let brandSelector = document.querySelectorAll('.BrandsWrapper .brand');
+        let category = Array.from(brandSelector, (e) => e.dataset.category);
+        return category;
+      };
+
+      // Remove duplicates from the Array
+      const removeDuplicates = (arr) => {
+        let unique_array = [];
+        for (var i = 0; i < arr.length; i++) {
+          if (unique_array.indexOf(arr[i]) == -1) {
+            unique_array.push(arr[i]);
+          }
+        }
+        return unique_array
+      }
+
+      // Build UL/LI
+      function makeUL(array) {
+        var list = document.createElement('ul');
+        for (var i = 0; i < array.length; i++) {
+          var item = document.createElement('li');
+          item.appendChild(document.createTextNode(array[i]));
+          item.setAttribute('data-category', array[i]);
+          item.classList.add('FilterBtn');
+          list.appendChild(item);
+        }
+        return list;
+      }
+      // Build Select/Option
+      function makeSelect(array) {
+        var list = document.createElement('select');
+        for (var i = 0; i < array.length; i++) {
+          var item = document.createElement('option');
+          item.appendChild(document.createTextNode(array[i]));
+          item.setAttribute('data-category', array[i]);
+          list.appendChild(item);
+        }
+        return list;
+      }
+      // Not Function
+      function not(selector, filter) {
+        try {
+          return document.querySelectorAll(selector + ":not(" + filter + ")");
+        } catch (e) {
+          console.log("something goes wrong");
+          return null;
+        }
+      }
+      // New Array without duplicates
+      const newArraylist = removeDuplicates(getCategoryList());
+
+      // For Mobile, build a select with the new Array
+      if (isMobile.any()) {
+        let filteredList = document.getElementById('FilteredList');
+        filteredList.appendChild(makeSelect(newArraylist));
+
+        let filterSelect = document.querySelector('#FilteredList select');
+        let option = document.createElement('option');
+        let optTxt = document.createTextNode('Filter By');
+        let selected = true;
+        let disabled = true;
+        option.appendChild(optTxt);
+        option.selected = selected;
+        option.disabled = disabled;
+
+        filterSelect.insertBefore(option, filterSelect.firstChild);
+
+        // Mobile Filter Functions
+        filterSelect.addEventListener('change', (event) => {
+          let targetVal = event.target.value;
+          let brand = document.querySelectorAll('.brand');
+
+          if(targetVal == 'All') {
+            brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+            not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+          } else {
+            brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+            document.querySelectorAll('.brand[data-category="' + targetVal + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+          }
+        });
+      } else {
+        // Build Ul for Desktop
+        let filteredList = document.getElementById('FilteredList');
+        filteredList.appendChild(makeUL(newArraylist));
+        let filterBtn = document.querySelector('#FilteredList ul');
+
+        filterBtn.addEventListener('click', (e) => {
+          if (e.target.className === 'FilterBtn') {
+            let category = e.target.dataset.category;
+            let brand = document.querySelectorAll('.brand');
+
+            if (category == "All") {
+              brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+              not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+            } else {
+              brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+              document.querySelectorAll('.brand[data-category="' + category + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+            }
+          }
+        });
+      }
     }
-    // ===========================================================
   }
+
   initCaseStudySlider() {
     $('.CaseStudy__challenge__slider__container--2').slick({
       slidesToShow: 1,
@@ -273,7 +300,7 @@ class Theme {
             $(this).data('start', endIndex);
           }
           if(index >= companies.length - 1){
-            $(this).remove();            
+            $(this).remove();
           }
         });
       });
