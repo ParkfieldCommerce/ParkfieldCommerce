@@ -1,3 +1,49 @@
-<% sliderBlock.each do |slide| %>
-<%= slide.title %>
+<% if type == 'migrationPage' %>	
+<div class="MigrationSlider__row large-12 medium-10 small-10 space-90">
+	<% sliderBlock.each do |slide| %>
+	<div class="MigrationSlider__container">
+		<div class="row">
+		<div class="large-6">
+			<h2 class="MigrationSlider__title"><%= slide.title %></h2>
+			<h3 class="MigrationSlider__quote"><%= slide.quote %></h3>
+			<p class=MigrationSlider__company><%= slide.company %></p>
+			<div class="MigrationSlider__percentage__container">
+				<div class="MigrationSlider__first__percentage">
+					<p class="MigrationSlider__first__percent"><%= slide.first_percent %></p>
+					<p class="MigrationSlider__first__percent__title"><%= slide.first_percent_title %></p>
+				</div>
+				<div class="MigrationSlider__second__percentage">
+					<p class="MigrationSlider__second__percent"><%= slide.second_percent %></p>
+					<p class="MigrationSlider__second__percent__title"><%= slide.second_percent_title %></p>
+				</div>
+			</div>
+		</div>
+
+		<div class="large-6">
+			<%= image_tag slide.image.url, class:'MigrationSlider__image' %>
+		</div>
+		</div>
+	</div>
+	<% end %>
+</div>
+
+<div class="row">
+	<div class="MigrationSlider__button Btn Btn--pfc">
+		<a href="/<%= sliderButtonLink.url %>"><%= sliderButtonTitle %></a>
+	</div>
+</div>
+
+<div class="row">
+	<div class="large-6"></div>
+	<div class="MigrationSlider__arrows large-6">
+		<div class="MigrationSlider__left">
+			<%= partial './partials/global/svg-icons', locals:{icon: 'left-arrow'} %>
+		</div>
+		<div class="MigrationSlider__count">
+		</div>
+		<div class="MigrationSlider__right">
+			<%= partial './partials/global/svg-icons', locals:{icon: 'right-arrow'} %>
+		</div>
+		</div>
+</div>
 <% end %>

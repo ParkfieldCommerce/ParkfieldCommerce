@@ -7,6 +7,7 @@ class Theme {
     this.initMobileNavigation();
     this.initCaseStudySlider();
     this.initReviewsSlider();
+    this.initMigrationSlider();
     this.initBrandDropdown();
     this.initHomeWareTextilesPage();
   }
@@ -141,10 +142,33 @@ class Theme {
         breakpoint:768,
         settings:{
           centerMode: true,
+
         }
       }]
     });
   }
+
+  initMigrationSlider() {
+
+    var $status = $('.MigrationSlider__count');
+    var $slickElement = $('.MigrationSlider__row');
+
+    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $status.text(i + '/' + slick.slideCount);
+    });
+
+    $('.MigrationSlider__row').slick({
+        nextArrow: '.MigrationSlider__left',
+        prevArrow: '.MigrationSlider__right',
+        adaptiveHeight: true
+    });
+
+
+  }
+
+
   initMobileNavigation() {
     let mobileTrigger = document.querySelector('#MobileNavTrigger');
     let header = document.querySelector('.MainHeader');

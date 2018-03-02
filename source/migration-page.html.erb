@@ -53,11 +53,22 @@ pageClass: MigrationPages
   </div>
 </div>
 
+  <div class="container m ">
+    <%= partial './partials/migration-pages/slider',
+    locals:{
+      type:'migrationPage',
+      sliderBlock: migrationPage.slider,
+      sliderButtonTitle: migrationPage.slider_button_title,
+      sliderButtonLink: migrationPage.slider_button_link
+    }
+   %>
+  </div>
+
 <div class="container m">
-  <%= partial './partials/migration-pages/slider',
-  locals:{
-    type:'migrationPage',
-    sliderBlock: migrationPage.slider
-  }
- %>
+  <%= partial './partials/migration-pages/accordion-faqs',
+    locals:{
+      type:'migrationPage',
+      accordionFaq: migrationPage.faq_categories
+    }
+   %>
 </div>
