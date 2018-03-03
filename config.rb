@@ -49,6 +49,7 @@ configure :development do
       locals: { caseStudy: caseStudy },
       ignore: true
     end
+
     paginate dato.articles, "/news", "/news.html", per_page: 8
     dato.articles.each do |article|
       proxy "/articles/#{article.handle}/index.html", "article.html", 
@@ -63,6 +64,7 @@ configure :build do
   live_reload: true,
   token: ENV['DATO_API_TOKEN']
   activate :minify_css
+  activate :pagination
   #activate :minify_javascript
   dato.tap do |dato|
     dato.case_studies.each do |caseStudy|
@@ -70,6 +72,8 @@ configure :build do
       locals: { caseStudy: caseStudy },
       ignore: true
     end
+
+    paginate dato.articles, "/news", "/news.html", per_page: 8
     dato.articles.each do |article|
       proxy "/articles/#{article.handle}/index.html", "article.html", 
       locals: { article: article },
