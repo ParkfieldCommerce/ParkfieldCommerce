@@ -112,8 +112,9 @@
     display: inline-block;
     margin-top: 10px;
     color: $heading;
+    padding-bottom: 3px;
     &:after{
-      width: 100%;
+      width: 90%;
       height: 2px;
       background-color: $heading;
     }

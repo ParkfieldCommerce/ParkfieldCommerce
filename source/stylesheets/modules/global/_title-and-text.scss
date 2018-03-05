@@ -85,3 +85,19 @@
 		}
 	}
 }
+
+.Description--li-experts {
+  max-width: 100%;
+    @include maxQuery($s){
+    display: none;
+  }
+}
+
+.Description--li-experts .Description{
+  &__heading h2{
+    font-size: 2.25rem;
+    &:after {
+      display: none;
+    }
+  }
+}

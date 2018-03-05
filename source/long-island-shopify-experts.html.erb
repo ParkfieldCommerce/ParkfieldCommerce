@@ -18,6 +18,15 @@ pageClass: LIExperts
   <%= image_tag logo.url, class:"LIExperts__website-logos" %>
 <% end %>
 </div>
+<div class="container l">
+  <%= partial './partials/global/title-and-text',
+    locals: {
+      heading: dato.li_shopify_expert.description_heading,
+      body: dato.li_shopify_expert.description_body,
+      modifier: '--li-experts'
+    }
+   %>
+</div>
 <% dato.li_shopify_experts_companies.first(3).each do |company| %>
 <%= partial '/partials/homeware-textiles/homeware-case-study',locals: { company: company} %>
 <% end %>

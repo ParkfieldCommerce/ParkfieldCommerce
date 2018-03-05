@@ -80,6 +80,9 @@
 .Hero__image--casestudy,
 .Hero__image--whatis{
   height: 70vh;
+  @include maxQuery($s){
+    height: auto;
+  }
 }
 .Hero__image--homewareTextile{
   height: 67vh;

@@ -50,7 +50,7 @@ a{
   font-family: 'Avenir';
   font-style: normal;
   text-decoration: none;
-
+  color: $page-links;
 }
 ul{
   margin: 0px;
@@ -174,9 +174,13 @@ img{
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 100%;
+    width: 90%;
     height: 1px;
     background-color: $link;
+    transition: width 0.3s;
+  }
+  &:hover:after {
+    width: 100%;
   }
 }
 
