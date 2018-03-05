@@ -79,4 +79,11 @@
 			height:16px;
 		}
 	}
+	@include maxQuery(375px){
+		&__container{
+	    -webkit-box-flex: 0;
+	    flex: 0 0 100%;
+	    max-width: 95%;
+		}
+	}
 }

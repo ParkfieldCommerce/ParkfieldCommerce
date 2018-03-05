@@ -15,7 +15,6 @@ pageClass: MigrationPages
   } 
 %>
 
-<div class="container m">
 <%= partial './partials/global/skewedBanner',
   locals:{
     type:'migrationPage',
@@ -24,10 +23,8 @@ pageClass: MigrationPages
     percent: migrationPage.percent
   }
  %>
-</div>
 
 
-<div class="container m">
 <%= partial './partials/migration-pages/comparison',
   locals:{
     type:'migrationPage',
@@ -37,38 +34,42 @@ pageClass: MigrationPages
     platformContent: migrationPage.comparison
   }
  %>
-</div>
 
-<div class="background-gray space-120 mobile-space-60">
-  <div class="container m ">
-  <%= partial './partials/migration-pages/services',
-    locals:{
-      type:'migrationPage',
-      servicesTitle: migrationPage.migration_services_title,
-      servicesBlock: migrationPage.services,
-      servicesButton: migrationPage.button_title,
-      servicesButtonLink: migrationPage.button_link
-    }
-   %>
-  </div>
-</div>
 
-  <div class="container m ">
-    <%= partial './partials/migration-pages/slider',
-    locals:{
-      type:'migrationPage',
-      sliderBlock: migrationPage.slider,
-      sliderButtonTitle: migrationPage.slider_button_title,
-      sliderButtonLink: migrationPage.slider_button_link
-    }
-   %>
-  </div>
+<%= partial './partials/migration-pages/services',
+  locals:{
+    type:'migrationPage',
+    servicesTitle: migrationPage.migration_services_title,
+    servicesBlock: migrationPage.services,
+    servicesButton: migrationPage.button_title,
+    servicesButtonLink: migrationPage.button_link
+  }
+ %>
 
-<div class="container m">
-  <%= partial './partials/migration-pages/accordion-faqs',
-    locals:{
-      type:'migrationPage',
-      accordionFaq: migrationPage.faq_categories
-    }
-   %>
-</div>
+<%= partial './partials/migration-pages/slider',
+  locals:{
+    type:'migrationPage',
+    sliderBlock: migrationPage.slider,
+    sliderButtonTitle: migrationPage.slider_button_title,
+    sliderButtonLink: migrationPage.slider_button_link
+  }
+%>
+
+<%= partial './partials/migration-pages/accordion-faqs',
+  locals:{
+    type:'migrationPage',
+    accordionTitle: migrationPage.faq_category_header,
+    accordionFaq: migrationPage.faq_categories
+  }
+ %>
+
+<%= partial './partials/migration-pages/text-button-image',
+  locals:{
+    type:'migrationPage',
+    bottomTitle: migrationPage.bottom_title,
+    bottomBody: migrationPage.bottom_body,
+    bottomButtonTitle: migrationPage.bottom_button_title,
+    bottomButtonLink: migrationPage.bottom_button_link,
+    bottomImageGallery: migrationPage.bottom_image_gallery
+  }
+ %>

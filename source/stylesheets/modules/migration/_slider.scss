@@ -3,6 +3,9 @@
 		margin-top:30px;
 		margin-bottom:0px;
 	}
+	&__company__description{
+		display:none;
+	}
 	&__image{
 		width:100%;
 	}
@@ -58,9 +61,48 @@
 	&__count{
 		margin:0 16px;
 	}
-	@media screen and (max-width:768px){
+	@media screen and (max-width:1025px){
 		&__image{
 			display:none!important;
+		}
+		&__row{
+			margin:0 auto;
+		}
+		&__arrows{
+			margin:0 auto;
+			justify-content:flex-start;
+			margin-top:15px;
+		}
+	}
+	@media screen and (max-width:$s){
+		&__title{
+			margin-top:0px;
+			margin-bottom:0px;
+		}
+		&__quote{
+			font-size:.875rem;
+			font-weight:500;
+			color:#979797;
+			margin-top:20px;
+			margin-bottom:0px;
+		}
+		&__company{
+			color:#231F20;
+			font-size:.875rem;
+			margin-top:20px;
+			margin-bottom:0px;
+		}
+		&__company__description{
+			display:block;
+			margin:0px;
+			color:#231F20;
+			font-size:.875rem;
+		}
+		&__button{
+			display:none;
+		}
+		&__arrows{
+			margin-top:40px;
 		}
 	}
 }

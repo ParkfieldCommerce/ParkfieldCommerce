@@ -1,0 +1,20 @@
+.TextButtonImage{
+	margin-top:110px;
+	&__textbox{
+		margin:0;
+	}
+	&__heading{
+		margin-top:30px;
+		font-size:3rem;
+	}
+	&__body{
+
+	}
+	&__image{
+		text-align:right;
+	}
+	&__button__container{
+		display:flex;
+		margin-top:45px;
+	}
+}
