@@ -1,0 +1,15 @@
+<% dato.marketing_page.marketing_sections.each do | section |%>
+	<div class="container l">
+		<div class="space-120">
+			<div class="MarketingSection">
+				<div class="MarketingSection__text">
+					<h2><%= section.heading %></h2>
+					<%= section.body %>
+				</div>	
+				<div class="MarketingSection__imageWrap">
+					<%= image_tag section.image.url, alt: section.image.alt, class:"MarketingSection__image" %>
+				</div>
+			</div>
+		</div>
+	</div>
+<% end %>

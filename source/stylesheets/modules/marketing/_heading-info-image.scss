@@ -1,0 +1,46 @@
+.MarketingSection {
+	display: flex;
+	&__text {
+		width: 40%;
+		h2 {
+			margin: 0 0 30px;
+		}
+		p {
+			margin: 0;
+			max-width: 85%;
+		}
+	}
+	&__imageWrap {
+		width: 60%;
+	}
+	&__image {
+		width: 100%;
+	}
+}
+
+@include maxQuery($s){
+	.MarketingSection {
+		flex-direction: column-reverse;
+		&__text {
+			width: 90%;
+			margin: 0 auto;
+			h2 {
+				font-size: 1.5rem;
+				margin-bottom: 20px;
+			}
+			p {
+				font-size: 0.875rem;
+				max-width: 100%;
+			}
+		}
+		&__imageWrap {
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		&__image {
+			display: block;
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+}

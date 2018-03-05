@@ -1,0 +1,31 @@
+---
+layout: layout
+pageClass: MarketingPage
+---
+
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'generic',
+    mobile_image: dato.marketing_page.banner[0],
+    med_image: dato.marketing_page.banner[1],
+    large_image: dato.marketing_page.banner[2],
+    heading: dato.marketing_page.banner_heading,
+    subHeadingImage: dato.marketing_page.banner_subheading_image
+  } 
+%> 
+
+<div class="container l">
+	<div class="padding-90 mobile-space-padding-60">
+		<%= partial './partials/global/title-and-text',
+	    locals: {
+	      heading: dato.marketing_page.description_heading,
+	      body: dato.marketing_page.description_body,
+	      modifier: '--marketing'
+	    }
+	   %>
+	</div>
+</div>
+
+<div class="container l">
+	<%= partial './partials/marketing/heading-info-image.html' %>
+</div>

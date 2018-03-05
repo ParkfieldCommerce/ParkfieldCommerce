@@ -93,9 +93,26 @@
   }
 }
 
-.Description--li-experts .Description{
+.Description--marketing {
+	max-width: 100%;
+	@include maxQuery($s){
+		max-width: 90%;
+		margin: 0 auto;
+	}
+	.Description__body p {
+		max-width: 80%;
+		@include maxQuery($s){
+			max-width: 100%;
+		}
+	}
+}
+
+.Description--li-experts,.Description--marketing .Description{
   &__heading h2{
     font-size: 2.25rem;
+    @include maxQuery($s){
+    	font-size: 1.5rem;
+    }
     &:after {
       display: none;
     }
