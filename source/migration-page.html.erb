@@ -1,0 +1,76 @@
+---
+title: ParkfieldCommerce - Migration From and To
+pageClass: MigrationPages
+---
+
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'migrationPage',
+    mobile_image: migrationPage.banner_gallery[0],
+    med_image: migrationPage.banner_gallery[1],
+    large_image: migrationPage.banner_gallery[2],
+    heading: migrationPage.banner_heading,
+    subHeading: migrationPage.banner_subheading,
+    subHeadingImage: migrationPage.banner_subheading_image
+  } 
+%>
+<div class="container m">
+<%= partial './partials/global/skewedBanner',
+  locals:{
+    type:'migrationPage',
+    reasonTitle: migrationPage.reason_title,
+    reasonList: migrationPage.reason_list,
+    percent: migrationPage.percent
+  }
+ %>
+</div>
+
+
+<%= partial './partials/migration-pages/comparison',
+  locals:{
+    type:'migrationPage',
+    comparisonTitle: migrationPage.migration_platform_name,
+    platformFromImage: migrationPage.migration_platform_image[0],
+    platformToImage: migrationPage.migration_platform_image[1],
+    platformContent: migrationPage.comparison
+  }
+ %>
+
+
+<%= partial './partials/migration-pages/services',
+  locals:{
+    type:'migrationPage',
+    servicesTitle: migrationPage.migration_services_title,
+    servicesBlock: migrationPage.services,
+    servicesButton: migrationPage.button_title,
+    servicesButtonLink: migrationPage.button_link
+  }
+ %>
+
+<%= partial './partials/migration-pages/slider',
+  locals:{
+    type:'migrationPage',
+    sliderBlock: migrationPage.slider,
+    sliderButtonTitle: migrationPage.slider_button_title,
+    sliderButtonLink: migrationPage.slider_button_link
+  }
+%>
+
+<%= partial './partials/migration-pages/accordion-faqs',
+  locals:{
+    type:'migrationPage',
+    accordionTitle: migrationPage.faq_category_header,
+    accordionFaq: migrationPage.faq_categories
+  }
+ %>
+
+<%= partial './partials/migration-pages/text-button-image',
+  locals:{
+    type:'migrationPage',
+    bottomTitle: migrationPage.bottom_title,
+    bottomBody: migrationPage.bottom_body,
+    bottomButtonTitle: migrationPage.bottom_button_title,
+    bottomButtonLink: migrationPage.bottom_button_link,
+    bottomImageGallery: migrationPage.bottom_image_gallery
+  }
+ %>

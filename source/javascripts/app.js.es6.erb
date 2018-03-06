@@ -7,6 +7,8 @@ class Theme {
     this.initMobileNavigation();
     this.initCaseStudySlider();
     this.initReviewsSlider();
+    this.initMigrationSlider();
+    this.initMigrationAccordion();
     this.initBrandDropdown();
     this.initHomeWareTextilesPage();
   }
@@ -168,8 +170,48 @@ class Theme {
         breakpoint:768,
         settings:{
           centerMode: true,
+
         }
       }]
+    });
+  }
+  initMigrationSlider() {
+
+    var $status = $('.MigrationSlider__count');
+    var $slickElement = $('.MigrationSlider__row');
+
+    $slickElement.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+        var i = (currentSlide ? currentSlide : 0) + 1;
+        $status.text(i + '/' + slick.slideCount);
+    });
+
+    $('.MigrationSlider__row').slick({
+        nextArrow: '.MigrationSlider__left',
+        prevArrow: '.MigrationSlider__right',
+        adaptiveHeight: true
+    });
+  }
+  initMigrationAccordion(){
+    $(function() {
+      // (Optional) Active an item if it has the class "is-active"
+      $(".js-accordion > .js-accordion-container.is-active")
+        .children(".js-accordion-body")
+        .slideDown();
+
+      $(".js-accordion > .js-accordion-container").click(function() {
+        // Cancel the siblings
+        $(this)
+          .siblings(".js-accordion-container")
+          .removeClass("is-active")
+          .children(".js-accordion-body")
+          .slideUp();
+        // Toggle the item
+        $(this)
+          .toggleClass("is-active")
+          .children(".js-accordion-body")
+          .slideToggle("ease-out");
+      });
     });
   }
   initMobileNavigation() {

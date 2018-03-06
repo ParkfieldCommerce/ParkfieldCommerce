@@ -1,0 +1,88 @@
+.TextButtonImage{
+	padding-top:110px;
+	background-color:#4C54B0;
+	&__textbox{
+		margin:0;
+	}
+	&__heading{
+		margin-top:30px;
+		font-size:3rem;
+		color:white;
+	}
+	&__body{
+		color:white;
+	}
+	&__image{
+		text-align:right;
+	}
+	&__button__container{
+		display:flex;
+		margin-top:45px;
+	}
+	&__button{
+		color:#4C54B0;
+		background-color:white;
+		font-weight:800;
+		width:152px;
+		max-width:100%;
+		text-align: center;
+		padding:20px 18px;
+	}
+	&__image--1{
+		vertical-align: bottom;
+	}
+	&__image--2{
+		display:none;
+	}
+	@include minmaxQuery(1022px,1250px){
+		padding-left:25px;
+		padding-right:25px;
+
+	}
+	@include maxQuery(1025px){
+		background-color:#FAFAFA;
+		margin-top:60px;
+		padding-top:60px;
+		&__heading{
+			margin-top:0px;
+			color:#231F20;
+		}
+		&__body{
+			color:#231F20;
+		}
+		&__button{
+			background-color:#4C54B0;
+			color:white;
+		}
+		&__image{
+			text-align:center;
+			margin-top:40px;
+		}
+	}
+	@include maxQuery($s){
+		&__heading{
+			font-size:1.5rem;
+			margin-bottom:0px;
+		}
+		&__body{
+			margin-top:20px;
+			color:#979797;
+			font-size:.875rem;
+		}
+		&__button__container{
+			margin-top:40px;
+		}
+		&__button{
+			width:100%;
+			font-size:.875rem;
+		}
+		&__image{
+			display:none;
+		}
+		&__image--2{
+			margin:0 auto;
+			display:block;
+			margin-top:40px;
+		}
+	}
+}

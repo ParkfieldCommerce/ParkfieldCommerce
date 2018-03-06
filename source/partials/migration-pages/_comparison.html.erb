@@ -1,0 +1,34 @@
+
+<div class="container m">
+<% if type == 'migrationPage' %>	
+	<div class="Comparison Comparison__container small-10">
+		<div class="Comparison__row row">
+			<div class="Comparison__left large-4 medium-4 small-12"><h2><%= comparisonTitle %></h2></div>
+			<div class="small-4 Comparison__hidden"></div>
+			<div class="Comparison__center large-4 medium-4 small-4"><%= image_tag platformFromImage.url, class:'Comparison__from__logo' %></div>
+			<div class="Comparison__right large-4 medium-4 small-4"><%= image_tag platformToImage.url, class:'Comparison__to__logo' %></div>
+		</div>
+
+		<% platformContent.each do |content| %>
+
+			<div class="Comparison__row row">
+				<div class="Comparison__left large-4 medium-4 small-4"><h4><%= content.feature %></h4></div>
+					<% if content.from_platform == true || content.to_platform == true %>
+						<div class="Comparison__center large-4 medium-4 small-4">
+							<% if content.from_platform == true %>
+								<%= image_tag dato.migration_check.check_images[0].url, class:'Comparison__checked' %> 
+							<% else %> <%= image_tag dato.migration_check.check_images[1].url, class:'Comparison__unchecked' %>
+							<% end %>
+						</div>
+						<div class="Comparison__right large-4 medium-4 small-4"><% if content.to_platform == true %><%= image_tag dato.migration_check.check_images[0].url, class:'Comparison__checked' %> <% else %> <%= image_tag dato.migration_check.check_images[1].url, class:'Comparison__unchecked' %>  <% end %></div>
+					<% else %>
+						<div class="Comparison__center large-4 medium-4 small-4"><p><%= content.from_platform_text %></p></div>
+						<div class="Comparison__center large-4 medium-4 small-4"><p><%= content.to_platform_text %></p></div>
+
+					<% end %>
+			</div>
+
+		<% end %>
+	</div>
+<%end %>
+</div>

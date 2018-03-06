@@ -1,0 +1,39 @@
+<div class="MigrationAccordion background-gray space-90 mobile-space-60 padding-75 padding-bottom-90">
+  <div class="container m">
+<div class="row ">
+	<div class="large-12 medium-12 small-12">
+		<h3 class="MigrationAccordion__main__title"><%= migrationPage.faq_category_header %></h3>
+	</div>
+	<% accordionFaq.each do |migrationHeading| %>
+	<% dato.migration_page_faqs.each do |pageFaq| %>
+ 	<% if migrationHeading.heading == pageFaq.category_title %>
+		<h2 class="MigrationAccordion__title large-12 "><%=pageFaq.category_title %></h2>	
+			<div class="large-2"></div>
+			<div class="MigrationAccordion__left large-5 js-accordion">
+				<% pageFaq.sub_category_items.each do |category| %>
+				<% if category.is_left_column == true %>
+					<div class="MigrationAccordion__container js-accordion-container ">
+						<p class="MigrationAccordion__header js-accordion-header"><%=category.title %></p>
+						<p class="MigrationAccordion__body js-accordion-body"><%=category.body %></p>
+					</div>
+				<% end %>
+				<% end %>
+			</div>
+			
+			<div class="MigrationAccordion__right large-5 js-accordion">
+				<% pageFaq.sub_category_items.each do |category| %>
+				<% if category.is_left_column != true %>
+					<div class="MigrationAccordion__container js-accordion-container ">
+						<p class="MigrationAccordion__header js-accordion-header"><%=category.title %></p>
+						<p class="MigrationAccordion__body js-accordion-body"><%=category.body %></p>
+					</div>
+				<% end %>
+				<% end %>
+			</div>
+		</div>
+ 	<% end %>
+	<% end %>
+	<% end %>
+</div>
+</div>
+</div>

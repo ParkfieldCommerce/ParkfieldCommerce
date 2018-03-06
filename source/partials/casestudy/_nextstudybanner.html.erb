@@ -5,6 +5,7 @@
 <% dato.case_studies.each do |nextCaseStudy| %>
 	<% if nextFound == true %>
 		<% nextUrl = nextCaseStudy.handle %>
+		<% nextStudyBanner = nextCaseStudy.banner_gallery[2] %>
 		<% break %>
 	<% end %>
 	<% if caseStudy.handle == nextCaseStudy.handle %>
@@ -13,7 +14,7 @@
 <% end %>
 
 
-<div class="space-120 mobile-space-60 CaseStudy__nextBanner__container--1" style="width:100%; height:398px;background-image:url('<%= nextStudyBanner.url %>'); background-position:center center; background-repeat:no-repeat;">
+<div class="space-120 mobile-space-60 CaseStudy__nextBanner__container--1" style="background-image:url('<%= nextStudyBanner.url %>');">
 	<div class="container m">
 		<div class=" row">
 			<div class="CaseStudy CaseStudy__nextBanner__logo__container">

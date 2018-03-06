@@ -69,6 +69,12 @@ img{
   border: 1px solid white;
 }
 
+.Btn--pfc{
+  background-color:$btn-pfc;
+  a{
+    color:$btn-pfc-text;
+  }
+}
 .Btn--animatedLeft{
   position: relative;
   span{

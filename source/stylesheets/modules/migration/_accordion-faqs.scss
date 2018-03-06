@@ -1,0 +1,49 @@
+.MigrationAccordion{
+	&__main__title{
+		margin-top:0px;
+		margin-bottom:73px;
+	}
+	&__title{
+		margin:0;
+	}
+	&__container{
+		margin-right:30px;
+		position:relative;
+	}
+	&__header{
+		padding-left:10px;
+		margin:0;
+		color:#231F20;
+		border-top: 2px solid #231F20;
+	}
+	&__header:after{
+		content:'+';
+		position:absolute;
+		right:0;
+		margin-right:10;
+	}
+	.is-active &__header:after{
+		content:'\2013	';
+	}
+	&__body{
+		margin:0;
+		margin-top:30px;
+		margin-left:10px;
+		display:none;
+		color:#231F20;
+	}
+	&__container:last-child{
+		border-bottom:2px solid #231F20;
+	}
+	
+@include minmaxQuery(1022px,1250px){
+	padding-left:25px;
+	padding-right:25px;
+}
+}
+
+@media screen and (max-width:1025px){
+	.MigrationAccordion{
+	display:none;
+}
+}
