@@ -37,30 +37,3 @@
 </div>
 </div>
 </div>
-
-<!-- JS -->
-<script type="text/javascript">
-$(function() {
-  // (Optional) Active an item if it has the class "is-active"
-  $(".js-accordion > .js-accordion-container.is-active")
-    .children(".js-accordion-body")
-    .slideDown();
-
-  $(".js-accordion > .js-accordion-container").click(function() {
-    // Cancel the siblings
-    $(this)
-      .siblings(".js-accordion-container")
-      .removeClass("is-active")
-      .children(".js-accordion-body")
-      .slideUp();
-    // Toggle the item
-    $(this)
-      .toggleClass("is-active")
-      .children(".js-accordion-body")
-      .slideToggle("ease-out");
-  });
-});
-
-
-</script>
-
