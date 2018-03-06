@@ -1,0 +1,139 @@
+.Migrated{
+
+	&__logo{
+		vertical-align: middle;
+		position:relative;
+	}
+	&__row--2{
+		display:none;
+	}
+	&__logo__hover{
+		width:100%;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		background-color:#EBEBEB;
+		opacity:0;
+		cursor:pointer;
+		transition: opacity .2s ease-in;
+
+		&:hover{
+			opacity:.5;
+		}
+	}
+	&__active &__logo__hover{
+		width:100%;
+		position:absolute;
+		top:0;
+		bottom:0;
+		left:0;
+		right:0;
+		background-color:#EBEBEB;
+		opacity:.8;
+		cursor:pointer;
+		transition: opacity .2s ease-in;
+	}
+	&__large__custom{
+		margin:0px 5px 10px;
+		position:relative;
+	}
+
+	&__large__custom:nth-child(10n+10){
+		margin-right:0px;
+	}
+	&__large__custom:nth-child(10n+1){
+		margin-left:0px;
+	}
+	&__border{
+		border:1px solid #e0dede;
+		width:158px;
+		margin:0 auto;
+		margin-top:45px;
+	}
+	&__hidden{
+		display:none;
+	}
+	&__arrow{
+		margin:0px 24px;
+	}
+	&__button__row{
+		justify-content:center;
+	}
+	&__button__row--1{
+		display:none;
+	}
+	&__button__container{
+		display:flex;
+		margin-top:30px;
+	}
+	&__button__container a{
+		color:white;
+    padding: 20px 44px;
+	}
+	&__hidden__row--1{
+		justify-content:center;
+	}
+	&__hidden__row--2{
+		align-items:center;
+		margin-top:45px;
+	}
+	&__logo__from &__active &__logo__hover{
+		opacity:0;
+	}
+
+	@include maxQuery(1140px){
+		&__row--1{
+			justify-content:center;
+		}
+		&__large__custom{
+    -webkit-box-flex: 0;
+    flex: 0 0 8.33333%;
+    max-width: 8.33333%;
+		}
+		&__logo__from &__large__custom{
+			max-width:100%;
+		}
+	}
+	@include maxQuery($s){
+		&__row--1{
+			display:none;
+		}
+		&__row--2{
+			display:flex;
+			width:320px;
+		}
+		&__logo:hover{
+			cursor:intial;
+		}
+		&__button__row{
+			display:none;
+		}
+		&__button__container{
+			width:100%;
+			display:flex;
+		}
+		&__button__container a{
+			width:100%;
+			text-align: center;
+		}
+		&__button__row--1{
+			display:block;
+		}
+		&__large__custom--1{		
+	    -ms-flex: 0 0 30%;
+	    -webkit-box-flex: 0;
+	    flex: 0 0 30%;
+	    max-width: 30%;
+		margin:0px 5px 10px;
+		}
+
+		&__large__custom--1:nth-child(3n+1){
+			margin-left:0px;
+		}
+		&__large__custom--1:nth-child(3n){
+			margin-right:0px;
+		}
+	}
+}

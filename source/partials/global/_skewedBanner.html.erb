@@ -46,6 +46,27 @@
     </div>
   </div>
 </div>
+<% elsif type == 'migrationGeneralPage' %>
+<div class="SkewedBanner SkewedBanner--general SkewedBanner--migrationpage">
+  <div class="SkewedBanner__row row">
+    <div class="SkewedBanner__text large-6 medium-10 small-10">
+      <h3 class="SkewedBanner__heading"><%= reasonTitle %></h3>
+      <div class="SkewedBanner__list "><%= reasonList %></div>
+    </div>
+    <div class="SkewedBanner__text large-6 medium-10 small-10">
+      <div class="row">
+        <div class="SkewedBanner__percent">
+        <% migrationGeneralPage.percent.each do |percent| %>
+          <div class="large-3 medium-3 small-3">
+            <h3><%= percent.percent_number %></h3>
+            <h2><%= percent.percent_title %></h2>
+          </div>  
+        <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 <% elsif type == 'whatis' %>
 <div class="SkewedBanner SkewedBanner--general SkewedBanner--whatis">
   <div class="SkewedBanner__row row">

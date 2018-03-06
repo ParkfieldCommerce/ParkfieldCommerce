@@ -1,0 +1,75 @@
+---
+title: ParkfieldCommerce - Migration From and To
+pageClass: migrationGeneralPages
+---
+
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'migrationGeneralPage',
+    mobile_image: migrationGeneralPage.banner_gallery[0],
+    med_image: migrationGeneralPage.banner_gallery[1],
+    large_image: migrationGeneralPage.banner_gallery[2],
+    heading: migrationGeneralPage.banner_heading,
+    subHeading: migrationGeneralPage.banner_subheading,
+    subHeadingImage: migrationGeneralPage.banner_subheading_image
+  } 
+%>
+<div class="container m">
+<%= partial './partials/global/skewedBanner',
+  locals:{
+    type:'migrationGeneralPage',
+    reasonTitle: migrationGeneralPage.reason_title,
+    reasonList: migrationGeneralPage.reason_list,
+    percent: migrationGeneralPage.percent
+  }
+ %>
+</div>
+
+<%= partial './partials/migration-pages/migrated',
+  locals:{
+    type:'migrationGeneralPage',
+    migratedTitle: migrationGeneralPage.migrated_clients_title,
+    migratedGallery: migrationGeneralPage.migrated_company_logos,
+    migratedTo: migrationGeneralPage.migrated_to,
+    migratedButton: migrationGeneralPage.migrated_button_text,
+    migratedButtonLink: migrationGeneralPage.migrated_button_link
+  }
+ %>
+
+<%= partial './partials/migration-pages/services',
+  locals:{
+    type:'migrationGeneralPage',
+    servicesTitle: migrationGeneralPage.migration_services_title,
+    servicesBlock: migrationGeneralPage.services,
+    servicesButton: migrationGeneralPage.button_title,
+    servicesButtonLink: migrationGeneralPage.button_link
+  }
+ %>
+
+<%= partial './partials/migration-pages/slider',
+  locals:{
+    type:'migrationGeneralPage',
+    sliderBlock: migrationGeneralPage.slider,
+    sliderButtonTitle: migrationGeneralPage.slider_button_title,
+    sliderButtonLink: migrationGeneralPage.slider_button_link
+  }
+%>
+
+<%= partial './partials/migration-pages/accordion-faqs',
+  locals:{
+    type:'migrationGeneralPage',
+    accordionTitle: migrationGeneralPage.faq_category_header,
+    accordionFaq: migrationGeneralPage.faq_categories
+  }
+ %>
+
+<%= partial './partials/migration-pages/text-button-image',
+  locals:{
+    type:'migrationGeneralPage',
+    bottomTitle: migrationGeneralPage.bottom_title,
+    bottomBody: migrationGeneralPage.bottom_body,
+    bottomButtonTitle: migrationGeneralPage.bottom_button_title,
+    bottomButtonLink: migrationGeneralPage.bottom_button_link,
+    bottomImageGallery: migrationGeneralPage.bottom_image_gallery
+  }
+ %>

@@ -1,0 +1,50 @@
+<div class="Migrated mobile-space-30 space-185">
+	<div class="Migrated__container container m">
+		<div class="Migrated__row--1 row large-12 medium-12">
+			<% migratedGallery.each do |logo| %>
+			<div class="Migrated__large__custom ">
+				<%= image_tag logo.url, class:'Migrated__logo' %>
+				<div class="Migrated__logo__hover"></div>
+			</div>
+			<% end %>	
+		</div>
+		<div class="Migrated__row--2 row large-12 medium-12">
+			<% migratedGallery.first(5).each do |logo| %>
+			<div class="Migrated__large__custom--1">
+				<%= image_tag logo.url, class:'Migrated__logo' %>
+			</div>
+			<% end %>
+			<div class="Migrated__large__custom--1">
+			<%= image_tag migratedGallery.last.url, class:'Migrated__logo' %>
+		</div>
+		</div>
+		<div class="Migrated__hidden__row--1 row large-12">
+			<div class="Migrated__hidden js-hidden">
+				<div class="Migrated__border"></div>
+				<div class="Migrated__hidden__row--2 row">
+					<div class="Migrated__logo__from js-logo-container"></div>
+					<div class="Migrated__arrow"><%= partial './partials/global/svg-icons', locals:{icon: 'right-arrow'} %></div>
+					<div class="Migrated__logo__to"><%= image_tag migratedTo.url, class: 'Migrated__to' %></div>
+				</div>
+				<div class="Migrated__button__row row">
+					<div class="Migrated__button__container"><a class="Btn Btn--pfc" href=""><%= migratedButton %></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="Migrated__button__row--1 row small-10">
+			<div class="Migrated__button__container mobile-space-30"><a class="Btn Btn--pfc" href=""><%= migratedButton %></a></div>
+		</div>
+	</div>	
+</div>
+
+
+
+<script>
+	$('.Migrated__large__custom').click(function(){
+    $('.Migrated__active').removeClass('Migrated__active')
+		$(this).addClass('Migrated__active');
+		$img = $(this).clone();
+		$('.js-logo-container').html($img);
+		$('.js-hidden').slideDown('slow');
+	});
+</script>
