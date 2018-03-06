@@ -51,7 +51,7 @@ configure :development do
     end
 
     dato.migration_pages.each do |migrationPage|
-      proxy "/#{migrationPage.handle}/index.html", "migration-page.html", 
+      proxy "/migration/#{migrationPage.handle}/index.html", "migration-page.html", 
       locals: { migrationPage: migrationPage },
       ignore: true
     end
