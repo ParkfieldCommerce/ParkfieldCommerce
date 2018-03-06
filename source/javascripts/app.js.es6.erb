@@ -7,6 +7,7 @@ class Theme {
     this.initMobileNavigation();
     this.initCaseStudySlider();
     this.initReviewsSlider();
+    this.initMigrationSelector();
     this.initMigrationSlider();
     this.initMigrationAccordion();
     this.initBrandDropdown();
@@ -175,8 +176,21 @@ class Theme {
       }]
     });
   }
-  initMigrationSlider() {
 
+  initMigrationSelector() {
+    if($('.migrationGeneralPages').length > 0){
+      $('.Migrated__large__custom').click(function(){
+        $('.Migrated__active').removeClass('Migrated__active')
+        $(this).addClass('Migrated__active');
+        let img = $(this).clone();
+        $('.js-logo-container').html(img);
+        $('.js-hidden').slideDown('slow');
+      });
+    }
+  }
+
+  initMigrationSlider() {
+    if($('.MigrationPages').length >0 || $('.migrationGeneralPages').length > 0){
     var $status = $('.MigrationSlider__count');
     var $slickElement = $('.MigrationSlider__row');
 
@@ -192,7 +206,9 @@ class Theme {
         adaptiveHeight: true
     });
   }
+  }
   initMigrationAccordion(){
+    if($('.MigrationPages').length >0 || $('.migrationGeneralPages').length > 0){
     $(function() {
       // (Optional) Active an item if it has the class "is-active"
       $(".js-accordion > .js-accordion-container.is-active")
@@ -213,6 +229,7 @@ class Theme {
           .slideToggle("ease-out");
       });
     });
+  }
   }
   initMobileNavigation() {
     let mobileTrigger = document.querySelector('#MobileNavTrigger');
