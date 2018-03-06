@@ -14,7 +14,7 @@ pageClass: MigrationPages
     subHeadingImage: migrationPage.banner_subheading_image
   } 
 %>
-
+<div class="container m">
 <%= partial './partials/global/skewedBanner',
   locals:{
     type:'migrationPage',
@@ -23,6 +23,7 @@ pageClass: MigrationPages
     percent: migrationPage.percent
   }
  %>
+</div>
 
 
 <%= partial './partials/migration-pages/comparison',

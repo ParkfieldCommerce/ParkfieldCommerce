@@ -35,6 +35,11 @@
 	&__container:last-child{
 		border-bottom:2px solid #231F20;
 	}
+	
+@include minmaxQuery(1022px,1250px){
+	padding-left:25px;
+	padding-right:25px;
+}
 }
 
 @media screen and (max-width:1025px){

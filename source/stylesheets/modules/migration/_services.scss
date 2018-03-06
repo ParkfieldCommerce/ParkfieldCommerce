@@ -44,7 +44,11 @@
 			color:white;
 		}
 	}
-	@include maxQuery($m){
+	@include minmaxQuery(1022px,1250px){
+		padding-left:25px;
+		padding-right:25px;
+	}
+	@include maxQuery(1022px){
 		&__block:nth-child(n+3){
 			margin-top:50px;
 		}

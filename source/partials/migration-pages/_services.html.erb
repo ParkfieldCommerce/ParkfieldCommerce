@@ -1,11 +1,11 @@
-<div class="background-gray space-120 mobile-space-60">
+<div class="Service background-gray space-120 mobile-space-60">
   <div class="container m ">
 <% if type == 'migrationPage' %>	
-	<div class="Service Service__container padding-120 padding-bottom-120 mobile-space-padding-60 mobile-space-padding-bottom-60 ">
+	<div class="Service__container padding-120 padding-bottom-120 mobile-space-padding-60 mobile-space-padding-bottom-60 ">
 		<div class="Service__title__container row small-10">
 			<h2 class="Service__title"><%= servicesTitle %></h2>
 		</div>
-		<div class="row small-10">
+		<div class="row large-12 small-10">
 			<% servicesBlock.each do |service| %>
 				<div class="Service__block large-4 medium-6 small-6 ">
 					<div class="Service__content">
@@ -21,7 +21,7 @@
 			<% end %>
 
 		</div>
-		<div class="Service__button__row row small-10">
+		<div class="Service__button__row row large-12 small-10">
 			<div class="Service__button__container small-12">
 				<a href="" class="Service__button Btn Btn--pfc">	
 					<%= servicesButton %>

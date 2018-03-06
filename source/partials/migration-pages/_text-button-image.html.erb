@@ -1,14 +1,16 @@
-<div class="TextButtonImage">
-<div class="TextButtonImage__container container m">
-	<div class="TextButtonImage__row row">
-	<div class="TextButtonImage__textbox large-6">
-		<h2 class="TextButtonImage__heading"><%= bottomTitle %></h2>
-		<p class="TextButtonImage__body"><%= bottomBody %></p>
+<div class="TextButtonImage mobile-space-60">
+	<div class="TextButtonImage__container container m">
+		<div class="TextButtonImage__row row large-12 medium-10 small-10">
+			<div class="TextButtonImage__textbox large-6">
+				<h2 class="TextButtonImage__heading"><%= bottomTitle %></h2>
+				<p class="TextButtonImage__body"><%= bottomBody %></p>
 
-		<div class="TextButtonImage__button__container"><a class="TextButtonImage__button Btn Btn--pfc" href="#"><%= bottomButtonTitle %></a></div>
+				<div class="TextButtonImage__button__container"><a class="TextButtonImage__button Btn" href="#"><%= bottomButtonTitle %></a></div>
+			</div>
+			<div class="TextButtonImage__image large-6 medium-12"><%= image_tag migrationPage.bottom_image_gallery[1].url, class:'TextButtonImage__image--1' %>
+		 </div>
+			<div class="TextButtonImage__image__container large-6 small-12"><%= image_tag migrationPage.bottom_image_gallery[0].url, class:'TextButtonImage__image--2' %>
+		 </div>
+		</div>
 	</div>
-	<div class="TextButtonImage__image large-6"><%= image_tag migrationPage.bottom_image_gallery[1].url, class:'TextButtonImage__image--1' %>
- </div>
-</div>
-</div>
 </div>
