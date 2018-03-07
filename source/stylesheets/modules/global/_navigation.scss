@@ -2,6 +2,7 @@
   &__items{
     display: flex;
     justify-content: flex-end;
+    align-items: center;
   }
   &__item{
     margin-right: 40px;
@@ -11,6 +12,10 @@
   }
   &__item--button a{
     font-weight: bold;
+    width: 160px;
+    display: inline-block;
+    padding: 10px 0px;
+    text-align: center;
   }
   &__link{
     position: relative;

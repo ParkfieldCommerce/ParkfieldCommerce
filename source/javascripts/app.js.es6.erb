@@ -291,6 +291,17 @@ class Theme {
         currentButtonTimer.width(0);
         clearInterval(timer);
       }, slideTime + 1000);
+
+      $('.js-ReviewsSliderController__button').unbind('click');
+      $('.js-ReviewsSliderController__button').click(function(){
+        currentButtonTimer.width(0);
+        clearInterval(timer);
+      });
+      buttonSet.each(function(i, button) {
+        $(this).on('click', () => {
+          ReviewsSlider.slick('slickGoTo', i);
+        });
+      });
     }
 
     if (ReviewsSlider.length > 0) { //If slider exists initialize
@@ -324,11 +335,7 @@ class Theme {
         }]
       });
 
-      buttonSet.each(function(i, button) {
-        $(this).on('click', () => {
-          ReviewsSlider.slick('slickGoTo', i);
-        });
-      });
+
     }
   }
   initHomeWareTextilesPage(){

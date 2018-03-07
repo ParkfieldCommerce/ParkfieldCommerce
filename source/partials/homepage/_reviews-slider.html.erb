@@ -2,7 +2,7 @@
   <div class="ReviewsSliderController">
   <% dato.reviews.each do |review | %>
     <button class="ReviewsSliderController__button js-ReviewsSliderController__button" data-bg="<%= review.background.url%>">
-      <%= image_tag review.logo.url %>
+      <%= image_tag review.logo.url, alt: review.logo.alt %>
       <div class="ReviewsSliderController__timer js-ReviewsSlider__timer"></div>
     </button>  
   <% end %>

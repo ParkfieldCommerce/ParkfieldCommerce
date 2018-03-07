@@ -1,3 +1,9 @@
+.ReviewsSliderController{
+  max-width: $l;
+  @include maxQuery($m){
+    max-width: $m;
+  }
+}
 .ReviewsSliderController,
 .ReviewsSlider{
   display: flex;
@@ -7,6 +13,12 @@
     background-color: transparent;
     border: none;
     position: relative;
+    &:first-child{
+      padding-left: 0px;
+    }
+    &:last-child{
+      padding-right: 0px;
+    }
   }
   &__timer{
     display: block;
@@ -31,6 +43,12 @@
   &__content{
     margin: 0 auto;
     max-width: 90%
+  }
+  &__body{
+    max-width: $l;
+    @include maxQuery($m){
+      max-width: 976px;
+    }
   }
   &__body p{
     font-size: 2.25rem;
