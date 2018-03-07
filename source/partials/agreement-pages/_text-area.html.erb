@@ -1,0 +1,28 @@
+
+<div class="AgreementPage__container container m ">
+	<div class="AgreementPage__row--1 row">
+		<h1 class="AgreementPage__header space-90"><%= agreementPage.page_title %></h1>
+	</div>
+	
+	<div class="AgreementPage__content__container space-90 space-bottom-120">
+	<% agreementPage.agreement_page.each do |agreement| %>
+	<div class="AgreementPage__row--2 row">
+
+		<% if agreement.title.length > 0 %>
+			<div class="AgreementPage__size__containers large-4 medium-10 small-10">
+				<h4 class="AgreementPage__title"><%= agreement.title %></h4>
+			</div>
+		<%else%>
+			<div class="AgreementPage__size__containers--1 large-4 medium-10 small-10">
+				<h4 class="AgreementPage__title"><%= agreement.title %></h4>
+			</div>
+		<%end%>
+		<div class="AgreementPage__offset large-1"></div>
+		<div class="AgreementPage__offset large-1"></div>
+		<div class="AgreementPage__size__containers large-6 medium-10 small-10">
+			<p class="AgreementPage__body"><%= agreement.body %></p>
+		</div>
+	</div>
+	<% end %>
+	</div>
+</div>

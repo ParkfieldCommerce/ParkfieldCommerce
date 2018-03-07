@@ -1,0 +1,76 @@
+.AgreementPage{
+  .Nav__link,
+  .MainHeader__logo{
+    color: black;
+  }
+  .Nav__link{
+    @include maxQuery(1000px){
+    	color:white;
+    }
+  }
+  .Btn.Btn--animatedLeft{
+    border-color: black;
+    span{color: black;}
+    &:after{
+      background-color: black;
+    }
+    &:hover{
+      span{color: white;}
+    }
+  }
+  &__content__container{
+
+  }
+  &__header{
+  	margin-bottom:0px;
+  }
+	&__row--1{
+		justify-content:center;
+	}
+	&__header{}
+	&__title{
+		margin-top:30px;
+		margin-bottom:0px;
+	}
+	&__body{
+		color:#979797;
+		line-height:21px;
+		margin-top:30px;
+		margin-bottom:0px;
+	}
+	@include maxQuery(1025px){
+		&__offset{
+			display:none;
+		}
+		&__size__containers{
+			margin:0 auto;
+		}
+		&__size__containers--1{
+			display:none;
+		}
+		&__header{
+			margin-top:45px;
+		}
+		&__content__container{
+			margin-top:40px;
+			margin-bottom:60px;
+		}
+		&__title{
+			margin-top:20px;
+		}
+		&__body{
+			margin-top:20px;
+		}
+	}
+	@include minmaxQuery(1022px, 1250px){
+		&__content__container{
+			margin-left:10px;
+			margin-right:10px;
+		}
+	}
+	@include maxQuery($s){
+		&__header{
+			font-size:1.5rem;
+		}
+	}
+}

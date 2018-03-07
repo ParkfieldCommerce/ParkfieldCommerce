@@ -3,6 +3,11 @@
   .MainHeader__logo{
     color: black;
   }
+  .Nav__link{
+    @include maxQuery(1000px){
+      color:white;
+    }
+  }
   .Btn.Btn--animatedLeft{
     border-color: black;
     span{color: black;}

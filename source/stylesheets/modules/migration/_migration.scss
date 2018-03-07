@@ -10,6 +10,9 @@ $migration-color-1: #4C54B0;
 .migration-page .Nav{
 	&__link{
 		color:black;
+		@include maxQuery(1000px){
+			color:white;
+		}
 	}
 	&__item--button a{
 		border:1px solid black;

@@ -62,6 +62,12 @@ configure :development do
       ignore: true
     end
 
+    dato.agreements.each do |agreementPage|
+      proxy "/#{agreementPage.handle}/index.html", "agreement-pages.html", 
+      locals: { agreementPage: agreementPage },
+      ignore: true
+    end
+
     paginate dato.articles, "/news", "/news.html", per_page: 8
     dato.articles.each do |article|
       proxy "/articles/#{article.handle}/index.html", "article.html", 
@@ -94,6 +100,12 @@ configure :build do
     dato.migration_general_pages.each do |migrationGeneralPage|
       proxy "/#{migrationGeneralPage.handle}/index.html", "migration-general-page.html", 
       locals: { migrationGeneralPage: migrationGeneralPage },
+      ignore: true
+    end
+
+    dato.agreements.each do |agreementPage|
+      proxy "/#{agreementPage.handle}/index.html", "agreement-pages.html", 
+      locals: { agreementPage: agreementPage },
       ignore: true
     end
 
