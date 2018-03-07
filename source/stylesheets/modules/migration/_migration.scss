@@ -120,6 +120,7 @@ $migration-color-1: #4C54B0;
 		font-weight:500;
 		color:$migration-color-1;
 		margin-bottom:-15px;
+		cursor:pointer;
 	}
 	&__text--3{
 		font-size:3rem;
@@ -143,6 +144,7 @@ $migration-color-1: #4C54B0;
 		color:$migration-color-1;
 		margin-bottom:-15px;
 		text-align:center;
+		cursor:pointer;
 	}
 	&__text__list--1{
 		display:none;
