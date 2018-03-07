@@ -10,7 +10,7 @@ pageClass: migration-page
 		<div class="row">
 			<div class="large-12 medium-12 small-12">
 				<div class="Migration__text__container--1">
-					<p class="Migration__text--1">I use</p>
+					<p class="Migration__text--1"><%=dato.migration.initial_text %></p>
 					<div class="Migration__text__container--2 js__container--2">
 						<div class="Migration__text__hover--1">Start here</div>
 						<div class="Migration__text--2 js__text__list--2">
@@ -42,7 +42,7 @@ pageClass: migration-page
 						%>
 						</div>
 					<p class="Migration__text--3">
-						to manage my store
+						<%= dato.migration.second_text_line %>
 					</p>
 				</div>
 			</div>
@@ -51,7 +51,7 @@ pageClass: migration-page
 		<div class="row">
 			<div class="large-12 medium-12 small-12">
 				<div class="Migration__text__container--3">
-					<p class="Migration__text--4">I want to switch to</p>
+					<p class="Migration__text--4"><%= dato.migration.switch_to_text %></p>
 					<div class="Migration__text__container--4 js__container--4">
 						<div class="Migration__text--5 js__text__list--4">
 						</div>
@@ -113,11 +113,11 @@ $(document).ready(function(){
 	});
 
 	function checkSelects(){
-		var hiddenSelect1Value = $('.js-hidden-select-1').val();
-		var hiddenSelect2Value = $('.js-hidden-select-2').val();
+		var hiddenSelect1Value = $('.js-hidden-select-1').val().toLowerCase();
+		var hiddenSelect2Value = $('.js-hidden-select-2').val().toLowerCase();
 		if (hiddenSelect1Value != '' && hiddenSelect2Value != ''){
 			$('.Migration .container').fadeOut('slow', function(){
-			location.href = '/' + hiddenSelect1Value + '-to-' + hiddenSelect2Value + '-migration'; 
+			location.href = '/migration/' + hiddenSelect1Value + '-to-' + hiddenSelect2Value + '-migration'; 
 
 			});
 		}
