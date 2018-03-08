@@ -6,6 +6,7 @@ pageClass: migration-page
 
 
 <div class="Migration background-gray">
+	<div class="Migration__overlay"></div>
 	<div class="container m">
 		<div class="row">
 			<div class="large-12 medium-12 small-12">
@@ -116,9 +117,11 @@ $(document).ready(function(){
 		var hiddenSelect1Value = $('.js-hidden-select-1').val().toLowerCase();
 		var hiddenSelect2Value = $('.js-hidden-select-2').val().toLowerCase();
 		if (hiddenSelect1Value != '' && hiddenSelect2Value != ''){
-			$('.Migration .container').fadeOut('slow', function(){
-			location.href = '/migration/' + hiddenSelect1Value + '-to-' + hiddenSelect2Value + '-migration'; 
-
+			$('.Migration__overlay').css('z-index', '1');
+			$('.Migration__overlay').animate({opacity: 1}, 3000, function(){
+				location.href = '/migration/' + hiddenSelect1Value + '-to-' + hiddenSelect2Value + '-migration'; 
+				// $('.Migration .container').fadeOut('slow', function(){
+				// location.href = '/migration/' + hiddenSelect1Value + '-to-' + hiddenSelect2Value + '-migration'; 
 			});
 		}
 		console.log(hiddenSelect1Value);
