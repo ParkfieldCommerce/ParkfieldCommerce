@@ -91,7 +91,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    overflow: hidden;
+
     z-index: 100;
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
@@ -100,15 +100,19 @@
 
     @include maxQuery(1000px) {
       top: 130px;
+      overflow: hidden;
     }
 
-    .inner {
-      overflow: auto;
+    .inner {    
       padding: 30px;
       display: flex;
       flex-flow: row wrap;
       align-content: flex-start;
       height: 100%;
+
+      @include maxQuery(1000px) {
+        overflow: auto;
+      }
     }
 
     .brand {

@@ -36,7 +36,11 @@ class Theme {
         if (hoveredTarget.matches('.brand')) {
           let dataTarget = hoveredTarget.dataset.target;
           let bgImage = document.querySelector('.BrandImage[data-hover="' + dataTarget + '"]');
+          let activeBg = document.querySelectorAll('.BrandImage')[0];
           if (bgImage) {
+            if (activeBg.classList.contains('visible')) {
+              activeBg.classList.remove('visible');
+            }
             bgImage.classList.add('visible');
           }
         }
