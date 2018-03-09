@@ -136,6 +136,38 @@ img{
   }
 }
 
+.Btn--animatedLeft--purple{
+  position: relative;
+  background-color:#4C54B0;
+  span{
+    color: $btn-animatedLeftSub;
+    color:white;    
+    position: relative;
+    z-index: 2;
+    transition: color .3s;
+  }
+  &:after{
+    z-index: 1;
+    content:'';
+    display: block;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    transition: width .3s;
+  }
+  &:hover{
+    span{
+      color:#4C54B0;
+    }
+    &:after{
+      width: 100%;
+    }
+  }
+}
+
 .Btn--ghost{
   border: 1px solid white;
   background-color: transparent;

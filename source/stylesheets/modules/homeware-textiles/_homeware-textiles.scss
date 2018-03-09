@@ -44,7 +44,6 @@
 	&__title--1{
 		max-width:338px;
 		margin-top:0px;
-		margin-left:25px;
 	}
 	&__title--3{
 		display:none;
@@ -108,8 +107,14 @@
 	}
 	@media screen and (max-width:1480px){
 		&__text{
-			margin-left:25px;
+			margin-left:10px;
 			max-width:333px;
+		}
+
+	@include minmaxQuery(1022px,1480px){
+			&__title--1{
+				margin-left:10px;
+			}
 		}
 	}
 	@media screen and (max-width:$m){
