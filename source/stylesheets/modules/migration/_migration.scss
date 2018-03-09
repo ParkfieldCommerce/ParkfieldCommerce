@@ -5,11 +5,19 @@ $migration-color-1: #4C54B0;
 .migration-page .MainHeader{
 	&__logo{
 		color:black;
+-webkit-transition: color 0.4s ease;
+-moz-transition: color 0.4s ease;
+-o-transition: color 0.4s ease;
+transition: color 0.4s ease;
 	}
 }
 .migration-page .Nav{
 	&__link{
 		color:black;
+-webkit-transition: color 0.4s ease;
+-moz-transition: color 0.4s ease;
+-o-transition: color 0.4s ease;
+transition: color 0.4s ease;
 		@include maxQuery(1000px){
 			color:white;
 		}
@@ -58,7 +66,7 @@ $migration-color-1: #4C54B0;
 		top: 0; 
 		left: 0; 
 		width: 100%; 
-		height: 100%; 
+		height: 80px; 
 		background: black; 
 		opacity: 0;
 		z-index:0;
