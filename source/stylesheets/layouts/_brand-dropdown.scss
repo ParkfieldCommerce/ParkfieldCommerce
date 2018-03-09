@@ -29,6 +29,7 @@
       border-radius: 0;
       padding: 4px 40px 4px 29px;
       opacity: 0.5;
+
       &:focus {
         opacity: 1;
         transition: 0.4s;
@@ -91,25 +92,22 @@
     right: 0;
     left: 0;
     bottom: 0;
-
     z-index: 100;
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
-
     @include maxQuery(1000px) {
       top: 130px;
-      overflow: hidden;
+      overflow: auto;
     }
 
-    .inner {    
+    .inner {
       padding: 30px;
       display: flex;
       flex-flow: row wrap;
       align-content: flex-start;
       height: 100%;
-
       @include maxQuery(1000px) {
         overflow: auto;
       }
@@ -141,7 +139,6 @@
       &.category-all {
         display: none;
       }
-
       // &.active-brand {
       //   opacity: 0.5;
       //   visibility: visible;
@@ -152,18 +149,24 @@
       //   visibility: hidden;
       //   display: none;
       // }
-
       .logo {
         position: absolute;
-        top: 5%;
-        right: 5%;
-        left: 5%;
-        bottom: 5%;
-        margin: 0 15%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         background-position: center center;
         background-repeat: no-repeat;
         background-size: contain;
         pointer-events: none;
+        height: 70px;
+        width: 60%;
+        margin: auto;
+
+        @include maxQuery(1000px) {
+          height: 50%;
+          width: 60%;
+        }
       }
     }
   }
