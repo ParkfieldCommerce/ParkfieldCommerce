@@ -93,24 +93,23 @@
     left: 0;
     bottom: 0;
     z-index: 100;
-    -webkit-overflow-scrolling: touch;
-    overflow-y: scroll;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    overflow: hidden;
     @include maxQuery(1000px) {
       top: 130px;
-      overflow: auto;
+      overflow-y: scroll;
     }
 
     .inner {
-      padding: 30px;
+      padding: 0 30px 30px;
       display: flex;
       flex-flow: row wrap;
       align-content: flex-start;
       height: 100%;
-      @include maxQuery(1000px) {
-        overflow: auto;
-      }
+      // @include maxQuery(1000px) {
+      //   overflow: auto;
+      // }
     }
 
     .brand {
@@ -139,16 +138,6 @@
       &.category-all {
         display: none;
       }
-      // &.active-brand {
-      //   opacity: 0.5;
-      //   visibility: visible;
-      // }
-      //
-      // &.hidden-brand {
-      //   opacity: 0;
-      //   visibility: hidden;
-      //   display: none;
-      // }
       .logo {
         position: absolute;
         top: 0;
