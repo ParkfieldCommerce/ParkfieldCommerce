@@ -4,13 +4,15 @@
   &__links{
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
-    width: 35%;
+    align-items: flex-start;
+    width: 50%;
   }
   &__description{
     width: 40%;
   }
-
+  &__heading{
+    margin-top: 0px;
+  }
   &__link-container{
     width: 50%;
   }
@@ -36,9 +38,6 @@
       width: 100%;
       align-items: flex-end;
       justify-content: space-between;
-    }
-    &__heading{
-      margin-top: 0px;
     }
     &__body p{
       font-size: .875rem;
