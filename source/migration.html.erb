@@ -113,12 +113,14 @@ $(document).ready(function(){
 		$('.js__text__list--4').text($(this).text());
 	});
 
+	$('.MainHeader').animate({opacity: 1}, 1000);
+
 	function checkSelects(){
 		var hiddenSelect1Value = $('.js-hidden-select-1').val().toLowerCase();
 		var hiddenSelect2Value = $('.js-hidden-select-2').val().toLowerCase();
 		if (hiddenSelect1Value != '' && hiddenSelect2Value != ''){
-			$('.Migration__overlay').css('z-index', '1');
-			$('.Migration__overlay').animate({opacity: 1}, 750);
+			//$('.Migration__overlay').css('z-index', '1');
+			//$('.Migration__overlay').animate({opacity: 1}, 750);
 				//location.href = '/migration/' + hiddenSelect1Value + '-to-' + hiddenSelect2Value + '-migration'; 
 				//$('.migration-page .MainHeader__logo ').css('color', 'white');
 

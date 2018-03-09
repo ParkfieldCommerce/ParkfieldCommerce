@@ -3,6 +3,7 @@ $migration-color-1: #4C54B0;
 	background-color:white;	
 }
 .migration-page .MainHeader{
+opacity:0;
 	&__logo{
 		color:black;
 -webkit-transition: color 0.4s ease;
