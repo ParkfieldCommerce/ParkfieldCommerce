@@ -6,6 +6,8 @@
   .ReviewBlogContainerBackground{
     position: relative;
     padding-top: 75px;
+    background-size: cover;
+    background-repeat: no-repeat;
     &:after{
       content:'';
       display: block;

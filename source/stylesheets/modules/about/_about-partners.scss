@@ -1,6 +1,4 @@
 .AboutPartners {
-	max-width: 90%;
-	margin: 0 auto;
 	padding-bottom: 90px;
 	@include maxQuery($s){
 		display: none;
@@ -14,6 +12,18 @@
 		width: 25%;
 		text-align: center;
 		margin-bottom: 90px;
+    &:nth-child(1n){
+      text-align: left;
+    }
+    &:nth-child(2n){
+      text-align: center;
+    }
+    &:nth-child(3n){
+      text-align: center;
+    }
+    &:nth-child(4n){
+      text-align: right;
+    }
 	}
 	&__button {
 		display: block;
