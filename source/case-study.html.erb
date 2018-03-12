@@ -61,14 +61,9 @@
 		</div>
 
 		<div class="CaseStudy__challenge__slider__container--1 large-6">
-			
-			
-
 			<div class="CaseStudy__challenge__slider__container--2">
 				<% challengeBlock.image_gallery.each do |image| %>
-					<div class="test">
-					 <%= image_tag image.url, alt: image.alt %>
-					</div>
+					 <%= image_tag image.url, alt: image.alt, class: 'CaseStudy__challenge__slider-image' %>
 				<% end %>	
 			</div>
 

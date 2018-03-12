@@ -49,7 +49,7 @@ pageClass: AboutPage
 
 <div class="grey-bg">
 	<div class="container m">
-		<div class="Partners">
+		<div class="Partners padding-90 padding-bottom-120 mobile-space-padding-bottom-60 mobile-space-padding-60">
 		<%= partial './partials/global/title-and-text', 
 			locals: {
 				heading: dato.about_page.about_description[2].heading,
@@ -63,12 +63,6 @@ pageClass: AboutPage
 
 <div class="grey-bg">
 	<div class="container m">
-		<%= partial './partials/about/about-partners' %>
-	</div>
-</div>
-
-<div class="container m">
-	<div class="mobile-space-bottom-60">
-		<%= partial './partials/about/about-clients' %>
+			<%= partial './partials/about/about-partners' %>
 	</div>
 </div>

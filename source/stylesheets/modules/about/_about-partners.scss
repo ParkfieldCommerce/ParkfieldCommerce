@@ -1,10 +1,5 @@
 .AboutPartners {
-	max-width: 90%;
-	margin: 0 auto;
 	padding-bottom: 90px;
-	@include maxQuery($s){
-		display: none;
-	}
 	&__brands {
 		display: flex;
 		flex-flow: row wrap;
@@ -14,6 +9,18 @@
 		width: 25%;
 		text-align: center;
 		margin-bottom: 90px;
+    &:nth-child(4n+1){
+      text-align: left;
+    }
+    &:nth-child(4n+2){
+      text-align: center;
+    }
+    &:nth-child(4n+3){
+      text-align: center;
+    }
+    &:nth-child(4n+4){
+      text-align: right;
+    }
 	}
 	&__button {
 		display: block;
@@ -27,4 +34,15 @@
 		color: $about-page-btn-text;
 		background-color: $about-page-btn;
 	}
+  @include maxQuery($s){
+    &__brand{
+      width: 50%;
+      margin-bottom: 30px;
+      text-align: center !important;
+    }
+    &__brand-image{
+      max-height: 28px;
+      margin: 0 auto;
+    }
+  }
 }

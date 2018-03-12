@@ -1,12 +1,10 @@
 .Description {
 	display: flex;
-	max-width: 90%;
-	margin: 0 auto;
 	&__heading {
-		width: 40%;
+		width: 39%;
 	}
 	&__body {
-		width: 60%;
+		width: 61%;
 		h4 {
 			margin: 30px 0 15px;
 		}
@@ -26,21 +24,17 @@
 		color: $heading;
 		padding-bottom: 5px;
 		margin: 0;
-		&:after {
-			content: "";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 90%;
-			height: 1px;
-			background-color: black;
-		}
 	}
 }
 
-
+@include maxQuery(1200px){
+  .Description{padding: 0px 10px;}
+}
 @include maxQuery($s){
 	.Description {
+    padding: 0px;
+    max-width: 90%;
+    margin: 0 auto;
 		flex-direction: column;
 		&__heading {
 			width: 100%;

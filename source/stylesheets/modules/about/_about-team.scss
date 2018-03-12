@@ -1,19 +1,19 @@
 .AboutTeam {
 	display: flex;
-	width: 90%;
-	margin: 0 auto;
 	&__heading {
-		width: 40%;
+		width: 39%;
 		h3 {
 			margin: 0;
 		}
 	}
 	&__content {
-		width: 60%;
+		width: 61%;
 	}
 	&__team {
 		margin-bottom: 20px;
 		h4 {
+      font-family: 'Avenir-Roman';
+      font-weight: normal;
 			color: $body;
 			margin: 0 0 9px 0;
 		}
@@ -81,6 +81,8 @@
 @include maxQuery($s){
 	.AboutTeam {
 		flex-direction: column;
+		max-width: 90%;
+		margin: 0 auto;
 		&__desktop {
 			display: none;
 		}

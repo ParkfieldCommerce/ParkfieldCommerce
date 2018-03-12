@@ -69,8 +69,6 @@
 			flex-flow:row wrap;
 			align-items:center;
 			min-height:600px;
-			&__container--1.container{
-			}
 			&__slider__container--1{
 				position:absolute;
 				left:50%;
@@ -85,6 +83,9 @@
 			&__right-arrow{
 				margin-left:45px;
 			}
+      &__slider-image{
+        outline: none;
+      }
 	}
 	&__pages{
 		&__container--1{
