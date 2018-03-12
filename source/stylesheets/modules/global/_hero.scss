@@ -1,14 +1,20 @@
-@keyframes slideInFromLeft {
+@keyframes slideUp {
   0% {
     opacity: 0;
-    transform: translate(-50%,0%);
+    top: 30px;
   }
   100% {
     opacity: 1;
-    transform: translate(-50%, -50%);
+    top: 0;
   }
 }
-
+@mixin slideUpAnimation($animation-duration, $animation-delay){
+  position: relative;
+  top: 30px;
+  animation: $animation-duration ease-out 0s 1 slideUp;
+  animation-delay: $animation-delay;
+  animation-fill-mode: forwards;
+}
 .Hero{    
   position: relative;
   &__image{
@@ -30,7 +36,6 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    animation: 1s ease-out 0s 1 slideInFromLeft;
   }
   &:after{
     content:'';
@@ -56,14 +61,22 @@
   text-align: center;
   width: 100%;
   &__heading{
+    opacity: 0;
     color: white;
     margin-bottom: 46px;
+    @include slideUpAnimation(1.5s, 0s);
   }
   &__partners{
+    opacity: 0;
     margin-bottom: 21px;
     color: white;
     font-family: 'Avenir-Roman';
     font-size: 1.125rem;
+    @include slideUpAnimation(1s, .5s);
+  }
+  &__subheading-image{
+    opacity: 0;
+    @include slideUpAnimation(1s, .5s);
   }
   @include maxQuery($s){
     &__heading{
