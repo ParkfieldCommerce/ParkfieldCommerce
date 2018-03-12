@@ -16,6 +16,9 @@
 .center{
   text-align: center;
 }
+.space-60{
+  margin-top: 60px;
+}
 .space-90{
 	margin-top: 90px;
 }
@@ -48,6 +51,9 @@
 }
 .padding-bottom-120{
   padding-bottom: 120px;
+}
+.padding-bottom-150{
+  padding-bottom: 150px;
 }
 .mobile-space-0{
   @media screen and (max-width: $s){

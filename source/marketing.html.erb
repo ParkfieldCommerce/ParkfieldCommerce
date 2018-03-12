@@ -15,7 +15,7 @@ pageClass: MarketingPage
 %> 
 
 <div class="container m">
-	<div class="padding-90 mobile-space-padding-60">
+	<div class="padding-90 mobile-space-padding-60 space-bottom-120 mobile-space-bottom-60">
 		<%= partial './partials/global/title-and-text',
 	    locals: {
 	      heading: dato.marketing_page.description_heading,
@@ -26,6 +26,4 @@ pageClass: MarketingPage
 	</div>
 </div>
 
-<div class="container m">
-	<%= partial './partials/marketing/heading-info-image.html' %>
-</div>
+<%= partial './partials/marketing/heading-info-image.html' %>

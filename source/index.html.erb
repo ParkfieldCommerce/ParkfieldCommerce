@@ -24,10 +24,16 @@ pageClass: Homepage
 <%= partial './partials/homepage/case-study-grid' %>
 </div>
 </div>
-<div class="container s">
-  <%= partial './partials/homepage/our-services' %>
+
+<div class="space-60">
+  <div class="background-gray container l">
+    <div class="container s">
+      <%= partial './partials/homepage/our-services' %>
+    </div>
+  </div>
 </div>
-<div class="ReviewBlogContainerBackground js-ReviewBlogContainerBackground space-120 mobile-space-60" data-turn="0">
+
+<div class="ReviewBlogContainerBackground js-ReviewBlogContainerBackground" data-turn="0">
   <div class="ReviewBlogContainerBackgroundAlt js-ReviewBlogContainerBackgroundAlt" data-turn="1"></div>
   <div class="container m">
     <%= partial './partials/homepage/reviews-slider' %>
