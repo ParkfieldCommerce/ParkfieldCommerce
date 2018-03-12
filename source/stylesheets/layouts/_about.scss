@@ -10,7 +10,7 @@
 	align-items: center;
 	margin-bottom: 120px;
 	@include maxQuery($s){
-		margin-bottom: 60px;
+		margin-bottom: 0px;
 	}
 	.AboutImage {
 		width: 75%;
@@ -23,11 +23,4 @@
 
 .grey-bg {
 	background-color: $grey-bg;
-}
-
-.Partners {
-	padding: 120px 0;
-	@include maxQuery($s){
-		display: none;
-	}
 }
