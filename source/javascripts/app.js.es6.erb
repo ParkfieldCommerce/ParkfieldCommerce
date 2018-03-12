@@ -154,6 +154,8 @@ class Theme {
           if (e.target.className === 'FilterBtn') {
             let category = e.target.dataset.category;
             let brand = document.querySelectorAll('.brand');
+            e.target.classList.add('active');
+            
             if (category == "All") {
               brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
               not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
