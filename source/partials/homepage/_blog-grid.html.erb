@@ -13,8 +13,8 @@
       <div class="BlogGrid__item__date--1">
         <p><%= firstArticle.date.strftime('%-m/%-d/%Y') %></p>
       </div>
-			<div class="BlogGrid__item__heading--1">
-				<h3><%= firstArticle.heading %></h3>		
+			<div class="BlogGrid__item__heading BlogGrid__item__heading--1">
+				<h3><%= link_to firstArticle.heading, "/articles/#{firstArticle.handle}" %></h3>		
 			</div>
 			<div class="BlogGrid__item__author--1">
 				<p>By <%= firstArticle.author %></p>
@@ -34,8 +34,8 @@
           <div class="BlogGrid__item__date--2">
             <p><%= secondArticle.date.strftime('%-m/%-d/%Y') %></p>
           </div>
-					<div class="BlogGrid__item__heading--2">
-						<h3><%= secondArticle.heading %></h3>
+					<div class="BlogGrid__item__heading BlogGrid__item__heading--2">
+						<h3><%= link_to secondArticle.heading, "/articles/#{secondArticle.handle}" %></h3>
 					</div>
 					<div class="BlogGrid__item__author--2">
 						<p>By <%= secondArticle.author %></p>

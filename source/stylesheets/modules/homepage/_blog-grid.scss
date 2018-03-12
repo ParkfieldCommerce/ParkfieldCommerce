@@ -114,7 +114,6 @@
 	}
 }
 
-
 .BlogGrid__item{
   &__heading--1 h3{
     margin: 0px;
@@ -137,7 +136,7 @@
 		margin:0 auto;
 		p{color:white;}
 	}
-	&__heading--2 h3{
+	&__heading--2 h3 a{
 		color:white;
     margin: 0px;
     font-size: 2rem;
@@ -149,6 +148,12 @@
 		color:white;
 	}
 	@include maxQuery(950px){
+    &__heading h3{
+      font-size: 1.5rem;
+    }
+    &__link--1{
+      margin-top: 15px;
+    }
 		&__twitterFeed{
 			margin-top:40px;
 			margin-bottom:40px;

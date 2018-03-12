@@ -302,6 +302,12 @@ class Theme {
           ReviewsSlider.slick('slickGoTo', i);
         });
       });
+
+      $(ReviewsSlider).on('swipe', () => {
+        console.log('swiped');
+        currentButtonTimer.width(0);
+        clearInterval(timer);
+      });
     }
 
     if (ReviewsSlider.length > 0) { //If slider exists initialize
@@ -317,7 +323,7 @@ class Theme {
 
       ReviewsSlider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {
         let nextButton = buttonSet[nextSlide];
-        changeReviewBackground($(nextButton).data('bg'));
+        //changeReviewBackground($(nextButton).data('bg'));
       });
 
       ReviewsSlider.slick({
