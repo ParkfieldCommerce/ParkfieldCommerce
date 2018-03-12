@@ -1,15 +1,23 @@
-<% nextStudyBanner = caseStudy.next_study_banner %>
+<% nextStudyBanner = caseStudy.banner_gallery[0] %>
 <% nextStudyBannerLogo = caseStudy.next_study_logo %>
 <% nextUrl = dato.case_studies.first.handle %>
 <% nextFound = false %>
-<% dato.case_studies.each do |nextCaseStudy| %>
+
+<% dato.case_studies.each_with_index do |nextCaseStudy, index| %>
 	<% if nextFound == true %>
 		<% nextUrl = nextCaseStudy.handle %>
 		<% nextStudyBanner = nextCaseStudy.banner_gallery[2] %>
+		<% nextStudyBannerLogo = nextCaseStudy.next_study_logo %>
 		<% break %>
 	<% end %>
 	<% if caseStudy.handle == nextCaseStudy.handle %>
 		<% nextFound = true %>
+		<% if dato.case_studies.length-1 == index %>
+			<% nextUrl = dato.case_studies[0].handle %>
+			<% nextStudyBanner = dato.case_studies[0].banner_gallery[2] %>
+			<% nextStudyBannerLogo = dato.case_studies[0].next_study_logo %>
+
+		<% end %>
 	<% end %>
 <% end %>
 
