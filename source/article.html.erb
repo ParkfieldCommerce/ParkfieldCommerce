@@ -26,11 +26,19 @@ pageClass: ArticlePage
 			</div>
 		</div>
 		<div class="ArticleSideColumn">
-			<div class="ArticleSideColumn__trialForm">
+<!-- 			<div class="ArticleSideColumn__trialForm">
 				<h2>Sign up for a free <br>30 day trial today</h2>
 				<p>Choose your platform</p>
 				<input type="email"  placeholder="Your email address">
-				<button type="submit"> --> </button>
+				<button type="submit"> -> </button>
+			</div> -->
+			<div class="ArticleSideColumn__newsletter">
+				<h2><%= dato.article_sidebar.newsletter_heading %></h2>
+				<p><%= dato.article_sidebar.newsletter_body %></p>
+				<div class="ArticleSideColumn__input">
+					<input type="email" placeholder="Your email address">
+					<button type="submit"><%= partial './partials/global/svg-icons', locals:{icon:'arrow-submit'} %></button>
+				</div>
 			</div>
 			<div class="ArticleSideColumn__relatedPost">
 				<h2>Related posts</h2>
@@ -48,12 +56,6 @@ pageClass: ArticlePage
 					<h2><%= dato.article_sidebar.event_heading %></h2>
 					<a href="<%= dato.article_sidebar.event_link_url %>"><%= dato.article_sidebar.event_link_text %></a>
 				</div>
-			</div>
-			<div class="ArticleSideColumn__newsletter">
-				<h2><%= dato.article_sidebar.newsletter_heading %></h2>
-				<p><%= dato.article_sidebar.newsletter_body %></p>
-				<input type="email" placeholder="Your email address">
-				<button type="submit"> --> </button>
 			</div>
 		</div>
 	</div>

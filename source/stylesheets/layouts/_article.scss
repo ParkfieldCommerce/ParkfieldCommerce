@@ -114,7 +114,6 @@
   &__newsletter {
     background-color: $newsletter-bg;
     padding: 30px 32px 40px;
-    margin-top: 40px;
     h2,p {
       color: white;
     }
@@ -122,13 +121,22 @@
       margin: 33px 0 52px;
     }
     input {
-      height: 50px;
       padding-left: 18px;
     }
     button {
       height: 50px;
+      line-height: 54px;
       border: none;
       background-color: $trial-form-button;
+    }
+  }
+  &__input {
+    display: flex;
+    input {
+      width: 85%;
+    }
+    button {
+      width: 15%;
     }
   }
 }
