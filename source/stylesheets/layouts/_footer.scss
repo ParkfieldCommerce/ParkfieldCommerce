@@ -4,6 +4,21 @@
 
 .FooterDesktop {
 	padding: 90px 0 108px;
+	&__logo {
+		display: inline-block;
+		margin-right: 30px;
+	}
+	&__socialIcons {
+		display: inline-block;
+		svg {
+			padding-right: 10px;
+			font-size: 19px;	
+			path {
+				fill: #4F4C4D;
+			}
+		}
+
+	}
 	&__content {
 		display: flex;
 		justify-content: space-between;
@@ -92,6 +107,7 @@
 			display: block;
 			font-family: 'Avenir';
 			font-weight: 800;
+			font-size: 0.875rem;
 			height: 45px;
 			width: 152px;
 			line-height: 45px;
