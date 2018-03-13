@@ -51,7 +51,10 @@
 // ===================Marketing================
 @import './modules/marketing/heading-info-image.scss';
 
+<<<<<<< HEAD
 // ===================Agreement================
 @import './modules/agreement/agreement.scss';
+=======
 // =====================Article==================
 @import './modules/article/share-buttons.scss';
+>>>>>>> feat/article

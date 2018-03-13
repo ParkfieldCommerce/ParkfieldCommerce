@@ -1,0 +1,60 @@
+---
+layout: article-layout
+pageClass: ArticlePage
+---
+
+<div class="space-90 space-bottom-90 mobile-space-30 mobile-space-bottom-60">
+	<div class="container m ArticleContainer">
+		<div class="Article">
+			<h3><%= article.heading %></h3>
+			<p>By <%= article.author %> - <%= article.date.strftime('%b %-d ,%Y') %></p>
+			<%= image_tag article.image.url, alt: article.image.alt, class:"Article__featuredImage" %>
+			<% article.content.each do | articleSection |%>
+			<div class="Article__body">
+				<%= articleSection.body %>
+			</div>
+				<% if articleSection.image != nil %>
+				<%= image_tag articleSection.image.url alt: articleSection.image.alt, class:"Article__innerImage" %>
+				<% end %>
+			<% end %>
+			<div class="Article__shareButtons">
+				<%= partial './partials/article/share-buttons',
+					locals: {
+						path: "https://parkfieldcommerce.com/articles/#{article.handle}"
+					}
+				 %>
+			</div>
+		</div>
+		<div class="ArticleSideColumn">
+			<div class="ArticleSideColumn__trialForm">
+				<h2>Sign up for a free <br>30 day trial today</h2>
+				<p>Choose your platform</p>
+				<input type="email"  placeholder="Your email address">
+				<button type="submit"> --> </button>
+			</div>
+			<div class="ArticleSideColumn__relatedPost">
+				<h2>Related posts</h2>
+				<% articleCount = 0 %>
+				<% dato.articles.each do | blogPost |%>
+					<% if blogPost.topic == article.topic && blogPost.handle != article.handle && articleCount < 4 %>
+						<%= link_to blogPost.heading, "/articles/#{blogPost.handle}", class:"ArticleSideColumn__relatedPostLink"%>
+						<% articleCount = articleCount + 1 %>
+					<% end %>
+				<% end %>
+			</div>
+			<div class="ArticleSideColumn__event">
+				<%= image_tag dato.article_sidebar.event_image.url alt:dato.article_sidebar.event_image.alt, class:"ArticleSideColumn__eventImage" %>
+				<div class="ArticleSideColumn__eventInfo">
+					<h2><%= dato.article_sidebar.event_heading %></h2>
+					<a href="<%= dato.article_sidebar.event_link_url %>"><%= dato.article_sidebar.event_link_text %></a>
+				</div>
+			</div>
+			<div class="ArticleSideColumn__newsletter">
+				<h2><%= dato.article_sidebar.newsletter_heading %></h2>
+				<p><%= dato.article_sidebar.newsletter_body %></p>
+				<input type="email" placeholder="Your email address">
+				<button type="submit"> --> </button>
+			</div>
+		</div>
+	</div>
+</div>

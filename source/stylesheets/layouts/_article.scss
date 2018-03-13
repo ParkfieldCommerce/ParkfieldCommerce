@@ -1,0 +1,149 @@
+.ArticlePage{
+  .Nav__link,
+  .MainHeader__logo{
+    color: black;
+  }
+  .Nav__link:after {
+    background-color: black;
+  }
+  .Btn.Btn--animatedLeft{
+    border-color: black;
+    span{color: black;}
+    &:after{
+      background-color: black;
+    }
+    &:hover{
+      span{color: white;}
+    }
+  }
+  &__heading{
+    text-align: center;
+  }
+  &__article-container:nth-child(odd){
+    display: flex;
+    justify-content: flex-start;    
+  }
+  &__article-container:nth-child(even){
+    display: flex;
+    justify-content: flex-end;
+  }
+  @include maxQuery($s){
+    &__heading{
+      font-size: 1.5rem;
+    }
+    &__article-container:nth-child(odd),
+    &__article-container:nth-child(even){
+      justify-content: center;
+    }
+  }
+}
+
+.ArticleContainer {
+  display: flex;
+}
+
+.Article {
+  width: 60%;
+  margin-left: auto;
+  h3 {
+    margin: 0 0 30px;
+  }
+  p {
+    margin: 0 0 30px;
+  }
+  img {
+    margin-bottom: 30px;
+  }
+  &__body p{
+    color: $article-text;
+    margin: 0 0 30px;
+  }
+}
+
+.ArticleSideColumn {
+  width: 30%;
+  margin-left: 45px;
+  &__trialForm {
+    background-color: $trial-form-bg;
+    padding: 30px 35px;
+    h2,p {
+      color: white;
+    }
+    p {
+      font-size: 0.875rem; 
+    }
+    input {
+      height: 50px;
+      padding-left: 18px;
+      margin-bottom: 89px;
+    }
+    button {
+      height: 50px;
+      border: none;
+      background-color: $trial-form-button;
+    }
+  }
+  &__relatedPostLink {
+    display: block;
+    font-weight: 800;
+    font-size: 1.125rem;
+    margin-bottom: 30px;
+  }
+  &__event {
+    border: 1px solid #C9C9C9;
+    margin-top: 30px;
+    img {
+      width: 100%;
+    }
+  }
+  &__eventInfo {
+    padding: 20px 30px 40px;
+    a {
+      display: block;
+      height: 50px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.125rem;
+      line-height: 50px;
+      margin-top: 30px;
+      background-color: $newsletter-bg;
+    }
+  }
+  &__newsletter {
+    background-color: $newsletter-bg;
+    padding: 30px 32px 40px;
+    margin-top: 40px;
+    h2,p {
+      color: white;
+    }
+    p {
+      margin: 33px 0 52px;
+    }
+    input {
+      height: 50px;
+      padding-left: 18px;
+    }
+    button {
+      height: 50px;
+      border: none;
+      background-color: $trial-form-button;
+    }
+  }
+}
+
+@include maxQuery($s) {
+  .ArticlePage .container {
+    max-width: 90%;
+  }
+  .Article {
+    width: 100%;
+    h3 {
+      font-size: 1.5rem;
+    }
+  }
+  .ArticleSideColumn {
+    display: none;
+  }
+}
