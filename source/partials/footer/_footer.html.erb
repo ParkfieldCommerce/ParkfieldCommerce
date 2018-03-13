@@ -4,6 +4,11 @@
 			<div class="FooterDesktop__logo">
       <%= partial './partials/global/svg-icons', locals:{icon:'logo'} %>
 			</div>
+			<div class="FooterDesktop__socialIcons">
+				<a href="<%= dato.footer.facebook_link %>"><i class="fab fa-facebook-f"></i></a>
+				<a href="<%= dato.footer.twitter_link %>"><i class="fab fa-twitter"></i></a>
+				<a href="<%= dato.footer.instagram_link %>"><i class="fab fa-instagram"></i></a>
+			</div>
 			<div class="FooterDesktop__content">
 				<div class="FooterDesktop__column FooterDesktop--column1">
 					<h2><%= dato.quote_banner.heading %></h2>
@@ -58,33 +63,7 @@
 			</div>
 			<div class="FooterMobile__bottom">
 				<div class="FooterMobile__logo">
-					<svg width="45" height="45" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-					<title>P.</title>
-					<desc>Created using Figma</desc>
-					<g id="Canvas" transform="translate(-21114 -2666)">
-					<rect x="21114" y="2666" width="45" height="45" fill="#E5E5E5"/>
-					<clipPath id="clip-0" clip-rule="evenodd">
-					<path d="M 20992 -513L 22432 -513L 22432 3188L 20992 3188L 20992 -513Z" fill="#FFFFFF"/>
-					</clipPath>
-					<g id="Services" clip-path="url(#clip-0)">
-					<path d="M 20992 -513L 22432 -513L 22432 3188L 20992 3188L 20992 -513Z" fill="#FFFFFF"/>
-					<g id="Footer">
-					<g id="Rectangle 9">
-					<use xlink:href="#path0_fill" transform="translate(20211 2574)" fill="#231F20"/>
-					</g>
-					<g id="P.">
-					<use xlink:href="#path1_fill" transform="translate(21114 2666)" fill="#FFFFFF"/>
-					<use xlink:href="#path2_fill" transform="translate(21114 2666)" fill="#FFFFFF"/>
-					</g>
-					</g>
-					</g>
-					</g>
-					<defs>
-					<path id="path0_fill" d="M 0 0L 3005 0L 3005 666L 0 666L 0 0Z"/>
-					<path id="path1_fill" d="M 15.8163 0C 22.6892 0 27.6838 1.33663 30.8001 4.0099C 33.9591 6.64074 35.5386 10.7143 35.5386 16.2306C 35.5386 21.7044 33.9164 25.7143 30.672 28.2603C 27.4703 30.8062 22.5611 32.0792 15.9443 32.0792L 9.98922 32.0792L 9.98922 44.4908L 0 44.4908L 0 0L 15.8163 0ZM 16.7127 23.4866C 20.0425 23.4866 22.305 22.8289 23.5003 21.5134C 24.6956 20.1556 25.2932 18.2037 25.2932 15.6577C 25.2932 13.0693 24.5035 11.2447 22.924 10.1839C 21.3872 9.08062 18.9752 8.529 15.6882 8.529L 9.98922 8.529L 9.98922 23.4866L 16.7127 23.4866Z"/>
-					<path id="path2_fill" d="M 35.3309 43.4088C 34.2637 42.3055 33.7301 40.9689 33.7301 39.3989C 33.7301 37.8289 34.2637 36.5134 35.3309 35.4526C 36.4409 34.3494 37.7856 33.7977 39.3651 33.7977C 40.9445 33.7977 42.2679 34.3494 43.3351 35.4526C 44.445 36.5134 45 37.8289 45 39.3989C 45 40.9689 44.445 42.3055 43.3351 43.4088C 42.2679 44.4696 40.9445 45 39.3651 45C 37.7856 45 36.4409 44.4696 35.3309 43.4088Z"/>
-					</defs>
-					</svg>
+				<%= partial './partials/global/svg-icons', locals:{icon:'logo'} %>
 				</div>
 				<div class="copyright">
 					<p>Copyright &#169; <br>All rights reserved</p>
