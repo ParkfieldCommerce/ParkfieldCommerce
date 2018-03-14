@@ -4,12 +4,12 @@
 
 .BrandDropdown {
   text-align: center;
-  position: relative;
+  position: absolute;
   z-index: 2;
   display: block;
   padding: 0;
   height: 100vh;
-  top: -70px;
+  top: 0;
   left: 0;
   right: 0;
   background-color: #000;
