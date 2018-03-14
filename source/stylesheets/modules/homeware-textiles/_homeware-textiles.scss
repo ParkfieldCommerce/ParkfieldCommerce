@@ -80,7 +80,7 @@
 	&__image--2{
 		position:absolute;
 		bottom:0;
-		transform:translateX(-50%);
+    left: -100px;
 	}
 	&__image--3{
 		width:100%;
@@ -98,9 +98,6 @@
 	}
 	&__container--3{
 		display:none;
-	}
-	&__button{
-		padding-top:47px;
 	}
 	&__background:nth-child(even){
 		background-color:#FAFAFA;

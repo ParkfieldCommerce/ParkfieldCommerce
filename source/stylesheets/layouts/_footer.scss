@@ -36,7 +36,7 @@
 			color: $footer-text;
 			line-height: 23px;
 			margin: 0;
-			padding-bottom: 40px;
+			padding-bottom: 20px;
 		}
 		a {
 			font-family: 'Avenir-Roman';
@@ -72,6 +72,7 @@
 	&__bottom {
 		display: flex;
 		align-items: center;
+    margin-top: 20px;
 		.copyright {
 			width: 30%;
 			p {

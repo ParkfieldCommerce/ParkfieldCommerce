@@ -10,7 +10,11 @@
   &__description{
     width: 40%;
   }
+  &__body p{
+    margin: 0px;
+  }
   &__heading{
+    display: none;
     margin-top: 0px;
   }
   &__link-container{

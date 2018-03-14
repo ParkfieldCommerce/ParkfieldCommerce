@@ -11,14 +11,14 @@
 		flex-direction: column;
 	}
 	&__captionedImage {
-		width: 57%;
+		width: 75%;
 		margin-left: auto;
 		@include maxQuery($s){
 			width: 100%;
 		}
 	}
 	&__captionedImageText {
-		width: 57%;
+		width: 75%;
 		margin-left: auto;
 		font-size: 0.875rem;
 		@include maxQuery($s){

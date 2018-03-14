@@ -38,16 +38,11 @@ pageClass: HomewareTextilesPage
 			<%= partial '/partials/homeware-textiles/homeware-case-study',locals: { company: company} %>
 			<% end %>
 		</div>
-		<div class="HomewareCaseStudy__text--2 background-gray padding-bottom-120">
-			<div class="row">
-				<div class="HomewareCaseStudy__button">
-					<div class="HomewareCaseStudy__loadButton js-loadButton Link--underline" data-start = "0">Load more</div>
-				</div>
-					<h3 class="HomewareCaseStudy__title--2"><%= bottomHeading %></h3>
-				<div class="HomewareCaseStudy__text--3 large-8 medium-10 small-10"><%= bottomBody %></div>
-			</div>
-		</div>
+    <div class="HomewareCaseStudy__button center space-90 space-bottom-90">
+      <div class="HomewareCaseStudy__loadButton js-loadButton Link--underline" data-start = "0">Load more</div>
+    </div>
 	</div>
 </div>
+<%= partial './partials/global/consultationBanner' %>
 
 

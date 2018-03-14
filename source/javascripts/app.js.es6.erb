@@ -358,21 +358,16 @@ class Theme {
         companies.push(company);
       <% end %>
 
-      console.log(companies);
       $('.js-loadButton').click(function(){
         let startIndex = $(this).data('start');
         let endIndex = startIndex + 2;
-        console.log(startIndex);
-        console.log(endIndex);
-
-        console.log(companies);
         companies.forEach((company, index) => {
-
           if(index >= startIndex && index <= endIndex){
             $('.js-companyList').append(company);
             $(this).data('start', endIndex);
           }
           if(index >= companies.length - 1){
+            $(this).parent().remove();
             $(this).remove();
           }
         });

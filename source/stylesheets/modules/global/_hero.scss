@@ -103,7 +103,8 @@
 }
 .Hero__image--homepage{}
 .Hero__image--casestudy,
-.Hero__image--whatis{
+.Hero__image--whatis,
+.Hero__image--generic{
   height: 70vh;
   @include maxQuery($s){
     height: auto;

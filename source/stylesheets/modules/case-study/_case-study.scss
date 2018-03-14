@@ -76,6 +76,7 @@
 			&__arrows__container{
 				display:flex;
 				margin-left:85px;
+        margin-top: 18px;
 			}
 			&__left-arrow{
 				margin-right:45px;
@@ -84,7 +85,7 @@
 				margin-left:45px;
 			}
       &__slider-image{
-        outline: none;
+        //outline: none;
       }
 	}
 	&__pages{

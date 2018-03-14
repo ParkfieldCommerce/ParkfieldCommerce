@@ -18,7 +18,9 @@ pageClass: LIExperts
   <%= image_tag logo.url, class:"LIExperts__website-logos" %>
 <% end %>
 </div>
+
 <div class="container l">
+  <div class="space-120 space-bottom-120 mobile-space-30 mobile-space-bottom-30">
   <%= partial './partials/global/title-and-text',
     locals: {
       heading: dato.li_shopify_expert.description_heading,
@@ -26,6 +28,7 @@ pageClass: LIExperts
       modifier: '--li-experts'
     }
    %>
+   </div>
 </div>
 <% dato.li_shopify_experts_companies.first(3).each do |company| %>
 <%= partial '/partials/homeware-textiles/homeware-case-study',locals: { company: company} %>

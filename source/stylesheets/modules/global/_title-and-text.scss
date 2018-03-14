@@ -64,7 +64,6 @@
 
 .Description--about-page-text .Description{
 	&__heading h2 {
-		font-size: 2.25rem;
 		@include maxQuery($s){
 			font-size: 1.5rem;
 		}
@@ -103,7 +102,6 @@
 
 .Description--li-experts,.Description--marketing .Description{
   &__heading h2{
-    font-size: 2.25rem;
     @include maxQuery($s){
     	font-size: 1.5rem;
     }
