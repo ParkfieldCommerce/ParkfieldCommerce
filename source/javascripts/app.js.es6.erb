@@ -83,6 +83,10 @@ class Theme {
           item.appendChild(document.createTextNode(array[i]));
           item.setAttribute('data-category', array[i]);
           item.classList.add('FilterBtn');
+          if (array[i] == array[0]) {
+            item.classList.add('active');
+          }
+
           list.appendChild(item);
         }
         return list;
@@ -117,33 +121,33 @@ class Theme {
 
       // For Mobile, build a select with the new Array
       if (isMobile.any()) {
-        let filteredList = document.getElementById('FilteredList');
-        filteredList.appendChild(makeSelect(newArraylist));
-
-        let filterSelect = document.querySelector('#FilteredList select');
-        let option = document.createElement('option');
-        let optTxt = document.createTextNode('Filter By');
-        let selected = true;
-        let disabled = true;
-        option.appendChild(optTxt);
-        option.selected = selected;
-        option.disabled = disabled;
-
-        filterSelect.insertBefore(option, filterSelect.firstChild);
-
-        // Mobile Filter Functions
-        filterSelect.addEventListener('change', (event) => {
-          let targetVal = event.target.value;
-          let brand = document.querySelectorAll('.brand');
-
-          if(targetVal == 'All') {
-            brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
-            not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
-          } else {
-            brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
-            document.querySelectorAll('.brand[data-category="' + targetVal + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
-          }
-        });
+        // let filteredList = document.getElementById('FilteredList');
+        // filteredList.appendChild(makeSelect(newArraylist));
+        //
+        // let filterSelect = document.querySelector('#FilteredList select');
+        // let option = document.createElement('option');
+        // let optTxt = document.createTextNode('Filter By');
+        // let selected = true;
+        // let disabled = true;
+        // option.appendChild(optTxt);
+        // option.selected = selected;
+        // option.disabled = disabled;
+        //
+        // filterSelect.insertBefore(option, filterSelect.firstChild);
+        //
+        // // Mobile Filter Functions
+        // filterSelect.addEventListener('change', (event) => {
+        //   let targetVal = event.target.value;
+        //   let brand = document.querySelectorAll('.brand');
+        //
+        //   if(targetVal == 'All') {
+        //     brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+        //     not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+        //   } else {
+        //     brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+        //     document.querySelectorAll('.brand[data-category="' + targetVal + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+        //   }
+        // });
       } else {
         // Build Ul for Desktop
         let filteredList = document.getElementById('FilteredList');
@@ -154,8 +158,13 @@ class Theme {
           if (e.target.className === 'FilterBtn') {
             let category = e.target.dataset.category;
             let brand = document.querySelectorAll('.brand');
+            let activeFilterBtn = document.querySelectorAll('.FilterBtn');
+
+            for (let i = 0; i < activeFilterBtn.length; i++) {
+              activeFilterBtn[i].classList.remove('active');
+            }
             e.target.classList.add('active');
-            
+
             if (category == "All") {
               brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
               not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
