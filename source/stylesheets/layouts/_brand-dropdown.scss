@@ -9,14 +9,14 @@
   display: block;
   padding: 0;
   height: 100vh;
-  top: 0;
+  top: -70px;
   left: 0;
   right: 0;
   background-color: #000;
 
   .FilteredList {
     position: absolute;
-    top: 30px;
+    top: 120px;
     left: 0;
     right: 0;
     z-index: 200;
@@ -104,7 +104,7 @@
 
   .BrandsWrapper {
     position: absolute;
-    top: 60px;
+    top: 140px;
     right: 0;
     left: 0;
     bottom: 0;
