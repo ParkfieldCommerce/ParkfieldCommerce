@@ -405,6 +405,32 @@ class Theme {
         });
       });
     }
+
+    var form = $('#mc-embedded-subscribe-form');
+    if (form.length > 0){
+      $('#mc-embedded-subscribe').bind('click', function(event){
+        if (event) event.preventDefault();
+        register(form);
+      });
+    }
+
+    function register(form){
+      $.ajax({
+        type: 'POST',
+        url: 'https://nyc.us16.list-manage.com/subscribe/post?u=f127562a91d5c95b40b01c49e&id=093cc5a009',
+        data: form.serialize(),
+        cache: false,
+        dataType: 'jsonp',
+        error: function(err){ console.log('Error'); },
+        success: function(data) {
+          if(data.result != 'success') {
+            console.log('Something went wrong');
+          } else {
+            console.log('Success');
+          }
+        }
+      });
+    }
   }
 }
 
