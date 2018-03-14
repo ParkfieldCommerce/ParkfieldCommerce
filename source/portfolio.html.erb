@@ -1,15 +1,16 @@
 ---
 layout: portfolio-layout
+pageClass: portfolio-page
 ---
-<nav class="BrandDropdown" href="#nav-portfolio">
+<section class="BrandDropdown" href="#nav-portfolio">
 
 	<!-- Categories for Filter appends here -->
 	<div class="FilteredList" id="FilteredList"></div>
 
 	<!-- Background Images for Hover -->
 	<div class="ImageCover" id="ImageCover">
-		<% dato.brands.each do |b| %>
-			<div class="BrandImage" data-hover="<%= b.name %>" style="background-image:url('<%= b.background.url %>')"></div>
+		<% dato.brands.each_with_index do |b, index| %>
+			<div class="BrandImage <% if index == 0 %>visible<% end %>" data-hover="<%= b.name %>" style="background-image:url('<%= b.background.url %>')"></div>
 		<% end %>
 	</div>
 
@@ -30,4 +31,4 @@ layout: portfolio-layout
 
 		</div>
 	</div>
-</nav>
+</section>
