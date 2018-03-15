@@ -394,42 +394,17 @@ class Theme {
     }
   }
   initArticlePage(){
-    if(window.location.pathname.indexOf('/articles') > -1){
-      let shareButtons = document.querySelectorAll('.ShareButtons__btn');
-      shareButtons.forEach((btn)=>{
-        btn.addEventListener('click', (event)=>{
-          let width = 650;
-          let height = 450;
-          event.preventDefault();
-          window.open(this.href, 'Share Dialog', `menubar=no,toolbar=no,resizable=yes,scrollbars=yes,width=${width},height=${height},top=${(screen.height/2-height/2)},left=${(screen.width/2-width/2)}`);
-        });
-      });
-    }
+    $('#mc-embedded-subscribe-form').ajaxChimp({
+      url: 'https://nyc.us16.list-manage.com/subscribe/post?u=f127562a91d5c95b40b01c49e&id=093cc5a009',
+      callback: callbackFunction
+    });
 
-    var form = $('#mc-embedded-subscribe-form');
-    if (form.length > 0){
-      $('#mc-embedded-subscribe').bind('click', function(event){
-        if (event) event.preventDefault();
-        register(form);
-      });
-    }
-
-    function register(form){
-      $.ajax({
-        type: 'POST',
-        url: 'https://nyc.us16.list-manage.com/subscribe/post?u=f127562a91d5c95b40b01c49e&id=093cc5a009',
-        data: form.serialize(),
-        cache: false,
-        dataType: 'jsonp',
-        error: function(err){ console.log('Error'); },
-        success: function(data) {
-          if(data.result != 'success') {
-            console.log('Something went wrong');
-          } else {
-            console.log('Success');
-          }
-        }
-      });
+    function callbackFunction(resp) {
+      if(resp.result === 'success') {
+        $('#mc_embed_signup').html(`<p>${resp.msg}</p>`);
+      } else {
+        $('#mc_embed_signup').append(`<p>${resp.msg}</p>`);
+      }
     }
   }
 }
