@@ -3,6 +3,10 @@ layout: article-layout
 pageClass: ArticlePage
 ---
 
+<% content_for(:head) do %>
+  <%= dato_meta_tags(article) %>
+<% end %>
+
 <div class="space-90 space-bottom-90 mobile-space-30 mobile-space-bottom-60">
 	<div class="container m ArticleContainer">
 		<div class="Article">

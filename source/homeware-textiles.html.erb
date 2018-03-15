@@ -1,7 +1,11 @@
 ---
-title: ParkfieldCommerce - The homeware & textiles eCommerce specialists
 pageClass: HomewareTextilesPage
 ---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.homeware_textile) %>
+<% end %>
+
 <%= partial './partials/global/hero', 
   locals:{
     type:'homewareTextiles',

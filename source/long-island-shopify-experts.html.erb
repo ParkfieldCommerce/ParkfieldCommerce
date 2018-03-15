@@ -1,7 +1,11 @@
 ---
-title: ParkfieldCommerce - Long Island Shopify Experts
 pageClass: LIExperts
 ---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.li_shopify_expert) %>
+<% end %>
+
 <%= partial './partials/global/hero', 
   locals:{
     type:'homewareTextiles',

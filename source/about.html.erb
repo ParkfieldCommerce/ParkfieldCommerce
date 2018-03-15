@@ -3,6 +3,10 @@ layout: layout
 pageClass: AboutPage
 ---
 
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.about_page) %>
+<% end %>
+
 <%= partial './partials/global/hero', 
   locals:{
     type:'generic',

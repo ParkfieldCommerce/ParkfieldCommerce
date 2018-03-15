@@ -3,7 +3,9 @@ layout: migration-layout
 pageClass: migration-page
 ---
 
-
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.migration) %>
+<% end %>
 
 <div class="Migration">
 	<div class="Migration__overlay"></div>

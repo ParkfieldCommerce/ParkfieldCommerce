@@ -2,6 +2,11 @@
 title: ParkfieldCommerce - What is Shopify?
 pageClass: Whatis
 ---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.what_is_shopify) %>
+<% end %>
+
 <%= partial './partials/global/hero', 
   locals:{
     type:'whatis',

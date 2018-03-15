@@ -1,7 +1,10 @@
 ---
-title: ParkfieldCommerce - Migration From and To
 pageClass: migrationGeneralPages
 ---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(migrationGeneralPage) %>
+<% end %>
 
 <%= partial './partials/global/hero', 
   locals:{

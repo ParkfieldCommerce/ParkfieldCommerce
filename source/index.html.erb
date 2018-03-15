@@ -1,7 +1,11 @@
 ---
-title: ParkfieldCommerce - E-Commerce Web Design Agency
 pageClass: Homepage
 ---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.homepage) %>
+<% end %>
+
 <%= partial './partials/global/hero', 
   locals:{
     type:'homepage',

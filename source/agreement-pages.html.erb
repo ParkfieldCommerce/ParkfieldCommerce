@@ -1,7 +1,10 @@
 ---
-title: ParkfieldCommerce - Agreement Pages
 pageClass: AgreementPage
 ---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(agreementPage) %>
+<% end %>
 
 <%= partial './partials/agreement-pages/text-area', 
   locals:{
