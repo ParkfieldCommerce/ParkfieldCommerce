@@ -1,0 +1,58 @@
+.ContactPopUp {
+	&__overlay {
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.33);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__form {
+		width: 100%;
+		max-width: 956px;
+		background-color: #fff;
+		box-shadow: 4px 4px rgba(0,0,0,0.25);
+		padding: 45px 53px;
+		h1 {
+			font-size: 2.25rem;
+			text-align: center;
+			margin-bottom: 15px;
+		}
+		p {
+			color: $heading;
+			margin: 0;
+			text-align: center;
+			padding-bottom: 61px;
+		}
+	}
+	&__formTopRow {
+		display: flex;
+	}
+	&__half {
+		width: 50%;
+		&:first-child {
+			margin-right: 55px;
+		}
+	}
+	&__input {
+		position: relative;
+		margin-bottom: 30px;
+		label {
+			color: $body;
+			font-size: 1.125rem;
+			position: absolute;
+			bottom: 14px;
+			transition: all 0.3s;
+		}
+		input {
+			width: 100%;
+			border: none;
+			border-bottom: 1px solid $body;
+			color: $body;
+			height: 32px;
+		}
+	}
+}
