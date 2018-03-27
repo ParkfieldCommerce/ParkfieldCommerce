@@ -1,0 +1,59 @@
+.ContactForm {
+	width: 100%;
+	max-width: 956px;
+	margin: 60px auto 164px;
+	&__info {
+		display: flex;
+		margin-bottom: 60px;
+	}
+	&__infoItem {
+		width: 50%;
+		h6,p {
+			color: $heading;
+			margin: 0;
+		}
+		h6 {
+			margin-bottom: 15px;
+		}
+		p {
+			width: 91%;
+		}
+	}
+	textarea {
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid $body;
+		color: $body;
+		height: 32px;
+		line-height: 32px;
+		font-size: 1.125rem;
+		transition: border-bottom 0.3s;
+		&:focus {
+			outline: none;
+		}
+	}
+	textarea:focus~label {
+		bottom: 33px;
+		font-size: 0.75rem;
+		color: $btn-pfc;
+	}
+	textarea.input-focus {
+		&~label {
+			bottom: 33px;
+			font-size: 0.75rem;
+			color: $btn-pfc;
+		}
+	}
+	input[type="submit"] {
+		height: 60px;
+		width: 143px;
+		color: $btn-pfc-text;
+		background-color: $btn-pfc;
+		font-family: 'Avenir';
+		font-size: 1.125rem;
+		font-weight: 800;
+	}
+	.hide {
+		display: none;
+	}
+}
