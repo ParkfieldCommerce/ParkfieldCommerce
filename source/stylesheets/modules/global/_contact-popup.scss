@@ -1,4 +1,5 @@
 .ContactPopUp {
+	display: none;
 	&__overlay {
 		position: fixed;
 		left: 0;
@@ -9,6 +10,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		z-index: 5;
 	}
 	&__form {
 		width: 100%;
@@ -16,6 +18,7 @@
 		background-color: #fff;
 		box-shadow: 4px 4px rgba(0,0,0,0.25);
 		padding: 45px 53px;
+		position: relative;
 		h1 {
 			font-size: 2.25rem;
 			text-align: center;
@@ -28,13 +31,25 @@
 			padding-bottom: 61px;
 		}
 	}
+	&__close {
+		position: absolute;
+		top: 30px;
+		right: 30px;
+		cursor: pointer;
+	}
 	&__formTopRow {
 		display: flex;
-	}
-	&__half {
-		width: 50%;
-		&:first-child {
-			margin-right: 55px;
+		flex-flow: row wrap;
+		li {
+			width: 50%;
+			box-sizing: border-box;
+			&:nth-child(odd) {
+				padding-right: 55px;
+			}
+		}
+		.hiddenSelect {
+			position: absolute;
+			visibility: hidden;
 		}
 	}
 	&__input {
@@ -42,9 +57,11 @@
 		margin-bottom: 30px;
 		label {
 			color: $body;
+			font-family: 'Avenir';
+			font-weight: 800;
 			font-size: 1.125rem;
 			position: absolute;
-			bottom: 14px;
+			bottom: 8px;
 			transition: all 0.3s;
 		}
 		input {
@@ -53,6 +70,134 @@
 			border-bottom: 1px solid $body;
 			color: $body;
 			height: 32px;
+			font-size: 1.125rem;
+			transition: border-bottom 0.3s;
+			&:focus {
+				outline: none;
+				border-bottom: 1px solid $btn-pfc;
+			}
+		}
+		.input-focus {
+			&~label {
+				bottom: 29px;
+				font-size: 0.75rem;
+				color: $btn-pfc;
+			}
+		}
+	}
+	.dropdownMenu {
+		padding-right: 55px;
+	}
+	&__dropdown {
+		text-align: center;
+		height: 0;
+		transition: height 0.3s;
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+		overflow: hidden;
+		li {
+			width: 100%;
+			color: #fff;
+			background-color: $btn-pfc;
+			font-size: 1.125rem;
+			padding: 13px 0;
+			&:nth-child(odd) {
+				padding-right: 0;
+			}
+		}
+	}
+	textarea {
+		width: 100%;
+		border: none;
+		border-bottom: 1px solid $body;
+		color: $body;
+		height: 32px;
+		line-height: 32px;
+		font-size: 1.125rem;
+		transition: border-bottom 0.3s;
+		&:focus {
+			outline: none;
+		}
+	}
+	textarea.input-focus {
+		&~label {
+			bottom: 33px;
+			font-size: 0.75rem;
+			color: $btn-pfc;
+		}
+	}
+	&__submit {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	input[type="submit"] {
+		height: 60px;
+		width: 143px;
+		color: $btn-pfc-text;
+		background-color: $btn-pfc;
+		font-family: 'Avenir';
+		font-size: 1.125rem;
+		font-weight: 800;
+	}
+	.hide {
+		display: none;
+	}
+	&__call {
+		display: none;
+		text-align: center;
+		font-size: 1.125rem;
+		font-weight: 800;
+		text-decoration: underline;
+		margin-top: 50px;
+	}
+}
+
+@include maxQuery($s){
+	.ContactPopUp {
+		&__form {
+			height: 100%;
+			box-sizing: border-box;
+			padding: 45px 32px;
+			h1,p {
+				text-align: left;
+			}
+			h1 {
+				font-size: 1.5rem;
+				margin-bottom: 20px;
+			}
+			p {
+				padding-bottom: 30px;
+			}
+		}
+		&__formTopRow {
+			flex-direction: column;
+			li {
+				width: 100%;
+				&:nth-child(odd) {
+					padding-right: 0;
+				}
+			}
+		}
+		&__input {
+			margin-bottom: 20px;
+			input,label {
+				font-size: 0.875rem;
+			}
+		}
+		&__submit {
+			input[type="submit"] {
+				font-size: 0.875rem;
+				width: 100%;
+				height: 45px;
+			}
+			img {
+				display: none;
+			}
+		}
+		&__call {
+			display: block;
 		}
 	}
 }

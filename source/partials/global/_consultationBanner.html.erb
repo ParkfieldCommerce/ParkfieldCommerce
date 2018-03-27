@@ -11,3 +11,21 @@
   <%= image_tag dato.consultation_banner.image.url, alt: dato.consultation_banner.image.alt, class:"ConsultationBanner__image" %>
 </div>
 <%= partial './partials/global/contact-popup' %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#ContactFormButton').click(function(){
+      $('.ContactPopUp').fadeIn();
+    });
+    $('#CloseContactPopUp').click(function(){
+      $('.ContactPopUp').fadeOut();
+    });
+    $('input[type="text"],input[type="email"],input[type="url"],textarea').on('focus', function(){
+      $(this).addClass('input-focus');
+    });
+    $('input[type="text"],input[type="email"],input[type="url"],textarea').on('change', function(){
+      if ($(this).val().length() < 1) {
+        $(this).removeClass('input-focus');
+      }
+    });
+  });
+</script>
