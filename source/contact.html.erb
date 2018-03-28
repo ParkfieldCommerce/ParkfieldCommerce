@@ -20,13 +20,16 @@ pageClass: ContactPage
 %>
 
 <div class="ContactForm">
+	<a class="ContactForm__callBtn" href="<%= dato.contact_page.call_us_button_link %>"><%= dato.contact_page.call_us_button_text %></a>
 	<div class="ContactForm__info">
-		<% dato.contact_page.info.each do | text |%>
 		<div class="ContactForm__infoItem">
-			<h6><%= text.heading %></h6>
-			<p><%= text.body %></p>
+			<h6><%= dato.contact_page.column_1_heading %></h6>
+			<p><%= dato.contact_page.column_1_text %></p>
 		</div>
-		<% end %>
+		<div class="ContactForm__infoItem">
+			<h6><%= dato.contact_page.column_2_heading %></h6>
+			<p><%= dato.contact_page.column_2_text %></p>
+		</div>
 	</div>
 	<form id="form96" name="form96" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://shopifybuilder.wufoo.eu/forms/kmjfzql1wfq68r/#public">
 			<ul>
@@ -95,4 +98,23 @@ pageClass: ContactPage
 			</li>
 			</ul>
 			</form>
+			<div class="ContactForm__locations">
+				<h5><%= dato.contact_page.locations_heading %></h5>
+				<div class="ContactForm__addresses">
+					<p><%= dato.contact_page.location_1 %></p>
+					<p><%= dato.contact_page.location_2 %></p>
+				</div>
+			</div>
 </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('input[type="text"],input[type="email"],input[type="url"],textarea').on('change', function(){
+      if ($(this).val().length > 1) {
+        $(this).addClass('input-focus');
+      }
+      if ($(this).val().length == 0) {
+        $(this).removeClass('input-focus');
+      }
+    });
+	});
+</script>
