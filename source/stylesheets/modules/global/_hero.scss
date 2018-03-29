@@ -110,6 +110,9 @@
     height: auto;
   }
 }
+.Hero__image--casestudy{
+  max-height: 680px;
+}
 .Hero__image--homewareTextile{
   height: 67vh;
   @include maxQuery($s){
