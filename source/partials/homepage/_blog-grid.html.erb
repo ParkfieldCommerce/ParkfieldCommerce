@@ -14,7 +14,7 @@
         <p><%= firstArticle.date.strftime('%-m/%-d/%Y') %></p>
       </div>
 			<div class="BlogGrid__item__heading BlogGrid__item__heading--1">
-				<h3><%= link_to firstArticle.heading, "/articles/#{firstArticle.handle}" %></h3>		
+				<h3><%= link_to dato.homepage_blog_section.article_1_title, "/articles/#{firstArticle.handle}" %></h3>		
 			</div>
 			<div class="BlogGrid__item__author--1">
 				<p>By <%= firstArticle.author %></p>
@@ -29,13 +29,13 @@
 			 <img src='<%= firstImage.url %>' alt="<%= firstImage.alt %>">
 		</div>
 		<div class="BlogGrid__container BlogGrid__container--4">
-			<div class="BlogGrid__item BlogGrid__item--3" style="background-image: url('<%= secondArticleImage.url %>')">		
+			<div class="BlogGrid__item BlogGrid__item--3" style="background-image: url('<%= dato.homepage_blog_section.article_2_image.url %>')">		
 				<div class="BlogGrid__item BlogGrid__item--4">
           <div class="BlogGrid__item__date--2">
             <p><%= secondArticle.date.strftime('%-m/%-d/%Y') %></p>
           </div>
 					<div class="BlogGrid__item__heading BlogGrid__item__heading--2">
-						<h3><%= link_to secondArticle.heading, "/articles/#{secondArticle.handle}" %></h3>
+						<h3><%= link_to dato.homepage_blog_section.article_2_title, "/articles/#{secondArticle.handle}" %></h3>
 					</div>
 					<div class="BlogGrid__item__author--2">
 						<p>By <%= secondArticle.author %></p>
