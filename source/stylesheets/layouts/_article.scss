@@ -1,7 +1,4 @@
 .ArticlePage{
-  ul li{
-    list-style: disc;
-  }
   .Nav__link,
   .MainHeader__logo{
     color: black;
@@ -56,6 +53,9 @@
   }
   img {
     margin-bottom: 30px;
+  }
+  ul li{
+    list-style: disc;
   }
   &__body p{
     color: $article-text;
