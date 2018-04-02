@@ -47,9 +47,8 @@
 		display:flex;
 		align-items:center;
 		justify-content:center;
-		&:visited{
-			color:white;
-		}
+		color:white;
+		cursor: pointer;
 	}
 	@include minmaxQuery(1022px,1250px){
 		padding-left:10px;
