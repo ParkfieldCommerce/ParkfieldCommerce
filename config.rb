@@ -152,7 +152,6 @@ redirect "blogs/news/best-ecommerce-platform-for-small-business.html", to: "/art
 redirect "pages/7-artisan-street.html", to: "/case-studies/7-artisan-street"
 redirect "contact-us.html", to: "/contact/"
 redirect "blogs/news/how-personalization-is-key-to-ecommerce-success.html", to: "/articles/why-is-mobile-commerce-so-important-for-ecommerce-s"
-redirect "pages/project-form?nopreview.html", to: "/ "
 redirect "pages/netaya-case-study.html", to: "/case-studies/netaya"
 redirect "pages/etonic.html", to: "/case-studies/etonic"
 redirect "pages/jefferson-lane.html", to: "/case-studies/jefferson-lane"
