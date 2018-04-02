@@ -78,7 +78,11 @@ pageClass: MigrationPages
   }
  %>
 
- <%= partial './partials/global/contact-popup' %>
+<%= partial './partials/global/contact-popup',
+  locals: {
+    heading: 'Get a free quote'
+  }
+%>
 <script type="text/javascript">
   $(document).ready(function(){
     $('#ContactFormButton, .openPopUp').click(function(){
