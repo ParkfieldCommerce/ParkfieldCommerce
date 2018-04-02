@@ -16,11 +16,11 @@
 
   .FilteredList {
     position: absolute;
-    top: 120px;
+    top: 90px;
     left: 0;
     right: 0;
     z-index: 200;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    // border-top: 1px solid rgba(255, 255, 255, 0.2);
     @include maxQuery(1000px) {
       top: 80px;
       border: 0;
@@ -186,9 +186,10 @@
         background-repeat: no-repeat;
         background-size: contain;
         pointer-events: none;
-        height: 70px;
-        width: 60%;
+        height: 60px;
+        width: 50%;
         margin: auto;
+        cursor: pointer;
 
         @include maxQuery(1000px) {
           height: 50%;
