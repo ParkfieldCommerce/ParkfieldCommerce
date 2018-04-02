@@ -114,7 +114,8 @@
 .Hero--caseStudy,
 .Hero--migrationPage,
 .Hero--whatis,
-.Hero--homewareTextiles{
+.Hero--homewareTextiles,
+.Hero--migrationGeneralPage{
   height: 70vh;
   max-height: 650px;
   @include maxQuery($m){
