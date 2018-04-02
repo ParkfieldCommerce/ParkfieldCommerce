@@ -92,13 +92,13 @@ configure :build do
     end
 
     dato.migration_pages.each do |migrationPage|
-      proxy "/#{migrationPage.handle}/index.html", "migration-page.html", 
+      proxy "/migration/#{migrationPage.handle}/index.html", "migration-page.html", 
       locals: { migrationPage: migrationPage },
       ignore: true
     end
 
     dato.migration_general_pages.each do |migrationGeneralPage|
-      proxy "/#{migrationGeneralPage.handle}/index.html", "migration-general-page.html", 
+      proxy "/migration/#{migrationGeneralPage.handle}/index.html", "migration-general-page.html", 
       locals: { migrationGeneralPage: migrationGeneralPage },
       ignore: true
     end
