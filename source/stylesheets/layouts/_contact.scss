@@ -62,6 +62,10 @@
 		font-family: 'Avenir';
 		font-size: 1.125rem;
 		font-weight: 800;
+		border: none;
+		&:hover{
+			cursor: pointer;
+		}
 	}
 	.hide {
 		display: none;

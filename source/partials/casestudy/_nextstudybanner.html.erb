@@ -2,12 +2,14 @@
 <% nextStudyBannerLogo = caseStudy.next_study_logo %>
 <% nextUrl = dato.case_studies.first.handle %>
 <% nextFound = false %>
+<% nextStudyOpacity = 0 %>
 
 <% dato.case_studies.each_with_index do |nextCaseStudy, index| %>
 	<% if nextFound == true %>
 		<% nextUrl = nextCaseStudy.handle %>
 		<% nextStudyBanner = nextCaseStudy.banner_gallery[2] %>
 		<% nextStudyBannerLogo = nextCaseStudy.next_study_logo %>
+		<% nextStudyOpacity = nextCaseStudy.next_study_opacity %>
 		<% break %>
 	<% end %>
 	<% if caseStudy.handle == nextCaseStudy.handle %>
@@ -16,11 +18,15 @@
 			<% nextUrl = dato.case_studies[0].handle %>
 			<% nextStudyBanner = dato.case_studies[0].banner_gallery[2] %>
 			<% nextStudyBannerLogo = dato.case_studies[0].next_study_logo %>
-
+			<% nextStudyOpacity = dato.case_studies[0].next_study_opacity %>
 		<% end %>
 	<% end %>
 <% end %>
-
+<style>
+	.CaseStudy__nextBanner__container--1::after{
+		background-color: rgba(0,0,0, <%= nextStudyOpacity %>);
+	}
+</style>
 
 <div class="space-120 mobile-space-60 CaseStudy__nextBanner__container--1" style="background-image:url('<%= nextStudyBanner.url %>');">
 	<div class="container m">
@@ -38,3 +44,4 @@
 		</div>
 	</div>
 </div>
+

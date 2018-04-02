@@ -5,4 +5,22 @@
       margin-bottom: 0;
     }
   }
+  .Btn--whatis{
+    background-color: #FFC156;
+    color: $heading;
+    font-weight: 800;
+    font-family: 'Avenir';
+    &:hover{
+      cursor: pointer;
+    }
+    @include maxQuery($s){
+      width: 100%;
+    }
+  }
+  .ImageText__body-grid{
+    margin-bottom: 60px;
+    @include maxQuery($s){
+      margin-bottom: 0;
+    }
+  }
 }

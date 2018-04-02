@@ -11,10 +11,16 @@
 		margin-bottom:60px;
 	}
 	&__title__container{
-		justify-content:center;
+		justify-content: flex-start;
 	}
 	&__text{
 		margin-left:30px;
+		h6{
+			font-weight: normal;
+			margin-top: 0;
+			color: $heading;
+			margin-bottom: 20px;
+		}
 	}
 	&__text h2{
 		margin:0;
@@ -32,6 +38,7 @@
 		text-align:center;
 	}
 	&__button{
+		font-weight: bold;
 		margin-top:60px;
 		display:inline-block;
 		width:152px;

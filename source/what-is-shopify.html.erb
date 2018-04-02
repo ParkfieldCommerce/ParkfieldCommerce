@@ -28,13 +28,14 @@ pageClass: Whatis
  %>
 </div>
 <% dato.what_is_shopify.content_block.each do |block| %>
-  <%= partial './partials/global/image-text',
+  <%= partial './partials/whatis/image-text-button',
     locals:{
       imagePosition: block.image_on_left,
       altBackground: block.alt_background,
       heading: block.heading,
       body: block.body,
-      image: block.image
+      image: block.image,
+      buttonText: 'Get a free trial'
     }
    %>
 <% end %>

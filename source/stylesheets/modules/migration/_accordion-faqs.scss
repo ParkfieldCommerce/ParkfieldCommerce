@@ -11,7 +11,7 @@
 		position:relative;
 	}
 	&__header{
-		padding-left:10px;
+		padding: 5px 0 5px 10px;
 		margin:0;
 		color:#231F20;
 		border-top: 2px solid #231F20;
@@ -29,7 +29,8 @@
 	}
 	&__body{
 		margin:0;
-		margin-top:30px;
+		margin-top:5px;
+		margin-bottom: 10px;
 		margin-left:10px;
 		display:none;
 		color:#231F20;

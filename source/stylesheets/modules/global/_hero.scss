@@ -17,16 +17,16 @@
 }
 .Hero{    
   position: relative;
+  margin-top: -70px;
+  overflow: hidden;
   &__image{
-    position: relative;
+    position: absolute;
     z-index: 1;
     display: block;
-    min-height: 550px;
-    height: 88vh;
+    height: 110%;
     width: 100%;
-    margin-top: -70px;
-    background-position: top;
-    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
   }
   &__text{
@@ -48,11 +48,7 @@
     z-index:2;
   }
   @include maxQuery($s){
-    &__image{
-      min-height: 290px;
-      margin-top: 0px;
-      height: auto;
-    }
+    margin-top: 0;
   }
 }
 
@@ -102,26 +98,37 @@
   }
 }
 
-.Hero__image--casestudy,
-.Hero__image--whatis,
-.Hero__image--generic{
+.Hero--homepage{
+  //883 - 680 - 290
+  height: 88vh;
+  max-height: 850px;
+  @include maxQuery($s){
+    max-height: 640px;
+  }
+  @include maxQuery($xs){
+    max-height: 250px;
+  }
+}
+
+.Hero--generic,
+.Hero--caseStudy,
+.Hero--migrationPage,
+.Hero--whatis,
+.Hero--homewareTextiles{
   height: 70vh;
-  max-height: 680px;
-  @include maxQuery(1200px){
-    max-height: 665px;
+  max-height: 650px;
+  @include maxQuery($m){
+    max-height: 650px;
   }
   @include maxQuery($s){
-    height: auto;
+    max-height: 260px;
   }
 }
 
-.Hero__image--homepage{
-  max-height: 883px;
-}
-
-.Hero__image--homewareTextile{
-  height: 67vh;
+.Hero--contact{
+  height: 40vh;
+  max-height: 427px;
   @include maxQuery($s){
-    height: 60vh;
+    max-height: 260px;
   }
 }

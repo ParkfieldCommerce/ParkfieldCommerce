@@ -1,0 +1,21 @@
+<div class="ImageText <% if imagePosition %>ImageText--image-left<% else %>ImageText--image-right<% end %> <% if altBackground %>ImageText--alt-bg<% end %> padding-120 mobile-space-padding-60 mobile-space-padding-bottom-60">
+  <div class="container m">
+  <% if imagePosition %>
+    <div class="ImageText__image">
+      <%= image_tag image.url %>
+    </div>
+  <% end %>
+  <div class="ImageText__text">
+    <h2 class="ImageText__heading"><%= heading %></h2>
+    <div class="ImageText__body space-bottom-90 mobile-space-bottom-0">
+      <%= body %>
+      <button class="Btn Btn--whatis"><%= buttonText %></button>
+    </div>
+  </div>
+  <% unless imagePosition %>
+    <div class="ImageText__image">
+      <%= image_tag(image.url, alt: image.alt) %>
+    </div>
+  <% end %>
+  </div>
+</div>
