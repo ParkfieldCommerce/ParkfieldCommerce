@@ -77,3 +77,37 @@ pageClass: MigrationPages
     bottomImageGallery: migrationPage.bottom_image_gallery
   }
  %>
+
+ <%= partial './partials/global/contact-popup' %>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#ContactFormButton, .openPopUp').click(function(){
+      $('.ContactPopUp').fadeIn();
+    });
+    $('#CloseContactPopUp').click(function(){
+      $('.ContactPopUp').fadeOut();
+    });
+
+    $('input[type="text"],input[type="email"],input[type="url"],textarea').on('change', function(){
+      if ($(this).val().length > 1) {
+        $(this).addClass('input-focus');
+      }
+      if ($(this).val().length == 0) {
+        $(this).removeClass('input-focus');
+      }
+    });
+
+    $('#select,.chevron').click(function(){
+      $('.ContactPopUp__dropdown').toggleClass('active');
+    });
+
+    $('.dataSelector').click(function(){
+      var value = $(this).attr('data-value');
+      $('#select').val(value);
+      $('#select').trigger('change');
+      $('#Field7').val(value);
+      $('.ContactPopUp__dropdown').removeClass('active');
+    });
+
+  });
+</script>
