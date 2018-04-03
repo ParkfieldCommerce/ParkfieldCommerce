@@ -4,11 +4,11 @@
 	<div class="HomewareCaseStudy__container large-5 medium-12 small-11 ">
 		<div class="HomewareCaseStudy__text">
 			<h3 class="HomewareCaseStudy__title"><%= company.site_name %></h3>
-			<h3 class="HomewareCaseStudy__title--3 Link--underline"><a href="case-studies/<%= company.case_study_link.handle%>"><%= company.site_name %></a></h3>
+			<h3 class="HomewareCaseStudy__title--3 Link--underline"><a href="/case-studies/<%= company.case_study_link.handle%>"><%= company.site_name %></a></h3>
 			<p class="HomewareCaseStudy__description"><%= company.description %></p>
 			<div class="HomewareCaseStudy__quote"><%= company.quote %></div>
 			<div class="HomewareCaseStudy__link">
-				<a class="HomewareCaseStudy__link Link--underline" href="case-studies/<%= company.case_study_link.handle %>">Read case study</a>
+				<a class="HomewareCaseStudy__link Link--underline" href="/case-studies/<%= company.case_study_link.handle %>">Read case study</a>
 			</div>
 		</div>
 	</div>
