@@ -64,6 +64,12 @@ li{
 img{
   max-width: 100%;
 }
+button{
+  outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
 .Btn{
   padding: 13px 18px;
   border: 1px solid white;
