@@ -1,3 +1,5 @@
+<% emailPhone = dato.case_study_email_form.phone %>
+
 <% main_nav_links = dato.main_nav_links.sort_by {|main_nav_link| main_nav_link.position} %>
 <div id="MobileNavTrigger" class="Nav__hamburger Nav__hamburger">
   <i></i><i></i><i></i>
@@ -20,7 +22,7 @@
     <span class="Nav__mobile-section__heading">
       Get a free quote
     </span>
-    <a href="#" class="Nav__mobile-section__button Btn Btn--filled">Call Us</a>
-    <a href="#" class="Nav__mobile-section__button Btn Btn--ghost">Send a message</a>
+    <a href="tel:<%= emailPhone %>" class="Nav__mobile-section__button Btn Btn--filled">Call Us</a>
+    <a href="mailto:experts@parkfieldcommerce.com" class="Nav__mobile-section__button Btn Btn--ghost">Send a message</a>
   </div>
 </nav>

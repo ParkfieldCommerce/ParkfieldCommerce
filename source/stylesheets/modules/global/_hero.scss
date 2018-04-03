@@ -101,12 +101,15 @@
 .Hero--homepage{
   //883 - 680 - 290
   height: 88vh;
+  min-height: 750px;
   max-height: 850px;
   @include maxQuery($s){
-    max-height: 640px;
+    min-height: 400px;
+    max-height: 500px;
   }
   @include maxQuery($xs){
-    max-height: 250px;
+    min-height: 250px;
+    max-height: 300px;
   }
 }
 
@@ -118,10 +121,13 @@
 .Hero--migrationGeneralPage{
   height: 70vh;
   max-height: 650px;
+  min-height: 450px;
   @include maxQuery($m){
+    min-height: 380px;
     max-height: 650px;
   }
   @include maxQuery($s){
+    min-height: 250px;
     max-height: 260px;
   }
 }
