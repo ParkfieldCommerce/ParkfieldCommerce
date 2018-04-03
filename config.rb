@@ -141,7 +141,7 @@ redirect "blogs/news/lets-talk-dropshipping-on-bigcommerce-and-shopify.html", to
 redirect "pages/fervor-bay-case-study.html", to: "/case-studies/fervor-bay"
 redirect "blogs/news/5-keys-to-mastering-ecommerce-shipping.html", to: "/articles/5-components-to-mastering-ecommerce-shipping"
 redirect "pages/eldridge-orchard-case-study.html", to: "/case-studies/eldridge-and-orchard"
-redirect "pages/about-ecommerce-agency.html", to: "/case-studies/eldridge-and-orchard"
+redirect "pages/about-ecommerce-agency.html", to: "/about"
 redirect "pages/store-migration-replatforming.html", to: "/"
 redirect "pages/case-study-whiskey-stills.html", to: "/portfolio/"
 redirect "pages/kiini.html", to: "/case-studies/kiini"
