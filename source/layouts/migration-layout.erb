@@ -12,7 +12,8 @@
     <%= stylesheet_link_tag "app" %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <%= javascript_include_tag "/javascripts/vendor/slick.min" %>
-
+    <%= partial './partials/scripts/google-listing' %>
+    <%= partial './partials/scripts/google-tracking' %>
   </head>
   <body class="<%= current_page.data.pageClass %>">
     <div class="migration__container container m">
