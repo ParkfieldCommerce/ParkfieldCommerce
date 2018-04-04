@@ -5,18 +5,60 @@
 <div class="container m">
 	<div class="row space-90 mobile-space-60 CaseStudy__form__container--1">
 			<div class="CaseStudy CaseStudy__form__container--2 large-12 medium-10 small-12">
-				<div id="mc_embed_signup">
-					<form action="https://nyc.us16.list-manage.com/subscribe/post?u=f127562a91d5c95b40b01c49e&amp;id=093cc5a009" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-						<h3> <%= emailTitle %> </h3>
-						<div class="CaseStudy__form__container--3" id="mc_embed_signup_scroll">
-							<input type="email" value="" placeholder="Enter your email address" name="EMAIL" id="mce-EMAIL" aria-label="" autocorrect="off" autocapitalize="off" required>
-							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f127562a91d5c95b40b01c49e_093cc5a009" tabindex="-1" value=""></div>
-							<button id="mc-embedded-subscribe" type="submit" class="Btn--animatedLeft--purple"><span><%= buttonTitle %></span></button>
-						</div>
-						<a href="tel:<%= emailPhone %>" class="hidden-desktop Btn--animatedLeft--purple"><span>Call <%= emailPhone %></span></a>
-					</form>
-				</div>
+				<form>
+					<h3> <%= emailTitle %> </h3>
+					<div class="CaseStudy__form__container--3" id="mc_embed_signup_scroll">
+						<input type="email" value="" placeholder="Enter your email address" name="EMAIL" id="mce-EMAIL" aria-label="" autocorrect="off" autocapitalize="off">
+						<button id="GetStartedBtn" type="submit" class="Btn--animatedLeft--purple"><span><%= buttonTitle %></span></button>
+					</div>
+					<a href="tel:<%= emailPhone %>" class="hidden-desktop Btn--animatedLeft--purple"><span>Call <%= emailPhone %></span></a>
+				</form>
 			</div>
 	</div>
 </div>
-<script type="text/javascript" src="../../javascripts/vendor/ajaxchimp.min.js"></script>
+<%= partial './partials/global/contact-popup', 
+  locals: {
+    heading: 'Get a free quote'
+  } 
+%>
+<script type="text/javascript">
+  $(document).ready(function(){
+  	$('#mce-EMAIL').on("input", function(){
+  		var email = $(this).val();
+  		$('#Field9').val(email);
+  		if ($('#Field9').val().length > 1) {
+  			$('#Field9').addClass('input-focus');
+  		}
+  	})
+
+    $('#GetStartedBtn').click(function(e){
+      e.preventDefault();
+      $('.ContactPopUp').fadeIn();
+    });
+    $('#CloseContactPopUp').click(function(){
+      $('.ContactPopUp').fadeOut();
+    });
+
+    $('input[type="text"],input[type="email"],input[type="url"],textarea').on('change', function(){
+      if ($(this).val().length > 1) {
+        $(this).addClass('input-focus');
+      }
+      if ($(this).val().length == 0) {
+        $(this).removeClass('input-focus');
+      }
+    });
+
+    $('#select,.chevron').click(function(){
+      $('.ContactPopUp__dropdown').toggleClass('active');
+    });
+
+    $('.dataSelector').click(function(){
+      var value = $(this).attr('data-value');
+      $('#select').val(value);
+      $('#select').trigger('change');
+      $('#Field7').val(value);
+      $('.ContactPopUp__dropdown').removeClass('active');
+    });
+
+  });
+</script>
