@@ -18,14 +18,16 @@
 	}
 	&__infoItem {
 		width: 50%;
-		h6,p {
+		h3,p {
 			color: $heading;
 			margin: 0;
 		}
-		h6 {
+		h3 {
+      font-family: 'Avenir-Roman';
 			margin-bottom: 15px;
 		}
 		p {
+      color: $body;
 			width: 91%;
 		}
 	}
