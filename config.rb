@@ -117,7 +117,7 @@ configure :build do
     end
   end
 end
-
+proxy "_redirects", "netlify-redirects", ignore: true
 redirect "pages/ecommerce-web-design.html", to: "/ecommerce-web-design"
 redirect "pages/marketing.html", to: "/marketing/"
 redirect "pages/merida-studio.html", to: "/case-studies/merida/"
