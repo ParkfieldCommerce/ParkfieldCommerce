@@ -31,6 +31,9 @@
     &__heading{
       font-size: 1.5rem;
     }
+    .Nav__link{
+      color: white;
+    }
     &__article-container:nth-child(odd),
     &__article-container:nth-child(even){
       justify-content: center;
@@ -77,11 +80,17 @@
     list-style: decimal;
   }
   &__author{
+    font-family: 'Avenir-Roman';
     margin-bottom: 20px !important;
   }
   &__body p{
     color: $article-text;
     margin: 0 0 20px;
+  }
+  @include maxQuery($s){
+    h1{
+      font-size: 1.7rem;
+    }
   }
 }
 
@@ -119,6 +128,7 @@
     font-weight: 800;
     font-size: 1.125rem;
     margin-bottom: 20px;
+    font-family: 'Avenir-Roman';
   }
   &__event {
     border: 1px solid #C9C9C9;
@@ -181,7 +191,7 @@
 }
 
 @include maxQuery($s) {
-  .ArticlePage .container {
+  .ArticleContainer.m {
     max-width: 90%;
   }
   .Article {

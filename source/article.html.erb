@@ -10,8 +10,8 @@ pageClass: ArticlePage
 <div class="space-90 space-bottom-90 mobile-space-30 mobile-space-bottom-60">
 	<div class="container m ArticleContainer">
 		<div class="Article">
-			<h1><%= article.heading %></h1>
-			<p class="Article__author">By <%= article.author %> - <%= article.date.strftime('%b %-d ,%Y') %></p>
+			<h1 class="Article__heading"><%= article.heading %></h1>
+			<p class="Article__author">By <%= article.author %> - <%= article.date.strftime('%b %-d, %Y') %></p>
 			<%= image_tag article.image.url, alt: article.image.alt, class:"Article__featuredImage" %>
 			<% article.content.each do | articleSection |%>
 			<div class="Article__body">
