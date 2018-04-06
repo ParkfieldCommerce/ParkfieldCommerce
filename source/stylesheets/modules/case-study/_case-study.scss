@@ -185,9 +185,9 @@
 			max-width:100%;
 		}
 		&__container--1 form input{
-      outline: none;
+      		outline: none;
 			border:none;
-			border-bottom:1px solid black;
+			position: relative;
 		}
 		&__container--2{
 			justify-content:center;
@@ -197,6 +197,36 @@
 			width:484px;
 			display:flex;
 			align-items:flex-end;
+			.inputField {
+				position: relative;
+				input {
+					border-bottom: 1px solid $body;
+					transition: border-color 0.3s;
+				}
+				label {
+					color: $body;
+					font-family: 'Avenir';
+					position: absolute;
+					font-size: 1.125rem;
+					bottom: 14px;
+					transition: all 0.3s;
+				}
+				input:focus {
+					border-color: $btn-pfc;
+					&~label {
+						bottom: 37px;
+						font-size: 0.75rem;
+						color: $btn-pfc;
+					}
+				}				
+				.input-focus {
+					&~label {
+						bottom: 37px;
+						font-size: 0.75rem;
+						color: $btn-pfc;
+					}
+				}
+			}
 		}
 		&__container--1 form .hidden-desktop{
 			display:none;

@@ -8,7 +8,10 @@
 				<form>
 					<h3> <%= emailTitle %> </h3>
 					<div class="CaseStudy__form__container--3" id="mc_embed_signup_scroll">
-						<input type="email" value="" placeholder="Enter your email address" name="EMAIL" id="mce-EMAIL" aria-label="" autocorrect="off" autocapitalize="off">
+            <div class="inputField">
+						  <input type="email" value="" name="EMAIL" id="mce-EMAIL" aria-label="" autocorrect="off" autocapitalize="off">
+              <label for="mce-EMAIL">Enter your email address</label>
+            </div>
 						<button id="GetStartedBtn" type="submit" class="Btn--animatedLeft--purple"><span><%= buttonTitle %></span></button>
 					</div>
 					<a href="tel:<%= emailPhone %>" class="hidden-desktop Btn--animatedLeft--purple"><span>Call <%= emailPhone %></span></a>
