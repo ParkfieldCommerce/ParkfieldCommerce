@@ -64,6 +64,15 @@ li{
 img{
   max-width: 100%;
 }
+input:focus::-webkit-input-placeholder{
+    color: transparent!important;
+}
+input:focus::-moz-placeholder{
+    color: transparent!important;
+}
+input:focus:-moz-placeholder{
+    color: transparent!important;
+}
 button{
   outline: none;
 }

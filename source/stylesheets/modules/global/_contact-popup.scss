@@ -67,11 +67,12 @@
 			width: 100%;
 			border: none;
 			border-bottom: 1px solid $body;
-			color: $body;
+			color: $heading;
 			height: 32px;
 			font-size: 1.125rem;
 			transition: border-bottom 0.3s;
 			&:focus {
+        color: $heading;
 				outline: none;
 				border-bottom: 1px solid $btn-pfc;
 			}
