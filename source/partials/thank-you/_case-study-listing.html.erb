@@ -1,0 +1,6 @@
+<div class="CaseStudyListing">
+  <% link_to "/case-studies/#{caseStudy.handle}" do %>
+  <%= image_tag caseStudyImage.url, alt: caseStudyImage.alt, class:"CaseStudyListing__image" %>
+<% end %>
+  <%= link_to caseStudy.heading, "/case-studies/#{caseStudy.handle}", class:"CaseStudyListing__link"%>
+</div>

@@ -1,0 +1,80 @@
+.ThankYou{
+  @include minQuery($s){
+    .MainHeader__logo,
+    .Nav__link{
+      color: black;
+      &:after{
+        background-color: black;
+      }
+    }
+    .Nav__item--button .Btn{
+      border-color: black;
+      span{color: black;}
+      &:after{
+        background-color: black;
+      }
+      &:hover{
+        span{color: white;}
+        &:after{
+          background-color: black;
+        }
+      }
+    }
+  }
+  &__heading{
+    margin-bottom: 30px;
+  }
+  &__body{
+    max-width: 100%;
+    max-width: 660px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__body p{
+    font-family: 'Avenir-Roman';
+    font-size: 1.7rem;
+    color: $heading;
+  }
+  &__subheading{
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+  &__case-studies{
+    display: flex;
+  }
+  &__articles{
+    display: flex;
+  }
+  @include maxQuery($s){
+    &__heading{
+      margin-top: 45px;
+      font-size: 2.25rem;
+    }
+    &__body{
+      margin-bottom: 40px;
+    }
+    &__body p{
+      font-size: .875rem;
+      padding: 0 10px;
+    }
+    &__subheading{
+      margin-bottom: 30px;
+      font-size: 1.125rem;
+    }
+    &__case-studies{
+      margin-bottom: 40px;
+    }
+  }
+  .ArticleListing{
+    width: 50%;
+    padding: 0px 10px;
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    @include maxQuery($s){
+      &__info{display: none;}
+      &__heading{font-size: .75rem;}
+    }
+  }
+}

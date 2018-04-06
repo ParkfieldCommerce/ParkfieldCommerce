@@ -1,0 +1,31 @@
+---
+layout: layout
+pageClass: ThankYou
+---
+<div class="container m center">
+  <h1 class="ThankYou__heading space-90"><%= dato.thank_you_page.heading %></h1>
+  <div class="ThankYou__body space-bottom-90"><%= dato.thank_you_page.body %></div>
+  
+  <h2 class="ThankYou__subheading">Our work</h2>
+  <div class="ThankYou__case-studies left space-bottom-90">
+    <% firstCaseStudy = dato.thank_you_page.case_study_1 %>
+    <% secondCaseStudy = dato.thank_you_page.case_study_2 %>
+    <%= partial './partials/thank-you/case-study-listing', locals:{
+      caseStudy:firstCaseStudy,
+      caseStudyImage: dato.thank_you_page.case_study_1_image
+    } %>
+    <%= partial './partials/thank-you/case-study-listing', locals:{
+      caseStudy:secondCaseStudy,
+      caseStudyImage: dato.thank_you_page.case_study_2_image
+    } %>
+  </div>
+
+  
+  <h2 class="ThankYou__subheading">Our blog</h2>
+  <div class="ThankYou__articles left space-bottom-120">
+    <% firstArticle = dato.articles.first %>
+    <% secondArticle = dato.articles[1] %>
+    <%= partial './partials/news/article-listing', locals:{article:firstArticle}%>
+    <%= partial './partials/news/article-listing', locals:{article:secondArticle}%>
+  </div>
+</div>
