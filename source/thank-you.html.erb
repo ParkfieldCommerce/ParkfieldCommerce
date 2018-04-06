@@ -6,7 +6,7 @@ pageClass: ThankYou
   <h1 class="ThankYou__heading space-90"><%= dato.thank_you_page.heading %></h1>
   <div class="ThankYou__body space-bottom-90"><%= dato.thank_you_page.body %></div>
   
-  <h2 class="ThankYou__subheading">Our work</h2>
+  <a href="/portfolio"><h2 class="ThankYou__subheading">Our work</h2></a>
   <div class="ThankYou__case-studies left space-bottom-90">
     <% firstCaseStudy = dato.thank_you_page.case_study_1 %>
     <% secondCaseStudy = dato.thank_you_page.case_study_2 %>
@@ -21,7 +21,7 @@ pageClass: ThankYou
   </div>
 
   
-  <h2 class="ThankYou__subheading">Our blog</h2>
+  <a href="/news"><h2 class="ThankYou__subheading">Our blog</h2></a>
   <div class="ThankYou__articles left space-bottom-120">
     <% firstArticle = dato.articles.first %>
     <% secondArticle = dato.articles[1] %>

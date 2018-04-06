@@ -1,5 +1,7 @@
 .Service{
 	&__content{
+    max-width: 85%;
+    margin-right: auto;
 		display:flex;
 		align-items:center;
 	}
@@ -12,6 +14,9 @@
 	}
 	&__title__container{
 		justify-content: flex-start;
+    @include maxQuery($s){
+      justify-content: center;
+    }
 	}
 	&__text{
 		margin-left:30px;
@@ -20,6 +25,9 @@
 			margin-top: 0;
 			color: $heading;
 			margin-bottom: 10px;
+      @include maxQuery($s){
+        font-size: 1.125rem;
+      }
 		}
 	}
 	&__text h2{
@@ -65,6 +73,12 @@
 			justify-content:center;
 			text-align: center;
 		}
+    &__title{
+      font-size: 1.5rem;
+      max-width: 83.33333%;
+      margin-right: auto;
+      margin-left: auto;
+    }
 		&__text{
 			margin-top:16px;
 			margin-left:0px;
@@ -77,6 +91,9 @@
 			display:none;
 		}
 		&__image{
+      display: flex;
+      justify-content: center;
+      align-items: center;
 			min-height:69px;
 			height:100%;
 		}
