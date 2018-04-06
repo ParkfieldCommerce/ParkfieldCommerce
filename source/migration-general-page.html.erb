@@ -76,3 +76,41 @@ pageClass: migrationGeneralPages
     bottomImageGallery: migrationGeneralPage.bottom_image_gallery
   }
  %>
+
+<%= partial './partials/global/contact-popup', 
+  locals: {
+    heading: 'Get a free quote'
+  } 
+%>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('.openPopUp').click(function(){
+      $('.ContactPopUp').fadeIn();
+    });
+    $('#CloseContactPopUp').click(function(){
+      $('.ContactPopUp').fadeOut();
+    });
+
+    $('input[type="text"],input[type="email"],input[type="url"],textarea').on('change', function(){
+      if ($(this).val().length > 1) {
+        $(this).addClass('input-focus');
+      }
+      if ($(this).val().length == 0) {
+        $(this).removeClass('input-focus');
+      }
+    });
+
+    $('#select,.chevron').click(function(){
+      $('.ContactPopUp__dropdown').toggleClass('active');
+    });
+
+    $('.dataSelector').click(function(){
+      var value = $(this).attr('data-value');
+      $('#select').val(value);
+      $('#select').trigger('change');
+      $('#Field7').val(value);
+      $('.ContactPopUp__dropdown').removeClass('active');
+    });
+
+  });
+</script>
