@@ -4,7 +4,7 @@
 	<div class="ContactPopUp__overlay">
 		<div class="ContactPopUp__form">
 			<div id="CloseContactPopUp" class="ContactPopUp__close">
-        <img src="../images/close.png" alt="Close">
+        <%= image_tag("../images/close.png", alt: "Close")%>
 			</div>
 			<h1><%= heading %></h1>
 			<p><%= dato.contact_form.form_text %></p>
@@ -92,7 +92,7 @@
 					<div class="ContactPopUp__input dropdownMenuWrap">
 						<input type="text" id="select" value="" readonly>
 						<div class="chevron">
-              <img src="../images/down.png" alt="Down Arrow">
+			        <%= image_tag("../images/down.png", alt: "Down")%>
             </div>
 						<label class="desc notranslate" id="title7" for="select">
 					Budget
