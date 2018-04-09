@@ -204,6 +204,8 @@
 					transition: border-color 0.3s;
 				}
 				label {
+          left: 0;
+          width: 100%;
 					color: $body;
 					font-family: 'Avenir';
 					position: absolute;

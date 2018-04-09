@@ -10,6 +10,12 @@
 	&__title{
 		margin-top:0px;
 		margin-bottom:60px;
+    @include maxQuery(1200px){
+      padding: 0 10px;
+    }
+    @include maxQuery($s){
+      padding: 0;
+    }
 	}
 	&__title__container{
 		justify-content: flex-start;
