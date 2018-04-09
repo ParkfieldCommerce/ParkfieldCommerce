@@ -20,6 +20,7 @@
 	&__text{
 		margin-left: 15px;
     margin-right: 30px;
+    width: 85%;
 		h6{
 			font-weight: normal;
 			margin-top: 0;
@@ -29,19 +30,21 @@
         font-size: 1.125rem;
       }
 		}
+    h2{
+      margin:0;
+      font-family: 'Avenir-Roman';
+    }
+    p{
+      margin:0;
+      font-family: 'Avenir-Roman';
+      line-height:21px;
+      margin-top:16px;
+    }
 	}
-	&__text h2{
-		margin:0;
-		font-family: 'Avenir-Roman';
-	}
-	&__text p{
-		margin:0;
-		font-family: 'Avenir-Roman';
-		line-height:21px;
-		margin-top:16px;
-	}
+
 	&__image{
-		width:73px;
+		width:15%;
+    min-width: 73px;
     margin: 0 auto;
 		max-width:100%;
 		text-align: right;
