@@ -175,6 +175,13 @@ class Theme {
             }
           }
         });
+
+        // Hash Function
+        let hash = window.location.href.split('#')[1];
+        if (hash == 'fashion') {
+          document.querySelector('.FilterBtn[data-category="Clothing & Accessories"]').click();
+        }
+
       }
     }
   }
