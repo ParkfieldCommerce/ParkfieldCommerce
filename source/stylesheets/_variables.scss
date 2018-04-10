@@ -39,8 +39,6 @@ $m: 1200px;
 $l: 1440px; 
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Montserrat:600');
-
 @font-face {
   font-family: "Avenir";
   src: url("../fonts/Avenir-Light.ttf") format("truetype");
@@ -115,5 +113,12 @@ $l: 1440px;
   font-family: "Avenir-Roman";
   src: url("../fonts/Avenir-Roman.ttf") format("truetype");
   font-weight: 400;
+  font-style: oblique;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
   font-style: oblique;
 }
