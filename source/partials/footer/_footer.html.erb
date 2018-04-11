@@ -52,7 +52,7 @@
 			</div>
 			<div class="FooterDesktop__bottom">
 				<div class="copyright">
-					<p>Copyright &#169; <br>All rights reserved</p>
+					<p>Copyright &#169; <%= Date.today.year %><br><a href="/terms-and-conditions">Terms</a> | <a href="/privacy-policy">Privacy</a></p>
 				</div>
 				<div class="images">
 					<% dato.footer.logo_gallery.each do | footer_logo | %>
@@ -72,7 +72,7 @@
 				<%= partial './partials/global/svg-icons', locals:{icon:'logo'} %>
 				</div>
 				<div class="copyright">
-					<p>Copyright &#169; <br>All rights reserved</p>
+					<p>Copyright &#169; <%= Date.today.year %><br>All rights reserved</p>
 				</div>
 			</div>
 		</div>

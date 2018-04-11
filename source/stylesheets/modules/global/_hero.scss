@@ -132,7 +132,9 @@
     max-height: 260px;
   }
 }
-
+.Hero--caseStudy::after{
+  background-color: rgba(0,0,0,0);
+}
 .Hero--contact{
   height: 40vh;
   max-height: 427px;

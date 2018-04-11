@@ -79,10 +79,18 @@
     margin-top: 20px;
 		.copyright {
 			width: 30%;
-			p {
+      p {
+        font-family: 'Avenir-Roman';
+        font-size: .875rem;
 				color: $footer-text;
 				line-height: 23px;
 			}
+      a{
+        font-family: 'Avenir-Roman';
+        font-size: .875rem;
+        display: inline-block;
+        color: $footer-text;
+      }
 		}
 		.images {
 			width: 70%;

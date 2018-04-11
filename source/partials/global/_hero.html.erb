@@ -37,6 +37,11 @@
       <p>Built with</p> <% if isShopify == true %> <%= image_tag dato.platform.shopify.url %> <% else %> <%= image_tag dato.platform.big_commerce.url %> <% end %>
     </div>
   </div>
+  <style>
+    .Hero::after{
+      background-color: rgba(0,0,0, <%= overlayOpacity %>);
+    }
+  </style>
 <%elsif type =='homewareTextiles'%>
   <div class="Hero__image Hero__image--homewareTextile">
   </div>
