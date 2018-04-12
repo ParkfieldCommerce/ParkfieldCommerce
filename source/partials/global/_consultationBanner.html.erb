@@ -5,7 +5,7 @@
     <div class="ConsultationBanner__body">
       <%= dato.consultation_banner.body %>
     </div>
-      <a  id="ContactFormButton" class="ConsultationBanner__button Btn Btn--filled"><%= dato.consultation_banner.link_text %></a>
+      <button  id="ContactFormButton" class="ConsultationBanner__button Btn Btn--animatedLeft"><span><%= dato.consultation_banner.link_text %></span></button>
     </div>
   </div>
   <%= image_tag dato.consultation_banner.image.url, alt: dato.consultation_banner.image.alt, class:"ConsultationBanner__image" %>

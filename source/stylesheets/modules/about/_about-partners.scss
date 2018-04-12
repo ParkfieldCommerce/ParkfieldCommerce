@@ -24,15 +24,27 @@
 	}
 	&__button {
 		display: block;
-		height: 60px;
+    padding: 20px 0;
 		width: 182px;
+    min-height: initial;
+    min-width: auto;
 		margin: 0 auto;
-		line-height: 60px;
+		line-height: 1;
 		font-weight: 800;
 		font-size: 1.125rem;
 		text-align: center;
 		color: $about-page-btn-text;
 		background-color: $about-page-btn;
+    border-width: 2px;
+    border-color: $about-page-btn;
+    &:after{
+      background-color: #FAFAFA;
+    }
+    &:hover{
+      span{
+        color: $about-page-btn;
+      }
+    }
 	}
   @include maxQuery($s){
     &__brand{

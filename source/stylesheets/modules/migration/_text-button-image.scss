@@ -20,7 +20,7 @@
 		margin-top:45px;
 	}
 	&__button{
-		color:#4C54B0;
+		span{color:#4C54B0;}
 		background-color:white;
 		font-weight:800;
 		width:152px;
@@ -28,6 +28,17 @@
 		text-align: center;
 		padding:20px 18px;
 		cursor: pointer;
+    border-width: 2px;
+    border-color: white;
+    &:after{
+      background-color: #4C54B0;
+    }
+    &:hover{
+      span{color: white;}
+    }
+    @include maxQuery(1025px){
+      span{color: white;}
+    }
 	}
 	&__image--1{
 		vertical-align: bottom;

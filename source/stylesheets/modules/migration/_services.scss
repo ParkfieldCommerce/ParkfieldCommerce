@@ -59,14 +59,33 @@
 		font-weight: bold;
 		margin-top:60px;
 		display:inline-block;
-		width:152px;
-		min-height:33px;
+		width:190px;
+		min-height:60px;
 		max-width:100%;
 		display:flex;
 		align-items:center;
 		justify-content:center;
 		color:white;
 		cursor: pointer;
+    background-color: $btn-pfc;
+    border-width: 2px;
+    border-color: $btn-pfc;
+    &:after{
+      background-color: #FAFAFA;
+    }
+    &:hover{
+      border-color: $btn-pfc;
+      span{color: $btn-pfc;}
+    }
+    @include maxQuery(1025px){
+      span{color: white;}
+      &:hover{
+        span{color: white;}
+        &:after{
+          display: none;
+        }
+      }
+    }
 	}
 	@include minmaxQuery(1022px,1250px){
 		padding-left:10px;

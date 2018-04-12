@@ -27,6 +27,16 @@
     font-weight: 800;
     margin-top: 60px;
     cursor: pointer;
+    background-color: white;
+    span{color: #231F20;}
+    border-width: 2px;
+    border-color: white;
+    &:after{
+      background-color: $btn-pfc;
+    }
+    &:hover{
+      span{color: white;}
+    }
   }
   &__image{
     position: absolute;
