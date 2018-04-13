@@ -1,0 +1,32 @@
+<% dato.custom_app_page.custom_app_sections.each_with_index do | section, index |%>
+  <div class="padding-120 mobile-space-padding-60 mobile-space-padding-bottom-60 <% if section.alt_background == true %>background-gray<% end %>">
+    <div class="container m">
+    <div class="MarketingSection">
+      <div class="MarketingSection__text">
+        <h2><%= section.heading %></h2>
+        <%= section.body %>
+      </div>  
+      <div class="MarketingSection__imageWrap">
+        <div class='MarketingSection__embed-container'>
+          <div class="MarketingSection__embed-cover" style="background-image: url('<%= section.cover_image.url %>');">
+            <button class="MarketingSection__play-button js-playVimeo">
+              <%= partial './partials/global/svg-icons', locals:{icon: 'play'} %>
+            </button>
+          </div>
+          <iframe src="<%= section.video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+<% end %>
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  
+  $('.js-playVimeo').click(function(){
+    $(this).parent().fadeOut();
+    var iframe = $(this).closest('.MarketingSection__embed-container').find('iframe')[0];
+    var player = new Vimeo.Player(iframe);
+    player.play();
+  });
+</script>
