@@ -76,6 +76,38 @@
 		color:white;
     padding: 20px 44px;
 	}
+  &__button{
+		font-weight: 800;
+		margin-top:60px;
+		width:190px;
+		min-height:60px;
+		max-width:100%;
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		color:white;
+		cursor: pointer;
+    background-color: $btn-pfc;
+    border-width: 2px;
+    border-color: $btn-pfc;
+    &:hover{
+      span{color: $btn-pfc;}
+    }
+    &:after{
+      background-color: white;
+    }
+    @include maxQuery($s){
+    	width: 100%;
+    	&:hover{
+    		border-color: $btn-pfc;
+    		background-color: $btn-pfc;
+    		span{color: white;}
+    	}
+    	&:after{
+    		display: none;
+    	}
+    }
+	}
 	&__hidden__row--1{
 		justify-content:center;
 	}

@@ -7,9 +7,10 @@
   }
   .Btn--whatis{
     background-color: #FFC156;
-    color: $heading;
     font-weight: 800;
     font-family: 'Avenir';
+    border: 2px solid #FFC156;
+    span{color: $heading;}
     &:hover{
       cursor: pointer;
     }
