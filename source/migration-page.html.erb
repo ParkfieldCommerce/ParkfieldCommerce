@@ -88,47 +88,5 @@ pageClass: MigrationPages
     $('#ContactFormButton, .openPopUp').click(function(){
       $('.ContactPopUp').fadeIn();
     });
-    $('#CloseContactPopUp').click(function(){
-      $('.ContactPopUp').fadeOut();
-    });
-
-    $('input[type="text"],input[type="email"],input[type="url"],textarea').on('change', function(){
-      if ($(this).val().length > 1) {
-        $(this).addClass('input-focus');
-      }
-      if ($(this).val().length == 0) {
-        $(this).removeClass('input-focus');
-      }
-    });
-
-    $('#select,.chevron').click(function(){
-      $('.ContactPopUp__dropdown').toggleClass('active');
-    });
-
-    $('.dataSelector').click(function(){
-      var value = $(this).attr('data-value');
-      $('#select').val(value);
-      $('#select').trigger('change');
-      $('#Field7').val(value);
-      $('.ContactPopUp__dropdown').removeClass('active');
-    });
-
-    $('#saveForm').click(function(e){
-      var name = $('#Field4').val();
-      var email = $('#Field9').val();
-      var emailTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      var nameTest = /^[A-Za-z\s]+$/;
-
-      if (!nameTest.test(name)){
-        e.preventDefault();
-        $('#Field4').css('border-bottom', '1px solid red');
-        $('label[for="Field4"]').css("color", "red");
-      }
-      if (!emailTest.test(String(email).toLowerCase())){
-        e.preventDefault();
-        $('#Field9').css('border-bottom', '1px solid red');
-        $('label[for="Field9"]').css("color", "red");
-      }
-    });
   });
 </script>

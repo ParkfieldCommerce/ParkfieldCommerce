@@ -74,7 +74,7 @@
 			&:focus {
         		color: $heading;
 				outline: none;
-				border-bottom: 1px solid $btn-pfc;
+				border-bottom: 1px solid $btn-pfc !important;
 			}
 		}
 		input:focus~label{

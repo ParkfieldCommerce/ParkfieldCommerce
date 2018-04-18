@@ -116,5 +116,38 @@ pageClass: ContactPage
         $(this).removeClass('input-focus');
       }
     });
+
+	    $('#saveForm').click(function(e){
+      var name = $('#Field4').val();
+      var email = $('#Field9').val();
+      var emailTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var nameTest = /^[A-Za-z\s]+$/;
+
+      if (!nameTest.test(name)){
+        e.preventDefault();
+        $('#Field4').css('border-bottom', '1px solid red');
+        $('label[for="Field4"]').css("color", "red");
+      } else {
+        $('#Field4').css('border-bottom', '1px solid #979797');
+        $('label[for="Field4"]').css("color", "#4C54B0");
+      }
+      if (!emailTest.test(String(email).toLowerCase())){
+        e.preventDefault();
+        $('#Field9').css('border-bottom', '1px solid red');
+        $('label[for="Field9"]').css("color", "red");
+      } else {
+        $('#Field9').css('border-bottom', '1px solid #979797');
+        $('label[for="Field9"]').css("color", "#4C54B0");
+      }
+      if($('#Field13').val() == ''){
+      	e.preventDefault();
+        $('#Field13').css('border-bottom', '1px solid red');
+        $('label[for="Field13"]').css("color", "red");
+      } else {
+        $('#Field13').css('border-bottom', '1px solid #979797');
+        $('label[for="Field13"]').css("color", "#4C54B0");
+      }
+    });
+
 	});
 </script>
