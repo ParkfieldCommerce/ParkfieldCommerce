@@ -1,4 +1,4 @@
-#hubspot-messages-iframe-container{
+body #hubspot-messages-iframe-container{
   @include maxQuery($s){
     display: none !important;
   }
