@@ -1,0 +1,5 @@
+#hubspot-messages-iframe-container{
+  @include maxQuery($s){
+    display: none !important;
+  }
+}
