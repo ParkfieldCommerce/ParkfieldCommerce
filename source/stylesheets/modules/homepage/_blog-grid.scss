@@ -29,8 +29,18 @@
 	&__item--1{
     max-width: 100%;
     padding: 0px 10px;
-    padding-left: 120px;
+    padding-left: 0px;
 		margin:0 auto;
+    margin-left: 120px;
+    @include maxQuery(1376px){
+      margin-left: 90px;
+    }
+    @include maxQuery(1250px){
+      margin-left: 30px;
+    }
+    @include maxQuery(1200px){
+      margin-left: 10px;
+    }
 	}
 	&__item--3{
 		width:100%;
