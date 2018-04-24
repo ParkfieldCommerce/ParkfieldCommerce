@@ -73,7 +73,10 @@
     font-size: 0.67rem;
   }
   h1, h2, h3, h4, h5, h6  {
-    span { font-size: inherit; }
+    span { 
+      font-size: inherit; 
+      font-weight: bold !important;
+    }
   }
   span, p,ul,li,ol,a{
     font-size: 1.125rem;
