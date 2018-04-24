@@ -53,13 +53,29 @@
     font-size: 2.25rem;
     margin-bottom: 15px;
   }
+  h2 {
+    font-size: 1.5rem;
+  }
   iframe{
     max-width: 100%;
   }
   h3 {
+    font-size: 1.17rem;
     margin: 30px 0 20px;
   }
-  span,p,ul,li,ol,a{
+  h4 {
+    font-size: 1rem;
+  }
+  h5 {
+    font-size: 0.83rem;
+  }
+  h6 {
+    font-size: 0.67rem;
+  }
+  h1, h2, h3, h4, h5, h6  {
+    span { font-size: inherit; }
+  }
+  span, p,ul,li,ol,a{
     font-size: 1.125rem;
   }
   p {
