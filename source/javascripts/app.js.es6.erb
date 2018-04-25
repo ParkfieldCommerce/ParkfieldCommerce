@@ -416,7 +416,7 @@ class Theme {
         if(resp.result === 'success') {
           $('#mc_embed_signup').html(`<p>${resp.msg}</p>`);
         } else {
-          $('#mc_embed_signup').append(`<p>${resp.msg}</p>`);
+          $('#mce-EMAIL').css('border', '2px solid red');
         }
       }
     }

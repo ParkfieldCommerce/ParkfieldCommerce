@@ -49,6 +49,9 @@
   width: 60%;
   margin-left: auto;
   line-height: 1.5;
+  &__heading {
+    margin-top: 0;
+  }
   h1{
     font-size: 2.25rem;
     margin-bottom: 15px;
