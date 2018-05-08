@@ -164,7 +164,13 @@
     &__heading{
       margin-top: 10px;
     }
-    a {
+    input[type="email"] {
+      width: 100%;
+      height: 50px;
+      padding-left: 18px;
+      box-sizing: border-box;
+    }
+    button[type="submit"] {
       display: block;
       height: 50px;
       width: 100%;
@@ -172,8 +178,8 @@
       color: white;
       font-weight: 800;
       font-size: 1.125rem;
-      line-height: 50px;
-      margin-top: 30px;
+      line-height: 44px;
+      margin-top: 20px;
       background-color: $newsletter-bg;
     }
   }

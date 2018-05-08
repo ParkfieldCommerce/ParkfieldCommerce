@@ -406,19 +406,30 @@ class Theme {
     }
   }
   initArticlePage(){
-    if($('#mc-embedded-subscribe-form').length > 0){
-      $('#mc-embedded-subscribe-form').ajaxChimp({
+    if($('#newsletter-signup').length > 0){
+      $('#newsletter-signup').ajaxChimp({
         url: 'https://nyc.us16.list-manage.com/subscribe/post?u=f127562a91d5c95b40b01c49e&id=093cc5a009',
-        callback: callbackFunction
-      });
-
-      function callbackFunction(resp) {
-        if(resp.result === 'success') {
-          $('#mc_embed_signup').html(`<p>${resp.msg}</p>`);
-        } else {
-          $('#mce-EMAIL').css('border', '2px solid red');
+        callback: function(resp) {
+          if(resp.result === 'success') {
+            $('#newsletter_embed_signup').html(`<p>${resp.msg}</p>`);
+          } else {
+            $('#newsletter-EMAIL').css('border', '2px solid red');
+          }
         }
-      }
+      });
+    }
+
+    if($('#event-subscribe-form').length > 0){
+      $('#event-subscribe-form').ajaxChimp({
+        url: 'https://nyc.us16.list-manage.com/subscribe/post?u=f127562a91d5c95b40b01c49e&id=5d76506a9d',
+        callback: function(resp) {
+          if(resp.result === 'success') {
+            $('#event_signup_scroll').html(`<p>${resp.msg}</p>`);
+          } else {
+            $('#event-EMAIL').css('border', '2px solid red');
+          }
+        }
+      });
     }
   }
 }
