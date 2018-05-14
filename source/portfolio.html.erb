@@ -11,7 +11,8 @@ description: Brands we're proud to showcase
 
 	<!-- Background Images for Hover -->
 	<div class="ImageCover" id="ImageCover">
-		<% dato.brands.each_with_index do |b, index| %>
+    <% brands = dato.brands.sort_by {|brand| brand.position} %>
+		<% brands.each_with_index do |b, index| %>
 			<div class="BrandImage <% if index == 0 %>visible<% end %>" data-hover="<%= b.name %>" style="background-image:url('<%= b.background.url %>')"></div>
 		<% end %>
 	</div>
