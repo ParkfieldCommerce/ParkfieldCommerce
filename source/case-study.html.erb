@@ -40,12 +40,11 @@
 		<div class="CaseStudy__overview__container--1">
 			<div class="CaseStudy__row row">
 				<div class="CaseStudy__overview__image__container--1 large-6 medium-5 small-10">
-          <!-- BUG: Revert overviewBlock.image_gallery index after speakking with datocms -->
           <% if overviewBlock.image_gallery[0] != nil %>
-			    <%= image_tag overviewBlock.image_gallery[1].url, alt: overviewBlock.image_gallery[0].alt, class:"CaseStudy__overview__image--1 CaseStudy__overview__image" %>
+			    <%= image_tag overviewBlock.image_gallery[0].url, alt: overviewBlock.image_gallery[0].alt, class:"CaseStudy__overview__image--1 CaseStudy__overview__image" %>
           <% end %>
           <% if overviewBlock.image_gallery[1] != nil %>
-			    <%= image_tag overviewBlock.image_gallery[0].url, alt: overviewBlock.image_gallery[1].alt, class:"CaseStudy__overview__image--2" %>
+			    <%= image_tag overviewBlock.image_gallery[1].url, alt: overviewBlock.image_gallery[1].alt, class:"CaseStudy__overview__image--2" %>
           <% end %>
 				</div>
 				<div class="CaseStudy__overview__text__container--1 large-6 medium-5">
