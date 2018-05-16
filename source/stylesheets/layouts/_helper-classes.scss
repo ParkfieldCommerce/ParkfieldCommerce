@@ -40,6 +40,18 @@
 .space-185{
   margin-top:185px;
 }
+.space-200{
+  margin-top: 200px;
+}
+.space-bottom-200{
+  margin-bottom: 200px;
+}
+.space-300{
+  margin-top: 300px;
+}
+.space-bottom-300{
+  margin-bottom: 300px;
+}
 .padding-75{
   padding-top: 75px;
 }
@@ -57,6 +69,13 @@
 }
 .padding-bottom-150{
   padding-bottom: 150px;
+}
+
+.padding-300{
+  padding-top: 300px;
+}
+.padding-bottom-300{
+  padding-bottom: 300px;
 }
 .mobile-space-0{
   @media screen and (max-width: $s){

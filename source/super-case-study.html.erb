@@ -1,0 +1,104 @@
+<% content_for(:head) do %>
+  <%= dato_meta_tags(caseStudy) %>
+<% end %>
+
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'caseStudy',
+    mobile_image: caseStudy.banner_gallery[0],
+    med_image: caseStudy.banner_gallery[1],
+    large_image: caseStudy.banner_gallery[2],
+    heading: caseStudy.heading,
+    isShopify: caseStudy.platform,
+    overlayOpacity: caseStudy.hero_overlay_opacity
+  } 
+%>
+
+<div class="container m">
+<%= partial './partials/global/skewedBanner',
+  locals:{
+    type:'caseStudy',
+    quoteSource: caseStudy.quote_source,
+    quoteSourceTitle: caseStudy.quote_source_title,
+    quoteSourceBody: caseStudy.quote_source_body
+  }
+ %>
+</div>
+
+<div class="CaseStudy SuperCaseStudy">
+	<div class="CaseStudy__overview mobile-space-60">
+		<div class="CaseStudy__overview__container--1">
+			<div class="CaseStudy__row row">
+				<div class="CaseStudy__overview__image__container--1 large-6 medium-5 small-10">
+          <!-- BUG: Revert overviewBlock.image_gallery index after speakking with datocms -->
+          <% if caseStudy.intro_images[0] != nil %>
+			    <%= image_tag caseStudy.intro_images[0].url, alt: caseStudy.intro_images[0].alt, class:"CaseStudy__overview__image--1 CaseStudy__overview__image" %>
+          <% end %>
+          <% if caseStudy.intro_images[1] != nil %>
+			    <%= image_tag caseStudy.intro_images[1].url, alt: caseStudy.intro_images[1].alt, class:"CaseStudy__overview__image--2" %>
+          <% end %>
+				</div>
+				<div class="CaseStudy__overview__text__container--1 large-6 medium-5">
+					<div class="CaseStudy__overview__text__container--2">
+					<h2><%= caseStudy.intro_heading %></h2>
+					<div> <%= caseStudy.intro_body %></div>
+				</div>
+				</div>
+			</div>
+		</div>
+	</div>
+  <div class="CaseStudy__website-overview CaseStudy__gray padding-300 SuperCaseStudy__website-overview container">
+    <div class="row">
+    <div class="small-12">
+    <%= image_tag caseStudy.overview_image.url, alt: caseStudy.overview_image.url, class:"SuperCaseStudy__website-overview-image" %>
+    </div>
+    </div>
+  </div>
+  <div class="CaseStudy__video SuperCaseStudy__video container">
+    <div class="row">
+      <div class="small-12">
+        <div class="SuperCaseStudy__video__imageWrap space-300 space-bottom-300">
+          <div class='SuperCaseStudy__video__embed-container'>
+            <div class="SuperCaseStudy__video__embed-cover" style="background-image: url('<%= caseStudy.cover_image.url %>');">
+              <button class="SuperCaseStudy__video__play-button js-playVimeo">
+                <%= partial './partials/global/svg-icons', locals:{icon: 'play'} %>
+              </button>
+            </div>
+            <iframe src="<%= caseStudy.video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="CaseStudy__challenge SuperCaseStudy__challenge">
+    <div class="SuperCaseStudy__challenge__images-section">
+      <div class="SuperCaseStudy__challenge__images">
+        <% caseStudy.challenge_images.each do |image| %>
+          <%= image_tag image.url, alt: image.alt, class:"SuperCaseStudy__challenge__image" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="SuperCaseStudy__challenge__text-section CaseStudy__gray">
+      <div class="SuperCaseStudy__challenge__text-content">
+        <%= caseStudy.challenge_heading %>
+        <%= caseStudy.challenge_body %>
+      </div>
+    </div>
+  </div>
+
+	<% partial './partials/casestudy/results' %>
+	<%= partial './partials/global/email-form.html' %>
+	<%= partial './partials/casestudy/nextstudybanner' %>
+</div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+  
+  $('.js-playVimeo').click(function(){
+    $(this).parent().fadeOut();
+    var iframe = $(this).closest('.SuperCaseStudy__video__embed-container').find('iframe')[0];
+    var player = new Vimeo.Player(iframe);
+    player.play();
+  });
+</script>

@@ -1,0 +1,33 @@
+.SuperCaseStudy__challenge{
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  width: 1800px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 1000px;
+  &__images-section{
+    width: 45%;
+  }
+  &__images{
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    position: absolute;
+    align-items: center;
+    width: 55%;
+  }
+  &__text-section{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  &__text-content{
+    max-width: 100%;
+    width: 490px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
