@@ -80,15 +80,15 @@
     </div>
     <div class="SuperCaseStudy__challenge__text-section CaseStudy__gray">
       <div class="SuperCaseStudy__challenge__text-content">
-        <%= caseStudy.challenge_heading %>
+        <h3><%= caseStudy.challenge_heading %></h3>
         <%= caseStudy.challenge_body %>
       </div>
     </div>
   </div>
-  <div class="CaseStudy__browsing SuperCaseStudy__browsing container space-200 space-bottom-200">
+  <div class="CaseStudy__browsing SuperCaseStudy__browsing container space-200 space-bottom-150">
     <div class="row">
       <div class="small-12 center">
-        <div class="SuperCaseStudy__generic-text">
+        <div class="SuperCaseStudy__generic-text space-bottom-120">
           <h3 class="SuperCaseStudy__generic-text__heading">
             <%= caseStudy.website_browsing_heading %>
           </h3>
@@ -100,23 +100,27 @@
       </div>
     </div>
   </div>
-  <div class="CaseStudy__browsing SuperCaseStudy__brand-story container space-200 space-bottom-200">
+  <div class="CaseStudy__brand-story SuperCaseStudy__brand-story container padding-150 space-bottom-300 CaseStudy__gray">
     <div class="row">
       <div class="small-12 center">
-        <div class="SuperCaseStudy__generic-text">
+        <div class="SuperCaseStudy__generic-text space-bottom-120">
           <h3 class="SuperCaseStudy__generic-text__heading">
-            <%= caseStudy.website_browsing_heading %>
+            <%= caseStudy.brand_story_heading %>
           </h3>
           <div class="SuperCaseStudy__generic-text__body">
-            <%= caseStudy.website_browsing_body %>
+            <%= caseStudy.brand_story_body %>
           </div>
         </div>
-        <%= image_tag caseStudy.website_browsing_video.url, alt: caseStudy.website_browsing_video.url %>
+        <div class="SuperCaseStudy__brand-story__images">
+        <% caseStudy.brand_story_images.each do |image| %>
+          <%= image_tag image.url, alt: image.alt %>
+        <% end %>
+        </div>
       </div>
     </div>
   </div>
-	<%= partial './partials/casestudy/results' %>
-	<%= partial './partials/global/email-form.html' %>
+	<%= partial './partials/supercasestudy/results' %>
+	<%= partial './partials/supercasestudy/email-form.html' %>
 	<%= partial './partials/casestudy/nextstudybanner' %>
 </div>
 
