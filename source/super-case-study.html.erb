@@ -70,7 +70,6 @@
       </div>
     </div>
   </div>
-
   <div class="CaseStudy__challenge SuperCaseStudy__challenge">
     <div class="SuperCaseStudy__challenge__images-section">
       <div class="SuperCaseStudy__challenge__images">
@@ -86,7 +85,36 @@
       </div>
     </div>
   </div>
-
+  <div class="CaseStudy__browsing SuperCaseStudy__browsing container space-200 space-bottom-200">
+    <div class="row">
+      <div class="small-12 center">
+        <div class="SuperCaseStudy__generic-text">
+          <h3 class="SuperCaseStudy__generic-text__heading">
+            <%= caseStudy.website_browsing_heading %>
+          </h3>
+          <div class="SuperCaseStudy__generic-text__body">
+            <%= caseStudy.website_browsing_body %>
+          </div>
+        </div>
+        <%= image_tag caseStudy.website_browsing_video.url, alt: caseStudy.website_browsing_video.url %>
+      </div>
+    </div>
+  </div>
+  <div class="CaseStudy__browsing SuperCaseStudy__brand-story container space-200 space-bottom-200">
+    <div class="row">
+      <div class="small-12 center">
+        <div class="SuperCaseStudy__generic-text">
+          <h3 class="SuperCaseStudy__generic-text__heading">
+            <%= caseStudy.website_browsing_heading %>
+          </h3>
+          <div class="SuperCaseStudy__generic-text__body">
+            <%= caseStudy.website_browsing_body %>
+          </div>
+        </div>
+        <%= image_tag caseStudy.website_browsing_video.url, alt: caseStudy.website_browsing_video.url %>
+      </div>
+    </div>
+  </div>
 	<%= partial './partials/casestudy/results' %>
 	<%= partial './partials/global/email-form.html' %>
 	<%= partial './partials/casestudy/nextstudybanner' %>
