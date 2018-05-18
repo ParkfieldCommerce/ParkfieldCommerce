@@ -122,8 +122,6 @@ configure :build do
       ignore: true
     end
   end
-
-  ignore 'ecommerce-web-design.html.erb'
 end
 
 proxy "_redirects", "netlify-redirects", ignore: true
