@@ -1,0 +1,15 @@
+<div class="CaseStudy__challenge SuperCaseStudy__challenge">
+  <div class="SuperCaseStudy__challenge__images-section">
+    <div class="SuperCaseStudy__challenge__images">
+      <% images.each do |image| %>
+        <%= image_tag image.url, alt: image.alt, class:"SuperCaseStudy__challenge__image" %>
+      <% end %>
+    </div>
+  </div>
+  <div class="SuperCaseStudy__challenge__text-section CaseStudy__gray">
+    <div class="SuperCaseStudy__challenge__text-content">
+      <h3><%= heading %></h3>
+      <%= body %>
+    </div>
+  </div>
+</div>

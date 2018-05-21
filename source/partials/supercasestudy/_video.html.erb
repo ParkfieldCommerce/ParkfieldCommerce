@@ -1,0 +1,23 @@
+  <div class="CaseStudy__video container space-120 space-bottom-300">
+    <div class="row">
+      <div class="small-12">
+        <div class='CaseStudy__video__container'>
+          <div class="CaseStudy__video__cover" style="background-image: url('<%= caseStudy.cover_image.url %>');">
+            <button class="CaseStudy__video__play-button js-playVideo">
+              <%= partial './partials/global/svg-icons', locals:{icon: 'play'} %>
+            </button>
+          </div>
+          <video class="js-video" controls src="<%= video.url %>"></video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script>
+  $('.js-playVideo').click(function(){
+    $(this).parent().remove();
+    var video = document.querySelector('.js-video');
+    video.play();
+  });
+</script>

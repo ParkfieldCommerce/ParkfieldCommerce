@@ -1,0 +1,32 @@
+  <div class="CaseStudy__intro mobile-space-60 space-200">
+    <div class="container m">
+      <div class="CaseStudy__intro__row row">
+        <div class="large-6 medium-5 small-10">
+          <% if images[0] != nil %>
+          <%= image_tag images[0].url, alt: images[0].alt, class:"CaseStudy__intro__image CaseStudy__intro__image--1 CaseStudy__intro__image" %>
+          <% end %>
+          <% if images[1] != nil %>
+          <%= image_tag images[1].url, alt: images[1].alt, class:"CaseStudy__intro__image CaseStudy__intro__image--2" %>
+          <% end %>
+        </div>
+        <div class="large-6 medium-5">
+          <div class="CaseStudy__intro">
+            <h2 class="CaseStudy__intro__heading"><%= heading %></h2>
+            <div class="CaseStudy__intro__body"><%= body %></div>
+            <div class="CaseStudy__intro__stats">
+              <% stats.each do |stat| %>
+              <div class="CaseStudy__intro__stat">
+                <div class="CaseStudy__intro__stat-number">+<%= stat.percent_number %>
+                </div>
+                <div class="CaseStudy__intro__stat-title">
+                  <%= stat.percent_title.partition(" ").first %><br>
+                  <%= stat.percent_title.partition(" ").last %>
+                </div>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

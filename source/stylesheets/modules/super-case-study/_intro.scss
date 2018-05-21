@@ -1,0 +1,35 @@
+.CaseStudyX .CaseStudy__intro{
+  &__body{
+    p{color: #231F20;}
+    margin-bottom: 37px;
+  }
+  &__image--2{
+    display: none;
+  }
+  &__stats{
+    display: flex;
+  }
+  &__stat{
+    text-align: left;
+    width: 160px;
+  }
+  &__stat-number{
+    font-family: 'Avenir';
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  &__stat-title{
+    margin-top: 5px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-family: 'Avenir-Roman'
+  }
+  @include maxQuery(768px){
+    &__image--1{
+      display: none;
+    }
+    &__image--2{
+      display: block;
+    }
+  }
+}
