@@ -97,6 +97,12 @@ configure :build do
       ignore: true
     end
 
+    dato.super_case_studies.each do |caseStudy|
+      proxy "/super-case-studies/#{caseStudy.handle}/index.html", "super-case-study.html", 
+      locals: { caseStudy: caseStudy },
+      ignore: true
+    end
+    
     dato.migration_pages.each do |migrationPage|
       proxy "/migration/#{migrationPage.handle}/index.html", "migration-page.html", 
       locals: { migrationPage: migrationPage },
