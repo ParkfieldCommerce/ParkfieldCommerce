@@ -1,8 +1,17 @@
-.SuperCaseStudy__brand-story{
+.CaseStudyX .CaseStudy__brand-story{
   width: 100%;
-  &__images{
-    display: flex;
+  &__full-width-banner{
     img{
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+  &__image{
+    display: flex;
+    justify-content: center;
+    img{
+      max-width: 100%;
+      width: 600px;
       vertical-align: middle;
     }
   }

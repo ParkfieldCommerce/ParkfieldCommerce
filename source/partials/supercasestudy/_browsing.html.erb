@@ -1,31 +1,25 @@
-  <div class="CaseStudy__browsing SuperCaseStudy__browsing container space-200 space-bottom-150">
+  <div class="CaseStudy__browsing SuperCaseStudy__browsing container space-120 space-bottom-90 mobile-space-30 mobile-space-bottom-30">
     <div class="row">
       <div class="small-12 center">
-        <div class="SuperCaseStudy__generic-text space-bottom-120">
-          <h3 class="SuperCaseStudy__generic-text__heading">
-            <%= caseStudy.website_browsing_heading %>
-          </h3>
-          <div class="SuperCaseStudy__generic-text__body">
-            <%= caseStudy.website_browsing_body %>
-          </div>
-        </div>
-        <%= image_tag caseStudy.website_browsing_video.url, alt: caseStudy.website_browsing_video.url %>
+      <%= image_tag caseStudy.website_browsing_video.url, alt: caseStudy.website_browsing_video.url %>
       </div>
     </div>
-  </div>
-
-    <div class="CaseStudy__browsing SuperCaseStudy__browsing container space-200 space-bottom-150">
-    <div class="row">
-      <div class="small-12 center">
-        <div class="SuperCaseStudy__generic-text space-bottom-120">
-          <h3 class="SuperCaseStudy__generic-text__heading">
+    <div class="row space-90">
+      <div class="small-6 CaseStudy__browsing__text-container">
+        <div class="CaseStudyX__text-content">
+          <h3 class="CaseStudyX__text-heading">
             <%= caseStudy.website_browsing_heading %>
           </h3>
-          <div class="SuperCaseStudy__generic-text__body">
+          <div class="CaseStudyX__text-body no-margin">
             <%= caseStudy.website_browsing_body %>
           </div>
         </div>
-        <%= image_tag caseStudy.website_browsing_video.url, alt: caseStudy.website_browsing_video.url %>
+      </div>
+      <div class="small-6 CaseStudy__browsing__percent-container">
+        <div class="CaseStudyX__percent-container">
+          <div class="CaseStudyX__percent no-margin">+<%= percentage.round %>%</div>
+          <div class="CaseStudyX__percent-label">Sales increase</div>
+        </div>
       </div>
     </div>
   </div>

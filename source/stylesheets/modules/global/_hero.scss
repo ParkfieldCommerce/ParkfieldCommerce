@@ -132,6 +132,19 @@
     max-height: 260px;
   }
 }
+.Hero--caseStudyX{
+  height: 84vh;
+  max-height: 830px;
+  min-height: 450px;
+  @include maxQuery($m){
+    min-height: 380px;
+    max-height: 650px;
+  }
+  @include maxQuery($s){
+    min-height: 250px;
+    max-height: 260px;
+  }  
+}
 .Hero--caseStudy::after{
   background-color: rgba(0,0,0,0);
 }

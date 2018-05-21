@@ -1,17 +1,30 @@
-  <div class="CaseStudy__brand-story SuperCaseStudy__brand-story container padding-150 space-bottom-300 CaseStudy__gray">
-    <div class="row">
-      <div class="small-12 center">
-        <div class="SuperCaseStudy__generic-text space-bottom-120">
-          <h3 class="SuperCaseStudy__generic-text__heading">
+  <div class="CaseStudy__brand-story__full-width-banner">
+  <%= image_tag fullBanner.url, alt: fullBanner.alt %>
+  </div>
+  <div class="CaseStudy__brand-story container padding-90 CaseStudy__gray">
+    <div class="row space-bottom-90">
+      <div class="small-6">
+        <div class="CaseStudyX__text-content">
+          <h3 class="CaseStudyX__text-heading">
             <%= heading %>
           </h3>
-          <div class="SuperCaseStudy__generic-text__body">
+          <div class="CaseStudyX__text-body no-margin">
             <%= body %>
           </div>
         </div>
-        <div class="SuperCaseStudy__brand-story__images">
-          <%= image_tag image.url, alt: image.alt %>
+      </div>
+      <div class="small-6 CaseStudy__browsing__percent-container">
+        <div class="CaseStudyX__percent-container">
+          <div class="CaseStudyX__percent no-margin">+<%= percentage %>%</div>
+          <div class="CaseStudyX__percent-label">Uptime</div>
         </div>
       </div>
+    </div>
+    <div class="row">
+      <% images.each do |image| %>
+      <div class="small-6 CaseStudy__brand-story__image">
+        <%= image_tag image.url, alt: image.alt %>
+      </div>
+      <% end %>
     </div>
   </div>

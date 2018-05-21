@@ -1,15 +1,25 @@
-<div class="CaseStudy__challenge SuperCaseStudy__challenge">
-  <div class="SuperCaseStudy__challenge__images-section">
-    <div class="SuperCaseStudy__challenge__images">
+<div class="CaseStudy__mobile">
+  <div class="CaseStudy__mobile__images-section">
+    <div class="CaseStudy__mobile__images mobile-space-padding-60 mobile-space-padding-bottom-60">
       <% images.each do |image| %>
-        <%= image_tag image.url, alt: image.alt, class:"SuperCaseStudy__challenge__image" %>
+        <%= image_tag image.url, alt: image.alt, class:"CaseStudy__mobile__image" %>
       <% end %>
     </div>
   </div>
-  <div class="SuperCaseStudy__challenge__text-section CaseStudy__gray">
-    <div class="SuperCaseStudy__challenge__text-content">
-      <h3><%= heading %></h3>
-      <%= body %>
+  <div class="CaseStudy__mobile__text-section CaseStudy__gray mobile-space-padding-bottom-60">
+    <div class="CaseStudyX__text-content">
+      <h3 class="CaseStudyX__text-heading">
+        <%= heading %>
+      </h3>
+      <div class="CaseStudyX__text-body">
+        <%= body %>
+      </div>
+      <div class="CaseStudyX__percent">
+        +<%= percentage.round %>%
+      </div>
+      <div class="CaseStudyX__percent-label">
+        Conversion rate
+      </div>
     </div>
   </div>
 </div>

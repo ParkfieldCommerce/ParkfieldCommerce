@@ -8,7 +8,7 @@ pageClass: CaseStudyX
 
 <%= partial './partials/global/hero', 
   locals:{
-    type: 'caseStudy',
+    type: 'caseStudyX',
     mobile_image: caseStudy.banner_gallery[0],
     med_image: caseStudy.banner_gallery[1],
     large_image: caseStudy.banner_gallery[2],
@@ -46,7 +46,7 @@ pageClass: CaseStudyX
   locals:{
     coverImage: caseStudy.cover_image,
     video: caseStudy.video,
-    images: caseStudy.video_alternative_images
+    enable: caseStudy.show_video
   }
 %>
 <%= partial './partials/supercasestudy/mobile',
@@ -67,10 +67,19 @@ pageClass: CaseStudyX
 %>
 <%= partial './partials/supercasestudy/brand-story',
   locals:{
-    image: caseStudy.full_width_image,
+    fullBanner: caseStudy.full_width_image,
     heading: caseStudy.brand_story_heading,
     body: caseStudy.brand_story_body,
-    percentage: caseStudy.uptime_percentage
+    percentage: caseStudy.uptime_percentage,
+    images: caseStudy.brand_story_images
+  }
+%>
+<%= partial './partials/supercasestudy/quote',
+  locals:{
+    name: caseStudy.quote_person,
+    body: caseStudy.quote_body,
+    job: caseStudy.quote_person_job_title,
+    image: caseStudy.quote_person_image
   }
 %>
 <%= partial './partials/supercasestudy/email-form.html' %>

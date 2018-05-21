@@ -1,0 +1,94 @@
+.CaseStudyX .CaseStudy__mobile{
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  height: 700px;
+  &__images-section{
+    width: 45%;
+  }
+  &__images{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__image:first-child{
+    position: absolute;
+    left: 0;
+  }
+  &__image:nth-child(2){
+    left: 55%;
+    position: absolute;
+    transform: translateX(-50%);
+  }
+  &__image:last-child{
+    position: absolute;
+    right: -120px;
+  }
+  &__text-section{
+    width: 55%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  @include maxQuery(1300px){
+    &__image:first-child{
+      display: none;
+    }
+    &__image:nth-child(2){
+      left: 40%;
+    }
+    .CaseStudyX__text-content{
+      margin-right: initial;
+    }
+    &__images-section{
+      width: 35%;
+    }
+    &__text-section{
+      width: 65%;
+    }
+  }
+  @include maxQuery(1025px){
+    &__image:nth-child(2){
+      display: none;
+    }
+    &__images-section{
+      width: 25%;
+    }
+    &__text-section{
+      width: 75%;
+    }
+  }
+  @include maxQuery(820px){
+    flex-flow: row wrap;
+    height: auto;
+    &__images-section{
+      width: 100%;
+    }
+    &__images{
+      background-color: $grey-bg;
+      justify-content: center;
+    }
+    &__image:nth-child(2){
+      display: block;
+      position: static;
+      transform: none;
+    }
+    &__image:last-child{
+      display: none;
+    }
+    &__text-section{
+      width: 100%;
+    }
+    .CaseStudyX__text-content{
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
