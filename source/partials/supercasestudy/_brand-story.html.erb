@@ -3,7 +3,7 @@
   </div>
   <div class="CaseStudy__brand-story container padding-90 CaseStudy__gray">
     <div class="row space-bottom-90">
-      <div class="small-6">
+      <div class="small-6 CaseStudy__brand-story__text-column">
         <div class="CaseStudyX__text-content">
           <h3 class="CaseStudyX__text-heading">
             <%= heading %>
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <div class="row">
+    <div class="row CaseStudy__brand-story__images">
       <% images.each do |image| %>
       <div class="small-6 CaseStudy__brand-story__image">
         <%= image_tag image.url, alt: image.alt %>

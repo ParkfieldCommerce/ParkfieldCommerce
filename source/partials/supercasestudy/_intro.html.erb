@@ -2,11 +2,11 @@
     <div class="container m">
       <div class="CaseStudy__intro__row row">
         <div class="large-6 medium-5 small-10">
-          <% if images[0] != nil %>
-          <%= image_tag images[0].url, alt: images[0].alt, class:"CaseStudy__intro__image CaseStudy__intro__image--1 CaseStudy__intro__image" %>
-          <% end %>
           <% if images[1] != nil %>
-          <%= image_tag images[1].url, alt: images[1].alt, class:"CaseStudy__intro__image CaseStudy__intro__image--2" %>
+          <%= image_tag images[1].url, alt: images[1].alt, class:"CaseStudy__intro__image CaseStudy__intro__image--1 CaseStudy__intro__image" %>
+          <% end %>
+          <% if images[0] != nil %>
+          <%= image_tag images[0].url, alt: images[0].alt, class:"CaseStudy__intro__image CaseStudy__intro__image--2" %>
           <% end %>
         </div>
         <div class="large-6 medium-5">

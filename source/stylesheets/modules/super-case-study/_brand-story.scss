@@ -6,6 +6,9 @@
       vertical-align: middle;
     }
   }
+  &__images{
+    align-items: flex-end;
+  }
   &__image{
     display: flex;
     justify-content: center;
@@ -13,6 +16,29 @@
       max-width: 100%;
       width: 600px;
       vertical-align: middle;
+    }
+  }
+  @include maxQuery(1050px){
+    padding-left: 20px;
+  }
+  @include maxQuery($s){
+    padding-left: 0;
+    &__text-column{
+      max-width: 90%;
+      width: 90%;
+      flex: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &__image:first-child{
+      max-width: 90%;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      flex: auto;
+    }
+    &__image:last-child{
+      display: none;
     }
   }
 }
