@@ -1,0 +1,31 @@
+  <div class="CaseStudy__browsing container space-120 space-bottom-90 mobile-space-30 mobile-space-bottom-30">
+    <div class="row">
+      <div class="small-12 center">
+        <video autoplay muted>
+          <source src="<%= caseStudy.website_browsing_video_webm.url %>" type="video/webm">
+          <source src="<%= caseStudy.website_browsing_video.url %>" type="video/mp4">
+        </video>
+      </div>
+    </div>
+    <span id="trigger-1"></span>
+    <div class="row space-90 mini-row">
+      <div class="small-6 CaseStudy__browsing__text-container">
+        <div class="CaseStudyX__text-content">
+          <h3 class="CaseStudyX__text-heading">
+            <%= caseStudy.website_browsing_heading %>
+          </h3>
+          <div class="CaseStudyX__text-body no-margin">
+            <%= caseStudy.website_browsing_body %>
+          </div>
+        </div>
+      </div>
+      <div class="small-6 CaseStudy__browsing__percent-container">
+        <div class="CaseStudyX__percent-container">
+          <div class="CaseStudyX__percent no-margin">
+            +<span class="js-percent-value" data-percent="<%= percentage.round %>">0</span>%
+          </div>
+          <div class="CaseStudyX__percent-label">Sales increase</div>
+        </div>
+      </div>
+    </div>
+  </div>

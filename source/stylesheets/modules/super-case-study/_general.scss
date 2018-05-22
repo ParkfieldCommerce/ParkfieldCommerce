@@ -1,0 +1,43 @@
+.mini-row{
+  width: 950px;
+  max-width: 100%;
+}
+.CaseStudyX{
+  &__text-content{
+    max-width: 100%;
+    width: 490px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__text-heading{
+    margin-top: 0;
+  }
+  &__text-body{
+    p:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &__percent{
+    margin-top: 40px;
+    font-family: 'Avenir';
+    font-weight: 500;
+    font-size: 2.25rem;
+    margin-bottom: 10px;
+  }
+  &__percent.no-margin{
+    margin-top: 0;
+  }
+  &__percent-label{
+    font-family: 'Avenir-Roman';
+    font-size: 1.5rem;
+  }
+  @include maxQuery($s){
+    &__percent,
+    &__percent-label{
+      display: none;
+    }
+    &__text-body p{
+      font-size: 1.125rem;
+    }
+  }
+}

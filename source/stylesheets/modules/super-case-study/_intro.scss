@@ -1,0 +1,65 @@
+.CaseStudyX .CaseStudy__intro{
+  &__heading{
+    margin-top: 0;
+  }
+  &__body{
+    p{
+      color: #231F20;
+      font-size: 1.125rem;
+    }
+    margin-bottom: 37px;
+  }
+  &__image--2{
+    display: none;
+  }
+  &__stats{
+    display: flex;
+  }
+  &__stat{
+    text-align: left;
+    width: 160px;
+  }
+  &__stat-number{
+    font-family: 'Avenir';
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  &__stat-title{
+    margin-top: 5px;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    font-family: 'Avenir-Roman'
+  }
+  @include maxQuery(800px){
+    &__image--1{
+      display: none;
+    }
+    &__image--2{
+      display: block;
+    }
+    &__body p,
+    &__stats{
+      color: $body;
+    }
+    .large-6:first-child{
+      flex: auto;
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      img{
+        width: 100%;
+      }
+    }
+    .large-6:last-child{
+      background-color: $grey-bg;
+      flex: auto;
+      width: 100%;
+      max-width: 100%;
+    }
+    &__text-content{
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}

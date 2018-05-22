@@ -21,18 +21,6 @@
 				</div>
 			</div>
 		</div>
-		<% if caseStudy.award_image_gallery.length > 0 %> 
-		<div class="row">
-			<div class="large-9 medium-10 small-10">
-				<div class="CaseStudy__rate__container--3">
-					<% caseStudy.award_image_gallery.each do |image| %>
-					<div class="caseStudy__rate__container--2 large-3 medium-6 small-6">
-						<img src="<%= image.url %>">
-					</div>
-					<% end %>
-				</div>
-			</div>
-		</div>
-		<% end %>
+  <!-- to put back awards include caseStudy/awards partial -->
 	</div>
 </div>
