@@ -219,7 +219,6 @@
   }
 }
 
-
 .SkewedBanner--whatis .SkewedBanner{
   &__flex{
     display: flex;
@@ -246,6 +245,61 @@
     font-size: 1.125rem;
   }
 }
+
+.SkewedBanner--casestudyx{
+  margin-top: -30px;
+  &:after{
+    height: 100px;
+    bottom: -30px;
+  }
+  @include maxQuery($s){
+    width: 90%;
+    margin-top: -20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.SkewedBanner--casestudyx .SkewedBanner{
+  &__row{
+    padding-top: 42px;
+  }
+
+  &__source,
+  &__title,
+  &__body p{
+    color: white;
+  }
+  
+  &__source{
+    font-size: 1.125rem;
+  }
+
+  &__title{
+    font-size: 1.125rem;
+    font-weight: normal;
+  }
+
+  &__body p{
+    font-size: 1.125rem;
+  }
+  
+  @include maxQuery($s){
+    &__row{
+      padding-top: 25px;
+      padding-bottom: 40px;
+    }
+    &__source,
+    &__title{
+      display: block;
+      font-size: 1.25rem;
+    }
+    &__body p{
+      font-size: .875rem;
+    }
+  }
+}
+
 @include maxQuery(1000px){
 .SkewedBanner--whatis .SkewedBanner{
   &__flex{

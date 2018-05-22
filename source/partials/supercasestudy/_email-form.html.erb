@@ -1,0 +1,36 @@
+<% emailTitle = dato.case_study_email_form.title %>
+<% emailPhone = dato.case_study_email_form.phone %>
+<% buttonTitle = dato.case_study_email_form.button_title %>
+
+<div class="container m">
+	<div class="row mobile-space-60 CaseStudy__form__container--1">
+			<div class="SuperCaseStudy__form__container--2 CaseStudy CaseStudy__form__container--2 large-12 medium-10 small-12">
+				<form>
+					<h3> <%= emailTitle %> </h3>
+					<div class="CaseStudy__form__container--3" id="mc_embed_signup_scroll">
+            <div class="inputField">
+						  <input type="email" value="" name="EMAIL" id="mce-EMAIL" aria-label="" autocorrect="off" autocapitalize="off">
+              <label for="mce-EMAIL">Enter your email address</label>
+            </div>
+						<button id="GetStartedBtn" type="submit" class="Btn--animatedLeft--purple"><span><%= buttonTitle %></span></button>
+					</div>
+					<a href="tel:<%= emailPhone %>" class="hidden-desktop Btn--animatedLeft--purple"><span>Call <%= emailPhone %></span></a>
+				</form>
+			</div>
+	</div>
+</div>
+<%= partial './partials/global/contact-popup', 
+  locals: {
+    heading: 'Get a free quote',
+    emailFirst: true
+  } 
+%>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#GetStartedBtn').click(function(e){
+      e.preventDefault();
+      $('.ContactPopUp').fadeIn();
+    });
+  });
+</script>
+

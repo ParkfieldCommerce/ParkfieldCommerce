@@ -5,7 +5,8 @@ gem 'middleman-autoprefixer', '~> 2.7'
 gem 'tzinfo-data', platforms: [:mswin, :mingw, :jruby]
 gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 gem 'middleman-livereload'
-gem 'middleman-dato'
+gem 'middleman-dato', '~> 0.8.1'
 gem 'middleman-paginate'
 gem 'middleman-sprockets', '~> 4.0.0.rc'
 gem 'sprockets-es6'
+gem 'dato', '~> 0.5.1'

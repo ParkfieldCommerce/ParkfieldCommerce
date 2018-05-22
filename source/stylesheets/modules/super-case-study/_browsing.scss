@@ -1,0 +1,29 @@
+.CaseStudyX .CaseStudy__browsing{
+  width: 100%;
+  &__text-container,
+  &__percent-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include maxQuery(1050px){
+    .CaseStudyX__text-content{
+      padding-left: 20px;
+    }
+  }
+  @include maxQuery($s){
+    max-width: 90%;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    &__text-container{
+      flex: auto;
+      width: 100%;
+      max-width: 100%;
+    }
+    .CaseStudyX__text-content{
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+}
