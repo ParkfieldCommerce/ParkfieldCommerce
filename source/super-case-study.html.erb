@@ -12,7 +12,8 @@ pageClass: CaseStudyX
     mobile_image: caseStudy.banner_gallery[0],
     med_image: caseStudy.banner_gallery[1],
     large_image: caseStudy.banner_gallery[2],
-    heading: caseStudy.heading,
+    headingLine1: caseStudy.heading_line_1,
+    headingLine2: caseStudy.heading_line_2,
     isShopify: caseStudy.platform,
     overlayOpacity: caseStudy.hero_overlay_opacity
   } 
@@ -45,7 +46,8 @@ pageClass: CaseStudyX
 <%= partial './partials/supercasestudy/video',
   locals:{
     coverImage: caseStudy.cover_image,
-    video: caseStudy.video,
+    videoMP4: caseStudy.video_mp4,
+    videoWEBM: caseStudy.video_webm,
     enable: caseStudy.show_video
   }
 %>

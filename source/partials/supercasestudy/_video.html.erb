@@ -1,14 +1,17 @@
   <% if enable  == true %>
-  <div class="CaseStudy__video container space-120 space-bottom-120 mobile-space-30 mobile-space-bottom-30">
+  <div class="CaseStudy__video container space-200 space-bottom-120 mobile-space-30 mobile-space-bottom-30">
     <div class="row">
       <div class="small-12">
         <div class='CaseStudy__video__container'>
           <div class="CaseStudy__video__cover" style="background-image: url('<%= caseStudy.cover_image.url %>');">
-            <button class="CaseStudy__video__play-button js-playVideo">
-              <%= partial './partials/global/svg-icons', locals:{icon: 'play'} %>
+            <button type="button" class="CaseStudy__video__play-button js-playVideo">
+              <span>PLAY</span>
             </button>
           </div>
-          <video class="js-video" controls src="<%= video.url %>"></video>
+          <video class="js-video" controls>
+            <source src="<%= videoWEBM.url %>" type="video/webm">
+            <source src="<%= videoMP4.url %>" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>

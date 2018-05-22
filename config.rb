@@ -51,7 +51,7 @@ configure :development do
     end
 
     dato.super_case_studies.each do |caseStudy|
-      proxy "/super-case-studies/#{caseStudy.handle}/index.html", "super-case-study.html", 
+      proxy "/case-studies+/#{caseStudy.handle}/index.html", "super-case-study.html", 
       locals: { caseStudy: caseStudy },
       ignore: true
     end
@@ -98,7 +98,7 @@ configure :build do
     end
 
     dato.super_case_studies.each do |caseStudy|
-      proxy "/super-case-studies/#{caseStudy.handle}/index.html", "super-case-study.html", 
+      proxy "/case-studies+/#{caseStudy.handle}/index.html", "super-case-study.html", 
       locals: { caseStudy: caseStudy },
       ignore: true
     end

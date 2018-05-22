@@ -7,10 +7,11 @@
     justify-content: center;
   }
   @include maxQuery(1050px){
-    padding: 0px 20px;
+    .CaseStudyX__text-content{
+      padding-left: 20px;
+    }
   }
   @include maxQuery($s){
-    padding: 0;
     max-width: 90%;
     width: 90%;
     margin-right: auto;
@@ -22,6 +23,7 @@
     }
     .CaseStudyX__text-content{
       width: 100%;
+      padding-left: 0;
     }
   }
 }

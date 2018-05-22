@@ -12,6 +12,7 @@
   &__image{
     display: flex;
     justify-content: center;
+    align-items: flex-end;
     img{
       max-width: 100%;
       width: 600px;
@@ -19,7 +20,9 @@
     }
   }
   @include maxQuery(1050px){
-    padding-left: 20px;
+    .CaseStudyX__text-content{
+      padding-left: 20px;
+    }
   }
   @include maxQuery($s){
     padding-left: 0;

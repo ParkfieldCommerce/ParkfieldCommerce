@@ -5,9 +5,10 @@
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  height: 700px;
+  height: 880px;
+  flex-flow: row wrap;
   &__images-section{
-    width: 45%;
+    width: 40%;
   }
   &__images{
     position: relative;
@@ -22,71 +23,87 @@
     left: 0;
   }
   &__image:nth-child(2){
-    left: 55%;
+    left: 60%;
     position: absolute;
     transform: translateX(-50%);
   }
   &__image:last-child{
     position: absolute;
-    right: -120px;
+    right: -180px;
   }
   &__text-section{
-    width: 55%;
+    width: 60%;
     height: 100%;
     display: flex;
     align-items: center;
   }
-  @include maxQuery(1300px){
+  @include maxQuery(2200px){
     &__image:first-child{
       display: none;
     }
     &__image:nth-child(2){
       left: 40%;
     }
+  }
+  @include maxQuery(1480px){
     .CaseStudyX__text-content{
-      margin-right: initial;
-    }
-    &__images-section{
-      width: 35%;
-    }
-    &__text-section{
-      width: 65%;
+      margin-left: 200px;
+      padding-right: 20px;
     }
   }
-  @include maxQuery(1025px){
+  @include maxQuery(1313px){
     &__image:nth-child(2){
       display: none;
     }
+  }
+  @include maxQuery(1000px){
+    height: 750px;
     &__images-section{
-      width: 25%;
+      width: 30%;
+    }
+    &__image:last-child{
+      right: -160px;
     }
     &__text-section{
-      width: 75%;
+      width: 70%;
     }
   }
-  @include maxQuery(820px){
-    flex-flow: row wrap;
+  @include maxQuery(900px){
+    &__image:last-child{
+      right:-140px;
+    }
+  }
+  @include maxQuery(900px){
+    &__image:last-child{
+      right:-140px;
+    }
+  }
+  @include maxQuery(800px){
     height: auto;
     &__images-section{
       width: 100%;
+      background-color: $grey-bg;
     }
     &__images{
-      background-color: $grey-bg;
       justify-content: center;
-    }
-    &__image:nth-child(2){
-      display: block;
-      position: static;
-      transform: none;
     }
     &__image:last-child{
       display: none;
     }
+    &__image:nth-child(2){
+      display: block;
+      position: static;
+      left: initial;
+      transform: none;
+    }
     &__text-section{
       width: 100%;
     }
     .CaseStudyX__text-content{
-      width: 90%;
+      margin-left: 0;
+      padding-right: 0;
+      width: auto;
+      max-width: 90%;
       margin-left: auto;
       margin-right: auto;
     }

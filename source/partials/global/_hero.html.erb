@@ -46,7 +46,9 @@
   <div class="Hero__image Hero__image--casestudy">
   </div>
   <div class="Hero__text Hero__text--casestudy">
-    <h1 class="Hero__text__heading"><%= heading %></h1>
+    <h1 class="Hero__text__heading">
+      <%= headingLine1 %><br><%= headingLine2 %>
+    </h1>
     <div class="Hero__text__builtwith Hero__text__subheading-image">
       <p>Built with</p> <% if isShopify == true %> <%= image_tag dato.platform.shopify.url %> <% else %> <%= image_tag dato.platform.big_commerce.url %> <% end %>
     </div>
