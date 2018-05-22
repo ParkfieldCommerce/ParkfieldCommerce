@@ -111,8 +111,8 @@
 		&__container--1 .row img{
 			max-width:100%;
 			width:545px;
-      user-select: none;
-      box-shadow: 0px -3px 16px 0px rgba(0,0,0,0.07);
+	      user-select: none;
+	      box-shadow: 0px -3px 16px 0px rgba(0,0,0,0.07);
 		}
 		&__container--2{
 			display:flex;
@@ -187,9 +187,21 @@
 			margin-bottom:0px;
 		}
 	}
+	&__form--wrap {
+		width: 100%;
+		background-color: $form-bg;
+		padding-bottom: 101px;
+		@include maxQuery(640px) {
+			background-color: #FAFAFA;
+			padding-bottom: 40px;
+		}
+	}
 	&__form{
 		&__container--1{
 			justify-content:center;
+			@include maxQuery(640px) {
+				margin-top: 40px;
+			}
 		}
 		&__container--1 form{
 			max-width:100%;
@@ -201,21 +213,27 @@
 		}
 		&__container--2{
 			justify-content:center;
+			h3 {
+				text-align: center;
+				color: #fff;
+				font-size: 2.25rem;
+				margin: 0 0 45px;
+				@include maxQuery(640px) {
+					color: $article-text;
+					margin: 0 0 35px;
+				}
+			}
 		}
 		&__container--3{
 			max-width:100%;
-			width:484px;
+			width:696px;
 			display:flex;
 			align-items:flex-end;
 			.inputField {
 				position: relative;
-				input {
-					border-bottom: 1px solid $body;
-					transition: border-color 0.3s;
-				}
 				label {
-          left: 0;
-          width: 100%;
+			        left: 0;
+			        width: 100%;
 					color: $body;
 					font-family: 'Avenir';
 					position: absolute;
@@ -244,23 +262,32 @@
 			display:none;
 		}
 		&__container--3 input{
-			width:324px;
+			width:460px;
+			height: 68px;
 			max-width:100%;
-			font-size:1.125rem;
-			margin-right:10px;
+			font-family: "Avenir";
+			font-size:1.5rem;
+			font-weight: 800;
+			box-sizing: border-box;
 			line-height:46px;
+			padding-left: 33px;
+			@include maxQuery(750px) {
+				width: 404px;
+			}
 		}
 		&__container--3 button{
 			-webkit-appearance:none;
 			max-width:100%;
-			width:154px;
-			height:50px;
-			border:2px solid #4C54B0;
-  		
-
+			width:236px;
+			height:68px;
+			border:none;
+  			background-color: $form-btn-bg;
+			font-weight: 800;
+			cursor: pointer;
 		}
 		&__container--3 button span{
-			font-size:1.125rem;
+			color: $page-links;
+			font-size:1.5rem;
 		}
 	}
 	&__nextBanner{
@@ -513,11 +540,16 @@
 				display:block;
 				height:58px;
 				width:258px;
-				border:1px solid black;
+				border:none;
 				margin:0 auto;
 				display:flex;
 				justify-content:center;
 				align-items:center;
+				background-color: $form-btn-bg;
+				box-shadow: 0px 0px rgba(0,0,0,0.25);
+				span {
+					color: $page-links;
+				}
 			}
 		}
 	}

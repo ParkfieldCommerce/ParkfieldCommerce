@@ -14,22 +14,28 @@
 	}
 	&__form {
 		width: 100%;
-		max-width: 956px;
-		background-color: #fff;
+		max-width: 1114px;
+		background-color: $form-bg;
 		box-shadow: 4px 4px rgba(0,0,0,0.25);
-		padding: 45px 53px;
+		padding: 50px 0 60px;
 		position: relative;
 		h1 {
-			font-size: 2.25rem;
+			font-size: 3rem;
 			text-align: center;
-			margin-bottom: 15px;
+			margin: 0 0 45px;
+			color: #fff;
 		}
 		p {
-			color: $heading;
+			color: #fff;
 			margin: 0;
 			text-align: center;
 			padding-bottom: 61px;
 		}
+	}
+	ul {
+		width: 100%;
+		max-width: 851px;
+		margin: 0 auto;
 	}
 	&__close {
 		position: absolute;
@@ -56,7 +62,7 @@
 		position: relative;
 		margin-bottom: 30px;
 		label {
-			color: $body;
+			color: #fff;
 			font-family: 'Avenir';
 			font-size: 1.125rem;
 			position: absolute;
@@ -66,27 +72,32 @@
 		input {
 			width: 100%;
 			border: none;
-			border-bottom: 1px solid $body;
-			color: $heading;
+			border-bottom: 1px solid #fff;
+			color: #fff;
+			background-color: $form-bg;
 			height: 32px;
 			font-size: 1.125rem;
 			transition: border-bottom 0.3s;
 			&:focus {
         		color: $heading;
 				outline: none;
-				border-bottom: 1px solid $btn-pfc !important;
+				border-bottom: 1px solid #fff;
 			}
+		}
+		input:focus {
+			color: #fff;
 		}
 		input:focus~label{
 			bottom: 29px;
 			font-size: 0.75rem;
-			color: $btn-pfc;
+			color: #fff;
 		}
 		.input-focus {
+			color: #fff;
 			&~label {
 				bottom: 29px;
 				font-size: 0.75rem;
-				color: $btn-pfc;
+				color: #fff;
 			}
 		}
 	}
@@ -127,8 +138,9 @@
 	textarea {
 		width: 100%;
 		border: none;
-		border-bottom: 1px solid $body;
-		color: $body;
+		border-bottom: 1px solid #fff;
+		color: #fff;
+		background-color: $form-bg;
 		height: 32px;
 		line-height: 32px;
 		font-size: 1.125rem;
@@ -140,13 +152,13 @@
 	textarea:focus~label {
 		bottom: 33px;
 		font-size: 0.75rem;
-		color: $btn-pfc;
+		//color: $btn-pfc;
 	}
 	textarea.input-focus {
 		&~label {
 			bottom: 33px;
 			font-size: 0.75rem;
-			color: $btn-pfc;
+			//color: $btn-pfc;
 		}
 	}
 	&__submit {
@@ -156,11 +168,13 @@
 	}
 	input[type="submit"] {
 		height: 60px;
-		width: 143px;
-		color: $btn-pfc-text;
-		background-color: $btn-pfc;
+		width: 100%;
+		border: none;
+		color: #000000;
+		border-radius: 5px;
+		background-color: $form-btn-bg;
 		font-family: 'Avenir';
-		font-size: 1.125rem;
+		font-size: 1.5rem;
 		font-weight: 800;
 	}
 	.hide {
@@ -173,6 +187,10 @@
 		font-weight: 800;
 		text-decoration: underline;
 		margin-top: 50px;
+	}
+	&__image {
+		display: block;
+		margin: 45px auto 0;
 	}
 }
 

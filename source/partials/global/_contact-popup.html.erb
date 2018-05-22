@@ -43,24 +43,6 @@
 					<% index=index+1 %>
 					</li>
 					<% end %>
-					<li id="foli13" class="notranslate      ">
-					<div class="ContactPopUp__input">
-					<input id="Field13" name="Field13" type="text" class="field text nospin medium"  value="" tabindex="<%= index %>" onkeyup="" required placeholder=""       />
-					<label class="desc " id="title13" for="Field13">
-					Phone
-					</label>
-					</div>
-					<% index=index+1 %>
-					</li>
-					<li id="foli10" class="notranslate       ">
-					<div class="ContactPopUp__input">
-					<input id="Field10" name="Field10" type="url" class="field text medium" value="" maxlength="255" tabindex="<%= index %>" placeholder=""       />
-					<label class="desc" id="title10" for="Field10">
-					Website URL (Optional)
-					</label>
-					</div>
-					<% index=index+1 %>
-					</li>
 					<li id="foli7" class="hiddenSelect">
 					<div class="ContactPopUp__input">
 					<select id="Field7" name="Field7" class="field select medium"       tabindex="<%= index %>" >
@@ -128,6 +110,9 @@
 			</div>
 			<div class="ContactPopUp__submit">
 				<input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="<%= dato.contact_form.submit_button_text %>"/>
+			</div>
+
+			<div class="ContactPopUp__image--wrap">
 				<%= image_tag dato.contact_form.form_image.url, alt: dato.contact_form.form_image.alt, class:"ContactPopUp__image" %>
 			</div>
 			
@@ -200,14 +185,14 @@
         $('#Field9').css('border-bottom', '1px solid #979797');
         $('label[for="Field9"]').css("color", "#4C54B0");
       }
-      if($('#Field13').val() == ''){
-      	e.preventDefault();
-        $('#Field13').css('border-bottom', '1px solid red');
-        $('label[for="Field13"]').css("color", "red");
-      } else {
-        $('#Field13').css('border-bottom', '1px solid #979797');
-        $('label[for="Field13"]').css("color", "#4C54B0");
-      }
+      // if($('#Field13').val() == ''){
+      // 	e.preventDefault();
+      //   $('#Field13').css('border-bottom', '1px solid red');
+      //   $('label[for="Field13"]').css("color", "red");
+      // } else {
+      //   $('#Field13').css('border-bottom', '1px solid #979797');
+      //   $('label[for="Field13"]').css("color", "#4C54B0");
+      // }
       // if($('#Field7').val() == '') {
       // 	e.preventDefault();
       // 	$('#select').css('border-bottom', '1px solid red');
