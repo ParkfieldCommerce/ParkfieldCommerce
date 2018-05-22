@@ -1,13 +1,17 @@
 <div class="CaseStudy__quote space-120 space-bottom-120">
-  <div class="row">
+  <div class="row mini-row">
     <div class="small-12">
       <div class="CaseStudy__quote__container">
         <div class="CaseStudy__quote__body-container">
+          <div>
           <%= image_tag "../images/quote.jpg", alt: "Quote", class:"CaseStudy__quote__apostrophe" %>
+          </div>
           <div class="CaseStudy__quote__body">
             <%= body %>
           </div>
+          <div class="right">
           <%= image_tag "../images/quote-flipped.jpg", alt: "Quote", class:"CaseStudy__quote__apostrophe--flipped" %>
+          </div>
         </div>
         <div class="CaseStudy__quote__cite">
           <%= image_tag image.url, alt: image.alt, class:"CaseStudy__quote__image" %>

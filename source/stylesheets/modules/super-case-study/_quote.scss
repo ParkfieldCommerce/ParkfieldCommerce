@@ -49,4 +49,26 @@
     font-family: 'Avenir-Roman';
     font-size: 1.125rem;
   }
+  @include maxQuery(920px){
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    &__cite{
+      margin-top: 10px;
+    }
+    &__body p{
+      font-size: 1.125rem;
+    }
+    &__apostrophe,
+    &__apostrophe--flipped{
+      transform: none;
+      position: static;
+    }
+  }
+  @include maxQuery($s){
+    &__apostrophe,
+    &__apostrophe--flipped{
+      max-width: 20px;
+    }
+  }
 }

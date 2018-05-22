@@ -4,7 +4,8 @@
       <%= image_tag caseStudy.website_browsing_video.url, alt: caseStudy.website_browsing_video.url %>
       </div>
     </div>
-    <div class="row space-90">
+    <span id="trigger-1"></span>
+    <div class="row space-90 mini-row">
       <div class="small-6 CaseStudy__browsing__text-container">
         <div class="CaseStudyX__text-content">
           <h3 class="CaseStudyX__text-heading">
@@ -17,7 +18,9 @@
       </div>
       <div class="small-6 CaseStudy__browsing__percent-container">
         <div class="CaseStudyX__percent-container">
-          <div class="CaseStudyX__percent no-margin">+<%= percentage.round %>%</div>
+          <div class="CaseStudyX__percent no-margin">
+            +<span class="js-percent-value" data-percent="<%= percentage.round %>">0</span>%
+          </div>
           <div class="CaseStudyX__percent-label">Sales increase</div>
         </div>
       </div>

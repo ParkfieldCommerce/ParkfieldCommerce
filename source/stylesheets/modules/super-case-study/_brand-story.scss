@@ -19,6 +19,13 @@
       vertical-align: middle;
     }
   }
+  @include maxQuery(1200px){
+    &__images{
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
   @include maxQuery(1050px){
     .CaseStudyX__text-content{
       padding-left: 20px;
