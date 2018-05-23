@@ -2,6 +2,25 @@
 	width: 100%;
 	max-width: 956px;
 	margin: 60px auto 164px;
+	.ContactPopUp__input {
+		label {
+			color: #231F20;
+		}
+		.input-focus {
+			color: #231F20;
+			border-bottom: 1px solid #979797;
+			&~label {
+				color: $btn-pfc;
+			}
+		}
+		input:focus {
+			color: #231F20;
+			border-bottom: 1px solid #979797;
+			&~label {
+				color: $btn-pfc;
+			}
+		}
+	}
 	&__callBtn {
 		display: none;
 		width: 100%;
@@ -35,7 +54,7 @@
 		width: 100%;
 		border: none;
 		border-bottom: 1px solid $body;
-		color: $body;
+		color: #231F20;
 		height: 32px;
 		line-height: 32px;
 		font-size: 1.125rem;
@@ -56,9 +75,14 @@
 			color: $btn-pfc;
 		}
 	}
+	input[type="text"], input[type="email"] {
+		background-color: #fff;
+		color: #333;
+		border-bottom: 1px solid #979797;
+	}
 	input[type="submit"] {
 		height: 60px;
-		width: 143px;
+		width: auto;
 		color: $btn-pfc-text;
 		background-color: $btn-pfc;
 		font-family: 'Avenir';
