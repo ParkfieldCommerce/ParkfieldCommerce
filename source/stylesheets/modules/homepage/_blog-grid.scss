@@ -1,5 +1,6 @@
 .BlogGrid{
 	display: flex;
+	flex-flow: row wrap;
 	&__container--1 {
 		display: flex;
 		position: relative;
@@ -71,138 +72,38 @@
 		}
 	}
 
-
- //  position: relative;
- //  z-index: 2;
-	// display:flex;
-	// flex-flow:row wrap;
-	// &__container{
-	// 	display:flex;
-	// }
-	// &__container--1{
-	// 	width:64.75%;
-	// 	background-color:#FAFAFA;
-	// 	align-items:center;
-	// }
-	// &__container--2{
-	// 	width:35.25%;
-	// }
-	// &__container--3{
-	// 	width:43.4%;
-	// 	align-items:center;
-	// 	img{
+	// @include maxQuery(950px){
+	// 	&__container--1{
+ //      padding-top: 0px;
+ //      padding-bottom: 0px;
 	// 		width:100%;
 	// 	}
-	// }
-	// &__container--4{
-	// 	width:100%;
-	// 	flex-flow:row wrap;
-	// }
-  
-	// &__item--1{
- //    max-width: 100%;
- //    padding: 0px 10px;
- //    padding-left: 0px;
-	// 	margin:0 auto;
- //    margin-left: 120px;
- //    @include maxQuery(1376px){
- //      margin-left: 90px;
+	// 	&__container--2{
+	// 		width:100%;
+	// 	}
+	// 	&__container--3{
+	// 		display:none;
+	// 	}
+	// 	&__container--4{
+	// 		width:100%;
+	// 	}
+	// 	&__item--1{
+	// 		margin-top:54px;
+	// 		margin-bottom:60px;
+ //      padding: 0px;
+ //      width: 90%;
+	// 	}
+	// 	&__item--3{
+	// 		display:none;
+	// 	}
+	// 	&__item--5{
+	// 		margin:0 auto;
+	// 		height:auto;
+	// 	}
+ //    &__item__twitterFeed{
+ //      width: 90%;
  //    }
- //    @include maxQuery(1250px){
- //      margin-left: 30px;
- //    }
- //    @include maxQuery(1200px){
- //      margin-left: 10px;
- //    }
 	// }
-	// &__item--3{
-	// 	width:100%;
-	// 	background-size:cover;
-	// 	background-position: center center;
-	// 	background-repeat:no-repeat;
-	// 	max-height:307px;
-	// 	height:100%;
- //    display: flex;
- //    align-items: center;
-	// }
-	// &__item--4{
- //    width: 370px;
- //    padding: 0px 10px;
- //    max-width: 100%;
-	// 	margin:0 auto;
-	// }
-	// &__item--5{
-	// 	max-height: 307px;
-	// 	height:100%;
- //    width: 100%;
-	// 	background-color:#1DA1F3;
-	// 	display:flex;
-	// 	align-items:center;
-	// }
- //  &__item__twitterFeed{
- //    width: 370px;
- //    padding: 0px 10px;
- //    max-width: 100%;
- //    margin: 0 auto;
- //  }
- //  &__item__twitter{
- //    display: block;
- //    text-align: center;
- //    color: white;
- //    margin-top: 10px;
- //    font-size: 1.8rem;
- //  }
-  @include maxQuery(1300px){
-    &__container--1{
-      padding-top: 25px;
-      padding-bottom: 25px;
-    }
-    &__container--3{
-      display: none;
-    }
-    &__container--4{
-      width: 100%;
-    }
-    &__item--3{
-      max-height: initial;
-      height: auto;
-    }
-    &__item--5{
-      height: auto;
-    }
-  }
-	@include maxQuery(950px){
-		&__container--1{
-      padding-top: 0px;
-      padding-bottom: 0px;
-			width:100%;
-		}
-		&__container--2{
-			width:100%;
-		}
-		&__container--3{
-			display:none;
-		}
-		&__container--4{
-			width:100%;
-		}
-		&__item--1{
-			margin-top:54px;
-			margin-bottom:60px;
-      padding: 0px;
-      width: 90%;
-		}
-		&__item--3{
-			display:none;
-		}
-		&__item--5{
-			margin:0 auto;
-			height:auto;
-		}
-    &__item__twitterFeed{
-      width: 90%;
-    }
-	}
 }
 
 .BlogGrid__item{
@@ -217,6 +118,7 @@
 		}
 	&__date--1 {
 		p {
+			font-weight: 800;
 			margin-bottom: 27px;
 		}
 	}
@@ -256,20 +158,61 @@
 	&__author--2 p{
 		color:white;
 	}
-	@include maxQuery(950px){
+	@include maxQuery(1240px){
     &__heading h3{
       font-size: 1.5rem;
+      line-height: normal;
+      a {
+      	font-size: 1.5rem;
+      }
     }
     &__link--1{
       margin-top: 15px;
     }
-		&__twitterFeed{
-			margin-top:40px;
-			margin-bottom:40px;
-		}
 		&__button--1{
 			height:47px;
 			margin-bottom:0px;
+		}
+	}
+}
+
+@include maxQuery(1080px) {
+	.BlogGrid {
+		&__container--1 {
+			width: 100%;
+		}
+		&__container--2 {
+			width: 100%;
+		}
+		&__item--3, &__item--5 {
+			height: auto;
+		}
+		&__item--1--wrap {
+			margin-left: 5%;
+		}
+		&__item--4, &__item__twitterFeed {
+			margin-top: 50px;
+			margin-bottom: 50px; 
+			margin-left: 5%;
+		}
+	}
+}
+
+@include maxQuery(672px) {
+	.BlogGrid {
+		&__container--1 {
+			display: none;
+		}
+	}
+}
+
+@include maxQuery(346px) {
+	.BlogGrid {
+		&__item--1--wrap {
+			margin-left: 1%;
+		}
+		&__item--4, &__item__twitterFeed {
+			margin-left: 1%;
 		}
 	}
 }
