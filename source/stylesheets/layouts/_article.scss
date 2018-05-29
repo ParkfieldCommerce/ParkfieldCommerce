@@ -110,6 +110,16 @@
     color: $article-text;
     margin: 0 0 20px;
   }
+  pre {
+    img {
+      display: block;
+      margin-bottom: 0;
+    }
+    br {
+      display: none;
+    }
+    font-family: 'Avenir-Roman';
+  }
   @include maxQuery($s){
     h1{
       font-size: 1.7rem;
