@@ -191,6 +191,7 @@ redirect "pages/privacy-policy.html", to: "/privacy-policy"
 redirect "blogs/news/why-is-mobile-commerce-so-important-for-ecommerce-success.html", to: "/articles/why-is-mobile-commerce-so-important-for-ecommerce-s"
 redirect "pages/the-hour.html", to: "/case-studies/the-hour"
 redirect "articles/is-the-future-of-ecommerce-3d-products-shopify-thin.html", to: "/articles/is-the-future-of-ecommerce-3d-products-shopify-thinks-so"
+redirect "index.html", to: "https://parkfieldcommerce.com"
 
 
 
