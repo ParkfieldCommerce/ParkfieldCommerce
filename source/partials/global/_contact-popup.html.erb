@@ -132,7 +132,7 @@
   $(document).ready(function(){
   	setTimeout(function(){
   		$('.ContactPopUp').fadeIn();
-  	}, 90000);
+  	}, <%= dato.contact_form.pop_up_form_timer %>);
 
     $('#mce-EMAIL').on("input", function(){
       var email = $(this).val();
