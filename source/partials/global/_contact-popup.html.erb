@@ -130,6 +130,10 @@
 </div>
 <script type="text/javascript">
   $(document).ready(function(){
+  	setTimeout(function(){
+  		$('.ContactPopUp').fadeIn();
+  	}, 90000);
+
     $('#mce-EMAIL').on("input", function(){
       var email = $(this).val();
       $('#Field9').val(email);
