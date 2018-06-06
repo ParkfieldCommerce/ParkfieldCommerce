@@ -11,7 +11,7 @@
     <%= dato_favicon_meta_tags %>
     <%= yield_content :head %>
     <!-- Use the title from a page's frontmatter if it has one -->
-    <title><%= current_page.data.title || "Parkfield Commerce" %></title>
+    <title><%= current_page.data.title %></title>
     <%= stylesheet_link_tag "app" %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <%= javascript_include_tag "/javascripts/vendor/slick.min" %>
