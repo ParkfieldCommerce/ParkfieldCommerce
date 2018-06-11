@@ -193,6 +193,52 @@
 		display: block;
 		margin: 45px auto 0;
 	}
+	&__form.light {
+		background-color: #fff;
+		h1, p {
+			color: $heading;
+		}
+		.ContactPopUp__input {
+			label {
+				color: $heading;
+			}
+			input {
+				background-color: #fff;
+				border-bottom: 1px solid #000;
+				color: $heading;
+				transition: border-bottom 0.3s;
+				&:focus {
+					border-bottom: 1px solid $btn-pfc;	
+				}
+			}
+			input:focus~label{
+				color: $btn-pfc;
+			}
+			.input-focus {
+				border-bottom: 1px solid $btn-pfc;
+				&~label {
+					color: $btn-pfc;
+				}
+			}
+		}
+		textarea {
+			background-color: #fff;
+			border-bottom: 1px solid #000;
+			color: $heading;
+			transition: border-bottom 0.3s;
+			&:focus {
+				border-bottom: 1px solid $btn-pfc;	
+			}
+		}
+		textarea:focus~label {
+			color: $btn-pfc;
+		}
+		textarea.input-focus {
+			&~label {
+				color: $btn-pfc;
+			}
+		}
+	}
 }
 
 @include maxQuery($s){
