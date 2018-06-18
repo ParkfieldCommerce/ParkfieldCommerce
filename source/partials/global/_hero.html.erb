@@ -4,6 +4,7 @@
 #Homepage/Generic Requires: subHeadingImage 
 
 =%>
+<% if locals.has_key? :large_image %>
 <style>
   .Hero__image{
     background-image: url('<%= large_image.url %>');
@@ -19,6 +20,7 @@
     } 
   }
 </style>
+<% end %>
 
 <div class="Hero Hero--<%= type %>">
 <% if type == 'homepage' %>
@@ -79,6 +81,13 @@
   </div>
   <div class="Hero__text Hero__text-whatis">
     <h1 class="Hero__text__heading"><%= heading %></h1>
+  </div>
+<% elsif type == 'button' %>
+  <div class="Hero__text Hero__text--button">
+    <div class="Hero__text__heading-wrap">
+      <h1 class="Hero__text__heading"><%= heading %></h1>
+    </div>
+    <a class="Hero__text__button Btn Btn--animatedLeft Btn--rounded Btn--shadow" href="/contact"><span>Let's build it</span></a>
   </div>
 <% else %>
   <div class="Hero__image Hero__image--generic">

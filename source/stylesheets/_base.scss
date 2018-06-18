@@ -84,6 +84,9 @@ button::-moz-focus-inner {
 .Btn{
   padding: 13px 18px;
   border: 1px solid white;
+  &:hover{
+    cursor: pointer;
+  }
 }
 
 .Btn--pfc{
@@ -185,13 +188,30 @@ button::-moz-focus-inner {
     }
   }
 }
-
+.Btn.Btn--animatedLeft--black{
+  border-color: black;
+  span{color: black;}
+  &:after{
+    background-color: black;
+  }
+  &:hover{
+    span{color: white;}
+  }
+}
 .Btn--ghost{
   border: 1px solid white;
   background-color: transparent;
   color: white;
 }
-
+.Btn--rounded{
+  border-radius: 5px;
+  &:after{
+    border-radius: 3px;
+  }
+}
+.Btn--shadow{
+  box-shadow: 5px 2px 2px rgba(0, 0, 0, 0.15);
+}
 .Btn--filled{
   background-color: white;
   color: black;

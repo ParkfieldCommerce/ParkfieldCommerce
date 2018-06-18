@@ -1,0 +1,25 @@
+.CustomApp{
+  &__sites-image{
+    margin-bottom: 30px;
+  }
+  &__link{
+    display: inline-block;
+    margin-top: 45px;
+  }
+  &__button{
+    margin-top: 45px;
+    border: 2px solid $btn-pfc !important;
+    font-weight: 800;
+    span{
+      color: white !important;
+    }
+    &:after{
+      background-color: white !important;
+    }
+    &:hover{
+      span{
+        color: $btn-pfc !important;
+      }
+    }
+  }
+}

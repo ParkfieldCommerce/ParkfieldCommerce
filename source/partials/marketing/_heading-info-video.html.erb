@@ -1,10 +1,16 @@
 <% dato.custom_app_page.custom_app_sections.each_with_index do | section, index |%>
-  <div class="padding-120 mobile-space-padding-60 mobile-space-padding-bottom-60 <% if section.alt_background == true %>background-gray<% end %>">
+  <div class="<% unless index == 0  %>padding-120 mobile-space-padding-60<% end %> mobile-space-padding-bottom-60 <% if section.alt_background == true %>background-gray<% end %>">
     <div class="container m">
     <div class="MarketingSection">
       <div class="MarketingSection__text">
         <h2><%= section.heading %></h2>
+      	<%= image_tag section.sites_using_app.url, alt: section.sites_using_app.alt, class:"CustomApp__sites-image" %>
         <%= section.body %>
+        <% if section.contact_link_is_button  %>
+        <a href="#" class="CustomApp__link OurServices__link Link--underline">Need this app? Let's talk</a>
+        <% else %>
+        <button type="button" class="CustomApp__button Btn Btn--animatedLeft Btn--animatedLeft--purple Btn--rounded Btn--shadow"><span>Let's build it</span></button>
+        <% end %>
       </div>  
       <div class="MarketingSection__imageWrap">
         <div class='MarketingSection__embed-container'>

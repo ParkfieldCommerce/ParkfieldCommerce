@@ -119,7 +119,8 @@
 .Hero--migrationPage,
 .Hero--whatis,
 .Hero--homewareTextiles,
-.Hero--migrationGeneralPage{
+.Hero--migrationGeneralPage,
+.Hero--button{
   height: 70vh;
   max-height: 650px;
   min-height: 450px;
@@ -153,5 +154,50 @@
   max-height: 427px;
   @include maxQuery($s){
     max-height: 260px;
+  }
+}
+.Hero--button{
+  background: white;
+  height: 80vh;
+  &:after{
+    display: none;
+  }
+}
+.Hero--button .Hero{
+  &__text__heading-wrap{
+    position: relative;
+    &:after{
+      content:'';
+      display: inline-block;
+      height: 1px;
+      width: 95px;
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #D6D6D6;
+    }
+  }
+  &__text__heading{
+    color: $heading;
+  }
+  &__text__button{
+    margin-top: 29px;
+    display: inline-block;
+    background-color: $btn-pfc;
+    border: 1px solid $btn-pfc !important;
+    width: 182px;
+    height: 48px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    span{
+      font-weight: 800;
+      color: white !important;
+    }
+    &:after{
+      display: none;
+    }
   }
 }

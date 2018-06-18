@@ -1,6 +1,6 @@
 ---
-layout: layout
-pageClass: CustomApp
+layout: article-layout
+pageClass: CustomApp News
 ---
 
 <% content_for(:head) do %>
@@ -9,26 +9,10 @@ pageClass: CustomApp
 
 <%= partial './partials/global/hero', 
   locals:{
-    type:'generic',
-    mobile_image: dato.custom_app_page.banner[0],
-    med_image: dato.custom_app_page.banner[1],
-    large_image: dato.custom_app_page.banner[2],
-    heading: dato.custom_app_page.banner_heading,
-    subHeadingImage: dato.custom_app_page.banner_subheading_image
+    type:'button',
+    heading: dato.custom_app_page.banner_heading
   } 
 %> 
-
-<div class="container m">
-  <div class="padding-90 mobile-space-padding-60 space-bottom-120 mobile-space-bottom-60">
-    <%= partial './partials/global/title-and-text',
-      locals: {
-        heading: dato.custom_app_page.top_description_heading,
-        body: dato.custom_app_page.top_description_body,
-        modifier: '--marketing'
-      }
-     %>
-  </div>
-</div>
 
 <%= partial './partials/marketing/heading-info-video.html' %>
 <%= partial './partials/global/email-form.html' %>
