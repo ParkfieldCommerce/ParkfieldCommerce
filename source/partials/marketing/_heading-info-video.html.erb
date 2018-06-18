@@ -17,13 +17,13 @@
           <div class="MarketingSection__embed-cover" style="background-image: url('<%= section.cover_image.url %>');">
           <% unless section.video.nil? %>
             <button class="MarketingSection__play-button js-playVimeo">
-              <span>PLAY</span>
+              <span>Play</span>
             </button>
           </div>
           <iframe src="<%= section.video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           <% else %>
             <a class="MarketingSection__play-button MarketingSection__play-button--demo" <% unless section.non_video_link.nil? %>target="_blank" rel="nofollow" href="<%= section.non_video_link %>"<% end %>>
-              <span>DEMO</span>
+              <span>View</span>
             </a>
           <% end %>
         </div>
