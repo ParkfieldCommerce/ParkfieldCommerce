@@ -39,7 +39,10 @@
     height: 80px;
     width: 80px;
     border-radius: 100%;
-    background-color: transparent;
+    background-color: white;
+    color: #231F20;
+    font-weight: 800;
+    transition: color .3s;
     svg{
       position: absolute;
       top: 50%;
@@ -52,17 +55,10 @@
     }  
     &:hover{
       cursor: pointer;
+      color: $btn-pfc;
       svg{
         height: 30px;
         width: 30px;
-      }
-    }
-    &--demo{
-      color: white;
-      font-weight: 800;
-      transition: font-size .3s;
-      &:hover{
-        font-size: 1.15rem;
       }
     }
   }

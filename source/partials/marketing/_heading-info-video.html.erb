@@ -17,7 +17,7 @@
           <div class="MarketingSection__embed-cover" style="background-image: url('<%= section.cover_image.url %>');">
           <% unless section.video.nil? %>
             <button class="MarketingSection__play-button js-playVimeo">
-              <%= partial './partials/global/svg-icons', locals:{icon: 'play'} %>
+              <span>PLAY</span>
             </button>
           </div>
           <iframe src="<%= section.video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
