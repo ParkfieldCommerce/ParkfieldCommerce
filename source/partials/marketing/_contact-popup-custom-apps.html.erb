@@ -1,0 +1,211 @@
+<% emailFirst ||= false %>
+
+<div class="ContactPopUp">
+	<div class="ContactPopUp__overlay">
+		<div class="ContactPopUp__form  <% if dato.custom_apps_popup.enable_white_form %> light <% end %>">
+			<div id="CloseContactPopUp" class="ContactPopUp__close">
+        <%= image_tag("../images/close.png", alt: "Close")%>
+			</div>
+			<h1><%= heading %></h1>
+			<p><%= dato.custom_apps_popup.form_text %></p>
+			<form id="form96" name="form96" class="wufoo topLabel page" accept-charset="UTF-8" autocomplete="nope" enctype="multipart/form-data" method="post" novalidate action="https://shopifybuilder.wufoo.eu/forms/kmjfzql1wfq68r/#public">
+			<ul>
+			<div class="ContactPopUp__formTopRow">
+					<% index = 1 %>
+					<% if emailFirst %>
+					<li id="foli9" class="notranslate      ">
+					<div class="ContactPopUp__input">
+					<input id="Field9" name="Field9" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="<%= index %>" required placeholder="" autocomplete="nope"/>
+					<label class="desc" id="title9" for="Field9">
+					Email
+					</label>
+					</div>
+					<% index=index+1 %>
+					</li>
+					<% end %>
+					<li id="foli4" class="notranslate      ">
+					<div class="ContactPopUp__input">
+					<input id="Field4" name="Field4" type="text" class="field text medium" value="" maxlength="255" tabindex="<%= index %>" onkeyup="" required placeholder="" autocomplete="nope"/>
+					<label class="desc" id="title4" for="Field4">
+					Name
+					</label>
+					</div>
+					<% index=index+1 %>
+					</li>
+					<% unless emailFirst %>
+					<li id="foli9" class="notranslate      ">
+					<div class="ContactPopUp__input">
+					<input id="Field9" name="Field9" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="<%= index %>" required placeholder="" autocomplete="nope"/>
+					<label class="desc" id="title9" for="Field9">
+					Email
+					</label>
+					</div>
+					<% index=index+1 %>
+					</li>
+					<% end %>
+					<li id="foli7" class="hiddenSelect">
+					<div class="ContactPopUp__input">
+					<select id="Field7" name="Field7" class="field select medium"       tabindex="<%= index %>" >
+					<option
+					value="" selected="selected">
+					<span class="notranslate"></span>
+					</option>
+					<option
+					value="$5,000 - $10,000" >
+					<span class="notranslate">$5,000 - $10,000</span>
+					</option>
+					<option
+					value="$10,000 - $20,000" >
+					<span class="notranslate">$10,000 - $20,000</span>
+					</option>
+					<option
+					value="$20,000 - $30,000" >
+					<span class="notranslate">$20,000 - $30,000</span>
+					</option>
+					<option
+					value="$30,000 +" >
+					<span class="notranslate">$30,000 +</span>
+					</option>
+					</select>
+					</div>
+					<% index=index+1 %>
+					</li>
+					<li class="dropdownMenu">
+					<div class="ContactPopUp__input dropdownMenuWrap">
+						<input type="text" id="select" value="" readonly>
+						<div class="chevron">
+			        <%= image_tag("../images/down.png", alt: "Down")%>
+            </div>
+						<label class="desc notranslate" id="title7" for="select">
+					Budget
+					</label>
+						<ul class="ContactPopUp__dropdown">
+							<li class="dataSelector" data-value="$5,000 - $10,000">$5,000 - $10,000</li>
+							<li class="dataSelector" data-value="$10,000 - $20,000">$10,000 - $20,000</li>
+							<li class="dataSelector" data-value="$20,000 - $30,000">$20,000 - $30,000</li>
+							<li class="dataSelector" data-value="$30,000 +">$30,000 +</li>
+						</ul>
+					</div>
+					<% index=index+1 %>
+					</li>
+			</div>
+			<div class="ContactPopUp__textarea">
+				<li id="foli15"
+				class="notranslate      ">
+				<div class="ContactPopUp__input">
+				<textarea id="Field15"
+				name="Field15"
+				class="field textarea medium"
+				spellcheck="true"
+				rows="1" cols="50"
+
+				tabindex="<%= index %>"
+				onkeyup=""
+				placeholder=""
+				       ></textarea>
+				<label class="desc" id="title15" for="Field15">
+				Tell us about your project
+				</label>
+				</div>
+			</div>
+			<div class="ContactPopUp__submit">
+				<input id="saveForm" name="saveForm" class="btTxt submit" type="submit" value="<%= dato.custom_apps_popup.submit_button_text %>"/>
+			</div>
+
+			<div class="ContactPopUp__image--wrap">
+				<%= image_tag dato.custom_apps_popup.form_image.url, alt: dato.custom_apps_popup.form_image.alt, class:"ContactPopUp__image" %>
+			</div>
+			
+
+			<li class="hide">
+			<label for="comment">Do Not Fill This Out</label>
+			<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+			<input type="hidden" id="idstamp" name="idstamp" value="B3CCQjcvEz00I+Ktnxzv1QoH+sO8IelY0gkMBi8kT1M=" />
+			</li>
+			</ul>
+			<a class="ContactPopUp__call" href="<%= dato.custom_apps_popup.phone_number_link %>"><%= dato.custom_apps_popup.phone_number_link_text %></a>
+			</form>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function(){
+  	setTimeout(function(){
+  		$('.ContactPopUp').fadeIn();
+  	}, <%= dato.custom_apps_popup.pop_up_form_timer %>);
+
+    $('#mce-EMAIL').on("input", function(){
+      var email = $(this).val();
+      $('#Field9').val(email);
+      if ($('#Field9').val().length > 1) {
+        $('#Field9').addClass('input-focus');
+      }
+    })
+
+    $('#CloseContactPopUp').click(function(){
+      $('.ContactPopUp').fadeOut();
+    });
+
+    $('input[type="text"],input[type="email"],input[type="url"],textarea').on('change', function(){
+      if ($(this).val().length > 1) {
+        $(this).addClass('input-focus');
+      }
+      if ($(this).val().length == 0) {
+        $(this).removeClass('input-focus');
+      }
+    });
+
+    $('#select,.chevron').click(function(){
+      $('.ContactPopUp__dropdown').toggleClass('active');
+    });
+
+    $('.dataSelector').click(function(){
+      var value = $(this).attr('data-value');
+      $('#select').val(value);
+      $('#select').trigger('change');
+      $('#Field7').val(value);
+      $('.ContactPopUp__dropdown').removeClass('active');
+    });
+
+    $('#saveForm').click(function(e){
+      var name = $('#Field4').val();
+      var email = $('#Field9').val();
+      var emailTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var nameTest = /^[A-Za-z\s]+$/;
+
+      if (!nameTest.test(name)){
+        e.preventDefault();
+        $('#Field4').css('border-bottom', '1px solid red');
+        $('label[for="Field4"]').css("color", "red");
+      } else {
+        $('#Field4').css('border-bottom', '1px solid #979797');
+        $('label[for="Field4"]').css("color", "#4C54B0");
+      }
+      if (!emailTest.test(String(email).toLowerCase())){
+        e.preventDefault();
+        $('#Field9').css('border-bottom', '1px solid red');
+        $('label[for="Field9"]').css("color", "red");
+      } else {
+        $('#Field9').css('border-bottom', '1px solid #979797');
+        $('label[for="Field9"]').css("color", "#4C54B0");
+      }
+      // if($('#Field13').val() == ''){
+      // 	e.preventDefault();
+      //   $('#Field13').css('border-bottom', '1px solid red');
+      //   $('label[for="Field13"]').css("color", "red");
+      // } else {
+      //   $('#Field13').css('border-bottom', '1px solid #979797');
+      //   $('label[for="Field13"]').css("color", "#4C54B0");
+      // }
+      // if($('#Field7').val() == '') {
+      // 	e.preventDefault();
+      // 	$('#select').css('border-bottom', '1px solid red');
+      //   $('label[for="select"]').css("color", "red");
+      // } else {
+      // 	$('#select').css('border-bottom', '1px solid #979797');
+      //   $('label[for="select"]').css("color", "#4C54B0");
+      // }
+    });
+
+  });
+</script>

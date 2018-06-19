@@ -565,7 +565,13 @@
 	}
 }
 
-.CustomApp .CaseStudy__form__container--1,
 .MarketingPage .CaseStudy__form__container--1{
 	margin-top: 90px;
+}
+
+.CustomApp .CaseStudy__form__container--1 {
+	margin-top: 90px;
+	@include maxQuery($m) {
+		margin-top: 40px;
+	}
 }

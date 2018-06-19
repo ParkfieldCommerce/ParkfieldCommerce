@@ -15,5 +15,21 @@ pageClass: CustomApp News
 %> 
 
 <%= partial './partials/marketing/heading-info-video.html' %>
-<%= partial './partials/global/email-form.html' %>
+<%= partial './partials/marketing/email-form-custom-apps.html' %>
+
+<%= partial './partials/marketing/contact-popup-custom-apps', 
+  locals: {
+    heading: dato.custom_apps_popup.heading,
+    emailFirst: true
+  } 
+%>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#GetStartedBtn, .openPopUpCustomApp').click(function(e){
+      e.preventDefault();
+      $('.ContactPopUp').fadeIn();
+    });
+  });
+</script>
+
 

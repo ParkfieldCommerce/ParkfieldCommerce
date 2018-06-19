@@ -21,8 +21,10 @@
             <button class="MarketingSection__play-button js-playVimeo">
               <span>Play</span>
             </button>
+          <% end %>
           </div>
-          <iframe src="<%= section.video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+          <% unless section.video.nil? %>
+            <iframe src="<%= section.video.url %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
           <% else %>
             <a class="MarketingSection__play-button MarketingSection__play-button--demo" <% unless section.non_video_link.nil? %>target="_blank" rel="nofollow" href="<%= section.non_video_link %>"<% end %>>
               <span>View</span>
