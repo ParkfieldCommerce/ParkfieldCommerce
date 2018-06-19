@@ -159,11 +159,19 @@
 .Hero--button{
   background: white;
   height: 80vh;
+  @include maxQuery($s){
+    margin-bottom: 30px;
+  }
   &:after{
     display: none;
   }
 }
 .Hero--button .Hero{
+  &__text__heading{
+    animation: none;
+    opacity: 1;
+    margin-bottom: 70px;
+  }
   &__text__heading-wrap{
     position: relative;
     &:after{
@@ -172,7 +180,7 @@
       height: 1px;
       width: 95px;
       position: absolute;
-      bottom: -30px;
+      bottom: -60px;
       left: 50%;
       transform: translateX(-50%);
       background-color: #D6D6D6;

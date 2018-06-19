@@ -1,4 +1,9 @@
 .CustomApp{
+  &__section--mobile-hide{
+    @include maxQuery($s){
+      display: none;
+    }
+  }
   &__sites-image{
     margin-bottom: 30px;
   }
