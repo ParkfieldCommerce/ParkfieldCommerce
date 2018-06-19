@@ -1,0 +1,45 @@
+.BasicHero{
+  min-height: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__text{
+    text-align: center;
+  }
+  &__body{
+    color: $heading;
+    font-size: 1.5rem;
+    margin-bottom: 42px;
+  }
+  &__btn{
+    width: 182px;
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+    margin-right: 15px;
+    font-size: 1.125rem;
+  }
+  &__link{
+    font-size: 1.125rem;
+    margin-left: 15px;
+  }
+  @include maxQuery($s){
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 350px;
+    &__heading{
+      font-size: 1.5rem;
+    }
+    &__body{
+      font-size: 1.125rem;
+    }
+    &__btn{
+      width: 150px;
+      font-size: .875rem;
+    }
+    &__link{
+      font-size: .875rem;
+    }
+  }
+}

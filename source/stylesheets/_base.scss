@@ -83,7 +83,8 @@ button::-moz-focus-inner {
 }
 .Btn{
   padding: 13px 18px;
-  border: 1px solid white;
+  border-radius: 5px;
+  border: 2px solid $btn-animatedLeftMain;
   &:hover{
     cursor: pointer;
   }
@@ -160,6 +161,8 @@ button::-moz-focus-inner {
 .Btn--animatedLeft--purple{
   position: relative;
   background-color:#4C54B0;
+  border-color: #4C54B0;
+  font-weight: 800;
   span{
     color: $btn-animatedLeftSub;
     color:white;    

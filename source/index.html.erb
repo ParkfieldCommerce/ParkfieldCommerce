@@ -7,28 +7,17 @@ pageClass: Homepage
   <%= dato_meta_tags(dato.homepage) %>
 <% end %>
 
-<%= partial './partials/global/hero', 
+<%= partial './partials/homepage/basic-hero', 
   locals:{
     type:'homepage',
-    mobile_image: dato.homepage_hero.banner_gallery[0],
-    med_image: dato.homepage_hero.banner_gallery[1],
-    large_image: dato.homepage_hero.banner_gallery[2],
-    heading: dato.homepage_hero.heading,
-    subHeadingImage: dato.homepage_hero.partners
+    heading: dato.homepage_hero.heading
   } 
 %>
-<div class="container m">
-<%= partial './partials/global/skewedBanner',
+<%= partial './partials/homepage/casestudy-slider',
   locals:{
-    type:'homepage',
-    heading: dato.homepage_skewed_banner.heading,
-    body: dato.homepage_skewed_banner.body
+    
   }
- %>
-<div class="container s">
-<%= partial './partials/homepage/case-study-grid' %>
-</div>
-</div>
+%>
 
 <div class="space-60">
   <div class="background-gray container l">
@@ -37,15 +26,8 @@ pageClass: Homepage
     </div>
   </div>
 </div>
-
-<div class="ReviewBlogContainerBackground js-ReviewBlogContainerBackground" data-turn="0">
-  <div class="ReviewBlogContainerBackgroundAlt js-ReviewBlogContainerBackgroundAlt" data-turn="1"></div>
-  <div class="container m">
-    <%= partial './partials/homepage/reviews-slider' %>
-  </div>
-  <div class="container l">
-    <%= partial './partials/homepage/blog-grid' %>
-  </div>
+<div class="container l">
+  <%= partial './partials/homepage/blog-grid' %>
 </div>
 
 
