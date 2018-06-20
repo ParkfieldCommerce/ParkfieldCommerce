@@ -16,12 +16,14 @@
 // ==================Homepage==================
 @import './modules/homepage/basic-hero';
 @import './modules/homepage/casestudy-slider';
-@import './modules/homepage/case-study-grid';
 @import './modules/homepage/our-services';
-@import './modules/homepage/video-banner';
-@import './modules/homepage/statistics';
-@import './modules/homepage/reviews-slider';
+@import './modules/homepage/clients';
+@import './modules/homepage/basic-reviews-slider';
 @import './modules/homepage/blog-grid';
+@import './modules/homepage/download-section';
+@import './modules/homepage/reviews-slider';
+@import './modules/homepage/case-study-grid';
+@import './modules/homepage/video-banner';
 
 // ==================Migration==================
 @import './modules/migration/migration.scss';

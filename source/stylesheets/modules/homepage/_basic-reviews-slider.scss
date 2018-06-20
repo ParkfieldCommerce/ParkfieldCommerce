@@ -1,0 +1,75 @@
+.BasicReviewsSliderSection{
+  width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #f7f7f7;
+  padding-top: 60px;
+  padding-bottom: 45px;
+  max-width: 100%;
+  &__heading{
+    font-size: 2.25rem;
+    margin-bottom: 30px;
+  }
+  @include maxQuery($s){
+    &__heading{
+      font-size: 1.5rem;
+    }
+  }
+}
+.BasicReviewsSlider{
+  width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  &__body{
+    min-height: 120px;
+    margin-bottom: 30px;
+    p{
+      margin-top: 0;
+      margin-bottom: 0;
+      color: $heading;
+      font-size: 1.25rem;
+    }
+  }
+  &__source{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  &__source__text{
+    text-align: left;
+    color: $heading;
+    min-width: 190px;
+  }
+  &__source-name{
+    font-weight: 800;
+  }
+  @include maxQuery($s){
+    max-width: 90%;
+    &__body{
+      min-height: 190px;
+      p{font-size: 1.125rem;}
+    }
+  }
+}
+
+.BasicReviewsSlider__dots{
+  .slick-dots{
+    display: flex;
+    justify-content: center;
+  }
+  button{
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    padding: 0;
+    font-size: 0;
+    margin-left: 2.5px;
+    margin-right: 2.5px;
+  }
+  .slick-active button{
+    background-color: black;
+  }
+}

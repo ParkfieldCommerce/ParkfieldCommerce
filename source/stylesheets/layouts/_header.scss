@@ -36,7 +36,8 @@
 
 .MainHeader.nav-is-open{
   background-color: black;
-  .MainHeader__logo{
-    color: $logo-color;
+  .MainHeader__logo,
+  .Nav__link{
+    color: $logo-color-open;
   }
 }

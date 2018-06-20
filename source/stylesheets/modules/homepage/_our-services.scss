@@ -1,63 +1,96 @@
 .OurServices{
-  display: flex;
-  justify-content: space-between;
-  &__links{
+  &__heading{
+    margin-bottom: 45px;
+    font-size: 2.25rem;
+  }
+  &__body{
+    width: 720px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+  }
+  &__services{
     display: flex;
     flex-flow: row wrap;
-    align-items: flex-start;
-    width: 50%;
+    justify-content: space-between;
   }
-  &__description{
-    width: 40%;
+  &__service{
+    width: 30%;
+    text-align: left;
+    box-shadow: 3px 3px 20px rgba(0,0,0,.06);
+    background: white;
+    transition: background-color .5s, box-shadow .5s;
   }
-  &__body p{
-    margin: 0px;
+  &__service-text{
+    position: relative;
+    &:after{
+      width: 40%;
+      max-width: 140px;
+    }
   }
-  &__heading{
-    display: none;
-    margin-top: 0px;
+  &__service:hover{
+    background-color: $accent;
+    box-shadow: 3px 3px 20px rgba(0,0,0,.20);
+    .OurServices__service-text{
+      color: white;
+      &:after{
+        width: 100%;
+        background-color: white;
+      }
+    }
   }
-  &__link-container{
-    width: 50%;
-  }
-  &__link{
+  &__service-text{
+    line-height: 1.5;
+    margin: 30px;
+    margin-right: 0;
     font-size: 1.5rem;
-  }
-  @include maxQuery(1200px){
-    padding-left: 10px;
-    padding-right: 10px;
-    &__links{
-      width: 50%;
+    font-weight: 800;
+    display: inline-block;
+    max-width: 160px;
+    transition: color .5s;
+    &:after{
+      transition: background-color .5s, width .5s;
     }
-    &__description{
-      width: 50%;
+    &--mobile{
+      display: none;
     }
   }
-  @include maxQuery(1000px){
+  @include maxQuery($s){
     max-width: 90%;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
-    flex-flow: column-reverse wrap;
-    &__links,
-    &__description{
+    &__service-image,
+    &__heading,
+    &__body{
+      display: none;
+    }
+    &__service{
       width: 100%;
-      align-items: flex-end;
-      justify-content: space-between;
+      box-shadow: none;
+      border: 1px solid #e2e2e2;
+      margin-bottom: 20px;
     }
-    &__body p{
-      font-size: .875rem;
-      margin-bottom: 60px;
-    }
-    &__link-container{
-      width: 49%;
-    }
-    &__link-container:first-child,
-    &__link-container:nth-child(2){
-      margin-bottom: 40px;
-    }
-    &__link{
-      font-size: 1.125rem;
-      display: inline-block;
+    &__service-text{
+      max-width: initial;
+      margin-left: 10px;
+      &--desktop{
+        margin-bottom: 20px;
+        display: block;
+        &:after{
+          display: none;
+        }
+      }
+      &--mobile{
+        display: inline-block;
+        margin-top: 0px;
+        font-size: 1.125rem;
+        color: $btn-pfc;
+        &:after{
+          background-color: $accent;
+          height: 2px;
+        }
+      }
     }
   }
 }

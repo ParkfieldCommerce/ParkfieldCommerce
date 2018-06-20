@@ -20,15 +20,25 @@ pageClass: Homepage
 %>
 
 <div class="space-60">
-  <div class="background-gray container l">
-    <div class="container s">
-      <%= partial './partials/homepage/our-services' %>
-    </div>
+  <div class="container m center">
+    <%= partial './partials/homepage/our-services' %>
+  </div>
+</div>
+<div class="space-120 mobile-space-60">
+  <div class="container m center">
+    <%= partial './partials/homepage/clients' %>
+  </div>
+</div>
+<div class="space-120 mobile-space-60">
+  <div class="container m center">
+    <%= partial './partials/homepage/basic-reviews-slider' %>
   </div>
 </div>
 <div class="container l">
   <%= partial './partials/homepage/blog-grid' %>
 </div>
-
+<div class="container l">
+  <%= partial './partials/homepage/download-section' %>
+</div>
 
 
