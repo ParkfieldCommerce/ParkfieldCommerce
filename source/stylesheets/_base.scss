@@ -191,6 +191,17 @@ button::-moz-focus-inner {
     }
   }
 }
+.Btn--animatedLeft--yellow{
+  background-color:#FFC156;
+  border-color: #FFC156;
+  font-weight: 800;
+  &:after{
+    background-color: white;
+  }
+  &:hover{
+    span{color: $heading;}
+  }
+}
 .Btn.Btn--animatedLeft--black{
   border-color: black;
   span{color: black;}
