@@ -10,14 +10,11 @@ pageClass: Homepage
 <%= partial './partials/homepage/basic-hero', 
   locals:{
     type:'homepage',
-    heading: dato.homepage_hero.heading
+    heading: dato.homepage_hero.heading,
+    body: dato.homepage_hero.body
   } 
 %>
-<%= partial './partials/homepage/casestudy-slider',
-  locals:{
-    
-  }
-%>
+<%= partial './partials/homepage/casestudy-slider' %>
 
 <div class="space-60">
   <div class="container m center">
@@ -29,7 +26,7 @@ pageClass: Homepage
     <%= partial './partials/homepage/clients' %>
   </div>
 </div>
-<div class="space-120 mobile-space-60">
+<div class="space-150 mobile-space-60">
   <div class="container m center">
     <%= partial './partials/homepage/basic-reviews-slider' %>
   </div>
@@ -37,7 +34,7 @@ pageClass: Homepage
 <div class="container l">
   <%= partial './partials/homepage/blog-grid' %>
 </div>
-<div class="space-200 space-bottom-150">
+<div class="space-200 space-bottom-150 mobile-space-bottom-0">
   <div class="container m">
     <%= partial './partials/homepage/download-section' %>
   </div>

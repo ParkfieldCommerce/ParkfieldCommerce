@@ -36,4 +36,12 @@
       margin-bottom: 15px;
     }
   }
+  @include maxQuery(600px){
+    &__image-container{
+      &:nth-last-child(1),
+      &:nth-last-child(2){
+        margin-bottom: 0;
+      }
+    }
+  }
 }

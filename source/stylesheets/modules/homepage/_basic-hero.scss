@@ -3,6 +3,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &__heading{
+    margin-top: 0;
+  }
   &__text{
     text-align: center;
   }
@@ -27,7 +30,7 @@
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-    min-height: 350px;
+    min-height: 400px;
     &__heading{
       font-size: 1.5rem;
     }

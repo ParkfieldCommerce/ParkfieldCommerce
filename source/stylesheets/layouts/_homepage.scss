@@ -1,4 +1,30 @@
 .Homepage{
+  .MainHeader{
+    &__logo{
+      color: $logo-color-dark;
+    }
+  }
+  .Nav{
+    &__link{
+      color: $navigation-link-dark;
+    }
+    &__item--button{
+      .Btn{
+        border-color: $navigation-link-dark;
+        &:after{
+          background-color: $navigation-link-dark;
+        }
+        &:hover{
+          span{
+            color: $navigation-link;
+          }
+        }
+      }
+      span{
+        color: $navigation-link-dark;
+      }
+    }
+  }
   .CaseStudyGrid{
     position: relative;
     z-index: 3;
