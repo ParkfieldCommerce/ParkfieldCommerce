@@ -1,0 +1,24 @@
+  <div class="row">
+    <div class="small-12">
+      <div class="TwoColumnText__container container">
+        <div class="TwoColumnText">
+          <div class="TwoColumnText__column TwoColumnText__column--1">
+            <% if heading1 != '' %>
+            <h3 class="TwoColumnText__heading"><%= heading1 %></h3>
+            <% else %>
+            <div class="TwoColumnText__headingspacer"></div>
+            <% end %>
+            <div class="TwoColumnText__body"><%= body1 %></div>
+          </div>
+          <div class="TwoColumnText__column TwoColumnText__column--2">
+            <% if heading2 != '' %>
+            <h3 class="TwoColumnText__heading"><%= heading2 %></h3>
+            <% else %>
+            <div class="TwoColumnText__headingspacer"></div>
+            <% end %>
+            <div class="TwoColumnText__body"><%= body2 %></div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

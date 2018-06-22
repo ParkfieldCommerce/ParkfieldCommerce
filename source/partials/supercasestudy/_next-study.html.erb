@@ -1,0 +1,44 @@
+<% nextFound = false %>
+<% nextCaseStudy = caseStudy %>
+<% dato.super_case_studies.each_with_index do |study, index| %>
+	<% if nextFound == true && caseStudy.handle != study.handle %>
+		<% nextCaseStudy = study %>
+		<% break %>
+	<% else %>
+		<% nextCaseStudy = dato.super_case_studies[0] %>
+	<% end %>
+	<% if caseStudy.handle == study.handle %>
+		<% nextFound = true %>
+		<% if dato.super_case_studies.length == 1 %>
+			<% nextCaseStudy = dato.super_case_studies[0] %>
+		<% end %>
+	<% end %>
+<% end %>
+<div class="NextStudy__container container m">
+<div class="NextStudy js-NextStudy">
+	<div class="NextStudy__banner NextStudy__banner--current" style="background-image:url('<%= caseStudy.final_results_image.url %>');">
+		<div class="NextStudy__text-container">
+			<h3 class="NextStudy__heading">Final Results</h3>
+			<div class="NextStudy__body"><%= caseStudy.final_results_body %></div>
+				<% if caseStudy.final_results_stats.length > 0 %>
+				<div class="NextStudy__stats">
+					<% caseStudy.final_results_stats.each do |stat| %>
+					<div class="NextStudy__stat">
+						<div class="NextStudy__stat-number">+<%= stat.percent_number %></div>
+						<div class="NextStudy__stat-label"><%= stat.percent_title %></div>
+					</div>
+					<% end %>
+				</div>
+				<% end %>		
+		</div>
+	</div>
+	<a class="NextStudy__link" href="/case-studies+/<%= nextCaseStudy.handle %>">
+	<div class="NextStudy__banner NextStudy__banner--next" style="background-image:url('<%= nextCaseStudy.final_results_image.url %>'); background-position: <%= nextCaseStudy.next_study_background_position %>% 50%;">
+			<div class="NextStudy__link-container">
+				<div class="NextStudy__linktext">Next case study</div>
+				<%= image_tag nextCaseStudy.next_study_logo.url, alt: nextCaseStudy.next_study_logo.alt, class:"NextStudy__linkimage" %>
+			</div>
+	</div>
+	</a>
+</div>
+</div>

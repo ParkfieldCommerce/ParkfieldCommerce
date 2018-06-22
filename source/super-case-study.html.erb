@@ -18,10 +18,33 @@ pageClass: CaseStudyX
     overlayOpacity: caseStudy.hero_overlay_opacity
   } 
 %>
-
+<div class="space-120 space-bottom-120 mobile-space-60 mobile-space-bottom-60">
+  <%= partial './partials/supercasestudy/two-column-text',
+    locals:{
+      heading1:'Challenge',
+      heading2:'Solution',
+      body1: caseStudy.challenge_body,
+      body2: caseStudy.solution_body
+    }
+  %>
+</div>
 <%= partial './partials/supercasestudy/overview-image',
   locals:{
     image: caseStudy.overview_image
+  }
+%>
+<%= partial './partials/supercasestudy/browsing',
+  locals:{
+    video: caseStudy.website_browsing_video,
+    heading: caseStudy.website_browsing_heading,
+    body: caseStudy.website_browsing_body
+  }
+%>
+<%= partial './partials/supercasestudy/brand-story',
+  locals:{
+    heading: caseStudy.brand_story_heading,
+    body: caseStudy.brand_story_body,
+    images: caseStudy.brand_story_images
   }
 %>
 <%= partial './partials/supercasestudy/video',
@@ -36,27 +59,11 @@ pageClass: CaseStudyX
   locals:{
     heading: caseStudy.mobile_section_heading,
     body: caseStudy.mobile_section_body,
-    images: caseStudy.mobile_section_images,
-    percentage: caseStudy.conversion_rate_percentage
+    images: caseStudy.mobile_section_images
   }
 %>
-<%= partial './partials/supercasestudy/browsing',
-  locals:{
-    video: caseStudy.website_browsing_video,
-    heading: caseStudy.website_browsing_heading,
-    body: caseStudy.website_browsing_body,
-    percentage: caseStudy.sales_increase_percentage
-  }
-%>
-<%= partial './partials/supercasestudy/brand-story',
-  locals:{
-    fullBanner: caseStudy.full_width_image,
-    heading: caseStudy.brand_story_heading,
-    body: caseStudy.brand_story_body,
-    percentage: caseStudy.uptime_percentage,
-    images: caseStudy.brand_story_images
-  }
-%>
+
+
 <%= partial './partials/supercasestudy/quote',
   locals:{
     name: caseStudy.quote_person,
@@ -65,9 +72,13 @@ pageClass: CaseStudyX
     image: caseStudy.quote_person_image
   }
 %>
-<%= partial './partials/supercasestudy/email-form.html' %>
-<%= partial './partials/casestudy/nextstudybanner' %>
+<%= partial './partials/supercasestudy/next-study' %>
 
+<div class="space-200 space-bottom-150 mobile-space-bottom-0">
+  <div class="container m">
+    <%= partial './partials/homepage/download-section' %>
+  </div>
+</div>
 
 <script>
   // Also can pass in optional settings block
