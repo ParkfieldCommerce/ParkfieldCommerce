@@ -19,25 +19,6 @@ pageClass: CaseStudyX
   } 
 %>
 
-<div class="container m">
-<%= partial './partials/global/skewedBanner',
-  locals:{
-    type:'casestudyx',
-    heading: caseStudy.overview_heading,
-    body: caseStudy.overview_body,
-  }
- %>
-</div>
-
-
-<%= partial './partials/supercasestudy/intro',
-  locals:{
-    heading: caseStudy.intro_heading,
-    body: caseStudy.intro_body,
-    images: caseStudy.intro_images,
-    stats: caseStudy.intro_stats
-  } 
-%>
 <%= partial './partials/supercasestudy/overview-image',
   locals:{
     image: caseStudy.overview_image

@@ -80,11 +80,14 @@
   }
   @include maxQuery($s){
     &__background{
-      height: 300px;
+      height: 253px;
     }
     &__text{
       background: transparent;
       margin-left: 0;
+      padding: 0;
+      left: 30px;
+      max-width: 300px;
     }
     &__heading{
       margin-bottom: 30px;

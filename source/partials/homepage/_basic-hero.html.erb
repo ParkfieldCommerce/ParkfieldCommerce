@@ -3,10 +3,12 @@
 <% if type == 'homepage' %>
   <div class="BasicHero__text BasicHero__text--<%= type %>">
     <h1 class="BasicHero__heading"><%= heading %></h1>
-    <p class="BasicHero__body">Optimize user experience, maximize sales, and don’t look back</p>
+    <p class="BasicHero__body"><%= body %></p>
     <div class="BasicHero__buttons">
       <a href="/work" class="BasicHero__btn Btn Btn--animatedLeft--purple Btn--rounded"><span>View Work</span></a>
+      <% if dato.homepage_hero.show_contact_link == true  %>
       <a href="/contact" class="BasicHero__link Link--underline">Let's Talk</a>
+      <% end %>
     </div>
   </div>
 <% end %>
