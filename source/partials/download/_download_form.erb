@@ -1,0 +1,131 @@
+
+<form id="form97" name="form97" class="wufoo topLabel page Download__form" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
+      action="https://shopifybuilder.wufoo.com/forms/k1juygep0fhx3vc/#public">
+
+  <li id="foli9" class="notranslate      ">
+    <label class="desc" id="title9" for="Field9">
+    </label>
+    <div class="Download__form__container">
+	  <input  autocomplete="nope" id="Field9" name="Field9" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup=""/>
+	  <label>Full Name</label>
+    </div>
+  </li>
+  <li id="foli10" class="notranslate      ">
+    <label class="desc" id="title10" for="Field10">
+    </label>
+    <div class="Download__form__container">
+      <input  autocomplete="nope" required id="Field10" name="Field10" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2"        />
+	  <label>Email</label>
+
+	</div>
+  </li>
+  <li id="foli11" class="notranslate      ">
+    <label class="desc" id="title11" for="Field11">
+    </label>
+    <div class="Download__form__container">
+      <input  autocomplete="nope" id="Field11" name="Field11" type="text" class="field text medium" value="" maxlength="255" tabindex="3" onkeyup=""        />
+	  <label>Company</label>
+	</div>
+  </li>
+  <li id="foli12" class="      ">
+    <label class="desc notranslate" id="title12" for="Field12">
+    </label>
+    <div class="Download__form__select">
+      <%= partial './partials/global/svg-icons',
+        locals:{
+          icon: 'down-arrow'
+        }
+      %>    
+      <select id="Field12" name="Field12" class="field select medium"       tabindex="4" >
+        <option disabled
+                value="Current Platform" selected="selected">
+          <span class="notranslate">Current Platform</span>
+        </option>
+        <option
+                value="Magento" >
+          <span class="notranslate">Magento</span>
+        </option>
+        <option
+                value="Volusion" >
+          <span class="notranslate">Volusion</span>
+        </option>
+        <option
+                value="Squarespace" >
+          <span class="notranslate">Squarespace</span>
+        </option>
+        <option
+                value="Netsuite" >
+          <span class="notranslate">Netsuite</span>
+        </option>
+        <option
+                value="Woocommerce" >
+          <span class="notranslate">Woocommerce</span>
+        </option>
+        <option
+                value="Amazon" >
+          <span class="notranslate">Amazon</span>
+        </option>
+        <option
+                value="BigCommerce" >
+          <span class="notranslate">BigCommerce</span>
+        </option>
+      </select>
+    </div>
+  </li> <li class="buttons ">
+  <div>
+
+    <input  autocomplete="nope" id="saveForm2" name="saveForm" class="btTxt space-bottom-60 submit"
+           type="submit" value="Download"
+           />    
+  </div>
+  </li>
+
+  <li class="hide">
+    <label for="comment">Do Not Fill This Out</label>
+    <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+    <input  autocomplete="nope" type="hidden" id="idstamp" name="idstamp" value="bBws101cjKweNSdr1Rarni1LD4qFCVFMfOnmT4GOLf8=" />
+  </li>
+  </ul>
+</form>
+
+
+
+
+<script>
+    $('#saveForm2').click(function(e){
+      var name = $('#Field9').val();
+      var email = $('#Field10').val();
+      var emailTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      var nameTest = /^[A-Za-z\s]+$/;
+
+      if (!nameTest.test(name)){
+        e.preventDefault();
+        $('#Field9').css('border-bottom', '1px solid red');
+        $('label[for="Field9"]').css("color", "red");
+      } else {
+        $('#Field9').css('border-bottom', '1px solid #979797');
+        $('label[for="Field9"]').css("color", "#4C54B0");
+      }
+      if (!emailTest.test(String(email).toLowerCase())){
+        e.preventDefault();
+        $('#Field10').css('border-bottom', '1px solid red');
+        $('label[for="Field10"]').css("color", "red");
+      } else {
+        $('#Field10').css('border-bottom', '1px solid #979797');
+        $('label[for="Field10"]').css("color", "#4C54B0");
+      }
+    });
+
+    $('input[type="text"],input[type="email"],input[type="url"],textarea').on('change', function(){
+		console.log($(this).val().length);
+      if ($(this).val().length > 1) {
+        $(this).addClass('input-focus');
+      }
+      if ($(this).val().length == 0) {
+        $(this).removeClass('input-focus');
+      }
+    });
+
+
+	
+</script>

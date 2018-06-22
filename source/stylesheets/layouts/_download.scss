@@ -1,0 +1,198 @@
+.Download{
+  &__heading{
+    font-size:2.21rem;
+    margin-bottom:49px;
+  }
+  &__body{
+  }
+  &__image{
+    &__container{
+      max-width:505px;
+      box-shadow: 3px 3px 20px rgba(0,0,0,0.08);
+      background-color:#F7F7F7;
+      padding-top:55px;
+      background-image:url('../images/download-bg-2.png');
+      background-size:contain;
+      background-position:bottom;
+      background-repeat:no-repeat;
+    }
+    &__container--inner{
+      margin-left:50px;
+      margin-right:50px;
+      img{
+        box-shadow: 6px 6px 22px rgba(0, 0, 0, 0.35);
+      }
+    }
+    &__disclaimer{
+      max-width:505px;
+      text-align:left;
+      font-size:1.125rem;
+    }
+    &__heading{
+      margin-bottom:60px;
+    }
+  }
+  &__heading{
+    margin-top:47px;
+    text-align:left;
+    font-size:2.21rem;
+  }
+  &__form{
+    &__select{
+      position:relative;
+      svg{
+        position:absolute;
+        top:50%;
+        right:0;
+        transform:translate(-50%, -50%);
+        width:17px;
+        height:9px;
+        pointer-events:none;
+        use{
+          fill:#979797;
+        }
+      }
+    }
+    input:focus~label{
+			bottom: 29px;
+			font-size: 0.75rem;
+			color: #000;
+    }
+    .input-focus{
+      &~label {
+				bottom: 29px;
+				font-size: 0.75rem;
+				color: #000;
+			}
+    }
+    &__container{
+      position:relative;
+      margin-bottom:60px;
+      label{
+        position:absolute;
+        left:0;
+        bottom:8px;
+			  transition: all 0.3s;
+      }
+    }
+    input, select{
+      &:focus {
+        outline: none;
+      }
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #979797;
+      color: #231F20;
+      height: 32px;
+      line-height: 32px;
+      font-size: 1.125rem;
+      -webkit-appearance: none;
+      -webkit-transition: border-bottom 0.3s;
+      transition: border-bottom 0.3s;
+      background-color:transparent;
+      border-radius:0;
+      font-family: 'Avenir';
+      font-weight:500;
+    }
+    select{
+      color:#757575;
+    }
+    .hide{display:none;}
+    .buttons{
+      margin-top:60px;
+      input{
+        height: 60px;
+        width: auto;
+        color: #FFFFFF;
+        background-color: #4C54B0;
+        font-family: 'Avenir';
+        font-size: 1.125rem;
+        font-weight: 800;
+        border: none;
+        width:100%;
+        border-radius:5px;
+        cursor:pointer;
+      }
+    }
+  }
+  &__share{
+    margin-top:80px;
+  }
+
+  .ShareButtons{
+    &__pinterest{
+      display:none;
+    }
+  }
+  @media screen and (max-width:1025px){
+    margin-bottom:70px;
+    .desktop-view{
+      display:none;
+    }
+    &__heading{
+      width:100%;
+      font-size:1.5rem;
+      margin-bottom:49px;
+      margin-top:0;
+    }
+    &__column{
+      max-width:90%;
+      margin:0 auto;
+    }
+    &__image{
+      &__disclaimer{
+        font-size:.875rem;
+      }
+      &__container{
+        padding-top:40px;
+        width:100%;
+        max-width:100%;
+        box-shadow:none;
+        img{
+          display:block;
+          margin:0 auto;
+        }
+      }
+      &__container--outer{
+        max-width:90%;
+        margin:0 auto;
+      }
+      &__heading{
+        font-size:1.5rem;
+        margin-bottom:40px;
+        margin-top:40px;
+      }
+    }
+    &__form{
+      &__container{
+        margin-bottom:40px;
+        font-size:1.125rem;
+      }
+      select{
+        font-size:1.125rem;
+      }
+      .buttons{
+      }
+    }
+    &__body{
+      font-size:.875rem;
+      margin-bottom:60px;
+    }
+    .ShareButtons{
+      margin-bottom:46px;
+      justify-content:initial;     
+    }
+  }
+  @media screen and (max-width:600px){
+    .ShareButtons{
+      &__btn{
+        width:25%;
+      }
+    }
+  }
+  @media screen and (min-width:1025px){
+    .mobile-view{
+      display:none;
+    }
+  }
+}

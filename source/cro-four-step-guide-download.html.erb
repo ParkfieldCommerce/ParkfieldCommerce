@@ -1,0 +1,57 @@
+---
+pageClass: DownloadPage
+---
+
+<div class="Download space-120 space-bottom-90 mobile-space-30">
+  <div class="Download__container container m">
+    <div class="Download__row row desktop-view">
+      <div class="Download__image large-6 medium-12 small-12 center">
+        <div class="Download__image__container">
+          <div class="Download__image__container--inner">
+            <%= image_tag("../images/e-commerce book.png", alt: "Close")%>
+            <h3 class="Download__image__heading">Get your free copy now</h3>
+            <%= partial './partials/download/download_form' %>          
+          </div>
+        </div>
+        <p class="Download__image__disclaimer"><%= dato.download_page.disclaimer %></p>
+      </div>
+      
+      <div class="Download__text large-6 medium-12 small-12">
+        <h1 class="Download__heading"><%= dato.download_page.heading %></h1>
+        <p class="Download__body"><%= dato.download_page.body %></p>
+        <div class="Download__share">
+          <%= partial './partials/article/share-buttons',
+            locals: {
+                path: "https://parkfieldcommerce.com/cro-four-step-guide-download/"
+            }
+          %>
+        </div>
+      </div>
+    </div>
+
+    <div class="Download__row row mobile-view medium-12">
+      <div class="Download__column column medium-12">
+        <h1 class="Download__heading"><%= dato.download_page.heading %></h1>
+      </div>
+      <div class="Download__image__container medium-12">
+        <div class="Download__image__container--outer">
+        <div class="Download__image__container--inner">
+          <%= image_tag("../images/e-commerce book.png", alt: "Close")%>
+        </div>
+        <h3 class="Download__image__heading">Get your free copy now</h3>
+        <%= partial './partials/download/download_form' %>      
+        
+        </div>
+      </div>
+      <div class="Download__column column medium-12">
+        <%= partial './partials/article/share-buttons',
+          locals: {
+            path: "https://parkfieldcommerce.com/cro-four-step-guide-download/"
+          }
+        %>    
+        <p class="Download__body"><%= dato.download_page.body %></p>
+        <p class="Download__image__disclaimer"><%= dato.download_page.disclaimer %></p>
+        </div>
+      </div>
+  </div>
+</div>

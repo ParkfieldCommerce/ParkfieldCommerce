@@ -32,6 +32,7 @@ $email-hover: #231F20;
 		margin-right: 2px;
 		text-align: center;
 		transition: background-color 0.3s;
+		cursor:pointer;
 		&:last-child {
 			margin-right: 0;
 		}
