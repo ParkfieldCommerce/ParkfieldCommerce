@@ -10,7 +10,7 @@
     position: relative;
   }
   &__banner--current{
-    width: 83%;
+    width: 88%;
   }
   &__banner--next{
     width: 100%;
@@ -49,7 +49,7 @@
     position: relative;
     display: flex;
     align-items: stretch;
-    width: 206px;
+    width: 160px;
     transition: width .3s;
     &:hover{
       width: 230px;
