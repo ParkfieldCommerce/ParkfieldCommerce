@@ -98,7 +98,8 @@
   }
   @include maxQuery(500px){
     &__text-container{
-      width: 70%;
+      padding-left: 15px;
+      padding-right: 15px;
     }
     &__heading{
       font-size: 1.125rem;

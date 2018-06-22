@@ -3,7 +3,7 @@
     width: 100%;
     text-align: center;
     @include maxQuery($s){
-      display: none;
+      padding-top: 40px;
     }
   }
   &__website-overview-image{

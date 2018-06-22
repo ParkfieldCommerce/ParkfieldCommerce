@@ -41,3 +41,34 @@
     }
   }
 }
+.TwoColumnText--special{
+  position: relative;
+}
+.TwoColumnText--special .TwoColumnText{
+  &__chevron{
+    color: #E8E8E8;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+  }
+  &__chevron--down{
+    display: none;
+  }
+  @include maxQuery($s){
+    &__chevron--right{
+      display: none;
+    }
+    &__chevron--down{
+      display: inline-block;
+    }
+    &__column--1{
+      margin-bottom: 40px;
+    }
+    &__column--2{
+      margin-top: 40px;
+      display: block;
+    }
+  }
+}
