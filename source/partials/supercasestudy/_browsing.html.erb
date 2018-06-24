@@ -13,8 +13,12 @@
     <div class="row">
       <div class="small-12 center">
         <video autoplay muted>
+          <% if caseStudy.website_browsing_video_webm.url != nil %>
           <source src="<%= caseStudy.website_browsing_video_webm.url %>" type="video/webm">
+          <% end %>
+          <% if caseStudy.website_browsing_video.url != nil %>
           <source src="<%= caseStudy.website_browsing_video.url %>" type="video/mp4">
+          <% end %>
         </video>
       </div>
     </div>
