@@ -9,8 +9,12 @@
             </button>
           </div>
           <video class="js-video" controls>
+            <% unless videoWEBM.nil? %>
             <source src="<%= videoWEBM.url %>" type="video/webm">
+            <% end %>
+            <% unless videoMP4.nil? %>
             <source src="<%= videoMP4.url %>" type="video/mp4">
+            <% end %>
           </video>
         </div>
       </div>
