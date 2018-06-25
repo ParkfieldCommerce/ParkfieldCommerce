@@ -10,7 +10,7 @@
     position: relative;
   }
   &__banner--current{
-    width: 88%;
+    width: 87%;
   }
   &__banner--next{
     width: 100%;
@@ -49,11 +49,8 @@
     position: relative;
     display: flex;
     align-items: stretch;
-    width: 160px;
+    width: 13%;
     transition: width .3s;
-    &:hover{
-      width: 230px;
-    }
     &:after{
       content:'';
       display: block;
@@ -64,10 +61,19 @@
       left: 0;
       background-color: rgba(0,0,0,.1);
       z-index: 1;
+      opacity: 1;
+      transition: opacity .3s;
+    }
+    &:hover{
+      width: 17%;
+      &:after{
+        opacity: 0;        
+      }
     }
   }
   &__link-container{
-    margin-left: 33px;
+    margin-left: 10px;
+    margin-right: 10px;
     margin-bottom: 40px;
     position: relative;
     z-index: 2;

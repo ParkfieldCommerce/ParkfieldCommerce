@@ -107,7 +107,7 @@ button::-moz-focus-inner {
   &:after{
     z-index: 1;
     content:'';
-    display: block;
+    display: none;
     height: 100%;
     width: 0%;
     position: absolute;
@@ -162,7 +162,8 @@ button::-moz-focus-inner {
   position: relative;
   background-color:#4C54B0;
   border-color: #4C54B0;
-  font-weight: 800;
+  font-weight: 500;
+  transition: background-color .3s, border-color .3s;
   span{
     color: $btn-animatedLeftSub;
     color:white;    
@@ -173,7 +174,7 @@ button::-moz-focus-inner {
   &:after{
     z-index: 1;
     content:'';
-    display: block;
+    display: none;
     height: 100%;
     width: 0%;
     position: absolute;
@@ -183,9 +184,8 @@ button::-moz-focus-inner {
     transition: width .3s;
   }
   &:hover{
-    span{
-      color:#4C54B0;
-    }
+    background-color: darken(#4C54B0, 10%);
+    border-color: darken(#4C54B0, 10%);
     &:after{
       width: 100%;
     }
@@ -194,12 +194,15 @@ button::-moz-focus-inner {
 .Btn--animatedLeft--yellow{
   background-color:#FFC156;
   border-color: #FFC156;
-  font-weight: 800;
+  font-weight: 500;
+  span{color: $heading;}
+  transition: border-color .3s, background-color .3s;
   &:after{
     background-color: white;
   }
   &:hover{
-    span{color: $heading;}
+    border-color: #DCA23D;
+    background-color: #DCA23D;
   }
 }
 .Btn.Btn--animatedLeft--black{

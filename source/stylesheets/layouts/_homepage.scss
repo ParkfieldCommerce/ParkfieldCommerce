@@ -7,6 +7,21 @@
   .Nav{
     &__link{
       color: $navigation-link-dark;
+      &:after{
+        background-color: $navigation-link-dark;
+      }
+    }
+    &__item{
+      svg use{
+        fill: $navigation-link-dark;
+        transition: opacity .3s;
+        opacity: .5;
+      }
+      &:hover{
+        svg use{
+          opacity: 1;
+        } 
+      }
     }
     &__item--button{
       .Btn{
@@ -16,7 +31,7 @@
         }
         &:hover{
           span{
-            color: $navigation-link;
+            color: $navigation-link-dark;
           }
         }
       }

@@ -60,7 +60,14 @@ body.fixed{
       transform:translate(-50%, -50%);
       top:50%;
       use{
-        fill:#231F20;
+        transition: opacity .3s;
+        fill:$navigation-link;
+        opacity: .5;
+      }
+    }
+    &:hover{
+      svg use{
+        opacity: 1;
       }
     }
   }
