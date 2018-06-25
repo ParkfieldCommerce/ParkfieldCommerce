@@ -21,19 +21,31 @@
     margin-bottom: 30px;
   }
   &__text{
+    overflow: hidden;
     position: absolute;
     left: 0;
-    max-width: 412px;
     top: 50%;
     transform: translateY(-50%);
     background-color: white;
     padding-left: 30px;
     padding-right: 18px;
-    padding-top: 45px;
-    padding-bottom: 45px;
+    width: 412px;
+    height: 320px;
+    display: flex;
+    align-items: center;
     @include maxQuery($m){
       margin-left: 10px;
     }
+  }
+  &__content-half{
+    position: absolute;
+    transition: top .5s, bottom .5s;
+  }
+  &__content-half--top{
+    top: 45px;
+  }
+  &__content-half--bottom{
+    bottom: 45px;
   }
   &__heading{
     margin-top: 0;
