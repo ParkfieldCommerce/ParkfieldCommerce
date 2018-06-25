@@ -1,7 +1,25 @@
   <div class="CaseStudy__website-overview CaseStudy__gray padding-120 CaseStudy__website-overview container">
     <div class="row">
-    <div class="small-12">
-    <%= image_tag image.url, alt: image.alt, class:"CaseStudy__website-overview-image" %>
-    </div>
+      <div class="small-12">
+        <div class="CaseStudy__website-overview__content">
+          <% images.each_with_index do |image, index| %>
+            <% if index == 0 %>
+              <%= image_tag image.url, alt: image.alt, class:"CaseStudy__website-overview__image CaseStudy__website-overview__image--mobile" %>
+            <% else %>
+              <%= image_tag image.url, alt: image.alt, class:"CaseStudy__website-overview__image CaseStudy__website-overview__image--desktop" %>
+            <% end %>
+          <% end %>
+          <% caseStudy.website_overview_stats.each_with_index do |stat, index| %>
+          <div class="CaseStudy__website-overview__stat CaseStudy__website-overview__stat--<%= index %>">
+            <div class="CaseStudy__website-overview__stat-value">
+              +<%= stat.percent_number %>
+            </div>
+            <div class="CaseStudy__website-overview__stat-label">
+              <%= stat.percent_title %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
