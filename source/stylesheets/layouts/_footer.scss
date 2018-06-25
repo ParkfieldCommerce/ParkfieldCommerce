@@ -50,7 +50,7 @@
 		}
 	}
 	&--column1 {
-		width: 22%;
+		width: 38%;
 		a {
 			display: inline-block;
 			position: relative;
@@ -78,7 +78,7 @@
 		align-items: center;
     margin-top: 20px;
 		.copyright {
-			width: 40%;
+			width: 47%;
       p {
         font-family: 'Avenir-Roman';
         font-size: .875rem;
@@ -93,10 +93,17 @@
       }
 		}
 		.images {
-			width: 70%;
+			width: 53%;
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+		}
+	}
+	@include maxQuery(1000px){
+		&__bottom{
+			.copyright{
+				width: 35%;
+			}
 		}
 	}
 }
