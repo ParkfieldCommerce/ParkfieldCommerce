@@ -7,11 +7,34 @@
 <nav class="Nav MainHeader__nav">
   <ul class="Nav__items">
     <% main_nav_links.each do |main_nav_link| %>
+      
+      
       <% unless main_nav_link.button == true %>
-      <li class="Nav__item">
-        <a class="Nav__link" id="nav-<%= main_nav_link.text %>" href="<%= main_nav_link.url %>"><%= main_nav_link.text %></a>
+      <% if !main_nav_link.children.empty? %>
+      <li class="Nav__item">  
+        <%= partial './partials/global/svg-icons',
+          locals:{
+            icon: 'down-arrow'
+          }
+        %>   
+        <a class="Nav__link Nav__link--no_line" id="nav-<%= main_nav_link.text %>" href="<%= main_nav_link.url %>"><%= main_nav_link.text %></a>
+        <ul class="Nav__dropdown dropdown">
+          <% main_nav_link.children.each do |sublink| %>
+          <li class="Nav__dropdown__sublink">
+            <a class="Nav__dropdown__sub" href="sublink.url"><span class="link-wrap"><%= sublink.text%></span></a>
+          </li>
+          <% end %>
+        </ul>
       </li>
+      <% elsif main_nav_link.parent.class == NilClass %>
+
+        <li class="Nav__item">  
+          <a class="Nav__link" id="nav-<%= main_nav_link.text %>" href="<%= main_nav_link.url %>"><%= main_nav_link.text %></a>
+        </li>
+      <% end %>          
+
       <% else %>
+      
       <li class="Nav__item Nav__item--button">
         <a class="Btn Btn--animatedLeft" href="<%= main_nav_link.url %>"><span><%= main_nav_link.text %></span></a>
       </li>
@@ -19,7 +42,24 @@
     <% end %>
   </ul>
   <div class="Nav__mobile-section">
-    <a href="tel:<%= emailPhone %>" class="Nav__mobile-section__button Btn Btn--filled">Call Us</a>
-    <a href="mailto:experts@parkfieldcommerce.com" class="Nav__mobile-section__button Btn Btn--ghost">Send a message</a>
+    <a href="/contact" class="Nav__mobile-section__button Btn Btn--animatedLeft--purple Btn--rounded"><span>Let's Talk<span></a>
   </div>
 </nav>
+
+
+<script>
+$('.Nav__item').hover(
+  function(){
+  $(this).find('.Nav__dropdown').addClass('active');
+  },
+  function(){$(this).find('.Nav__dropdown').removeClass('active');
+  });
+
+$('.Nav__dropdown__sublink').hover(
+  function(){
+      $(this).addClass('border-left');
+  },
+  function(){
+    $(this).removeClass('border-left');
+  });
+</script>

@@ -13,6 +13,7 @@ body.fixed{
     align-items: center;
   }
   &__item{
+    position:relative;
     margin-right: 40px;
     &:last-child{
       margin-right: 0px;
@@ -49,6 +50,60 @@ body.fixed{
       }
     }
   }
+  @include minQuery(1000px){
+  &__item{
+    svg{
+      position:absolute;
+      right:-25px;
+      width:14px;
+      height:7px;
+      transform:translate(-50%, -50%);
+      top:50%;
+      use{
+        fill:#231F20;
+      }
+    }
+  }
+  &__link--no_line{
+    padding-bottom:30px;
+    &:after{
+      content:initial;
+    }
+  }
+  &__dropdown{
+    position:absolute;
+    top:30px;
+    width:200px;
+    background-color:white;
+    z-index:1;
+    padding:20px;
+    padding-left:0;
+    border-radius:10px;
+    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.3);
+    visibility:hidden;
+    opacity:0;
+    transition: all .5s;
+    span{
+      font-size:.875rem;
+    }
+    &__sublink{
+      margin-bottom:18px;
+      padding-left:16px;
+      border-left:4px solid transparent;
+      transition: all .5s;
+    }
+    &__sublink.border-left{
+      border-left:4px solid #4C54B0;
+    }
+    &__sublink:last-child{
+      margin-bottom:0;
+    }
+  }
+  &__dropdown.active{
+    opacity:1;
+    visibility: visible;
+  }
+  }
   &__mobile-section,
   &__hamburger{
     display: none;
@@ -68,7 +123,7 @@ body.fixed{
     width: 100%;
     overflow: hidden;
     padding-top: 0%;
-    background-color: black;
+    background-color: white;
     transition: height .3s ease-in-out, padding .3s;
     &__items{
       width: 100%;
@@ -84,6 +139,9 @@ body.fixed{
         padding: 20px;
         display: block;
       }
+      svg{
+        display:none;
+      }
     }
     &__item--button{
       display: none;
@@ -94,7 +152,7 @@ body.fixed{
   }
   .Nav__mobile-section{
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-self: flex-end;
     margin-bottom: 64px;
     margin-top: 40px;
@@ -115,12 +173,17 @@ body.fixed{
       align-items: center;
       justify-content: center;
       height: 45px;
-      max-width: 150px;
-      width: 50%;
+      max-width: 320px;
+      width: 100%;
       padding: 0px;
       text-align: center;
       font-size: .875rem;
       font-weight: 800;
+      color:white;
+      &:hover{
+        color:#4C54B0;
+      }
+
     }
     &__button.Btn--filled{
       margin-right: 5px;
