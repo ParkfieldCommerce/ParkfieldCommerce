@@ -40,6 +40,9 @@
   &__content-half{
     position: absolute;
     transition: top .5s, bottom .5s;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
   }
   &__content-half--top{
     top: 45px;
@@ -84,10 +87,13 @@
     width: 34px;
     background-color: white;
     border: none;
-    box-shadow: none;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
     outline: none;
+    border-radius: 3px;
+    transition: background-color .3s;
     &:hover{
       cursor: pointer;
+      background-color: #f7f7f7;
     }
   }
   @include maxQuery($s){
