@@ -1,33 +1,9 @@
-  <div class="CaseStudy__brand-story__full-width-banner">
-  <%= image_tag fullBanner.url, alt: fullBanner.alt %>
-  </div>
-  <span id="trigger-2"></span>
-  <div class="CaseStudy__brand-story container padding-90 CaseStudy__gray">
-    <div class="row space-bottom-90 mini-row">
-      <div class="small-6 CaseStudy__brand-story__text-column">
-        <div class="CaseStudyX__text-content">
-          <h3 class="CaseStudyX__text-heading">
-            <%= heading %>
-          </h3>
-          <div class="CaseStudyX__text-body no-margin">
-            <%= body %>
-          </div>
-        </div>
-      </div>
-      <div class="small-6 CaseStudy__browsing__percent-container">
-        <div class="CaseStudyX__percent-container">
-          <div class="CaseStudyX__percent no-margin">
-            +<span class="js-percent-value" data-percent="<%= percentage %>">0</span>%
-          </div>
-          <div class="CaseStudyX__percent-label">Uptime</div>
-        </div>
-      </div>
+<div class="CaseStudy__brand-story container padding-90 mobile-padding-30 CaseStudy__gray">
+  <div class="row CaseStudy__brand-story__images">
+    <% images.each do |image| %>
+    <div class="small-6 CaseStudy__brand-story__image">
+      <%= image_tag image.url, alt: image.alt %>
     </div>
-    <div class="row CaseStudy__brand-story__images">
-      <% images.each do |image| %>
-      <div class="small-6 CaseStudy__brand-story__image">
-        <%= image_tag image.url, alt: image.alt %>
-      </div>
-      <% end %>
-    </div>
+    <% end %>
   </div>
+</div>

@@ -1,0 +1,74 @@
+.TwoColumnText__container{
+  width: 1000px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.TwoColumnText{
+  width: 927px;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  &__column{
+    width: 413px;
+    max-width: 50%;
+  }
+  &__heading{
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  &__headingspacer{
+    margin-top: 60px;
+  }
+  @include maxQuery(927px){
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    &__column{
+      width: 48%;
+      max-width: 100%;
+    }
+  }
+  @include maxQuery($s){
+    &__column{
+      width: 100%;
+    }
+    &__column--2{
+      display: none;
+    }
+  }
+}
+.TwoColumnText--special{
+  position: relative;
+}
+.TwoColumnText--special .TwoColumnText{
+  &__chevron{
+    color: #E8E8E8;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 2rem;
+  }
+  &__chevron--down{
+    display: none;
+  }
+  @include maxQuery($s){
+    &__chevron--right{
+      display: none;
+    }
+    &__chevron--down{
+      display: inline-block;
+    }
+    &__column--1{
+      margin-bottom: 40px;
+    }
+    &__column--2{
+      margin-top: 40px;
+      display: block;
+    }
+  }
+}

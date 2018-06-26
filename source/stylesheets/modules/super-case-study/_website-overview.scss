@@ -1,15 +1,65 @@
-.CaseStudyX .CaseStudy{
-  &__website-overview{
-    width: 100%;
-    text-align: center;
-    @include maxQuery($s){
-      display: none;
-    }
+.CaseStudyX .CaseStudy__website-overview{
+  width: 100%;
+  text-align: center;
+  @include maxQuery($s){
+    padding-top: 40px;
   }
-  &__website-overview-image{
+  &__content{
+    position: relative;
+    display: inline-block;
+  }
+  &__image{
     max-width: 100%;
     margin-right: auto;
     margin-left: auto;
     vertical-align: middle;
+  }
+  &__image--mobile{
+    display: none;
+  }
+  &__stat{
+    position: absolute;
+    width: 100px;
+    text-align: left;
+  }
+  &__stat-value{
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: $heading;
+    margin-bottom: 10px;
+  }
+  &__stat-label{
+    font-family: 'Avenir-Roman';
+    color: #979797;
+    font-size: 1.125rem;
+  }
+  &__stat--0{
+    top: 14%;
+    left: -14%;
+  }
+  &__stat--1{
+    right: -14%;
+    top: 45%;
+  }
+  &__stat--2{
+    left: -14%;
+    bottom: 12%;
+  }
+  @include maxQuery(1120px){
+    &__content{
+      width: 600px;
+    }
+  }
+  @include maxQuery($s){
+    &__content{
+      width: auto;
+    }
+    &__image--mobile{
+      display: block
+    }
+    &__image--desktop,
+    &__stat{
+      display: none;
+    }
   }
 }

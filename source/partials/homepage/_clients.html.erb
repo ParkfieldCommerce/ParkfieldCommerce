@@ -1,0 +1,11 @@
+<div class="Clients">
+  <h3 class="Clients__heading"><%= dato.homepage_client_section.heading %></h3>
+  <div class="Clients__body"><%= dato.homepage_client_section.body %></div>
+  <div class="Clients__images">
+    <% dato.homepage_client_section.clients.each do |client| %>
+      <div class="Clients__image-container">
+    	  <%= image_tag client.url, alt: client.alt, class:"Clients__image" %>
+      </div>
+    <% end %>
+  </div>
+</div>

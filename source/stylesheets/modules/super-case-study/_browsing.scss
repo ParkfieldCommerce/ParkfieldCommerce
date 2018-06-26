@@ -6,6 +6,11 @@
     align-items: center;
     justify-content: center;
   }
+  video{
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+    max-width: 100%;
+  }
   @include maxQuery(1050px){
     .CaseStudyX__text-content{
       padding-left: 20px;

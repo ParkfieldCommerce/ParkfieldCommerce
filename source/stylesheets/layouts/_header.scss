@@ -35,8 +35,13 @@
 }
 
 .MainHeader.nav-is-open{
-  background-color: black;
-  .MainHeader__logo{
-    color: $logo-color;
+  background-color: white;
+  border-bottom:1px solid #E9E9E9;
+  .MainHeader__logo,
+  .Nav__link{
+    color: $logo-color-open;
+  }
+  .MainHeader__nav{
+    border-top:1px solid #E9E9E9;
   }
 }

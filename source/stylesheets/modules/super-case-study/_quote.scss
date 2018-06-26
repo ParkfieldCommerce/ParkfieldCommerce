@@ -1,74 +1,84 @@
-.CaseStudyX .CaseStudy__quote{
+.CaseStudy__quote{
   &__container{
-    width: 760px;
-    max-width: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-color: #f7f7f7;
+    width: 833px;
     margin-left: auto;
     margin-right: auto;
+    max-width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    justify-content: center;
+    @include maxQuery(833px){
+      width: 90%;
+    }
   }
   &__body-container{
-    position: relative;
+    width: 556px;
+    max-width: 100%;
   }
-  &__apostrophe,
-  &__apostrophe--flipped{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-  &__apostrophe{
-    left: -60px;
-  }
-  &__apostrophe--flipped{
-    right: -60px;
-  }
-  &__body{
-    p{
-      text-align: center;
-      font-size: 1.5rem;
-      font-family: 'Avenir-Roman';
-      color: $heading;
-      margin: 0;
+  &__svg-container{
+    margin-right: 40px;
+    svg{
+      width: 85px;
+      height: 85px;
     }
   }
-
+  &__body {
+    p{
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: $heading;
+    }
+  }
   &__cite{
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 45px;
   }
-  &__person-text{
-    margin-left: 25px;
+  &__image{
+    margin-right: 15px;
   }
   &__name{
-   font-size: 1.125rem;
-   font-weight: 700;
-   display: block;
-   width: 100%;
+    font-size: 1.125rem;
+    font-weight: 800;
+    display: block;
   }
   &__job{
-    font-family: 'Avenir-Roman';
     font-size: 1.125rem;
-  }
-  @include maxQuery(920px){
-    max-width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    &__cite{
-      margin-top: 10px;
-    }
-    &__body p{
-      font-size: 1.125rem;
-    }
-    &__apostrophe,
-    &__apostrophe--flipped{
-      transform: none;
-      position: static;
-    }
+    font-family: 'Avenir-Roman';
   }
   @include maxQuery($s){
-    &__apostrophe,
-    &__apostrophe--flipped{
-      max-width: 20px;
+    &__container{
+      width: 80%;
+      flex-flow: row wrap;
+      justify-content: center;
+      text-align: center;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    &__svg-container{
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 30px;
+      svg{
+        height: 40px;
+        width: 40px;
+      }
+    }
+    &__body-container{
+      width: 100%;
+    }
+    &__body{
+      margin-bottom: 30px;
+      p{
+        font-size: 1.125rem;
+      }
+    }
+    &__person-text{
+      text-align: left;
+    }
+    &__cite{
+      justify-content: center;
     }
   }
 }

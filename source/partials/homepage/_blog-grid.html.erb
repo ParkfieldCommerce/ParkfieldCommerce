@@ -5,43 +5,33 @@
 	<% secondArticleImage = secondArticle.image %>
 <% end %>
 
-<% if dato.homepage_blog_section.image != nil %>
-<% firstImage = dato.homepage_blog_section.image %>
-<% end %>
-<div class="BlogGrid space-150 mobile-space-60">
-
-
+<div class="BlogGrid BlogGrid--desktop space-150 mobile-space-60">
 	<div class="BlogGrid__container BlogGrid__container--1">
 		<video autoplay nocontrols loop muted>
 			<source src="<%= dato.homepage_blog_section.blog_video.url %>" type="video/mp4">
 		</video>
-	<div class="BlogGrid__item--1">
-		<div class="BlogGrid__item--1--wrap">
-      <div class="BlogGrid__item__date--1">
-        <p><%= dato.homepage_blog_section.video_header %></p>
-      </div>
-			<div class="BlogGrid__item__heading BlogGrid__item__heading--1">
-				<h3><%= link_to dato.homepage_blog_section.article_1_title, "/articles/#{firstArticle.handle}" %></h3>		
+		<div class="BlogGrid__item--1">
+			<div class="BlogGrid__item--1--wrap">
+				<div class="BlogGrid__item__date--1">
+					<p><%= dato.homepage_blog_section.video_header %></p>
+				</div>
+				<div class="BlogGrid__item__heading BlogGrid__item__heading--1">
+					<h3><%= link_to dato.homepage_blog_section.article_1_title, "/articles/#{firstArticle.handle}" %></h3>		
+				</div>
+				<div class="BlogGrid__item__author--1">
+					<p><%= dato.homepage_blog_section.article_1_blurb %></p>
+				</div>
+				<a href="/articles/<%= firstArticle.handle%>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
 			</div>
-			<div class="BlogGrid__item__author--1">
-				<p><%= dato.homepage_blog_section.article_1_blurb %></p>
-			</div>
-			<a href="/articles/<%= firstArticle.handle%>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
-		</div>
 		</div>      
 	</div>
-
-
 	<div class="BlogGrid__container BlogGrid__container--2">
 			<div class="BlogGrid__item BlogGrid__item--3" style="background-image: url('<%= dato.homepage_blog_section.article_2_image.url %>')">		
 				<div class="BlogGrid__item BlogGrid__item--4">
-				
-         
 					<div class="BlogGrid__item__heading BlogGrid__item__heading--2">
 						<h3><%= link_to dato.homepage_blog_section.article_2_title, "/articles/#{secondArticle.handle}" %></h3>
 					</div>
-				<a href="/articles/<%= secondArticle.handle%>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
-				
+					<a href="/articles/<%= secondArticle.handle%>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
 				</div>
 			</div>
 			<div class="BlogGrid__item BlogGrid__item--5">
@@ -49,8 +39,18 @@
 					<div class="BlogGrid__item__heading BlogGrid__item__heading--3">
 						<h3><%= link_to dato.homepage_blog_section.article_3_title, "/articles/#{thirdArticle.handle}" %></h3>
 					</div>
-				<a href="/articles/<%= thirdArticle.handle%>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
+					<a href="/articles/<%= thirdArticle.handle%>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
 				</div>
 			</div>	
+	</div>
+</div>
+<div class="BlogGrid BlogGrid--mobile mobile-space-60">
+	<div class="BlogGrid__article">
+		<a href="/articles/<%= firstArticle.handle %>">
+			<%= image_tag dato.homepage_blog_section.mobile_article_image.url, alt: dato.homepage_blog_section.mobile_article_image.alt, class:"BlogGrid__article-image" %>
+			<h3 class="BlogGrid__article-heading"><%= dato.homepage_blog_section.article_1_title %></h3>		
+			<p class="BlogGrid__article-body"><%= dato.homepage_blog_section.article_1_blurb %></p>
+			<span class="BlogGrid__article-more">Read More</span>
+		</a>
 	</div>
 </div>

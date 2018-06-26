@@ -1,0 +1,73 @@
+.HomepageDownload{
+  height: 316px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  background-image:url('../images/download-bg.png');
+  &__heading{
+    font-size: 2.25rem;
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+  &__text{
+    margin-left: 100px;
+  }
+  &__body{
+    margin: 0;
+    font-size: 1.5rem;
+    color: $heading;
+    margin-bottom: 40px;
+  }
+  &__button{
+    display: inline-block;
+    font-size: 1.1rem;
+  }
+  &__image{
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+    img{box-shadow: 5px 5px 7px rgba(0,0,0,.05);}
+  }
+  @include maxQuery(1050px){
+    &__text{
+      margin-left: 50px;
+    }
+    &__image{
+      right: 50px;
+    }
+  }
+  @include maxQuery(910px){
+    background-image:url('../images/download-bg-mobile.png');
+    height: auto;
+    flex-flow: column-reverse wrap;
+    &__image{
+      margin-top: -110px;
+      position: static;
+      margin-bottom: 40px;
+    }
+    &__text{
+      margin-left: 0;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 90%;
+    }
+    &__heading{
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    &__body{
+     font-size: .875rem; 
+    }
+    &__button{
+      padding-left: 0;
+      padding-right: 0;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 60px;
+      font-size: .875rem;
+    }
+  }
+}

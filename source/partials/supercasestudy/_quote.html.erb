@@ -1,30 +1,23 @@
-<div class="CaseStudy__quote space-120 space-bottom-120">
-  <div class="row mini-row">
-    <div class="small-12">
-      <div class="CaseStudy__quote__container">
-        <div class="CaseStudy__quote__body-container">
-          <div>
-          <%= image_tag "../images/quote.jpg", alt: "Quote", class:"CaseStudy__quote__apostrophe" %>
-          </div>
-          <div class="CaseStudy__quote__body">
-            <%= body %>
-          </div>
-          <div class="right">
-          <%= image_tag "../images/quote-flipped.jpg", alt: "Quote", class:"CaseStudy__quote__apostrophe--flipped" %>
-          </div>
-        </div>
-        <div class="CaseStudy__quote__cite">
-          <%= image_tag image.url, alt: image.alt, class:"CaseStudy__quote__image" %>
-          <div class="CaseStudy__quote__person-text">
-            <small class="CaseStudy__quote__name">
-              <%= name %>
-            </small>
-            <small class="CaseStudy__quote__job">
-              <%= job %>
-            </small>
-          </div>
-        </div>
+<div class="CaseStudy__quote space-150 space-bottom-150 mobile-space-60 mobile-space-bottom-60">
+  <div class="CaseStudy__quote__container">
+    <div class="CaseStudy__quote__svg-container">
+      <%= partial './partials/global/svg-icons', locals:{icon: 'quote'} %>
     </div>
+    <div class="CaseStudy__quote__body-container">
+      <div class="CaseStudy__quote__body">
+        <%= body %>
+      </div>
+      <div class="CaseStudy__quote__cite">
+        <%= image_tag image.url, alt: image.alt, class:"CaseStudy__quote__image" %>
+        <div class="CaseStudy__quote__person-text">
+          <small class="CaseStudy__quote__name">
+            <%= name %>
+          </small>
+          <small class="CaseStudy__quote__job">
+            <%= job %>
+          </small>
+        </div>
+      </div>
     </div>
   </div>
 </div>

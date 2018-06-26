@@ -4,7 +4,8 @@
   &__container{
     display: inline-block;
     position: relative;
-    max-width: 83.333%;
+    max-width: 100%;
+    width: 1000px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -52,6 +53,14 @@
       max-width: 90%;
       margin-left: auto;
       margin-right: auto;
+    }
+    &__play-button{
+      height: 50px;
+      width: 50px;
+      &:hover{
+        height: 50px;
+        width: 50px;
+      }
     }
   }
 }

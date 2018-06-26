@@ -1,0 +1,35 @@
+<div class="BasicReviewsSliderSection">
+  <%= partial './partials/global/svg-icons', locals:{icon: 'quote'} %>
+  <h2 class="BasicReviewsSliderSection__heading">What our clients say</h2>
+  <div class="BasicReviewsSlider js-BasicReviewsSlider">
+  <% dato.reviews.each do |review | %>
+    <div class="BasicReviewsSlider__slide">
+      <div class="BasicReviewsSlider__content">
+      <div class="BasicReviewsSlider__body">
+        <%= review.body %>
+      </div>
+        <div class="BasicReviewsSlider__source">
+          <image src="<%= review.source_image.url %>" alt="<%= review.source_image.alt %>" class="BasicReviewsSlider__source__image">
+          <p class="BasicReviewsSlider__source__text">
+            <span class="BasicReviewsSlider__source-name"><%= review.source %></span><br>
+            <%= review.source_title %><br>
+            <%= review.source_company %>
+          </p>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  </div>
+  <div class="BasicReviewsSlider__dots"></div>
+</div>
+
+<script>
+$('.js-BasicReviewsSlider').slick({
+  fade: true,
+  dots: true,
+  arrows: false,
+  autoplay: true,
+  adaptiveHeight: true,
+  appendDots:'.BasicReviewsSlider__dots'
+})
+</script>

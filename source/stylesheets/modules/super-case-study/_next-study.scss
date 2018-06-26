@@ -1,0 +1,124 @@
+.NextStudy{
+  display: flex;
+  &__container{
+    overflow: hidden;
+  }
+  &__banner{
+    background-size: cover;
+    height: 550px;
+    background-position: 50% 50%;
+    position: relative;
+  }
+  &__banner--current{
+    width: 87%;
+  }
+  &__banner--next{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+  }
+  &__text-container{
+    padding: 45px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 90px;
+    width: 380px;
+    max-width: 90%;
+  }
+  &__heading{
+    margin-top: 0;
+  }
+  &__stats{
+    display: flex;
+  }
+  &__stat{
+    flex: 1;
+  }
+  &__stat-number{
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  &__stat-label{
+    font-size: 1.125rem;
+    font-family: 'Avenir-Roman';
+  }
+  &__link{
+    position: relative;
+    display: flex;
+    align-items: stretch;
+    width: 13%;
+    transition: width .3s;
+    &:after{
+      content:'';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(0,0,0,.1);
+      z-index: 1;
+      opacity: 1;
+      transition: opacity .3s;
+    }
+    &:hover{
+      width: 17%;
+      &:after{
+        opacity: 0;        
+      }
+    }
+  }
+  &__link-container{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 2;
+  }
+  &__linktext{
+    font-family: 'Avenir-Roman';
+    font-size: 1.125rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+  &__linkimage{
+    width: 100px;
+    max-width: 90%;
+  }
+  @include maxQuery($s){
+    &__link{
+      display: none;
+    }
+    &__banner--current{
+      width: 100%;
+    }
+    &__text-container{
+      width: 80%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-50%);
+    }
+  }
+  @include maxQuery(500px){
+    &__text-container{
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    &__heading{
+      font-size: 1.125rem;
+      margin-bottom: 20px;
+    }
+    &__body p{
+      font-size: .875rem;
+    }
+    &__stat-number{
+      font-size: 1.125rem;
+    }
+    &__stat-label{
+      font-size: .875rem;
+    }
+  }
+}

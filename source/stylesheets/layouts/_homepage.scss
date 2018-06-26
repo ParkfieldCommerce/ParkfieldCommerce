@@ -1,4 +1,45 @@
 .Homepage{
+  .MainHeader{
+    &__logo{
+      color: $logo-color-dark;
+    }
+  }
+  .Nav{
+    &__link{
+      color: $navigation-link-dark;
+      &:after{
+        background-color: $navigation-link-dark;
+      }
+    }
+    &__item{
+      svg use{
+        fill: $navigation-link-dark;
+        transition: opacity .3s;
+        opacity: .5;
+      }
+      &:hover{
+        svg use{
+          opacity: 1;
+        } 
+      }
+    }
+    &__item--button{
+      .Btn{
+        border-color: $navigation-link-dark;
+        &:after{
+          background-color: $navigation-link-dark;
+        }
+        &:hover{
+          span{
+            color: $navigation-link-dark;
+          }
+        }
+      }
+      span{
+        color: $navigation-link-dark;
+      }
+    }
+  }
   .CaseStudyGrid{
     position: relative;
     z-index: 3;

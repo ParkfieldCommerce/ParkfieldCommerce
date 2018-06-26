@@ -1,26 +1,19 @@
-<span id="trigger-0"></span>
+<div class="space-120 space-bottom-90 mobile-space-60 mobile-space-bottom-30">
+  <%= partial './partials/supercasestudy/two-column-text',
+    locals:{
+      heading1:caseStudy.mobile_section_heading,
+      heading2:'',
+      body1: caseStudy.mobile_section_body,
+      body2: caseStudy.mobile_section_body2
+    }
+  %>
+</div>
 <div class="CaseStudy__mobile">
   <div class="CaseStudy__mobile__images-section">
-    <div class="CaseStudy__mobile__images mobile-space-padding-60 mobile-space-padding-bottom-60">
+    <div class="CaseStudy__mobile__images padding-90 padding-bottom-120 mobile-space-padding-60 mobile-space-padding-bottom-60">
       <% images.each do |image| %>
         <%= image_tag image.url, alt: image.alt, class:"CaseStudy__mobile__image" %>
       <% end %>
-    </div>
-  </div>
-  <div class="CaseStudy__mobile__text-section CaseStudy__gray mobile-space-padding-bottom-60">
-    <div class="CaseStudyX__text-content">
-      <h3 class="CaseStudyX__text-heading">
-        <%= heading %>
-      </h3>
-      <div class="CaseStudyX__text-body">
-        <%= body %>
-      </div>
-      <div class="CaseStudyX__percent">
-        +<span class="js-percent-value" data-percent="<%= percentage.round %>">0</span>%
-      </div>
-      <div class="CaseStudyX__percent-label">
-        Conversion rate
-      </div>
     </div>
   </div>
 </div>

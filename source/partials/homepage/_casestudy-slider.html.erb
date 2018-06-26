@@ -1,0 +1,53 @@
+<div class="CaseStudySlider">
+  <div class="CaseStudySlider__slider-container">
+    <div class="CaseStudySlider__slider js-CaseStudySlider">
+      <% dato.homepage_case_study_slides.each do |slide| %>
+      <div class="CaseStudySlider__slide">
+        <div class="CaseStudySlider__background" style="background-image: url('<%= slide.background_image.url %>');"></div>
+        <div class="CaseStudySlider__text-container container m">
+          <div class="CaseStudySlider__text">
+            <div class="CaseStudySlider__text-content">
+              <div class="CaseStudySlider__content-half CaseStudySlider__content-half--top">
+                <% unless slide.logo.nil? %>
+                <img src="<%= slide.logo.url %>" class="CaseStudySlider__logo">
+                <% end %>
+                <h3 class="CaseStudySlider__heading"><%= slide.heading %></h3>
+              </div>
+              <div class="CaseStudySlider__content-half CaseStudySlider__content-half--bottom">
+                <div class="CaseStudySlider__body"><%= slide.body %></div>
+                <a href="<%= slide.url %>" class="CaseStudySlider__link Link--underline">View Case Study</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class="CaseStudySlider__arrows-container container m">
+      <div class="CaseStudySlider__arrows">
+        <button type="button" class="CaseStudySlider__arrow js-caseStudyPrevArrow">
+          <%= partial './partials/global/svg-icons', locals:{icon: 'slider-left'} %>
+        </button>
+        <button type="button" class="CaseStudySlider__arrow js-caseStudyNextArrow">
+          <%= partial './partials/global/svg-icons', locals:{icon: 'slider-right'} %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('.js-CaseStudySlider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+    $('.CaseStudySlider__content-half--top').css('top','-150px');
+    $('.CaseStudySlider__content-half--bottom').css('bottom','-150px');
+  });
+  $('.js-CaseStudySlider').on('afterChange', function(event, slick, currentSlide, nextSlide){
+    $('.CaseStudySlider__content-half--bottom').css('bottom','45px');
+    $('.CaseStudySlider__content-half--top').css('top','45px');
+  });
+  $('.js-CaseStudySlider').slick({
+    prevArrow:'.js-caseStudyPrevArrow',
+    nextArrow:'.js-caseStudyNextArrow',
+    fade: true,
+    speed: 500
+  });
+</script>

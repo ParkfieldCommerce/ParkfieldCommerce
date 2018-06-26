@@ -1,13 +1,10 @@
 .CaseStudyX .CaseStudy__brand-story{
-  width: 100%;
-  &__full-width-banner{
-    img{
-      width: 100%;
-      vertical-align: middle;
-    }
-  }
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
   &__images{
     align-items: flex-end;
+    max-width: 1200px;
   }
   &__image{
     display: flex;
@@ -15,7 +12,7 @@
     align-items: flex-end;
     img{
       max-width: 100%;
-      width: 600px;
+      width: 530px;
       vertical-align: middle;
     }
   }
