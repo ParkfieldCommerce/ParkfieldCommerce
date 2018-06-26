@@ -21,7 +21,7 @@
         <ul class="Nav__dropdown dropdown">
           <% main_nav_link.children.each do |sublink| %>
           <li class="Nav__dropdown__sublink">
-            <a class="Nav__dropdown__sub" href="sublink.url"><span class="link-wrap"><%= sublink.text%></span></a>
+            <a class="Nav__dropdown__sub" href="<%= sublink.url %>"><span class="link-wrap"><%= sublink.text%></span></a>
           </li>
           <% end %>
         </ul>
