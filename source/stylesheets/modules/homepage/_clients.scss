@@ -31,14 +31,14 @@
     &__images{
       flex-flow: row wrap;
     }
-    &__image:last-child{
-      display: none;
-    }
     &__image-container{
       background-color: #F7F7F7;
       width: 47%;
       max-width: 180px;
       margin-bottom: 15px;
+      &:last-child{
+        display: none;
+      }
     }
   }
   @include maxQuery(600px){
