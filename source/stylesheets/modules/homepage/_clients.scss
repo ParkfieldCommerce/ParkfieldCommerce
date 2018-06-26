@@ -13,7 +13,6 @@
   }
   &__images{
     display: inline-flex;
-    flex-flow: row wrap;
     justify-content: space-between;
   }
   &__image{
@@ -27,6 +26,12 @@
       font-size: 1.5rem;
     }
     &__body{
+      display: none;
+    }
+    &__images{
+      flex-flow: row wrap;
+    }
+    &__image:last-child{
       display: none;
     }
     &__image-container{
