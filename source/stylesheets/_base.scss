@@ -201,6 +201,7 @@ button::-moz-focus-inner {
     background-color: white;
   }
   &:hover{
+    span{color: $heading;}
     border-color: #DCA23D;
     background-color: #DCA23D;
   }
