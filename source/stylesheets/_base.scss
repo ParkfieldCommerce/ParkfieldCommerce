@@ -119,7 +119,7 @@ button::-moz-focus-inner {
   }
   &:hover{
     span{
-      color: $btn-animatedLeftSub;
+      color: $btn-animatedLeftMain;
     }
     &:after{
       width: 100%;
@@ -194,7 +194,7 @@ button::-moz-focus-inner {
 .Btn--animatedLeft--yellow{
   background-color:#FFC156;
   border-color: #FFC156;
-  font-weight: 500;
+  font-weight: 800;
   span{color: $heading;}
   transition: border-color .3s, background-color .3s;
   &:after{

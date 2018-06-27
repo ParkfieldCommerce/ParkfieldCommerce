@@ -12,13 +12,13 @@
     background-color: black;
   }
   .Btn.Btn--animatedLeft{
-    border-color: black;
-    span{color: black;}
+    border-color: $heading;
+    span{color: $heading;}
     &:after{
       background-color: black;
     }
     &:hover{
-      span{color: white;}
+      span{color: $heading;}
     }
   }
   &__heading{

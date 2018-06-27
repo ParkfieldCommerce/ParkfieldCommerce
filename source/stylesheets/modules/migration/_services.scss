@@ -73,10 +73,6 @@
     &:after{
       background-color: #FAFAFA;
     }
-    &:hover{
-      border-color: $btn-pfc;
-      span{color: $btn-pfc;}
-    }
     @include maxQuery(1025px){
       span{color: white;}
       &:hover{

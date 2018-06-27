@@ -55,10 +55,6 @@
 		cursor: pointer;
     background-color: $btn-pfc;
     border-width: 2px;
-    &:hover{
-      border-color: $btn-pfc;
-      span{color: $btn-pfc;}
-    }
     &:after{
       background-color: white;
     }
@@ -69,8 +65,18 @@
 		display:flex;
 		justify-content:center;
 	}
+  &__arrow{
+    font-size: 1.3rem;
+    color: #c2c2c2;
+    transition: color .3s;
+    &:hover{
+      color: darken(#c2c2c2, 10%);
+      cursor: pointer;
+    }
+  }
 	&__count{
 		margin:0 16px;
+    line-height: 20px;
 	}
 	@include minmaxQuery(1022px,1250px){
 	padding-left:10px;

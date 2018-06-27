@@ -40,11 +40,6 @@
     &:after{
       background-color: #FAFAFA;
     }
-    &:hover{
-      span{
-        color: $about-page-btn;
-      }
-    }
 	}
   @include maxQuery($s){
     &__brand{

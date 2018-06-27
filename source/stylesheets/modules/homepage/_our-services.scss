@@ -21,6 +21,7 @@
     box-shadow: 3px 3px 20px rgba(0,0,0,.06);
     background: white;
     transition: background-color .5s, box-shadow .5s;
+    a{display: inline-block;}
   }
   &__service-text{
     position: relative;
