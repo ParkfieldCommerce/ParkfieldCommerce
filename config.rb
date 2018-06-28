@@ -74,7 +74,7 @@ configure :development do
       ignore: true
     end
 
-    paginate dato.articles, "/news", "/news.html", per_page: 8
+    paginate dato.articles, "/best-practices", "/best-practices.html", per_page: 8
     dato.articles.each do |article|
       proxy "/articles/#{article.handle}/index.html", "article.html", 
       locals: { article: article },
@@ -121,7 +121,7 @@ configure :build do
       ignore: true
     end
 
-    paginate dato.articles, "/news", "/news.html", per_page: 8
+    paginate dato.articles, "/best-practices", "/best-practices.html", per_page: 8
     dato.articles.each do |article|
       proxy "/articles/#{article.handle}/index.html", "article.html", 
       locals: { article: article },
@@ -192,6 +192,7 @@ redirect "blogs/news/why-is-mobile-commerce-so-important-for-ecommerce-success.h
 redirect "pages/the-hour.html", to: "/case-studies/the-hour"
 redirect "articles/is-the-future-of-ecommerce-3d-products-shopify-thin.html", to: "/articles/is-the-future-of-ecommerce-3d-products-shopify-thinks-so"
 redirect "custom-app-development.html", to: "/custom-shopify-app-development"
+redirect "news.html", to: "/best-practices"
 
 
 
