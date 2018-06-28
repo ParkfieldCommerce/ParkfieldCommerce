@@ -144,6 +144,9 @@
     }
 		&__image--1{
 			margin-right: 25px;
+			@include maxQuery($s){
+				margin-right: 0;
+			}
 		}
 		&__image--1 img{
 			vertical-align: middle;

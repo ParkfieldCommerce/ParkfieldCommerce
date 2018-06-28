@@ -15,7 +15,12 @@ pageClass: CustomApp News
 %> 
 
 <%= partial './partials/marketing/heading-info-video.html' %>
-<%= partial './partials/marketing/email-form-custom-apps.html' %>
+
+<div class="space-200 space-bottom-150 mobile-space-bottom-0">
+  <div class="container m">
+    <%= partial './partials/homepage/download-section' %>
+  </div>
+</div>
 
 <%= partial './partials/marketing/contact-popup-custom-apps', 
   locals: {

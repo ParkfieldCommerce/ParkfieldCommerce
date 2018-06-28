@@ -23,6 +23,11 @@
   }
   &__heading{
     text-align: center;
+    @include maxQuery($s){
+      max-width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
   &__article-container:nth-child(odd){
     display: flex;
