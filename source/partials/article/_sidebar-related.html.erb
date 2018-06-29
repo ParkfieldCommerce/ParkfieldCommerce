@@ -1,0 +1,10 @@
+<div class="ArticleSideColumn__relatedPost">
+  <h2 class="ArticleSideColumn__relatedPost-heading">Related posts</h2>
+  <% articleCount = 0 %>
+  <% dato.articles.each do | blogPost |%>
+    <% if blogPost.topic == article.topic && blogPost.handle != article.handle && articleCount < 4 %>
+      <%= link_to blogPost.heading, "/articles/#{blogPost.handle}", class:"ArticleSideColumn__relatedPostLink"%>
+      <% articleCount = articleCount + 1 %>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,10 @@
+<div class="Article__related space-60">
+  <h2 class="Article__related__heading">Related posts</h2>
+  <% articleCount = 0 %>
+  <% dato.articles.each_with_index do | blogPost, index |%>
+    <% if blogPost.topic == article.topic && blogPost.handle != article.handle && articleCount < 2 %>
+      <%= partial './partials/news/article-listing', locals:{article:blogPost, index: index}%>
+      <% articleCount = articleCount + 1 %>
+    <% end %>
+  <% end %>
+</div>

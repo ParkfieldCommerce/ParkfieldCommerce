@@ -22,7 +22,7 @@ pageClass: DownloadPage Homepage
         <div class="Download__share">
           <%= partial './partials/article/share-buttons',
             locals: {
-                path: "https://parkfieldcommerce.com/cro-four-step-guide-download/"
+                path: "https://parkfieldcommerce.com/#{dato.download_page.handle}/"
             }
           %>
         </div>
@@ -46,7 +46,7 @@ pageClass: DownloadPage Homepage
       <div class="Download__column column medium-12">
         <%= partial './partials/article/share-buttons',
           locals: {
-            path: "https://parkfieldcommerce.com/cro-four-step-guide-download/"
+            path: "https://parkfieldcommerce.com/#{dato.download_page.handle}/"
           }
         %>    
         <p class="Download__body"><%= dato.download_page.body %></p>

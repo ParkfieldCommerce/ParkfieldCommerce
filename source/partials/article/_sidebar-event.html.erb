@@ -1,0 +1,15 @@
+<div class="ArticleSideColumn__event">
+  <%= image_tag dato.article_sidebar.event_image.url alt:dato.article_sidebar.event_image.alt, class:"ArticleSideColumn__eventImage" %>
+  <div class="ArticleSideColumn__eventInfo">
+    <h2 class="ArticleSideColumn__eventInfo__heading"><%= dato.article_sidebar.event_heading %></h2>
+    <div id="event_embed_signup">
+      <form action="https://nyc.us16.list-manage.com/subscribe/post?u=f127562a91d5c95b40b01c49e&amp;id=5d76506a9d" method="post" id="event-subscribe-form" name="event-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="event_signup_scroll">
+          <input type="email" value="" name="EMAIL" class="email" id="event-EMAIL" placeholder="Your email address" required>
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f127562a91d5c95b40b01c49e_5d76506a9d" tabindex="-1" value=""></div>
+          <button type="submit" name="subscribe" id="event-embedded-subscribe"><%= dato.article_sidebar.event_link_text %></button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

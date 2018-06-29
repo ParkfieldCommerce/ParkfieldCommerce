@@ -6,16 +6,6 @@
   .Nav__link:after {
     background-color: black;
   }
-  .Btn.Btn--animatedLeft{
-    border-color: black;
-    span{color: black;}
-    &:after{
-      background-color: black;
-    }
-    &:hover{
-      span{color: white;}
-    }
-  }
   &__heading{
     text-align: center;
   }
@@ -41,8 +31,9 @@
   }
 }
 
-.ArticleContainer {
+.ArticleContainer.m{
   display: flex;
+  width: 70rem;
 }
 
 .Article{
@@ -129,7 +120,7 @@
 
 .ArticleSideColumn {
   width: 30%;
-  margin-left: 45px;
+  margin-left: 10%;
   &__trialForm {
     background-color: $trial-form-bg;
     padding: 30px 35px;
@@ -155,10 +146,10 @@
   }
   &__relatedPost-heading{
     margin: 0px 0 15px 0;
+    font-size: 1.5rem;
   }
   &__relatedPostLink {
     display: block;
-    font-weight: 800;
     font-size: 1.125rem;
     margin-bottom: 20px;
     font-family: 'Avenir-Roman';
@@ -194,47 +185,100 @@
       background-color: $newsletter-bg;
     }
   }
-  &__newsletter {
-    background-color: $newsletter-bg;
+  &__signup {
+    background-color: #F7F7F7;
     padding: 30px 32px 40px;
-    h2,p {
-      color: white;
-    }
-    h2{
+    &__heading{
+      color: $heading;
+      font-size: 1.5rem;
       margin-bottom: 25px;
     }
-    p {
+    &__body p{
+      color: $heading;
       margin: 0 0 30px;
     }
-    input {
-      padding-left: 18px;
+    &__button{
+      width: 100%;
+      display: inline-block;
+      padding: 0;
+      text-align: center;
+      height: 40px;
+      line-height: 40px;
     }
-    button {
-      height: 50px;
-      line-height: 54px;
+  }
+  &__download{
+    background-image:url('../images/article-download-bg.png');
+    background-size: cover;
+    background-position: center;
+    padding: 30px;
+    padding-bottom: 45px;
+    text-align: center;
+    &__heading{
+      margin-top: 0;
+      font-size: 1.5rem;
+      color: white;
+      margin-bottom: 15px;
+      text-align: left;
+    }
+    &__body{
+      color: white;
+      text-align: left;
+    }
+    &__image{
+      box-shadow: 1px 1px 12px rgba(0,0,0,.5);
+      margin-bottom: 45px;
+      max-width: 183px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    &__input{
+      width: 100%;
+      color: $heading;
+      margin-bottom: 30px;
+      height: 45px;
+      border-radius: 0;
+      padding-left: 10px;
       border: none;
-      background-color: $trial-form-button;
+      box-sizing: border-box;
+      @include placeholder{
+        color: $heading;
+      }
+    }
+    &__button{
+      width: 100%;
+      display: inline-block;
+      padding-left: 0;
+      padding-right: 0;
     }
   }
   &__input {
     display: flex;
     input {
-      width: 85%;
+      width: 75%;
       border-radius: 0;
       border: none;
     }
     button {
-      width: 15%;
+      width: 25%;
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 }
-
+@include maxQuery(1200px){
+  .Article,
+  .ArticleSideColumn{
+    padding: 0px 10px;
+  }
+}
 @include maxQuery($s) {
   .ArticleContainer.m {
     max-width: 90%;
   }
   .Article {
     width: 100%;
+    padding: 0;
     h3 {
       font-size: 1.5rem;
     }

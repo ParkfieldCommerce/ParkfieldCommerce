@@ -7,7 +7,7 @@ pageClass: ArticlePage
   <%= dato_meta_tags(article) %>
 <% end %>
 
-<div class="space-90 space-bottom-90 mobile-space-30 mobile-space-bottom-60">
+<div class="space-90 space-bottom-90 mobile-space-30 mobile-space-bottom-0">
 	<div class="container m ArticleContainer">
 		<div class="Article">
 			<h1 class="Article__heading"><%= article.heading %></h1>
@@ -17,9 +17,9 @@ pageClass: ArticlePage
 			<div class="Article__body">
 				<%= articleSection.body %>
 			</div>
-				<% if articleSection.image != nil %>
+			<% if articleSection.image != nil %>
 				<%= image_tag articleSection.image.url alt: articleSection.image.alt, class:"Article__innerImage" %>
-				<% end %>
+			<% end %>
 			<% end %>
 			<div class="Article__shareButtons">
 				<%= partial './partials/article/share-buttons',
@@ -28,58 +28,18 @@ pageClass: ArticlePage
 					}
 				 %>
 			</div>
+			<%= partial './partials/article/related-posts.html.erb' %>
 		</div>
 		<div class="ArticleSideColumn">
-<!-- 			<div class="ArticleSideColumn__trialForm">
-				<h2>Sign up for a free <br>30 day trial today</h2>
-				<p>Choose your platform</p>
-				<input type="email"  placeholder="Your email address">
-				<button type="submit"> -> </button>
-			</div> -->
-			<div class="ArticleSideColumn__newsletter">
-				<h2><%= dato.article_sidebar.newsletter_heading %></h2>
-				<%= dato.article_sidebar.newsletter_body %>
-				<div id="newsletter_embed_signup">
-					<form action="https://nyc.us16.list-manage.com/subscribe/post?u=f127562a91d5c95b40b01c49e&amp;id=093cc5a009" method="post" id="newsletter-signup" name="newsletter-signup" class="validate" target="_blank" novalidate>
-						<div class="ArticleSideColumn__input" id="newsletter-signup_scroll">
-							<input type="email" value="" name="EMAIL" class="email" id="newsletter-EMAIL" placeholder="Your email address" required>
-							<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f127562a91d5c95b40b01c49e_093cc5a009" tabindex="-1" value=""></div>
-							<button type="submit" id="newsletter-embedded-subscribe"><%= partial './partials/global/svg-icons', locals:{icon:'arrow-submit'} %></button>
-						</div>
-					</form>
-				</div>
-			</div>
-			<div class="ArticleSideColumn__relatedPost">
-				<h2 class="ArticleSideColumn__relatedPost-heading">Related posts</h2>
-				<% articleCount = 0 %>
-				<% dato.articles.each do | blogPost |%>
-					<% if blogPost.topic == article.topic && blogPost.handle != article.handle && articleCount < 4 %>
-						<%= link_to blogPost.heading, "/articles/#{blogPost.handle}", class:"ArticleSideColumn__relatedPostLink"%>
-						<% articleCount = articleCount + 1 %>
-					<% end %>
-				<% end %>
-			</div>
-			<div class="ArticleSideColumn__event">
-				<%= image_tag dato.article_sidebar.event_image.url alt:dato.article_sidebar.event_image.alt, class:"ArticleSideColumn__eventImage" %>
-				<div class="ArticleSideColumn__eventInfo">
-					<h2 class="ArticleSideColumn__eventInfo__heading"><%= dato.article_sidebar.event_heading %></h2>
-
-		
-				<div id="event_embed_signup">
-				<form action="https://nyc.us16.list-manage.com/subscribe/post?u=f127562a91d5c95b40b01c49e&amp;id=5d76506a9d" method="post" id="event-subscribe-form" name="event-subscribe-form" class="validate" target="_blank" novalidate>
-				    <div id="event_signup_scroll">
-					<input type="email" value="" name="EMAIL" class="email" id="event-EMAIL" placeholder="Your email address" required>
-				    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f127562a91d5c95b40b01c49e_5d76506a9d" tabindex="-1" value=""></div>
-				    <button type="submit" name="subscribe" id="event-embedded-subscribe"><%= dato.article_sidebar.event_link_text %></button>
-				    </div>
-				</form>
-				</div>
-
-	
-
-
-
-				</div>
+			<%= partial './partials/article/sidebar-signup' %>
+			<%= partial './partials/article/sidebar-related' %>
+			<%= partial './partials/article/sidebar-download' %>
+		</div>
+	</div>
+	<div class="container m">
+		<div class="space-200 space-bottom-150 mobile-space-bottom-0" style="width: 100%;">
+			<div class="container m">
+				<%= partial './partials/homepage/download-section' %>
 			</div>
 		</div>
 	</div>

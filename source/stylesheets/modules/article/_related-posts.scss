@@ -1,0 +1,28 @@
+.Article__related{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  &__heading{
+    width: 100%;
+  }
+  .ArticleListing{
+    width: 48%;
+    padding: 0;
+    &__heading{
+      margin-bottom: 20px;
+      font-size: 1.125rem;
+    }
+    &__image{
+      margin-bottom: 0;
+    }
+    &:first-child{
+      padding-left: 0;
+    }
+    &:last-child{
+      padding-right: 0;
+    }
+    @include maxQuery($s){
+      width: 100%;
+    }
+  }
+}
