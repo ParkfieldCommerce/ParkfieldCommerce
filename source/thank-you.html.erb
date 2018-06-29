@@ -6,26 +6,29 @@ pageClass: ThankYou
   <h1 class="ThankYou__heading space-90"><%= dato.thank_you_page.heading %></h1>
   <div class="ThankYou__body space-bottom-90"><%= dato.thank_you_page.body %></div>
   
-  <a href="/portfolio"><h2 class="ThankYou__subheading">Our work</h2></a>
+  <a href="/portfolio"><h2 class="ThankYou__subheading"><%= dato.thank_you_page.case_study_heading %></h2></a>
   <div class="ThankYou__case-studies left space-bottom-90">
     <% firstCaseStudy = dato.thank_you_page.case_study_1 %>
     <% secondCaseStudy = dato.thank_you_page.case_study_2 %>
     <%= partial './partials/thank-you/case-study-listing', locals:{
       caseStudy:firstCaseStudy,
-      caseStudyImage: dato.thank_you_page.case_study_1_image
+      caseStudyImage: dato.thank_you_page.case_study_1_image,
+      caseStudyHeading: dato.thank_you_page.case_study_1_heading
     } %>
     <%= partial './partials/thank-you/case-study-listing', locals:{
       caseStudy:secondCaseStudy,
-      caseStudyImage: dato.thank_you_page.case_study_2_image
+      caseStudyImage: dato.thank_you_page.case_study_2_image,
+      caseStudyHeading: dato.thank_you_page.case_study_2_heading
     } %>
   </div>
 
-  
-  <a href="/news"><h2 class="ThankYou__subheading">Our blog</h2></a>
+  <% if dato.thank_you_page.enable_blog == true %>
+  <a href="/ecommerce-best-practices"><h2 class="ThankYou__subheading"><%= dato.thank_you_page.blog_heading %></h2></a>
   <div class="ThankYou__articles left space-bottom-120">
     <% firstArticle = dato.articles.first %>
     <% secondArticle = dato.articles[1] %>
     <%= partial './partials/news/article-listing', locals:{article:firstArticle, index: 1}%>
     <%= partial './partials/news/article-listing', locals:{article:secondArticle, index: 2}%>
   </div>
+  <% end %>
 </div>
