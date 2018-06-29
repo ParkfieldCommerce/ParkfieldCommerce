@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <% unless current_page.data.description.nil? %>
+      <meta name="description" content="<%= current_page.data.description %>"/>
+    <% end %>
+    <%= dato_favicon_meta_tags %>
+    <%= yield_content :head %>
+    <meta name="robots" content="noindex">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title %></title>
+    <%= stylesheet_link_tag "app" %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <%= javascript_include_tag "/javascripts/vendor/slick.min" %>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rellax/1.6.2/rellax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+    <script src="../../javascripts/vendor/sharon-1.6.0.min.js"></script>
+    <%= partial './partials/scripts/google-listing' %>
+    <%= partial './partials/scripts/google-tracking' %>
+    <%= partial './partials/scripts/hotjar' %>
+  </head>
+  <body class="<%= current_page.data.pageClass %>">
+    <div class="container m">
+    <%= partial './partials/header/header' %>
+    </div>
+    <%= yield %>
+    <%= partial './partials/footer/footer' %>
+    <%= javascript_include_tag "app" %>
+    <%= partial './partials/scripts/hubspot' %>
+  </body>
+</html>
