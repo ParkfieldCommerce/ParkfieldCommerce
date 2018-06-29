@@ -6,7 +6,7 @@ description: Latest in E-commerce articles
 <div class="container m">
   <h1 class="News__heading space-120 space-bottom-120 mobile-space-30 mobile-space-bottom-60">eCommerce Best Practices</h1>
   <div class="row">
-  <% items.each_with_index do |article| %>
+  <% items.each_with_index do |article, index| %>
     <div class="small-12 medium-6 News__article-container space-bottom-90 mobile-space-bottom-60">
     <%= partial './partials/news/article-listing', locals:{article:article, index: index}%>
     </div>
