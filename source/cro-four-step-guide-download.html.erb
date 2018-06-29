@@ -13,12 +13,16 @@ pageClass: DownloadPage Homepage
             <%= partial './partials/download/download_form' %>          
           </div>
         </div>
-        <p class="Download__image__disclaimer"><%= dato.download_page.disclaimer %></p>
+        <div class="Download__image__disclaimer">
+          <%= dato.download_page.disclaimer %>
+        </div>
       </div>
       
       <div class="Download__text large-6 medium-12 small-12">
         <h1 class="Download__heading"><%= dato.download_page.heading %></h1>
-        <p class="Download__body"><%= dato.download_page.body %></p>
+        <div class="Download__body">
+          <%= dato.download_page.body %>
+        </div>
         <div class="Download__share">
           <%= partial './partials/article/share-buttons',
             locals: {
