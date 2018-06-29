@@ -1,7 +1,9 @@
 ---
 pageClass: DownloadPage Homepage
 ---
-
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.download_page) %>
+<% end %>
 <div class="Download space-120 space-bottom-90 mobile-space-30">
   <div class="Download__container container m">
     <div class="Download__row row desktop-view">
