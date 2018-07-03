@@ -76,6 +76,13 @@
     font-family: 'Avenir-Roman';
     font-size: 1.125rem;
   }
+  a{
+    text-decoration: underline;
+    transition: color .3s;
+    &:hover{
+      color: $btn-pfc;
+    }
+  }
   p {
     margin: 0 0 30px;
   }
