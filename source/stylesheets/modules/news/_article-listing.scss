@@ -17,11 +17,14 @@
     margin-bottom: 15px;
   }
   &__author{
-    display: inline-block;
+    display: none;
     margin-right: 40px;
   }
   &__dash{
     display: none;
+  }
+  &__date{
+    display: block;
   }
   @include maxQuery($s){
     width: 90%;
@@ -38,7 +41,7 @@
       margin-right: 0px;
     }
     &__dash{
-      display: inline-block;
+      display: none;
     }
   }
 }
