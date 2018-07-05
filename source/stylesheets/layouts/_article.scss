@@ -17,6 +17,12 @@
         opacity: 1;
       } 
     }
+    .Btn{
+      border-color: $heading;
+      span{
+        color: $heading;
+      }
+    }
   }
   &__heading{
     text-align: center;
