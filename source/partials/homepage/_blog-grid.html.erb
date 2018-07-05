@@ -16,12 +16,12 @@
 					<p><%= dato.homepage_blog_section.video_header %></p>
 				</div>
 				<div class="BlogGrid__item__heading BlogGrid__item__heading--1">
-					<h3><%= link_to dato.homepage_blog_section.article_1_title, "/articles/#{firstArticle.handle}" %></h3>		
+					<h3><%= link_to dato.homepage_blog_section.article_1_title, "/articles/#{dato.homepage_blog_section.article_1_url}" %></h3>		
 				</div>
 				<div class="BlogGrid__item__author--1">
 					<p><%= dato.homepage_blog_section.article_1_blurb %></p>
 				</div>
-				<a href="/articles/<%= firstArticle.handle%>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
+				<a href="/articles/<%= dato.homepage_blog_section.article_1_url %>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
 			</div>
 		</div>      
 	</div>
@@ -29,17 +29,17 @@
 			<div class="BlogGrid__item BlogGrid__item--3" style="background-image: url('<%= dato.homepage_blog_section.article_2_image.url %>')">		
 				<div class="BlogGrid__item BlogGrid__item--4">
 					<div class="BlogGrid__item__heading BlogGrid__item__heading--2">
-						<h3><%= link_to dato.homepage_blog_section.article_2_title, "/articles/#{secondArticle.handle}" %></h3>
+						<h3><%= link_to dato.homepage_blog_section.article_2_title, "/articles/#{dato.homepage_blog_section.article_2_url}" %></h3>
 					</div>
-					<a href="/articles/<%= secondArticle.handle%>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
+					<a href="/articles/<%= dato.homepage_blog_section.article_2_url %>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
 				</div>
 			</div>
 			<div class="BlogGrid__item BlogGrid__item--5">
 				<div class="BlogGrid__item__twitterFeed">
 					<div class="BlogGrid__item__heading BlogGrid__item__heading--3">
-						<h3><%= link_to dato.homepage_blog_section.article_3_title, "/articles/#{thirdArticle.handle}" %></h3>
+						<h3><%= link_to dato.homepage_blog_section.article_3_title, "/articles/#{dato.homepage_blog_section.article_3_url}" %></h3>
 					</div>
-					<a href="/articles/<%= thirdArticle.handle%>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
+					<a href="/articles/<%= dato.homepage_blog_section.article_3_url %>"  class="BlogGrid__item__link--1 Link--underline">Read more</a>
 				</div>
 			</div>	
 	</div>
