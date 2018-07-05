@@ -8,6 +8,18 @@
       color:white;
     }
   }
+  .Nav__item{
+    svg{
+      fill: $navigation-link-dark;
+      transition: opacity .3s;
+      opacity: .5;
+    }
+    &:hover{
+      svg{
+        opacity: 1;
+      } 
+    }
+  }
   .Nav__link:after {
     background-color: black;
   }
