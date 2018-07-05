@@ -59,14 +59,12 @@ body.fixed{
       height:7px;
       transform:translate(-50%, -50%);
       top:50%;
-      use{
-        transition: opacity .3s;
-        fill:$navigation-link;
-        opacity: .5;
-      }
+      transition: opacity .3s;
+      fill:$navigation-link;
+      opacity: .5;
     }
     &:hover{
-      svg use{
+      svg{
         opacity: 1;
       }
     }
