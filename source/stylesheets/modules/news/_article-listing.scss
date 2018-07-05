@@ -24,7 +24,7 @@
     display: none;
   }
   &__date{
-    display: block;
+    display: none;
   }
   @include maxQuery($s){
     width: 90%;
