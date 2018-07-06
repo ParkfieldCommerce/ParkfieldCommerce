@@ -7,17 +7,19 @@
 <nav class="Nav MainHeader__nav">
   <ul class="Nav__items">
     <% main_nav_links.each do |main_nav_link| %>
-      
-      
       <% unless main_nav_link.button == true %>
       <% if !main_nav_link.children.empty? %>
       <li class="Nav__item">  
-        <%= partial './partials/global/svg-icons',
-          locals:{
-            icon: 'down-arrow'
-          }
-        %>   
-        <a class="Nav__link Nav__link--no_line" id="nav-<%= main_nav_link.text %>" href="<%= main_nav_link.url %>"><%= main_nav_link.text %></a>
+        <a class="Nav__link Nav__link--no_line Nav__link--hasdropdown" id="nav-<%= main_nav_link.text %>" href="<%= main_nav_link.url %>">
+          <span>
+            <%= main_nav_link.text %>
+            <%= partial './partials/global/svg-icons',
+            locals:{
+              icon: 'down-arrow'
+            }
+          %>   
+          </span>
+        </a>
         <ul class="Nav__dropdown dropdown">
           <% main_nav_link.children.each do |sublink| %>
           <li class="Nav__dropdown__sublink">
@@ -27,7 +29,6 @@
         </ul>
       </li>
       <% elsif main_nav_link.parent.class == NilClass %>
-
         <li class="Nav__item">  
           <a class="Nav__link" id="nav-<%= main_nav_link.text %>" href="<%= main_nav_link.url %>"><%= main_nav_link.text %></a>
         </li>

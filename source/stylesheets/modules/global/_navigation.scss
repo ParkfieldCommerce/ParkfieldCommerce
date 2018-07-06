@@ -50,64 +50,63 @@ body.fixed{
       }
     }
   }
-  @include minQuery(1000px){
-  &__item{
-    svg{
-      position:absolute;
-      right:-25px;
-      width:14px;
-      height:7px;
-      transform:translate(-50%, -50%);
-      top:50%;
-      transition: opacity .3s;
-      fill:$navigation-link;
-      opacity: .5;
-    }
+  &__link--hasdropdown span{
+    display: inline-block;
+    position: relative;
+  }
+  &__link svg{
+    position:absolute;
+    right:-25px;
+    width:14px;
+    height:7px;
+    transform:translate(-50%, -50%);
+    top:50%;
+    transition: opacity .3s;
+    fill:$navigation-link;
+    opacity: .5;
     &:hover{
-      svg{
-        opacity: 1;
-      }
+      opacity: 1;
     }
   }
   &__link--no_line{
-    padding-bottom:30px;
     &:after{
-      content:initial;
+      display: none;
     }
   }
-  &__dropdown{
-    position:absolute;
-    top:30px;
-    width:200px;
-    background-color:white;
-    z-index:1;
-    padding:20px;
-    padding-left:0;
-    border-radius:10px;
-    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.3);
-    visibility:hidden;
-    opacity:0;
-    transition: all .5s;
-    span{
-      font-size:.875rem;
-    }
-    &__sublink{
-      margin-bottom:18px;
-      padding-left:16px;
-      border-left:4px solid transparent;
+  @include minQuery(1000px){
+    &__dropdown{
+      position:absolute;
+      top:30px;
+      width:200px;
+      background-color:white;
+      z-index:1;
+      padding:20px;
+      padding-left:0;
+      border-radius:10px;
+      box-shadow: 0 2px 11px rgba(0, 0, 0, 0.3);
+      visibility:hidden;
+      opacity:0;
       transition: all .5s;
+      span{
+        font-size:.875rem;
+      }
+      &__sublink{
+        margin-bottom:18px;
+        padding-left:16px;
+        border-left:4px solid transparent;
+        transition: all .5s;
+      }
+      &__sublink.border-left{
+        border-left:4px solid #4C54B0;
+      }
+      &__sublink:last-child{
+        margin-bottom:0;
+      }
     }
-    &__sublink.border-left{
-      border-left:4px solid #4C54B0;
+    &__dropdown.active{
+      opacity:1;
+      visibility: visible;
     }
-    &__sublink:last-child{
-      margin-bottom:0;
-    }
-  }
-  &__dropdown.active{
-    opacity:1;
-    visibility: visible;
-  }
   }
   &__mobile-section,
   &__hamburger{
@@ -144,12 +143,12 @@ body.fixed{
         padding: 20px;
         display: block;
       }
-      svg{
-        display:none;
-      }
     }
     &__item--button{
       display: none;
+    }
+    &__link svg{
+      left: -15px;
     }
     &__hamburger{
       display: inline-block;
