@@ -3,23 +3,23 @@
 <% leftoverPages = dataToPaginate.length % paginateBy %>
 <% fullPages.times do |i|%>
   <% if i == 0 %>
-    <% if isCurrentNewsPage("/news/",pager.page_path) %>
-      <%= link_to "#{i+1}", "/news/", class:"Pagination__link Pagination__link--active" %>
+    <% if isCurrentNewsPage("/ecommerce-best-practices/",pager.page_path) %>
+      <%= link_to "#{i+1}", "/ecommerce-best-practices/", class:"Pagination__link Pagination__link--active" %>
     <% else %>
-      <%= link_to "#{i+1}", "/news", class:"Pagination__link" %>
+      <%= link_to "#{i+1}", "/ecommerce-best-practices", class:"Pagination__link" %>
     <% end %>
   <% else %>
-    <% if isCurrentNewsPage("/news/page/#{i+1}/",pager.page_path) %>
-      <%= link_to "#{i+1}", "/news/page/#{i+1}/", class:"Pagination__link Pagination__link--active" %>
+    <% if isCurrentNewsPage("/ecommerce-best-practices/page/#{i+1}/",pager.page_path) %>
+      <%= link_to "#{i+1}", "/ecommerce-best-practices/page/#{i+1}/", class:"Pagination__link Pagination__link--active" %>
     <% else %>
-      <%= link_to "#{i+1}", "/news/page/#{i+1}/", class:"Pagination__link" %>
+      <%= link_to "#{i+1}", "/ecommerce-best-practices/page/#{i+1}/", class:"Pagination__link" %>
     <% end %>
   <% end %>
   <% if i == fullPages -1 && leftoverPages > 0%>
-    <% if isCurrentNewsPage("/news/page/#{i+2}/",pager.page_path) %>
-      <%= link_to "#{i+2}", "/news/page/#{i+2}/", class:"Pagination__link Pagination__link--active" %>
+    <% if isCurrentNewsPage("/ecommerce-best-practices/page/#{i+2}/",pager.page_path) %>
+      <%= link_to "#{i+2}", "/ecommerce-best-practices/page/#{i+2}/", class:"Pagination__link Pagination__link--active" %>
     <% else %>
-      <%= link_to "#{i+2}", "/news/page/#{i+2}/", class:"Pagination__link" %>
+      <%= link_to "#{i+2}", "/ecommerce-best-practices/page/#{i+2}/", class:"Pagination__link" %>
     <% end %>
   <% end %>
 <% end %>
