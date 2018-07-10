@@ -123,6 +123,16 @@
     padding-bottom: 30px;
   }
 }
+.mobile-space-bottom-40{
+  @media screen and (max-width: $s){
+    margin-bottom: 40px;
+  } 
+}
+.mobile-padding-bottom-40{
+  @media screen and (max-width: $s){
+    padding-bottom: 40px;
+  }
+}
 .mobile-space-60{
   @media screen and (max-width: $s){
     margin-top: 60px;

@@ -20,7 +20,9 @@
     <%= partial './partials/scripts/mailchimp' %>
   </head>
   <body class="<%= current_page.data.pageClass %>">
+    <div class="container m">
     <%= partial './partials/header/header' %>
+    </div>
     <%= yield %>
     <%= javascript_include_tag "app" %>
     <%= partial './partials/scripts/adroll' %>

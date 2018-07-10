@@ -50,7 +50,13 @@
 				</div>
 				<div class="images">
 					<% dato.footer.logo_gallery.each do | footer_logo | %>
+					<% unless footer_logo.title.nil? %>
+					<a href="<%= footer_logo.title %>" rel="nofollow" target="_blank">
+					<% end %>
 					<%= image_tag footer_logo.url, alt: footer_logo.alt, class:"footer__logo" %>
+					<% unless footer_logo.title.nil? %>
+					</a>
+					<% end %>
 					<% end %>
 				</div>
 			</div>

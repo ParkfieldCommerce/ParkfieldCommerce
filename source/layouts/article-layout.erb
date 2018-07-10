@@ -21,7 +21,9 @@
     <%= partial './partials/scripts/mailchimp' %>
   </head>
   <body class="<%= current_page.data.pageClass %>">
-    <%= partial './partials/header/header' %>
+    <div class="container m">
+      <%= partial './partials/header/header' %>
+    </div>
     <div class="<%= current_page.data.pageClass %>">
     <%= yield %>
     </div>
