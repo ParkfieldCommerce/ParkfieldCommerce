@@ -26,6 +26,9 @@
 	&__body p{
 		margin-bottom: 0;
 	}
+	&__body a{
+		color: inherit;
+	}
 	&__body:after{
 		content:'';
 		margin-top: 60px;
@@ -102,7 +105,7 @@
 	}
 	li.focused,
 	li.filled{
-		label{
+		.ContactPage__form__input label{
 			bottom: 30px;
 			font-size: .75rem;
 			color: $heading;
@@ -155,8 +158,38 @@
 		display: flex;
 		flex-flow: row wrap;
 	}
+	.subfield-container{
+		width: 33.333%;
+		@include maxQuery($s){
+			width: 50%;
+		}
+		@include maxQuery(330px){
+			width: 100%;
+			justify-content: center;
+		}
+	}
+	.subfield-container:nth-child(1),
+	.subfield-container:nth-child(4){
+		text-align: left;
+		@include maxQuery($s){
+			text-align: center;
+		}
+	}
+	.subfield-container:nth-child(2),
+	.subfield-container:nth-child(5){
+		text-align: center;
+		@include maxQuery($s){
+			text-align: center;
+		}
+	}
+	.subfield-container:nth-child(3),
+	.subfield-container:nth-child(6){
+		text-align: right;
+		@include maxQuery($s){
+			text-align: center;
+		}
+	}
 	.subfield{
-		width: 33.33%;
 		text-align: left;
 		display: inline-flex;
 		align-items: center;
@@ -165,11 +198,6 @@
 		position: relative;
 		margin-bottom: 60px;
 		@include maxQuery($s){
-			width: 50%;
-		}
-		@include maxQuery(330px){
-			width: 100%;
-			justify-content: center;
 			margin-bottom: 30px;
 		}
 	}
