@@ -244,6 +244,7 @@
 		color: $heading;
 		max-width: 230px;
 		width: 100%;
+		font-weight: 500;
 		@include maxQuery($s){
 			max-width: 320px;
 		}
