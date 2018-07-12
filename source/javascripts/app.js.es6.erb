@@ -151,36 +151,36 @@ class Theme {
         // });
       } else {
         // Build Ul for Desktop
-        let filteredList = document.getElementById('FilteredList');
-        filteredList.appendChild(makeUL(newArraylist));
-        let filterBtn = document.querySelector('#FilteredList ul');
-
-        filterBtn.addEventListener('click', (e) => {
-          if (e.target.className === 'FilterBtn') {
-            let category = e.target.dataset.category;
-            let brand = document.querySelectorAll('.brand');
-            let activeFilterBtn = document.querySelectorAll('.FilterBtn');
-
-            for (let i = 0; i < activeFilterBtn.length; i++) {
-              activeFilterBtn[i].classList.remove('active');
-            }
-            e.target.classList.add('active');
-
-            if (category == "All") {
-              brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
-              not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
-            } else {
-              brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
-              document.querySelectorAll('.brand[data-category="' + category + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
-            }
-          }
-        });
-
-        // Hash Function
-        let hash = window.location.href.split('#')[1];
-        if (hash == 'fashion') {
-          document.querySelector('.FilterBtn[data-category="Clothing & Accessories"]').click();
-        }
+        // let filteredList = document.getElementById('FilteredList');
+        // filteredList.appendChild(makeUL(newArraylist));
+        // let filterBtn = document.querySelector('#FilteredList ul');
+        //
+        // filterBtn.addEventListener('click', (e) => {
+        //   if (e.target.className === 'FilterBtn') {
+        //     let category = e.target.dataset.category;
+        //     let brand = document.querySelectorAll('.brand');
+        //     let activeFilterBtn = document.querySelectorAll('.FilterBtn');
+        //
+        //     for (let i = 0; i < activeFilterBtn.length; i++) {
+        //       activeFilterBtn[i].classList.remove('active');
+        //     }
+        //     e.target.classList.add('active');
+        //
+        //     if (category == "All") {
+        //       brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+        //       not('.brand', '.category-all').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+        //     } else {
+        //       brand.velocity({opacity: 0}, {display: 'none'}, {duration: 500});
+        //       document.querySelectorAll('.brand[data-category="' + category + '"]').velocity({opacity: 0.5}, {display: 'block'}, {duration: 500});
+        //     }
+        //   }
+        // });
+        //
+        // // Hash Function
+        // let hash = window.location.href.split('#')[1];
+        // if (hash == 'fashion') {
+        //   document.querySelector('.FilterBtn[data-category="Clothing & Accessories"]').click();
+        // }
 
       }
     }
