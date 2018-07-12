@@ -2,6 +2,7 @@
 	.MainHeader__logo,
 	.Nav__link{
 		color: $heading;
+		svg{fill: $heading;}
 	}
 	.Nav__link:after{
 		background-color: $heading;
@@ -10,6 +11,7 @@
 		border-color: $heading;
 		span{color: $heading;}
 	}
+
 }
 .ContactPage{
 	&__intro{

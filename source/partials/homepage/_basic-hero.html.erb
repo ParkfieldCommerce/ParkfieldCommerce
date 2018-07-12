@@ -3,7 +3,7 @@
 <% if type == 'homepage' %>
   <div class="BasicHero__text BasicHero__text--<%= type %>">
     <h1 class="BasicHero__heading"><a href="<%= dato.homepage_hero.heading_link %>"><%= heading %></a></h1>
-    <p class="BasicHero__body"><%= body %></p>
+    <p class="BasicHero__body"><a href="<%= dato.homepage_hero.heading_link %>"><%= body %></a></p>
     <div class="BasicHero__buttons">
       <a href="/portfolio" class="BasicHero__btn Btn Btn--animatedLeft--purple Btn--rounded"><span>View work</span></a>
       <% if dato.homepage_hero.show_contact_link == true  %>
