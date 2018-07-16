@@ -1,11 +1,11 @@
 ---
-pageClass: DownloadPage Homepage DownloadPage
+pageClass: DownloadPage Homepage Download--now
 layout: unlisted-layout
 ---
 <% content_for(:head) do %>
   <%= dato_meta_tags(dato.download_page) %>
 <% end %>
-<div class="Download space-120 space-bottom-90 mobile-space-30">
+<div class="Download space-90 space-bottom-90 mobile-space-30">
   <div class="Download__container container m">
     <div class="Download__row row desktop-view">
       <div class="Download__image large-6 medium-12 small-12 center">
@@ -17,9 +17,6 @@ layout: unlisted-layout
             <a target="_blank" class="Download__button Btn Btn--animatedLeft Btn--animatedLeft--purple" href="<%= dato.download_page.download_file.url %>">Download</a>        
             <% end %>
           </div>
-        </div>
-        <div class="Download__image__disclaimer">
-          <%= dato.download_page.disclaimer %>
         </div>
       </div>
       
@@ -47,9 +44,15 @@ layout: unlisted-layout
         </div>
       </div>
       <div class="Download__column column medium-12">
-        <div class="Download__body"><%= dato.download_page.body %></div>
-        <p class="Download__image__disclaimer"><%= dato.download_page.disclaimer %></p>
+        <div class="Download__body">
+          <%= dato.download_page.body %>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+<div class="space-120 mobile-space-60 space-bottom-90">
+  <div class="container m center">
+    <%= partial './partials/homepage/clients' %>
   </div>
 </div>

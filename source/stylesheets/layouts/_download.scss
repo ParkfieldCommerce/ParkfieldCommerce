@@ -228,4 +228,24 @@
       display:none;
     }
   }
+  &--now .Download{
+    &__heading{
+      margin-bottom: 30px;
+    }
+    &__body{
+      br{
+        display: none;
+      }
+      h2{
+        margin-top: 0;
+      }
+      p{
+        margin-top: 0;
+        margin-bottom: 25px;
+      }
+      ul{
+        margin-bottom: 20px;
+      }
+    }
+  }
 }
