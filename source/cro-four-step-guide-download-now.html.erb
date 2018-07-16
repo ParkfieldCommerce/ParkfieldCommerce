@@ -1,0 +1,55 @@
+---
+pageClass: DownloadPage Homepage DownloadPage
+layout: unlisted-layout
+---
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.download_page) %>
+<% end %>
+<div class="Download space-120 space-bottom-90 mobile-space-30">
+  <div class="Download__container container m">
+    <div class="Download__row row desktop-view">
+      <div class="Download__image large-6 medium-12 small-12 center">
+        <div class="Download__image__container">
+          <div class="Download__image__container--inner">
+            <%= image_tag("../images/e-commerce book.png", alt: "Close")%>
+            <h3 class="Download__image__heading">Get your free copy now</h3>
+            <% unless dato.download_page.download_file.nil? %>
+            <a class="Download__button Btn Btn--animatedLeft Btn--animatedLeft--purple" href="<%= dato.download_page.download_file.url %>">Download</a>        
+            <% end %>
+          </div>
+        </div>
+        <div class="Download__image__disclaimer">
+          <%= dato.download_page.disclaimer %>
+        </div>
+      </div>
+      
+      <div class="Download__text large-6 medium-12 small-12">
+        <h1 class="Download__heading"><%= dato.download_page.heading %></h1>
+        <div class="Download__body">
+          <%= dato.download_page.body %>
+        </div>
+      </div>
+    </div>
+
+    <div class="Download__row row mobile-view medium-12">
+      <div class="Download__column column medium-12">
+        <h1 class="Download__heading"><%= dato.download_page.heading %></h1>
+      </div>
+      <div class="Download__image__container medium-12">
+        <div class="Download__image__container--outer">
+        <div class="Download__image__container--inner">
+          <%= image_tag("../images/e-commerce book.png", alt: "Close")%>
+        </div>
+        <h3 class="Download__image__heading">Get your free copy now</h3>
+        <% unless dato.download_page.download_file.nil? %>
+          <a class="Download__button Btn Btn--animatedLeft Btn--animatedLeft--purple" href="<%= dato.download_page.download_file.url %>">Download</a>        
+        <% end %>
+        </div>
+      </div>
+      <div class="Download__column column medium-12">
+        <div class="Download__body"><%= dato.download_page.body %></div>
+        <p class="Download__image__disclaimer"><%= dato.download_page.disclaimer %></p>
+        </div>
+      </div>
+  </div>
+</div>
