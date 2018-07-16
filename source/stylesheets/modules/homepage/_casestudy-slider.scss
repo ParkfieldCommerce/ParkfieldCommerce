@@ -104,32 +104,28 @@
       background: transparent;
       margin-left: 0;
       padding: 0;
-      left: 30px;
-      max-width: 300px;
+      left: 50%;
+      top: 50%;
+      padding: 20px;
+      transform: translate(-50%,-50%);
+      max-width: 80%;
+      height: auto;
+      background: white;
+    }
+    &__logo{
+      margin-bottom: 20px;
     }
     &__content-half{
       position: static;
       transform: none;
     }
     &__heading{
-      margin-bottom: 30px;
+      margin-bottom: 20px;
+      font-size: 1.125rem;
     }
     &__body,
     &__arrows{
       display: none;
-    }
-    &__link{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background-color: rgba(255,255,255,.5);
-      width: 180px;
-      height: 45px;
-      border-radius: 5px;
-      @include btn-shadow();
-      &:after{
-        display: none;
-      }
     }
   }
 }
