@@ -14,7 +14,7 @@ layout: unlisted-layout
             <%= image_tag("../images/e-commerce book.png", alt: "Close")%>
             <h3 class="Download__image__heading">Get your free copy now</h3>
             <% unless dato.download_page.download_file.nil? %>
-            <a class="Download__button Btn Btn--animatedLeft Btn--animatedLeft--purple" href="<%= dato.download_page.download_file.url %>">Download</a>        
+            <a target="_blank" class="Download__button Btn Btn--animatedLeft Btn--animatedLeft--purple" href="<%= dato.download_page.download_file.url %>">Download</a>        
             <% end %>
           </div>
         </div>
@@ -42,7 +42,7 @@ layout: unlisted-layout
         </div>
         <h3 class="Download__image__heading">Get your free copy now</h3>
         <% unless dato.download_page.download_file.nil? %>
-          <a class="Download__button Btn Btn--animatedLeft Btn--animatedLeft--purple" href="<%= dato.download_page.download_file.url %>">Download</a>        
+          <a target="_blank" class="Download__button Btn Btn--animatedLeft Btn--animatedLeft--purple" href="<%= dato.download_page.download_file.url %>">Download</a>        
         <% end %>
         </div>
       </div>
