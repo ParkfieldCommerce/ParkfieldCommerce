@@ -1,13 +1,12 @@
 <% intro = dato.design_dev_intro %>
-<div class="space-150 space-bottom-200">
+<div class="space-150 space-bottom-300">
   <div class="eIntro__container container m">
     <div class="eIntro__left-section">
       <h1 class="eIntro__heading">
         <%= intro.heading %>
       </h1>
       <p class="eIntro__body">
-        <q class="eIntro__quote"><%= intro.quote %></q>
-        <cite class="eIntro__quote-person"><%= intro.quote_person %></cite>
+        <%= intro.body %>
       </p>
       <a href="/contact" class="Link--underline">Let's talk</a>
       <div class="eIntro__approved">Approved</div>
@@ -17,4 +16,12 @@
       <%= image_tag intro.image.url, alt: intro.image.alt %>
     </div>
   </div>
+</div>
+
+<div class="space-150">
+  <p class="eIntro__quote-section">
+    <%= partial './partials/global/svg-icons', locals:{icon: 'quote'} %>
+    <q class="eIntro__quote"><%= intro.quote %></q>
+    <cite class="eIntro__quote-person"><%= intro.quote_person %></cite>
+  </p>
 </div>

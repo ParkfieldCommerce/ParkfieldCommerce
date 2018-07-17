@@ -1,0 +1,27 @@
+<% services = dato.design_dev_service %>
+<div class="space-150 space-bottom-300">
+  <div class="eService__container container m">
+    <div class="eService__left-section">
+      <h2 class="eService__heading">
+        <%= services.heading %>
+      </h2>
+      <p class="eService__body">
+        <%= services.body %>
+      </p>
+      <div class="eService__services">
+        <% services.icon_and_text.each do | service | %>
+          <div class="eService__service">
+            <%= image_tag service.image.url, alt: service.image.alt %>
+            <div class="eService__service-text">
+              <h3><%= service.heading %></h3>
+              <p><%= service.body %></p>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div class="eService__right-section">
+      <%= image_tag services.image.url, alt: services.image.alt %>
+    </div>
+  </div>
+</div>
