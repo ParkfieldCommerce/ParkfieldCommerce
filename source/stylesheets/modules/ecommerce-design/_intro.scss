@@ -1,0 +1,12 @@
+.eIntro{
+  &__container{
+    display: flex;
+    position: relative;
+  }
+  &__left-section{
+    width: 740px;
+  }
+  &__right-section{
+    position: absolute;
+  }
+}
