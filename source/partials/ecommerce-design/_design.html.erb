@@ -1,8 +1,7 @@
 
 
-<% mainBlock = design_dev.design_section_image[0] %>
-
-
+<% design = dato.design_dev_design %>
+<% mainImage = design.main_image %>
 
 
 <div class="eDesign">
@@ -10,7 +9,8 @@
 		<div class="eDesign__overview__container--1">
 			<div class="eDesign__row row">
 				<div class="eDesign__overview__image__container--1 large-6 medium-5 small-10">
-          
+         
+           <%= image_tag  mainImage.url, alt:  mainImage.alt, class:"CaseStudy__overview__image--1 CaseStudy__overview__image" %>
 				</div>
 				<div class="eDesign__overview__text__container--1 large-6 medium-5">
 					<div class="eDesign__overview__text__container--2">
