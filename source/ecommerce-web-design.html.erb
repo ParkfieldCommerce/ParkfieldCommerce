@@ -6,10 +6,13 @@ pageClass: eCommerceDesign
 <% content_for(:head) do %>
   <%= dato_meta_tags(dato.service_page) %>
 <% end %>
-
+<div class="eCommerceDesign__overflow-container">
+<div class="eCommerceDesign__container">
 <%= partial './partials/ecommerce-design/intro' %>
 <%= partial './partials/ecommerce-design/design' %>
 <%= partial './partials/ecommerce-design/dev' %>
 <%= partial './partials/ecommerce-design/support' %>
 <%= partial './partials/ecommerce-design/services' %>
 <%= partial './partials/ecommerce-design/cta' %>
+</div>
+</div>
