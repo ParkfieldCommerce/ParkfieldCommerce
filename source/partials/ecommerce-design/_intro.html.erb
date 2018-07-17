@@ -2,8 +2,6 @@
 <div class="space-150 space-bottom-200">
   <div class="eIntro__container container m">
     <div class="eIntro__left-section">
-      <div class="eIntro__approved">Approved</div>
-      <%= image_tag("../images/shopifypartner.png", alt: "Shopify Partner", class: "eIntro__shopify")%>
       <h1 class="eIntro__heading">
         <%= intro.heading %>
       </h1>
@@ -12,6 +10,8 @@
         <cite class="eIntro__quote-person"><%= intro.quote_person %></cite>
       </p>
       <a href="/contact" class="Link--underline">Let's talk</a>
+      <div class="eIntro__approved">Approved</div>
+      <%= image_tag("../images/shopifypartner.png", alt: "Shopify Partner", class: "eIntro__shopify")%>
     </div>
     <div class="eIntro__right-section">
       <%= image_tag intro.image.url, alt: intro.image.alt %>

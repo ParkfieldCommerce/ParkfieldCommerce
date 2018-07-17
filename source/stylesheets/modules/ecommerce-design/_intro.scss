@@ -14,14 +14,6 @@
     right: -240px;
     top: 0;
   }
-  &__approved{
-    font-family: 'Avenir-Roman';
-    font-size: .875rem;
-    margin-bottom: 15px;
-  }
-  &__shopify{
-    margin-bottom: 30px;
-  }
   &__heading{
     margin-top: 0;
     margin-bottom: 45px;
@@ -45,5 +37,14 @@
     color: $heading;
     font-family: 'Avenir';
     font-style: oblique;
+  }
+  &__approved{
+    font-family: 'Avenir-Roman';
+    font-size: .875rem;
+    margin-top: 40px;
+    margin-bottom: 15px;
+  }
+  &__shopify{
+    margin-bottom: 0;
   }
 }
