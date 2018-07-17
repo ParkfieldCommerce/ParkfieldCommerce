@@ -1,0 +1,14 @@
+.eCommerceDesign{
+	.MainHeader__logo,
+	.Nav__link{
+		color: $heading;
+		svg{fill: $heading;}
+	}
+	.Nav__link:after{
+		background-color: $heading;
+	}
+	.Nav__item--button .Btn{
+		border-color: $heading;
+		span{color: $heading;}
+	}
+}
