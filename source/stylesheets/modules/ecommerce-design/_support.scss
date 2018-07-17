@@ -1,0 +1,19 @@
+.eSupport{
+	&__container{
+		display:flex;
+	}
+	&__left, &__right{
+		width:50%;
+	}
+	&__right{
+		max-width:500px;
+		margin-left:autp;
+	}
+	&__title{
+		margin-bottom:12px;
+		font-size:2.25rem;
+	}
+	&__body{
+		margin-bottom:38px;
+	}
+}

@@ -1,0 +1,23 @@
+
+<% support = dato.design_dev_support %>
+<% mainImage = support.main_image %>
+<% mainTitle = support.main_title %>
+<% mainBody = support.main_body %>
+
+<div class="space-150 space-bottom-300">
+<div class="eSupport">
+	<div class="eSupport__container container m">
+		<div class="eSupport__left">
+	     <%= image_tag  mainImage.url, alt:  mainImage.alt, class:"eSupport__image" %>
+		</div>
+	
+		<div class="eSupport__right">
+			<div class="eSupport__text-container">
+				<h2 class="eSupport__title"><%= mainTitle %></h2>
+				<p class="eSupport__body"><%= mainBody %></p>
+				<a href="/contact" class="Link--underline">Let's talk</a>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
