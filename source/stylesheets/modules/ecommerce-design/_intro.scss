@@ -5,8 +5,45 @@
   }
   &__left-section{
     width: 740px;
+    @include maxQuery(1200px){
+      padding: 0px 10px;
+    }
   }
   &__right-section{
     position: absolute;
+    right: -240px;
+    top: 0;
+  }
+  &__approved{
+    font-family: 'Avenir-Roman';
+    font-size: .875rem;
+    margin-bottom: 15px;
+  }
+  &__shopify{
+    margin-bottom: 30px;
+  }
+  &__heading{
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+  &__body{
+    margin-top: 0;
+  }
+  &__quote{
+    font-size: 1.5rem;
+    font-family: 'Avenir-Roman';
+    display: block;
+    margin-bottom: 20px;
+    color: $heading;
+    &:before,
+    &:after{
+      color: $accent;
+    }
+  }
+  &__quote-person{
+    font-size: 1.125rem;
+    color: $heading;
+    font-family: 'Avenir';
+    font-style: oblique;
   }
 }

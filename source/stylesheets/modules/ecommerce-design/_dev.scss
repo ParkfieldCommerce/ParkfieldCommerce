@@ -1,0 +1,92 @@
+.eDev{
+  &__container{
+    display: flex;
+    position: relative;
+  }
+  &__left-section{
+    width: 480px;
+    @include maxQuery(1200px){
+      padding: 0px 10px;
+    }
+  }
+  &__right-section{
+    position: absolute;
+    right: -240px;
+    top: 0;
+  }
+  &__heading{
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 2.25rem;
+    width: 386px;
+    max-width: 100%;
+  }
+  &__body{
+    margin-top: 0;
+  }
+  &__btn{
+    display: inline-block;
+    margin-top: 40px;
+  }
+}
+
+.eDev__person{
+  position: absolute;
+  &--1{
+    top: 120px;
+    left: 0;
+  }
+  &--2{
+    left: 300px;
+    top: 20px;
+  }
+  &__info{
+    opacity: 0;
+    padding: 7px;
+    padding-bottom: 13px;
+    width: 130px;
+    border-radius: 4px;
+    position: absolute;
+    left: 0px;
+    top: -70px;
+    background: white;
+    box-shadow: 1px 1px 4px  rgba(0,0,0,0.15);
+    transition: opacity .3s;
+    &:before{
+      left: 0;
+      bottom: 0;
+      height: 13px;
+      width: 30px;
+      left: 15px;
+      content:'';
+      display: inline-block;
+      background-color: white;
+      position: absolute;
+      z-index: 3;
+    }
+    &:after{
+      position: absolute;
+      bottom: -7.5px;
+      left: 20px;
+      content:'';
+      display: block;
+      width: 15px;
+      height: 15px;
+      transform: rotate(-45deg);
+      background: white;
+      box-shadow: 1px 1px 4px  rgba(0,0,0,0.15);
+      z-index: 2;
+    }
+  }
+  &__name{
+    font-weight: 800;
+  }
+  &__title{
+    font-weight: 500;
+  }
+  &:hover{
+    .eDev__person__info{
+      opacity: 1;
+    }
+  }
+}
