@@ -68,11 +68,16 @@
     }
     &__body{
       margin-bottom: 40px;
+      font-size: 1.125rem;
     }
     &__service{
       text-align: center;
       flex-flow: row wrap;
       justify-content: center;
+      h3,
+      p{
+        font-size: 1.125rem;
+      }
     }
     &__service-text{
       margin-top: 15px;

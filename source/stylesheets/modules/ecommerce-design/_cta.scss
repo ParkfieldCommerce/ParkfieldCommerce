@@ -1,5 +1,8 @@
 .eCTA{
   text-align: center;
+  &__heading{
+    font-size: 1.5rem;
+  }
   &__button{
     width: 370px;
     display: inline-block;
