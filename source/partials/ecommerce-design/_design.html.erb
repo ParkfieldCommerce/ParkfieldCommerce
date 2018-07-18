@@ -14,27 +14,29 @@
 
 
 
-<div class="space-150 space-bottom-300 mobile-space-bottom-60">
+<div class="space-150 space-bottom-450 tablet-space-90 tablet-space-bottom-60">
 <div class="eDesign">
 	<div class="eDesign__container container m">
 		<div class="eDesign__left-section">
-     <%= image_tag  mainImage.url, alt:  mainImage.alt, class:"eDesign__image" %>     
-     <%= image_tag  mobileImage.url, alt:  mobileImage.alt, class:"eDesign__mobile__image" %>
-     	<div class="eDesign__image__first-container">
-     	<div class="eDesign__bubble">
-				<h3 class="eDesign__person-name"><%= firstName %></h3>
-				<p class="eDesign__person-title"> <%= firstTitle %></p>
-			</div>
-     	<%= image_tag  firstPerson.url, alt:  firstPerson.alt, class:"eDesign__image__first js-first" %>
+			<div class="eDesign__image-container">
+			<%= image_tag  mainImage.url, alt:  mainImage.alt, class:"eDesign__image" %>     
+			<%= image_tag  mobileImage.url, alt:  mobileImage.alt, class:"eDesign__mobile__image" %>
+				<div class="eDesign__image__first-container">
+				<div class="eDesign__bubble">
+					<h3 class="eDesign__person-name"><%= firstName %></h3>
+					<p class="eDesign__person-title"> <%= firstTitle %></p>
+				</div>
+				<%= image_tag  firstPerson.url, alt:  firstPerson.alt, class:"eDesign__image__first js-first" %>
 
+				</div>
+				<div class="eDesign__image__second-container">
+				<div class="eDesign__bubble">
+					<h3 class="eDesign__person-name"><%= secondName %></h3>
+					<p class="eDesign__person-title"> <%= secondTitle %></p>
+				</div>
+				<%= image_tag  secondPerson.url, alt:  secondPerson.alt, class:"eDesign__image__second js-second" %>
+				</div>
 			</div>
-     	<div class="eDesign__image__second-container">
-     	<div class="eDesign__bubble">
-				<h3 class="eDesign__person-name"><%= secondName %></h3>
-				<p class="eDesign__person-title"> <%= secondTitle %></p>
-			</div>
-     	<%= image_tag  secondPerson.url, alt:  secondPerson.alt, class:"eDesign__image__second js-second" %>
-     	</div>
 		</div>
 		<div class="eDesign__right-section">
 			<div class="eDesign__text-container">

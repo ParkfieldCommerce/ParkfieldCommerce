@@ -1,5 +1,5 @@
 <% intro = dato.design_dev_intro %>
-<div class="space-150 space-bottom-300 mobile-space-30 mobile-space-bottom-60">
+<div class="space-150 space-bottom-300 tablet-space-60 tablet-space-bottom-60">
   <div class="eIntro__container container m">
     <div class="eIntro__left-section">
       <h1 class="eIntro__heading">
@@ -19,12 +19,4 @@
       <%= image_tag intro.mobile_image.url, alt: intro.mobile_image.alt, class: "eIntro__image eIntro__image--mobile"%>
     </div>
   </div>
-</div>
-
-<div class="space-150 mobile-space-0">
-  <p class="eIntro__quote-section">
-    <%= partial './partials/global/svg-icons', locals:{icon: 'quote'} %>
-    <q class="eIntro__quote"><%= intro.quote %></q>
-    <cite class="eIntro__quote-person"><%= intro.quote_person %></cite>
-  </p>
 </div>

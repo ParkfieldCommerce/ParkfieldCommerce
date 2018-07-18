@@ -1,0 +1,32 @@
+.eIntro{
+  &__quote-section{
+    text-align: center;
+    margin-top: 0;
+    img{
+      margin-bottom: 30px;
+    }
+  }
+  &__quote{
+    font-size: 1.5rem;
+    font-family: 'Avenir-Roman';
+    font-weight: 800;
+    display: block;
+    margin-bottom: 20px;
+    color: $heading;
+    &:before,
+    &:after{
+      color: $accent;
+    }
+  }
+  &__quote-person{
+    font-size: 1.125rem;
+    color: $heading;
+    font-family: 'Avenir';
+    font-style: oblique;
+  }
+  @include maxQuery(1100px){
+    &__quote-section{
+      @include mobileContainer();
+    }
+  }
+}
