@@ -1,5 +1,5 @@
 <% intro = dato.design_dev_intro %>
-<div class="space-150 space-bottom-300">
+<div class="space-150 space-bottom-300 mobile-space-30 mobile-space-bottom-60">
   <div class="eIntro__container container m">
     <div class="eIntro__left-section">
       <h1 class="eIntro__heading">
@@ -10,15 +10,18 @@
       </p>
       <a href="/contact" class="Link--underline">Let's talk</a>
       <div class="eIntro__approved">Approved</div>
-      <%= image_tag("../images/shopifypartner.png", alt: "Shopify Partner", class: "eIntro__shopify")%>
+      <div>
+        <%= image_tag("../images/shopifypartner.png", alt: "Shopify Partner", class: "eIntro__shopify")%>
+      </div>
     </div>
     <div class="eIntro__right-section">
-      <%= image_tag intro.image.url, alt: intro.image.alt %>
+      <%= image_tag intro.image.url, alt: intro.image.alt, class: "eIntro__image eIntro__image--desktop"%>
+      <%= image_tag intro.mobile_image.url, alt: intro.mobile_image.alt, class: "eIntro__image eIntro__image--mobile"%>
     </div>
   </div>
 </div>
 
-<div class="space-150">
+<div class="space-150 mobile-space-0">
   <p class="eIntro__quote-section">
     <%= partial './partials/global/svg-icons', locals:{icon: 'quote'} %>
     <q class="eIntro__quote"><%= intro.quote %></q>

@@ -1,3 +1,13 @@
 .eCTA{
   text-align: center;
+  &__button{
+    width: 370px;
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 100%;
+  }
+  @include maxQuery(1100px){
+    @include mobileContainer();
+  }
 }
