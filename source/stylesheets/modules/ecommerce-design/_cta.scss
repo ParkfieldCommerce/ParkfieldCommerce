@@ -1,7 +1,7 @@
 .eCTA{
   text-align: center;
   &__heading{
-    font-size: 1.5rem;
+    font-size: 2.25rem;
   }
   &__button{
     width: 370px;
@@ -9,8 +9,11 @@
     padding-left: 0;
     padding-right: 0;
     max-width: 100%;
+    font-size: 1.5rem;
   }
   @include maxQuery(1100px){
+    &__heading{font-size: 1.5rem;}
+    &__button{font-size: 1.125rem;}
     @include mobileContainer();
   }
 }
