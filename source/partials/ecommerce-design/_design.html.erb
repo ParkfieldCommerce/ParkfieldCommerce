@@ -1,18 +1,17 @@
-
-
 <% design = dato.design_dev_design %>
 <% mainImage = design.main_image %>
-<% firstPerson = design.first_person %>
-<% firstName = design.first_name %>
-<% firstTitle = design.first_title %>
-<% secondPerson = design.second_person %>
-<% secondName = design.second_name %>
-<% secondTitle = design.second_title %>
-<% mainTitle = design.main_title %>
-<% mainBody = design.main_body %>
 <% mobileImage = design.mobile_main_image %>
 
+<% firstPerson = design.first_person %>
+<% firstName = firstPerson.alt %>
+<% firstTitle = firstPerson.title %>
 
+<% secondPerson = design.second_person %>
+<% secondName = secondPerson.alt %>
+<% secondTitle = secondPerson.title %>
+
+<% mainTitle = design.main_title %>
+<% mainBody = design.main_body %>
 
 <div class="space-150 space-bottom-450 tablet-space-90 tablet-space-bottom-60">
 <div class="eDesign">
@@ -21,20 +20,19 @@
 			<div class="eDesign__image-container">
 			<%= image_tag  mainImage.url, alt:  mainImage.alt, class:"eDesign__image" %>     
 			<%= image_tag  mobileImage.url, alt:  mobileImage.alt, class:"eDesign__mobile__image" %>
-				<div class="eDesign__image__first-container">
-				<div class="eDesign__bubble">
-					<h3 class="eDesign__person-name"><%= firstName %></h3>
-					<p class="eDesign__person-title"> <%= firstTitle %></p>
+				<div class="eDesign__person eDesign__person--1">
+					<div class="eDesign__bubble">
+						<h4 class="eDesign__person-name"><%= firstName %></h4>
+						<p class="eDesign__person-title"><%= firstTitle %></p>
+					</div>
+					<%= image_tag  firstPerson.url, alt:  firstPerson.alt, class:"eDesign__image__first" %>
 				</div>
-				<%= image_tag  firstPerson.url, alt:  firstPerson.alt, class:"eDesign__image__first js-first" %>
-
-				</div>
-				<div class="eDesign__image__second-container">
-				<div class="eDesign__bubble">
-					<h3 class="eDesign__person-name"><%= secondName %></h3>
-					<p class="eDesign__person-title"> <%= secondTitle %></p>
-				</div>
-				<%= image_tag  secondPerson.url, alt:  secondPerson.alt, class:"eDesign__image__second js-second" %>
+				<div class="eDesign__person eDesign__person--2">
+					<div class="eDesign__bubble">
+						<h4 class="eDesign__person-name"><%= secondName %></h4>
+						<p class="eDesign__person-title"><%= secondTitle %></p>
+					</div>
+					<%= image_tag  secondPerson.url, alt:  secondPerson.alt, class:"eDesign__image__second" %>
 				</div>
 			</div>
 		</div>
@@ -43,26 +41,8 @@
 				<h2 class="eDesign__title"><%= mainTitle %></h2>
 				<p class="eDesign__body"><%= mainBody %></p>
 				<a href="/contact" class="Link--underline">Let's talk</a>
-
 			</div>
 		</div>
 	</div>
 </div>
 </div>
-
-
-
-<script type="text/javascript">
-	$('.js-first').hover(function(){
-		$(this).closest('.eDesign__image__first-container').find('.eDesign__bubble').addClass('show');
-	},function(){
-		$(this).closest('.eDesign__image__first-container').find('.eDesign__bubble').removeClass('show');
-	});
-
-	$('.js-second').hover(function(){
-		$(this).closest('.eDesign__image__second-container').find('.eDesign__bubble').addClass('show');
-	},function(){
-		$(this).closest('.eDesign__image__second-container').find('.eDesign__bubble').removeClass('show');
-	});
-
-</script>

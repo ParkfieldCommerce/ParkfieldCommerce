@@ -1,11 +1,15 @@
 .eSupport{
 	&__container{
 		display:flex;
+		position: relative;
 	}
-	&__left, &__right{
-		width:50%;
+	&__left{
+		position: absolute;
+		left: -100px;
+		top: 0;
 	}
 	&__right{
+		width:50%;
 		max-width:500px;
 		margin-left:auto;
 	}
@@ -24,6 +28,9 @@
 		&__left{
 			width:100%;
 			text-align: center;
+			position: relative;
+			left: initial;
+			top: initial;
 			@include mobileContainer();
 		} 
 		&__right{
@@ -35,10 +42,12 @@
 		}
 		&__mobile__image{
 			display: inline-block;
+			margin-bottom: 40px;
 		}
 		&__title{
 			font-size:1.5rem;
 			margin-bottom:21px;
+			margin-top: 0;
 		}
 		&__body{
 			font-size:1.125rem;
