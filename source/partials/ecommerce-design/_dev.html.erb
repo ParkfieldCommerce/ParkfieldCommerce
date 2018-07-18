@@ -1,5 +1,5 @@
 <% dev = dato.design_dev_dev %>
-<div class="space-150 space-bottom-300">
+<div class="space-150 space-bottom-300 mobile-space-bottom-60">
   <div class="eDev__container container m">
     <div class="eDev__left-section">
       <h2 class="eDev__heading">
@@ -11,29 +11,32 @@
       <a href="/contact" class="Link--underline">Let's talk</a>
     </div>
     <div class="eDev__right-section">
-      <div class="eDev__person eDev__person--1">
-        <div class="eDev__person__info">
-          <div class="eDev__person__name">
-            <%= dev.person.alt %>
+      <div class="eDev__image-container">
+        <div class="eDev__person eDev__person--1">
+          <div class="eDev__person__info">
+            <div class="eDev__person__name">
+              <%= dev.person.alt %>
+            </div>
+            <div class="eDev__person__title">
+              <%= dev.person.title %>
+            </div>
           </div>
-          <div class="eDev__person__title">
-            <%= dev.person.title %>
-          </div>
+          <%= image_tag dev.person.url, alt: dev.person.alt, class:"eDev__person__image"%>
         </div>
-        <%= image_tag dev.person.url, alt: dev.person.alt, class:"eDev__person__image"%>
-      </div>
-      <div class="eDev__person eDev__person--2">
-        <div class="eDev__person__info">
-          <div class="eDev__person__name">
-            <%= dev.person_2.alt %>
+        <div class="eDev__person eDev__person--2">
+          <div class="eDev__person__info">
+            <div class="eDev__person__name">
+              <%= dev.person_2.alt %>
+            </div>
+            <div class="eDev__person__title">
+              <%= dev.person_2.title %>
+            </div>
           </div>
-          <div class="eDev__person__title">
-            <%= dev.person_2.title %>
-          </div>
+          <%= image_tag dev.person_2.url, alt: dev.person_2.alt, class:"eDev__person__image"%>
         </div>
-        <%= image_tag dev.person_2.url, alt: dev.person_2.alt, class:"eDev__person__image"%>
+        <%= image_tag dev.image.url, alt: dev.image.alt, class:"eDev__image eDev__image--desktop" %>
+        <%= image_tag dev.mobile_image.url, alt: dev.mobile_image.alt, class:"eDev__image eDev__image--mobile" %>
       </div>
-      <%= image_tag dev.image.url, alt: dev.image.alt %>
     </div>
   </div>
 </div>

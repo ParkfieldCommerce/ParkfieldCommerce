@@ -1,6 +1,7 @@
 .eIntro{
   &__container{
     display: flex;
+    flex-flow: row wrap;
     position: relative;
   }
   &__left-section{
@@ -17,6 +18,9 @@
   &__heading{
     margin-top: 0;
     margin-bottom: 45px;
+  }
+  &__body{
+    margin-top: 0;
   }
   &__quote-section{
     text-align: center;
@@ -51,5 +55,53 @@
   }
   &__shopify{
     margin-bottom: 0;
+  }
+  &__image--mobile{
+    display: none;
+  }
+  @include maxQuery(1200px){
+    &__left-section{
+      width: 550px;
+    }
+    &__right-section{
+      right: -100px;
+    }
+  }
+  @include maxQuery(1100px){
+    &__container{
+      text-align: center;
+    }
+    &__left-section{
+      width: 100%;
+      padding: 0px;
+      @include mobileContainer();
+    }
+    &__right-section{
+      position: relative;
+      right: initial;
+      text-align: center;
+      width: 100%;
+      padding: 0px;
+      @include mobileContainer();
+    }
+    &__heading{
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    &__approved{
+      display: none;
+    }
+    &__shopify{
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    &__image--desktop{
+      display: none;
+    }
+    &__image--mobile{
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }

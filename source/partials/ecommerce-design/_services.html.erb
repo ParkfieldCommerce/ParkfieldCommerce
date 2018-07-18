@@ -21,7 +21,8 @@
       </div>
     </div>
     <div class="eService__right-section">
-      <%= image_tag services.image.url, alt: services.image.alt %>
+      <%= image_tag services.image.url, alt: services.image.alt, class:"eService__image eService__image--desktop" %>
+      <%= image_tag services.mobile_image.url, alt: services.mobile_image.alt, class:"eService__image eService__image--mobile" %>
     </div>
   </div>
 </div>
