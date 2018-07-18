@@ -1,6 +1,7 @@
 
 <% support = dato.design_dev_support %>
 <% mainImage = support.main_image %>
+<% mobileImage = support.mobile_main_image %>
 <% mainTitle = support.main_title %>
 <% mainBody = support.main_body %>
 
@@ -9,6 +10,7 @@
 	<div class="eSupport__container container m">
 		<div class="eSupport__left">
 	     <%= image_tag  mainImage.url, alt:  mainImage.alt, class:"eSupport__image" %>
+	     <%= image_tag  mobileImage.url, alt:  mobileImage.alt, class:"eSupport__mobile__image" %>
 		</div>
 	
 		<div class="eSupport__right">
