@@ -18,10 +18,6 @@
     display: block;
     margin-bottom: 20px;
     color: $heading;
-    &:before,
-    &:after{
-      color: $accent;
-    }
   }
   &__quote-person{
     font-size: 1.125rem;
