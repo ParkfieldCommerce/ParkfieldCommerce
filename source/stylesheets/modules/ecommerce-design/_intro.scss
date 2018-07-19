@@ -23,10 +23,13 @@
     margin-top: 0;
     font-size: 1.125rem;
   }
+  &__link{
+    margin-top: 20px;
+  }
   &__approved{
     font-family: 'Avenir-Roman';
     font-size: .875rem;
-    margin-top: 40px;
+    margin-top: 50px;
     margin-bottom: 15px;
   }
   &__shopify{

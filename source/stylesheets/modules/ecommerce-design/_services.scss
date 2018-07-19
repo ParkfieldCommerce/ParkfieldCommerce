@@ -4,7 +4,7 @@
     position: relative;
   }
   &__left-section{
-    width: 480px;
+    width: 540px;
     @include maxQuery(1200px){
       padding: 0px 10px;
     }
@@ -34,6 +34,8 @@
     width: 100%;
     margin-bottom: 30px;
     img{
+      display: none;
+      width: 70px;
       margin-right: 20px;
     }
     h3{
@@ -74,6 +76,9 @@
       text-align: center;
       flex-flow: row wrap;
       justify-content: center;
+      img{
+        display: block;
+      }
       h3,
       p{
         font-size: 1.125rem;
