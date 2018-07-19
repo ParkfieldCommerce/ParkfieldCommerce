@@ -9,7 +9,9 @@
 	}
 	&__left-section{
 		position:absolute;
-		left:-100px;
+		left:-302px;
+		top:-420px;
+		z-index: 1;
 	}
 	&__image-container{
 		position: relative;
@@ -18,12 +20,12 @@
 	&__person{
     position: absolute;
 		&--1{
-			left: 66px;
-			top: 51px;
+			left: 296px;
+			top: 401px;
 		}
 		&--2{
-			left: 575px;
-			top: 195px;
+			left: 755px;
+			top: 445px;
 		}
 		&:hover{
 			.eDesign__bubble{
@@ -87,7 +89,7 @@
 		z-index: 3;
 	}
 	&__right-section{
-    width: 50%;
+    width: 470px;
 	}
 	&__text-container{
 		max-width:490px;
@@ -100,11 +102,6 @@
 	&__body{
 		font-size:1.125rem;
 		margin-bottom:44px;
-	}
-	@media screen and (max-width:1250px){
-		&__person--1{
-			left:96px;
-		}
 	}
 	@media screen and (max-width:1100px){
 		&__container{
@@ -120,6 +117,7 @@
 		&__left-section{
 			position:relative;
 			left:initial;
+			top: initial;
 			width:100%;
 			text-align: center;
 			@include mobileContainer();

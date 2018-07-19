@@ -1,8 +1,22 @@
 <% intro = dato.design_dev_intro %>
 <div class="space-90 tablet-space-60">
-  <p class="eIntro__quote-section">
+  <div class="eIntro__quote-section">
     <%= partial './partials/global/svg-icons', locals:{icon: 'quote'} %>
-    <q class="eIntro__quote"><%= intro.quote %></q>
-    <cite class="eIntro__quote-person"><%= intro.quote_person %></cite>
-  </p>
+    <div class="eIntro__quote-slider js-quote-slider">
+      <% intro.quote.each do |slide| %>
+      <div class="eIntro__quote-slide">
+        <q class="eIntro__quote"><%= slide.quote %></q>
+        <cite class="eIntro__quote-person"><%= slide.source %></cite>
+      </div>
+      <% end %>
+    </div>
+  </div>
 </div>
+
+<script>
+$('.js-quote-slider').slick({
+  fade: true,
+  autoplay: true,
+  arrows: false
+});
+</script>

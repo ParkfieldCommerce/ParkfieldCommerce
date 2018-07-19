@@ -6,11 +6,11 @@
 	&__left{
 		position: absolute;
 		left: -100px;
-		top: 0;
+		top: -100px;
 	}
 	&__right{
 		width:50%;
-		max-width:500px;
+		max-width: 470px;
 		margin-left:auto;
 	}
 	&__title{
