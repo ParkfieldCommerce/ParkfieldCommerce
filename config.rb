@@ -131,6 +131,7 @@ configure :build do
 end
 
 proxy "_redirects", "netlify-redirects", ignore: true
+proxy "googlebe0c108108bc72d8.html.erb", "googlebe0c108108bc72d8.html", ignore: true
 redirect "pages/ecommerce-web-design.html", to: "/ecommerce-web-design"
 redirect "pages/marketing.html", to: "/marketing"
 redirect "pages/merida-studio.html", to: "/case-studies/merida"
