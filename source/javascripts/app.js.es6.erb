@@ -11,7 +11,6 @@ class Theme {
     this.initMigrationSlider();
     this.initMigrationAccordion();
     this.initBrandDropdown();
-    this.initHomeWareTextilesPage();
     this.initArticlePage();
   }
 
@@ -374,35 +373,6 @@ class Theme {
       });
 
 
-    }
-  }
-  initHomeWareTextilesPage(){
-    if(window.location.pathname == '/homeware-textiles'){
-      let companies = [];
-      let company = '';
-      //Get Company Data
-      <% dato.homeware_textile_companies.each_with_index do |company, index| %>
-        <% next if index < 2 %>
-        company = `
-          <%= partial '/partials/homeware-textiles/homeware-case-study',locals: { company: company} %>
-        `
-        companies.push(company);
-      <% end %>
-
-      $('.js-loadButton').click(function(){
-        let startIndex = $(this).data('start');
-        let endIndex = startIndex + 2;
-        companies.forEach((company, index) => {
-          if(index >= startIndex && index <= endIndex){
-            $('.js-companyList').append(company);
-            $(this).data('start', endIndex);
-          }
-          if(index >= companies.length - 1){
-            $(this).parent().remove();
-            $(this).remove();
-          }
-        });
-      });
     }
   }
   initArticlePage(){

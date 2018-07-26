@@ -194,6 +194,15 @@ redirect "pages/the-hour.html", to: "/case-studies/the-hour"
 redirect "articles/is-the-future-of-ecommerce-3d-products-shopify-thin.html", to: "/articles/is-the-future-of-ecommerce-3d-products-shopify-thinks-so"
 redirect "custom-app-development.html", to: "/custom-shopify-app-development"
 redirect "news.html", to: "/ecommerce-best-practices"
+redirect "case-studies/maximira.html", to: "/portfolio"
+redirect "case-studies/scalisi-skincare.html", to: "/portfolio"
+redirect "case-studies/jefferson-lane.html", to: "/portfolio"
+redirect "case-studies/artware-editions.html", to: "/portfolio"
+redirect "case-studies/eldridge-and-orchard.html", to: "/portfolio"
+redirect "case-studies/etonic.html", to: "/portfolio"
+redirect "case-studies/7-artisan-street.html", to: "/portfolio"
+redirect "homeware-textiles.html", to: "/long-island-shopify-experts"
+
 
 
 
