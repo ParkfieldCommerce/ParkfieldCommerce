@@ -1,0 +1,15 @@
+---
+pageClass: MigrateTo DarkNav
+---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.shopify_migration_page) %>
+<% end %>
+<div class="MigrateTo__overflow-container">
+  <div class="MigrateTo__container">
+    <%= partial './partials/migrate-to/intro' %>
+  </div>
+</div>
+<%= partial './partials/migrate-to/migrate-slider' %>
+<div class="MigrateTo__container">
+</div>

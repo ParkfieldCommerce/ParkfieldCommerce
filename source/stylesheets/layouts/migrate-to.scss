@@ -1,0 +1,14 @@
+.MigrateTo{
+	.MainHeader{
+		padding-left: 0;
+		padding-right: 0;
+		@include maxQuery(1200px){
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
+	&__overflow-container{
+		width: 100%;
+		overflow: hidden;
+	}
+}

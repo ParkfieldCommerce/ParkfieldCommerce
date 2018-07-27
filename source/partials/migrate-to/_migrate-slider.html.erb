@@ -1,0 +1,61 @@
+<% page = dato.shopify_migration_page %>
+<div class="MigrateSlider">
+  <div class="MigrateSlider__slider-container">
+    <div class="MigrateSlider__slider js-MigrateSlider">
+      <% page.slider.each do |slide| %>
+      <div class="MigrateSlider__slide">
+        <div class="MigrateSlider__background" style="background-image: url('<%= slide.background_image.url %>');">
+          <div class="MigrateSlider__text-container container m">
+            <div class="MigrateSlider__image">
+              <img src="<%= slide.image.url %>" alt="<%= slide.image.alt %>">
+            </div>
+            <div class="MigrateSlider__text">
+              <div class="MigrateSlider__text-content">
+                <% unless slide.logo.nil? %>
+                <img src="<%= slide.logo.url %>" class="MigrateSlider__logo">
+                <% end %>
+                <h3 class="MigrateSlider__heading"><%= slide.heading %></h3>
+                <% if slide.percent_1 || slide.percent_2 || slide.percent_3 %>
+                <div class="MigrateSlider__stats">
+                  <div class="MigrateSlider__stat">
+                    <div class="MigrateSlider__stat__value">+<%= slide.percent_1 %>%</div>
+                    <div class="MigrateSlider__stat__label"><%= slide.percent_1_label %></div>
+                  </div>
+                  <div class="MigrateSlider__stat">
+                    <div class="MigrateSlider__stat__value">+<%= slide.percent_2 %>%</div>
+                    <div class="MigrateSlider__stat__label"><%= slide.percent_2_label %></div>
+                  </div>
+                  <div class="MigrateSlider__stat">
+                    <div class="MigrateSlider__stat__value">+<%= slide.percent_3 %>%</div>
+                    <div class="MigrateSlider__stat__label"><%= slide.percent_3_label %></div>
+                  </div>
+                </div>
+                <% end %>
+                <div class="MigrateSlider__body"><%= slide.body %></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    <div class="MigrateSlider__arrows-container container m">
+      <div class="MigrateSlider__arrows">
+        <button type="button" class="MigrateSlider__arrow js-caseStudyPrevArrow">
+          <%= partial './partials/global/svg-icons', locals:{icon: 'slider-left'} %>
+        </button>
+        <button type="button" class="MigrateSlider__arrow js-caseStudyNextArrow">
+          <%= partial './partials/global/svg-icons', locals:{icon: 'slider-right'} %>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $('.js-MigrateSlider').slick({
+    prevArrow:'.js-caseStudyPrevArrow',
+    nextArrow:'.js-caseStudyNextArrow',
+    fade: true,
+    speed: 500
+  });
+</script>

@@ -1,0 +1,20 @@
+<% page = dato.shopify_migration_page %>
+<div class="migrateIntro__section">
+  <div class="migrateIntro__container container m">
+    <div class="migrateIntro__left-section space-150 padding-bottom-150 tablet-space-30 tablet-space-padding-bottom-60">
+      <div class="migrateIntro__certified">
+        <span>Certified</span> <%= image_tag("../images/shopifypartner.png", alt: "Shopify Partner")%>
+      </div>
+      <h1 class="migrateIntro__heading">
+        <%= page.intro_heading %>
+      </h1>
+      <p class="migrateIntro__body">
+        <%= page.intro_body %>
+      </p>
+      <a href="<%= page.intro_link_url %>" class="migrateIntro__link Link--underline"><%= page.intro_link_text %></a>
+    </div>
+    <div class="migrateIntro__right-section">
+      <%= image_tag page.intro_image.url, alt: page.intro_image.alt, class: "migrateIntro__image migrateIntro__image--desktop"%>
+    </div>
+  </div>
+</div>

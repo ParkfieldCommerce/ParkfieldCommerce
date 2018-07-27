@@ -1,0 +1,111 @@
+.migrateIntro{
+  &__container{
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+  }
+  &__left-section{
+    width: 760px;
+    @include maxQuery(1200px){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  &__right-section{
+    position: absolute;
+    right: 0;
+    bottom: -20px;
+    max-width: 420px;
+    img{
+      vertical-align: middle;
+    }
+  }
+  &__certified{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    span{
+      font-family: 'Avenir-Roman';
+      font-size: 1.125rem;
+      margin-right: 10px;
+      display: inline-block;
+    }
+  }
+  &__heading{
+    margin-top: 0;
+    margin-bottom: 45px;
+  }
+  &__body{
+    margin-top: 0;
+    font-size: 1.125rem;
+  }
+  &__link{
+    margin-top: 20px;
+  }
+  &__approved{
+    font-family: 'Avenir-Roman';
+    font-size: .875rem;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+  &__shopify{
+    margin-bottom: 0;
+  }
+  &__image--mobile{
+    display: none;
+  }
+  @include maxQuery(1200px){
+    &__left-section{
+      width: 700px;
+    }
+    &__right-section{
+      right: -100px;
+    }
+  }
+  @include maxQuery(1100px){
+    &__container{
+      text-align: center;
+    }
+    &__left-section{
+      width: 100%;
+      @include mobileContainer();
+      padding-top: 60px;
+      padding-bottom: 60px;
+    }
+    &__right-section{
+      position: relative;
+      right: initial;
+      text-align: center;
+      width: 100%;
+      padding: 0px;
+      @include mobileContainer();
+    }
+    &__certified{
+      justify-content: center;
+    }
+    &__heading{
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    &__approved{
+      display: none;
+    }
+    &__shopify{
+      margin-top: 20px;
+      margin-bottom: 40px;
+    }
+    &__image--desktop{
+      display: none;
+    }
+    &__image--mobile{
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @include maxQuery(1000px){
+    &__left-section{
+      padding-top: 0;
+    }
+  }
+}
