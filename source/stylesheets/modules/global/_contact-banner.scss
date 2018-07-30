@@ -2,6 +2,7 @@
   background-color: $accent;
   position: relative;
   overflow: hidden;
+  z-index: 2;
   .ContactPage__form{
     &__heading{
       color: white;
@@ -24,7 +25,7 @@
     width: 50px;
     background: white;
     position: absolute;
-    top: -25px;
+    top: -42px;
     left: 50%;
     transform: translateX(-50%) rotate(45deg);
   }

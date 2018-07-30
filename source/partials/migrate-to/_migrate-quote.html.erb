@@ -1,12 +1,18 @@
 <% page = dato.shopify_migration_page %>
 <div class="container m">
-<div class="MigrateQuote space-120">
-		<%= partial './partials/global/svg-icons', locals:{icon: 'quote'} %>
-    <div class="MigrateQuote__quote"><%= page.quote %></div>
-    <div class="MigrateQuote__source"><%= page.quote_person %></div>
+<div class="MigrateQuote space-120 space-bottom-120 mobile-space-60 mobile-space-bottom-90">
+    <div class="MigrateQuote__icon">
+		  <%= partial './partials/global/svg-icons', locals:{icon: 'quote'} %>
+    </div>
+    <p class="MigrateQuote__text">
+      <span class="MigrateQuote__quote"><%= page.quote %></span><br>
+      <span class="MigrateQuote__source"><%= page.quote_person %></span>
+    </p>
     <div class="MigrateQuote__images">
     <% page.quote_images.each do |image| %>
-      <img src="<%= image.url %>" alt="<% image.alt %>">
+      <div class="MigrateQuote__image">
+        <img src="<%= image.url %>" alt="<% image.alt %>">
+      </div>
     <% end %>
   </div>
 </div>

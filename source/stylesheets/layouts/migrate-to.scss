@@ -11,4 +11,23 @@
 		width: 100%;
 		overflow: hidden;
 	}
+	.MigrateQuote{
+		position: relative;
+    &:after{
+      content:'';
+      background-image: url('../images/migrate-dots-left.png');
+      width: 368px;
+      position: absolute;
+      left: -140px;
+      height: 506px;
+      top: -156%;
+      z-index: 1;
+      display: block;
+      background-size: contain;
+      background-position: center;
+      @include maxQuery(1100px){
+        display: none;
+      }
+    }
+	}
 }

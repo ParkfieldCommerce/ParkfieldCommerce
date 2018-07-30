@@ -1,22 +1,22 @@
 <% page = dato.shopify_migration_page %>
-<div class="container m">
-<div class="MigrateServices__header">
-<h2 class="MigrateServices__heading">
-  <%= page.services_heading %>
-</h2>
-<p class="MigrateServices__stars">
-  <%= image_tag("../images/stars.png", alt: "Review Stars")%> (Based on 55 Reviews)
-</p>
-</div>
-<div class="MigrateServices">
-  <% page.services.each do |service| %>
-    <div class="MigrateServices__service">
-      <div class="MigrateServices__service__content">
-        <img src="<%= service.url %>" alt="<%= service.alt %>">
-        <h5 class="MigrateServices__service__heading"><%= service.alt %></h5>
-        <p class="MigrateServices__service__body"><%= service.title %></p>
+<div class="MigrateServices__container container m">
+  <div class="MigrateServices__header">
+    <h2 class="MigrateServices__heading">
+      <%= page.services_heading %>
+    </h2>
+    <p class="MigrateServices__stars">
+      <%= image_tag("../images/stars.png", alt: "Review Stars")%> (Based on 55 Reviews)
+    </p>
+  </div>
+  <div class="MigrateServices">
+    <% page.services.each do |service| %>
+      <div class="MigrateServices__service">
+        <div class="MigrateServices__service__content">
+          <img src="<%= service.url %>" alt="<%= service.alt %>">
+          <h5 class="MigrateServices__service__heading"><%= service.alt %></h5>
+          <p class="MigrateServices__service__body"><%= service.title %></p>
+        </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
   </div>
 </div>

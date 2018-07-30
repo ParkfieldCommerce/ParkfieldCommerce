@@ -9,7 +9,7 @@
             <div class="MigrateSlider__image">
               <img src="<%= slide.image.url %>" alt="<%= slide.image.alt %>">
             </div>
-            <div class="MigrateSlider__text">
+            <div class="MigrateSlider__text MigrateSlider__text--<% if slide.text_color_is_white %>white<% else %>black<% end %>">
               <div class="MigrateSlider__text-content">
                 <% unless slide.logo.nil? %>
                 <img src="<%= slide.logo.url %>" class="MigrateSlider__logo">
