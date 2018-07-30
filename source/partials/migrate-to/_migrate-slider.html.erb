@@ -1,5 +1,5 @@
 <% page = dato.shopify_migration_page %>
-<div class="MigrateSlider">
+<div class="MigrateSlider space-bottom-120 mobile-space-bottom-60">
   <div class="MigrateSlider__slider-container">
     <div class="MigrateSlider__slider js-MigrateSlider">
       <% page.slider.each do |slide| %>
@@ -56,6 +56,7 @@
     prevArrow:'.js-caseStudyPrevArrow',
     nextArrow:'.js-caseStudyNextArrow',
     fade: true,
+    adaptiveHeight: true,
     speed: 500
   });
 </script>

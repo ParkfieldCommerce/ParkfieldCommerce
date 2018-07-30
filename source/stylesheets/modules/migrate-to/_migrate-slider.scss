@@ -96,7 +96,6 @@
   }
   @include maxQuery($s){
     &__background{
-      background-size: auto;
       background-position: right;
       flex-flow: row wrap;
     }
@@ -117,6 +116,10 @@
       padding: 20px;
       height: auto;
       width: 90%;
+      justify-content: center;
+    }
+    &__text-content{
+      padding-right: 0;
     }
     &__image{
       width: 90%;

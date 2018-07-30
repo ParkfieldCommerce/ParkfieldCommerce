@@ -1,0 +1,31 @@
+.ContactBanner{
+  background-color: $accent;
+  position: relative;
+  overflow: hidden;
+  .ContactPage__form{
+    &__heading{
+      color: white;
+      margin-bottom: 45px;
+    }
+    &__input input,
+    &__input label{
+      color: white !important;
+      border-color: white !important;
+    }
+    .Btn#saveForm{
+      font-weight: 800;
+      font-size: 1.125rem;
+    }
+  }
+  &:after{
+    content:'';
+    display: block;
+    height: 50px;
+    width: 50px;
+    background: white;
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+}

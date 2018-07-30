@@ -12,6 +12,7 @@
 @import './modules/global/title-and-text';
 @import './modules/global/contact-popup';
 @import './modules/global/third-party-widgets';
+@import './modules/global/contact-banner';
 
 // ==================Homepage==================
 @import './modules/homepage/basic-hero';
@@ -38,6 +39,8 @@
 // =============== Migrate To(Shopify) ============
 @import './modules/migrate-to/intro.scss';
 @import './modules/migrate-to/migrate-slider.scss';
+@import './modules/migrate-to/migration-services.scss';
+@import './modules/migrate-to/migrate-quote.scss';
 // ==================Case Study==================
 @import './modules/case-study/case-study.scss';
 
