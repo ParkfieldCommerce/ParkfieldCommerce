@@ -1,11 +1,12 @@
+<% page = dato.about_page %>
 <div class="AboutClients">
-	<h2><%= dato.about_page.client_brands_heading %></h2>
+	<h2><%= page.client_brands_heading %></h2>
 	<div class="AboutClients__brands">
-		<% dato.about_page.client_brands.each do | brand |%>
+		<% page.client_brands.each do | brand |%>
 		<div class="AboutClients__brand">
 			<%= image_tag brand.url, alt: brand.alt, class:"AboutClients__brand-image" %>
 		</div>
 		<% end %>
 	</div>
-	<a href="<%= dato.about_page.button_link %>" class="AboutClients__button"><%= dato.about_page.button_text %></a>
+	<a href="<%= page.button_link %>" class="AboutClients__button"><%= page.button_text %></a>
 </div>

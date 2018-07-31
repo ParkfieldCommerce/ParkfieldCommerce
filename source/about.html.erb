@@ -1,72 +1,19 @@
 ---
 layout: layout
-pageClass: AboutPage
+pageClass: AboutPage DarkNav
 ---
 
 <% content_for(:head) do %>
   <%= dato_meta_tags(dato.about_page) %>
 <% end %>
 
-<%= partial './partials/global/hero', 
-  locals:{
-    type:'generic',
-    mobile_image: dato.about_page.banner[0],
-    med_image: dato.about_page.banner[1],
-    large_image: dato.about_page.banner[2],
-    heading: dato.about_page.banner_heading,
-    subHeadingImage: nil
-  } 
-%>
-<div class="container m">
-	<div class="space-90 mobile-space-60 mobile-space-bottom-60">
-	<%= partial './partials/global/title-and-text', 
-		locals: {
-			heading: dato.about_page.about_description[0].heading,
-			body: dato.about_page.about_description[0].body,
-			modifier: '--about-page-text'
-		} 
-	%>
-	</div>
-</div>
+<%= partial '/partials/about/intro' %>
 
 <div class="container m">
 	<div class="space-120">
 		<%= partial './partials/about/about-team' %>
 	</div>
 </div>
+<%= partial './partials/migrate-to/migrate-quote' %>
+<%= partial './partials/about/about-cards' %>
 
-<div class="container m">
-	<div class="space-bottom-90 mobile-space-bottom-60">
-	<%= partial './partials/global/title-and-text', 
-		locals: {
-			heading: dato.about_page.about_description[1].heading,
-			body: dato.about_page.about_description[1].body,
-			modifier: '--about-page-text'
-		} 
-	%>
-	</div>
-</div>
-
-<div class="AboutPage__image">
-	<%= image_tag dato.about_page.about_image.url, alt: dato.about_page.about_image.alt, class:"AboutImage" %>
-</div>
-
-<div class="grey-bg">
-	<div class="container m">
-		<div class="Partners padding-90 padding-bottom-120 mobile-space-padding-bottom-60 mobile-space-padding-60">
-		<%= partial './partials/global/title-and-text', 
-			locals: {
-				heading: dato.about_page.about_description[2].heading,
-				body: dato.about_page.about_description[2].body,
-				modifier: '--about-page-text'
-			} 
-		%>
-		</div>
-	</div>
-</div>
-
-<div class="grey-bg">
-	<div class="container m">
-			<%= partial './partials/about/about-partners' %>
-	</div>
-</div>

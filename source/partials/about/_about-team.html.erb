@@ -1,32 +1,44 @@
+<% page = dato.about_page %>
 <div class="AboutTeam">
-	<div class="AboutTeam__heading">
-		<h3><%= dato.about_page.about_team_heading %></h3>
-	</div>
-	<div class="AboutTeam__content">
-		<% dato.about_page.teams.each do | team |%>
-		<div class="AboutTeam__team AboutTeam__desktop">
-			<h4><%= team.team_heading %></h4>
+	<h2 class="AboutTeam__heading">
+		<%= page.about_team_heading %>
+	</h2>
+	<div class="AboutTeam__teams AboutTeam__teams--desktop">
+		<% page.teams.each do | team |%>
+		<div class="AboutTeam__team">
 			<div class="AboutTeam__members">
-			<% team.team_members.each do | member | %>
-				<div class="AboutTeam__member-wrapper">
-					<div class="AboutTeam__overlay">
-						<span class="AboutTeam__member-name"><%= member.alt %></span>
-						<span class="AboutTeam__member-title"><%= member.title %></span>
-					</div>
-					<%= image_tag member.url, alt: member.alt, class:"AboutTeam__member-image" %>	
+				<div class="AboutTeam__member AboutTeam__member--heading">
+					<h4><%= team.team_heading.split(' ').first %><br><%= team.team_heading.split(' ').last %></h4>
 				</div>
-			<% end %>
+				<% team.team_members.each do | member | %>
+					<div class="AboutTeam__member">
+						<div class="AboutTeam__member__image-container">
+							<%= image_tag member.url, alt: member.alt, class:"AboutTeam__member__image" %>	
+							<div class="AboutTeam__member__overlay">
+								<div class="AboutTeam__member__text-container">
+									<span class="AboutTeam__member__name"><%= member.alt.split(' ', 2).first %><br><%= member.alt.split(' ', 2).last %></span>
+									<span class="AboutTeam__member__title">
+										<%= member.title.split(' ', 2).first %>
+										<% if member.title.split(' ').length > 1 %>
+										<br><%= member.title.split(' ',2).last %>
+										<% end %>
+									</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				<% end %>
 			</div>
 		</div>
 		<% end %>
-		<div class="AboutTeam__mobile">
-			<% dato.about_page.teams.each do | team |%>
-				<% team.team_members.each do | member | %>
-				<div class="AboutTeam__memberImageWrapMobile">
-					<%= image_tag member.url, alt: member.alt, class:"AboutTeam__memberImageMobile" %>	
-				</div>
-			<% end %>
+	</div>
+	<div class="AboutTeam__teams AboutTeam__teams--mobile">
+	<% page.teams.each do | team |%>
+		<% team.team_members.each do | member | %>
+			<div class="AboutTeam__member">
+				<%= image_tag member.url, alt: member.alt, class:"AboutTeam__member__image" %>	
+			</div>
 		<% end %>
-		</div>
+	<% end %>
 	</div>
 </div>

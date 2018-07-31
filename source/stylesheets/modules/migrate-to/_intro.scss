@@ -5,7 +5,7 @@
     flex-flow: row wrap;
   }
   &__left-section{
-    width: 760px;
+    width: 770px;
     @include maxQuery(1200px){
       padding-left: 10px;
       padding-right: 10px;
@@ -33,7 +33,7 @@
   }
   &__heading{
     margin-top: 0;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
   }
   &__body{
     margin-top: 0;

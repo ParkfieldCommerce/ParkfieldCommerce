@@ -1,0 +1,30 @@
+.AboutIntro{
+  width: 822px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  &__content{padding: 0px 10px;}
+  &__certified{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    span{
+      display: inline-block;
+      margin-right: 10px;
+    }
+  }
+  &__heading{
+    margin-bottom: 35px;
+  }
+  &__body{
+    margin-bottom: 35px;
+  }
+  @include maxQuery($s){
+    &__heading{
+      font-size: 1.5rem;
+      margin-bottom: 25px;
+    }
+    @include mobileContainer();
+  }
+}

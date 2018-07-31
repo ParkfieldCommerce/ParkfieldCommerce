@@ -1,0 +1,25 @@
+
+<% page = dato.about_page %>
+<div class="container m">
+  <div class="AboutCards__container space-bottom-150 mobile-space-bottom-60">
+    <div class="AboutCards">
+      <% page.cards.each do |card| %>
+      <a class="AboutCards__card"
+         href="<%= card.button_url %>"
+         style="background-image:url('<%= card.image.url %>'); background-position: 50% <%= card.mobile_image_vertical_position %>%">
+        <img class="AboutCards__card__image" src="<%= card.image.url %>" alt="<%= card.image.alt %>">
+        <div class="AboutCards__card__text-content">
+          <h2 class="AboutCards__card__heading">
+            <span><%= card.heading_line_1 %></span><br><span><%= card.heading_line_2 %></span>
+          </h2>
+          <p class="AboutCards__card__body"><%= card.body %></p>
+        </div>
+        <span class="AboutCards__card__button Btn Btn--animatedLeft Btn--animatedLeft--purple Btn--rounded Btn--shadow">
+          <span><%= card.button_text %></span>
+        </span>
+        <div class="AboutCards__card__overlay"></div>
+      </a>
+      <% end %>
+    </div>
+  </div>
+</div>
