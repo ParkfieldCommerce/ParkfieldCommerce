@@ -60,10 +60,11 @@
 			transition: height .3s;
 			width: 100%;
 			overflow: hidden;
+			display: flex;
+			align-items: center;
 		}
 		&__text-container{
 			padding-left: 10px;
-			padding-top: 20px;
 		}
 		&--heading{
 			height: 150px;
