@@ -15,5 +15,5 @@ pageClass: MigrateTo DarkNav
 <div class="MigrateTo__overflow-container">
   <%= partial './partials/migrate-to/migration-services' %>
   <%= partial './partials/global/contact-form-banner' %>
-  <%= partial './partials/migrate-to/migrate-quote' %>
+  <%= partial './partials/migrate-to/migrate-quote', locals:{page: dato.shopify_migration_page} %>
 </div>

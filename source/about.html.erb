@@ -10,10 +10,10 @@ pageClass: AboutPage DarkNav
 <%= partial '/partials/about/intro' %>
 
 <div class="container m">
-	<div class="space-120">
+	<div class="space-120 space-bottom-30">
 		<%= partial './partials/about/about-team' %>
 	</div>
 </div>
-<%= partial './partials/migrate-to/migrate-quote' %>
+<%= partial './partials/migrate-to/migrate-quote', locals:{page: dato.about_page} %>
 <%= partial './partials/about/about-cards' %>
 

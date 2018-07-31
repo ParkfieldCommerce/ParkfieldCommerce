@@ -1,0 +1,8 @@
+.AboutPage{
+	.MigrateQuote{
+		margin-bottom: 150px;
+		@include maxQuery(1000px){
+			margin-bottom: 60px;
+		}
+	}
+}
