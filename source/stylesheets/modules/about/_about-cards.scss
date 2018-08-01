@@ -1,10 +1,12 @@
 .AboutCards{
   display: flex;
   align-items: center;
+  position: relative;
   &__card{
     width: 33.333%;
     transition: transform .3s;
     position: relative;
+    z-index: 2;
     &__overlay{
       z-index: 2;
       position: absolute;
@@ -66,6 +68,7 @@
       left: 40px;
     }
     &:hover{
+      box-shadow: 2px 2px 12px rgba(0,0,0,.12);
       transform: scale(1.05);
       z-index: 10;
       .AboutCards__card__overlay{
@@ -164,6 +167,22 @@
           }
         }
       }
+    }
+  }
+  &:after{
+    content:'';
+    background-image: url('../images/about_dots_left_desktop.png');
+    width: 303px;
+    position: absolute;
+    left: -140px;
+    height: 407px;
+    top: -79%;
+    z-index: 1;
+    display: block;
+    background-size: contain;
+    background-position: center;
+    @include maxQuery(1100px){
+      display: none;
     }
   }
 }

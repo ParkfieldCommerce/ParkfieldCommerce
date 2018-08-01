@@ -2,16 +2,22 @@
 <div class="container m">
   <div class="AboutIntro space-150 center mobile-space-60">
     <div class="AboutIntro__content">
-      <div class="AboutIntro__certified">
-        <span>Certified</span> <%= image_tag("../images/shopifypartner.png", alt: "Shopify Partner")%>
-      </div>
       <h1 class="AboutIntro__heading">
         <%= page.intro_heading %>
       </h1>
       <p class="AboutIntro__body">
         <%= page.intro_body %>
       </p>
-      <a href="<%= page.intro_link_url %>" class="AboutIntro__link Link--underline"><%= page.intro_link_text %></a>
+      <a
+        href="<%= page.intro_link_url %>"
+        <% if page.show_link_as_button %>
+        class="AboutIntro__link Btn Btn--animatedLeft--purple"
+        <% else %>
+        class="AboutIntro__link Link--underline"
+        <% end %>
+      >
+        <span><%= page.intro_link_text %></span>
+      </a>
     </div>
   </div>
 </div>

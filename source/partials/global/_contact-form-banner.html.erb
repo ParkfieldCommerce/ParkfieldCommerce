@@ -1,3 +1,4 @@
+<a name="MigrateForm"></a>
 <div class="ContactBanner container m">
 <form id="form99" name="form99" class="ContactPage__form wufoo topLabel page space-60 mobile-space-40 space-bottom-60" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate
       action="https://shopifybuilder.wufoo.com/forms/kmhko6717uj0yl/#public">
@@ -257,4 +258,13 @@ function addEvent( obj, type, fn ) {
 			$(this).parent().removeClass('checked');
 		}
 	});
+
+	function scrollToAnchor(aid){
+    var aTag = $("a[name='"+ aid +"']");
+    $('html,body').animate({scrollTop: aTag.offset().top},'slow');
+	}
+	$('.js-migrateIntroLink').click(function(){
+		scrollToAnchor('MigrateForm');
+	});
 </script>
+

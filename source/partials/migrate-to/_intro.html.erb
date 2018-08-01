@@ -11,7 +11,16 @@
       <p class="migrateIntro__body">
         <%= page.intro_body %>
       </p>
-      <a href="<%= page.intro_link_url %>" class="migrateIntro__link Link--underline"><%= page.intro_link_text %></a>
+      <a
+        href="#MigrateForm"
+        <% if page.show_link_as_button %>
+        class="migrateIntro__link Btn Btn--animatedLeft--purple js-migrateIntroLink"
+        <% else %>
+        class="migrateIntro__link Link--underline"
+        <% end %>
+      >
+        <span><%= page.intro_link_text %></span>
+      </a>
     </div>
     <div class="migrateIntro__right-section">
       <%= image_tag page.intro_image.url, alt: page.intro_image.alt, class: "migrateIntro__image migrateIntro__image--desktop"%>

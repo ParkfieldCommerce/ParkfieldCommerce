@@ -2,8 +2,8 @@
 <div class="MigrateSlider space-bottom-120 mobile-space-bottom-60">
   <div class="MigrateSlider__slider-container">
     <div class="MigrateSlider__slider js-MigrateSlider">
-      <% page.slider.each do |slide| %>
-      <div class="MigrateSlider__slide">
+      <% page.slider.each_with_index do |slide, index| %>
+      <div class="MigrateSlider__slide MigrateSlider__slide--<%= index %>">
         <div class="MigrateSlider__background" style="background-image: url('<%= slide.background_image.url %>');">
           <div class="MigrateSlider__text-container container m">
             <div class="MigrateSlider__image">
@@ -51,6 +51,15 @@
     </div>
   </div>
 </div>
+<style>
+  @media screen and (max-width: 768px){
+  <% page.slider.each_with_index do |slide, index| %>
+    .MigrateSlider__slide--<%= index %> .MigrateSlider__background{
+      background-position: 50% <%= slide.mobile_position %>%;
+    }
+  <% end %>
+  }
+</style>
 <script>
   $('.js-MigrateSlider').slick({
     prevArrow:'.js-caseStudyPrevArrow',

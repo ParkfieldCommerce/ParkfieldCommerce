@@ -1,8 +1,29 @@
 .AboutPage{
+	&__overflow-container{
+		width: 100%;
+		overflow: hidden;
+	}
 	.MigrateQuote{
 		margin-bottom: 150px;
+		position: relative;
 		@include maxQuery(1000px){
 			margin-bottom: 60px;
+		}
+		&:after{
+			content:'';
+			background-image: url('../images/about_dots_right_desktop.png');
+			width: 303px;
+			position: absolute;
+			right: -140px;
+			height: 407px;
+			top: -79%;
+			z-index: 1;
+			display: block;
+			background-size: contain;
+			background-position: center;
+			@include maxQuery(1100px){
+				display: none;
+			}
 		}
 	}
 }

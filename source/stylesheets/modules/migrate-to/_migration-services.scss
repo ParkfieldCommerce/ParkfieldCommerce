@@ -31,6 +31,12 @@
     text-align: center;
     margin-top: 0;
     margin-bottom: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+      margin-right: 10px;
+    }
   }
   &__service{
     width: 33.333%;

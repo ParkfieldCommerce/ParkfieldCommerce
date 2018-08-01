@@ -3,15 +3,23 @@
     <h2 class="OurServices__heading"><%= dato.homepage_service_section.heading %></h2>
     <div class="OurServices__body"><%= dato.homepage_service_section.body %></div>
   </div>
-  <ul class="OurServices__services">
-    <% dato.homepage_service_section.service.each do |service| %>
-    <li class="OurServices__service">
-      <a href="<%= service.link_url %>">
-        <img class="OurServices__service-image" src="<%= service.image.url %>" alt="<%= service.image.alt %>">
-        <span class="OurServices__service-text OurServices__service-text--desktop Link--underline"><%= service.link_text %></span>
-        <span class="OurServices__service-text OurServices__service-text--mobile Link--underline">Learn More</span>
-      </a>
-    </li>
+  <div class="OurServicesCards">
+    <% dato.homepage_service_section.cards.each do |card| %>
+    <a class="OurServicesCards__card"
+        href="<%= card.button_url %>"
+        style="background-image:url('<%= card.image.url %>'); background-position: 50% <%= card.mobile_image_vertical_position %>%">
+      <img class="OurServicesCards__card__image" src="<%= card.image.url %>" alt="<%= card.image.alt %>">
+      <div class="OurServicesCards__card__text-content">
+        <h2 class="OurServicesCards__card__heading">
+          <span><%= card.heading_line_1 %></span><br><span><%= card.heading_line_2 %></span>
+        </h2>
+        <p class="OurServicesCards__card__body"><%= card.body %></p>
+      </div>
+      <span class="OurServicesCards__card__button Btn Btn--animatedLeft Btn--animatedLeft--purple Btn--rounded Btn--shadow">
+        <span><%= card.button_text %></span>
+      </span>
+      <div class="OurServicesCards__card__overlay"></div>
+    </a>
     <% end %>
-  </ul>
+  </div>
 </div>
