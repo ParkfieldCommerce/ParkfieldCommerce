@@ -283,6 +283,9 @@ button::-moz-focus-inner {
 }
 
 .DarkNav{
+  .MainHeader__logo span{
+    color: $accent;
+  }
   .MainHeader__logo,
 	.Nav__link{
 		color: $heading;

@@ -2,6 +2,9 @@
   .MainHeader{
     &__logo{
       color: $logo-color-dark;
+      span{
+        color: $accent;
+      }
     }
   }
   .Nav{
