@@ -36,7 +36,12 @@
   <div class="Hero__text Hero__text--casestudy">
     <h1 class="Hero__text__heading"><%= heading %></h1>
     <div class="Hero__text__builtwith Hero__text__subheading-image">
-      <p>Built with</p> <% if isShopify == true %> <%= image_tag dato.platform.shopify.url %> <% else %> <%= image_tag dato.platform.big_commerce.url %> <% end %>
+      <p>Built with</p>
+        <% if isShopify == true %>
+          <%= image_tag dato.platform.shopify.url, alt: dato.platform.shopify.alt %>
+        <% else %>
+          <%= image_tag dato.platform.big_commerce.url, alt: dato.platform.big_commerce.alt %>
+        <% end %>
     </div>
   </div>
   <style>
@@ -52,7 +57,12 @@
       <%= headingLine1 %><br><%= headingLine2 %>
     </h1>
     <div class="Hero__text__builtwith Hero__text__subheading-image">
-      <p>Built with</p> <% if isShopify == true %> <%= image_tag dato.platform.shopify.url %> <% else %> <%= image_tag dato.platform.big_commerce.url %> <% end %>
+      <p>Built with</p>
+        <% if isShopify == true %>
+          <%= image_tag dato.platform.shopify.url, alt: dato.platform.shopify.alt %>
+        <% else %>
+          <%= image_tag dato.platform.big_commerce.url, alt: dato.platform.big_commerce.alt %>
+        <% end %>
     </div>
   </div>
   <style>
