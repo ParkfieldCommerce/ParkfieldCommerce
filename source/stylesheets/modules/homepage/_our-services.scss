@@ -115,7 +115,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background-color: rgba(255,255,255, .6);
+      background-color: rgba(0,0,0, .3);
       transition: background-color .3s;
       opacity: 1;
     }
@@ -123,16 +123,7 @@
       position: relative;
       z-index: 3;
       font-size: 2.25rem;
-      &:after{
-        content:'';
-        display: inline-block;
-        width: 65px;
-        height: 2px;
-        background-color: $heading;
-        position: absolute;
-        bottom: -15px;
-        left: 0;
-      }
+      color: white;
     }
     &__body{
       position: relative;
@@ -231,7 +222,7 @@
         background: transparent;
         display: inline-block;
         border-color: transparent;
-        span{color: $accent;}
+        span{color: white;}
         transform: none;
         bottom: initial;
         left: initial;
@@ -248,7 +239,7 @@
           bottom: -5px;
           top: initial;
           width: 60px;
-          background-color: $accent;
+          background-color: white;
           height: 2px;
         }
       }
