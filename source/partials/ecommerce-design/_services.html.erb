@@ -11,7 +11,9 @@
       <div class="eService__services">
         <% services.icon_and_text.each do | service | %>
           <div class="eService__service">
+            <% if service.image %>
             <%= image_tag service.image.url, alt: service.image.alt %>
+            <% end %>
             <div class="eService__service-text">
               <h3><%= service.heading %></h3>
               <p><%= service.body %></p>
