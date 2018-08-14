@@ -1,0 +1,34 @@
+---
+layout: layout
+pageClass: PortfolioList DarkNav
+---
+
+<div class="PortfolioBrands space-30">
+	<% dato.portfolio_page_brands.each do |brand| %>
+	<div class="BrandContainer">
+		<div class="BrandContainer__content">
+			<div class="BrandContainer__info">
+				<%= image_tag brand.logo.url, alt: brand.logo.alt %>
+				<p><%= brand.description %></p>
+				<a href="<%= brand.case_study_url %>" class="Link--underline">Read case study</a>
+			</div>
+			<div class="BrandContainer__img">
+				<%= image_tag brand.screenshot.url, alt: brand.screenshot.alt %>
+			</div>
+		</div>
+	</div>
+	<% end %>
+	<div class="PortfolioBrands__loadMore">
+		<a id="loadMoreBtn" class="Link--underline">Load more</a>
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#loadMoreBtn').click(function(){
+			$('.BrandContainer:hidden').slice(0,3).show();
+			if ($('.BrandContainer:hidden').length == 0) {
+				$('.PortfolioBrands__loadMore').css('display', 'none');
+			}
+		});
+	});
+</script>

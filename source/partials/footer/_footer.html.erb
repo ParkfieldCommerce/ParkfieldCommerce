@@ -17,7 +17,7 @@
 			</div>
 			<div class="FooterDesktop__content">
 				<div class="FooterDesktop__column FooterDesktop--column1">
-					<h2><%= dato.quote_banner.heading %></h2>
+					<h2><a href="<%= dato.quote_banner.heading_url %>"><%= dato.quote_banner.heading %></a></h2>
           <div>
 					 <a href="<%= dato.quote_banner.email_button_url %>"><%= dato.quote_banner.email_button_text %></a>
           </div>
@@ -62,7 +62,7 @@
 			</div>
 		</div>
 		<div class="FooterMobile">
-			<h2><%= dato.quote_banner.heading %></h2>
+			<h2><a href="<%= dato.quote_banner.heading_url %>"><%= dato.quote_banner.heading %></a></h2>
 			<div class="FooterMobile__links">
 				<a href="<%= dato.quote_banner.phone_button_url %>">Call us</a>
 				<a href="<%= dato.quote_banner.email_button_url %>"><%= dato.quote_banner.email_button_text %></a>

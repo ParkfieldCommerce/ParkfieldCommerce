@@ -36,6 +36,10 @@
 			color: $footer-text;
 			margin: 90px 0 40px;
 		}
+		h2 a {
+			font-size: 1.7rem;
+			&:after { display: none; }
+		}
 		p {
 			color: $footer-text;
 			line-height: 23px;
@@ -119,6 +123,9 @@
 		color: $footer-text;
 		padding-bottom: 30px;
 		margin: 0;
+		a {
+			color: #fff;
+		}
 	}
 	&__links {
 		display: flex;
