@@ -15,7 +15,7 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
-
+ignore 'portfolio.html'
 
 
 # With alternative layout
@@ -191,6 +191,10 @@ redirect "case-studies/etonic.html", to: "/portfolio"
 redirect "case-studies/7-artisan-street.html", to: "/portfolio"
 redirect "homeware-textiles.html", to: "/long-island-shopify-experts"
 redirect "marketing.html", to: "/ecommerce-web-design"
+redirect "portfolio-list.html", to: "/case-studies"
+redirect "portfolio.html", to: "/case-studies"
+
+
 
 
 
