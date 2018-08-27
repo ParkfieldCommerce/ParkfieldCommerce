@@ -16,6 +16,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 ignore 'portfolio.html'
+page '/404.html', directory_index: false
 
 
 # With alternative layout
