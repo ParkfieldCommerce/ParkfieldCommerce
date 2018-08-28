@@ -8,12 +8,16 @@ pageClass: PortfolioList DarkNav
 	<div class="BrandContainer">
 		<div class="BrandContainer__content">
 			<div class="BrandContainer__info">
-				<%= image_tag brand.logo.url, alt: brand.logo.alt %>
+				<a href="<%= brand.case_study_url %>">
+					<%= image_tag brand.logo.url, alt: brand.logo.alt %>
+				</a>
 				<p><%= brand.description %></p>
 				<a href="<%= brand.case_study_url %>" class="Link--underline">Read case study</a>
 			</div>
 			<div class="BrandContainer__img">
-				<%= image_tag brand.screenshot.url, alt: brand.screenshot.alt %>
+				<a href="<%= brand.case_study_url %>">
+					<%= image_tag brand.screenshot.url, alt: brand.screenshot.alt %>
+				</a>
 			</div>
 		</div>
 	</div>
