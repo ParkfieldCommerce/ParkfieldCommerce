@@ -1,10 +1,13 @@
-<div class="AboutPartners">
-	<div class="AboutPartners__brands">
-		<% dato.about_page.partner_brands.each do | brand |%>
-		<div class="AboutPartners__brand">
-			<%= image_tag brand.url, alt: brand.alt, class:"AboutPartners__brand-image" %>
+<div class="AboutPartners padding-150">
+	<div class="AboutPartners__container">
+		<h2 class="AboutPartners__heading"><%= dato.about_page.partners_heading %></h2>
+		<p class="AboutPartners__text"><%= dato.about_page.partners_text %></p>
+		<div class="AboutPartners__brands">
+			<% dato.about_page.partner_images.each do | brand |%>
+			<div class="AboutPartners__brand">
+				<%= image_tag brand.url, alt: brand.alt, class:"AboutPartners__brandImg" %>	
+			</div>	
+			<% end %>
 		</div>
-		<% end %>
 	</div>
-	<a href="<%= dato.about_page.button_link %>" class="Btn Btn--animatedLeft Btn--animatedLeft--purple AboutPartners__button"><span><%= dato.about_page.button_text %></span></a>
 </div>
