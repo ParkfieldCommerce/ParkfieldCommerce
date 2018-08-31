@@ -22,6 +22,10 @@
 		width: 30.35%;
 		display: flex;
 		align-items: flex-end;
+		a {
+			position: relative;
+			top: 4px;
+		}
 	}
 	@include maxQuery(1000px) {
 		display: none;
