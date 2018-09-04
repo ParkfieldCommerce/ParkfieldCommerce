@@ -8,7 +8,13 @@
 			display: none;
 		}
 	}
+	&__teams--desktop {
+		width: 100%;
+		max-width: 814px;
+		margin: 0 auto;
+	}
 	&__team {
+		width: 100%;
 		margin-bottom: 20px;
 		h4 {
       font-family: 'Avenir-Roman';
@@ -22,13 +28,12 @@
 	}
 	&__members {
 		display: flex;
-		flex-flow: row wrap;
-		justify-content: center;
+		justify-content: space-between;
+		position: relative;
 	}
 	&__member{
 		max-height: 150px;
 		max-width: 150px;
-		margin-right: 20px;
 		color: white;
 		&__image-container{
 			position: relative;
@@ -43,13 +48,19 @@
 			font-family: 'Avenir';
 			word-break: break-all;
 			display: block;
-			margin-bottom: 6px;
 		}
 		&__title{
 			font-family: 'Avenir-Roman';
 			word-break: break-all;
 			font-size: 1.125rem;
+			font-weight: initial;
 			display: block;
+			color: #fff;
+			cursor: pointer;
+			&:after {
+				background-color: #fff;
+				bottom: -2px;
+			}
 		}
 		&__overlay{
 			background-color: rgba($accent, .8);
@@ -65,6 +76,13 @@
 		}
 		&__text-container{
 			padding-left: 10px;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding-top: 21px;
+			padding-bottom: 22px;
+			box-sizing: border-box;
 		}
 		&--heading{
 			height: 150px;
@@ -79,6 +97,64 @@
 				height: 100%;
 			}
 		}
+	}
+	&__member__employee-image {
+		position: absolute;
+		left: 166px;
+		height: 150px;
+		width: 150px;
+		opacity: 0;
+		z-index: -1;
+		visibility: hidden;
+		transition: opacity 0.3s;
+		img {
+			width: 100%;
+		}
+	}
+	&__member__employee-image.openPanelImg {
+		opacity: 1;
+		z-index: 1;
+		visibility: visible;
+	}
+	&__member__employee-info {
+		position: absolute;
+		left: 332px;
+		right: 0;
+		width: 0;
+		height: 152px;
+		overflow: hidden;
+		background-color: #F7F7F7;
+		transition: width 0.3s;
+		box-sizing: border-box;
+		.closeInfoPanel {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+			cursor: pointer;
+		}
+		span {
+			display: inline-block;
+			font-size: 1.125rem;
+			color: #231F20;
+			margin-top: 30px;
+		}
+		.name {
+			font-family: "Avenir";
+			font-weight: 800;
+			margin-right: 40px;
+			margin-left: 25px;
+		}
+		.title {
+			font-family: "Avenir-Roman";
+		}
+		p {
+			margin: 10px 30px 30px 25px;
+			font-size: 0.875rem;
+		}
+	}
+	&__member__employee-info.openPanel {
+		width: 482px;
+		z-index: 1;
 	}
 	@include maxQuery(865px){
 		@include mobileContainer();
