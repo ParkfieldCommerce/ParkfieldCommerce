@@ -16,13 +16,13 @@
 					<% name = member.title.split('_', 2).last %>
 					<% title = member.title.split('_', 2).first %>
 							
-					<div class="AboutTeam__member">
+					<div class="AboutTeam__member AboutTeam__memberOpenPanel" data-person="<%= name.split(' ', 2).last %>">
 						<div class="AboutTeam__member__image-container">
 							<%= image_tag member.url, alt: "employee", class:"AboutTeam__member__image" %>	
 							<div class="AboutTeam__member__overlay">
 								<div class="AboutTeam__member__text-container">
 									<span class="AboutTeam__member__name"><%= name.split(' ', 2).first %><br><%= name.split(' ', 2).last %></span>
-									<a class="AboutTeam__member__title Link--underline" data-person="<%= name.split(' ', 2).last %>">Read More</a>
+									<a class="AboutTeam__member__title"><%= title %></a>
 								</div>
 							</div>
 						</div>
@@ -41,8 +41,6 @@
 		</div>
 		<% end %>
 	</div>
-<!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius tempor. Lorem ipsum dolor sit amet, consectetur adipiscing elit ipsum. Sed do eiusmod tempor. Lorem ipsum dolor sit amet, consectetur. -->
-
 	<div class="AboutTeam__teams AboutTeam__teams--mobile">
 	<% page.teams.each do | team |%>
 		<% team.team_members.each do | member | %>
@@ -56,7 +54,9 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('.AboutTeam__member__title').click(function(){
+		$('.AboutTeam__memberOpenPanel').click(function(){
+			$('.AboutTeam__member__employee-info').each(function(){ $(this).removeClass('openPanel'); });
+			$('.AboutTeam__member__employee-image').each(function(){ $(this).removeClass('openPanelImg'); });
 			var person = $(this).attr('data-person');
 			$('.AboutTeam__member__employee-info[data-person="'+ person +'"]').addClass('openPanel');
 			$('.AboutTeam__member__employee-image[data-person="'+ person +'"]').addClass('openPanelImg');
