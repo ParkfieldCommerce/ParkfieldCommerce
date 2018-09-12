@@ -194,6 +194,7 @@ redirect "homeware-textiles.html", to: "/long-island-shopify-experts"
 redirect "marketing.html", to: "/ecommerce-web-design"
 redirect "portfolio-list.html", to: "/case-studies"
 redirect "portfolio.html", to: "/case-studies"
+redirect "ecommerce-web-design.html", to: "/shopify-design-and-development"
 
 
 
