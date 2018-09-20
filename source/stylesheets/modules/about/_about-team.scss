@@ -31,6 +31,17 @@
 		justify-content: space-between;
 		position: relative;
 	}
+	&__team.designers {
+		.AboutTeam__member--heading {
+			margin-right: 8px;
+		}
+		.AboutTeam__members {
+			justify-content: initial;
+		}
+		.designer {
+			margin: 0 8px;
+		}
+	}
 	&__member{
 		max-height: 150px;
 		max-width: 150px;
@@ -114,7 +125,7 @@
 	}
 	&__member__employee-info {
 		position: absolute;
-		left: 332px;
+		left: 316px;
 		right: 0;
 		width: 0;
 		height: 152px;
@@ -134,7 +145,7 @@
 			display: inline-block;
 			font-size: 1.125rem;
 			color: #231F20;
-			margin-top: 30px;
+			margin-top: 27px;
 		}
 		.name {
 			font-family: "Avenir";
@@ -146,12 +157,12 @@
 			font-family: "Avenir-Roman";
 		}
 		p {
-			margin: 10px 30px 30px 25px;
+			margin: 7px 30px 30px 25px;
 			font-size: 0.875rem;
 		}
 	}
 	&__member__employee-info.openPanel {
-		width: 482px;
+		width: 496px;
 		opacity: 1;
 	}
 	@include maxQuery(865px){
