@@ -1,0 +1,19 @@
+---
+pageClass: MigrateTo DarkNav
+---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.shopify_design) %>
+<% end %>
+<div class="MigrateTo__overflow-container">
+  <div class="MigrateTo__container">
+    <%= partial './partials/migrate-to/intro', locals:{page: dato.shopify_design}%>
+  </div>
+</div>
+<%= partial './partials/migrate-to/migrate-slider', locals:{page: dato.shopify_design} %>
+
+<div class="MigrateTo__overflow-container">
+  <%= partial './partials/migrate-to/migration-services', locals:{page: dato.shopify_design} %>
+  <%= partial './partials/global/contact-form-banner' %>
+  <%= partial './partials/migrate-to/migrate-quote', locals:{page: dato.shopify_design} %>
+</div>
