@@ -1,55 +1,47 @@
 .AboutPartners {
-	padding-bottom: 90px;
-	&__brands {
-		display: flex;
-		flex-flow: row wrap;
-		align-items: center;
-	}
-	&__brand {
-		width: 25%;
-		text-align: center;
-		margin-bottom: 90px;
-    &:nth-child(4n+1){
-      text-align: left;
+  &__container {
+    width: 100%;
+    max-width: 814px;
+    margin: 0 auto;
+  }
+  &__heading {
+    text-align: center;
+    font-size: 2.25rem;
+  }
+  &__text {
+    max-width: 93%;
+    margin: 0 auto 53px;
+  }
+  &__brands {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &__brand {
+    height: 147px;
+    width: 147px;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    img {
+      width: 100%;
     }
-    &:nth-child(4n+2){
-      text-align: center;
+  }
+  @include maxQuery(865px) {
+    &__container { max-width: 90%; }
+    &__heading { font-size: 1.5rem; }
+    &__brand {
+      width: 32%;
+      height: auto;
+      margin-bottom: 5px;
     }
-    &:nth-child(4n+3){
-      text-align: center;
-    }
-    &:nth-child(4n+4){
-      text-align: right;
-    }
-	}
-	&__button {
-		display: block;
-    padding: 20px 0;
-		width: 182px;
-    min-height: initial;
-    min-width: auto;
-		margin: 0 auto;
-		line-height: 1;
-		font-weight: 800;
-		font-size: 1.125rem;
-		text-align: center;
-		color: $about-page-btn-text;
-		background-color: $about-page-btn;
-    border-width: 2px;
-    border-color: $about-page-btn;
-    &:after{
-      background-color: #FAFAFA;
-    }
-	}
-  @include maxQuery($s){
-    &__brand{
-      width: 50%;
-      margin-bottom: 30px;
-      text-align: center !important;
-    }
-    &__brand-image{
-      max-height: 28px;
-      margin: 0 auto;
-    }
+  }
+}
+@include maxQuery(865px) {
+  .AboutPartners.padding-150 {
+    padding-top: 60px;
   }
 }
