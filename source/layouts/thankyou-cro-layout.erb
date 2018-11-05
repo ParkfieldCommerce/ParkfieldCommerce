@@ -27,6 +27,7 @@
     <%= partial './partials/scripts/google-conversion-cro' %>
     <%= partial './partials/scripts/hotjar' %>
     <%= partial './partials/scripts/mailchimp' %>
+    <%= partial './partials/scripts/drift' %>
   </head>
   <body class="<%= current_page.data.pageClass %>">
     <div class="container m">
@@ -35,7 +36,6 @@
     <%= yield %>
     <%= partial './partials/footer/footer' %>
     <%= javascript_include_tag "app" %>
-    <%= partial './partials/scripts/hubspot' %>
     <%= partial './partials/scripts/adroll' %>
   </body>
 </html>
