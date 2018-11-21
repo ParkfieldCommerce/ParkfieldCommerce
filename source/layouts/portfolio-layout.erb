@@ -11,6 +11,7 @@
     <meta name="description" content="<%= current_page.data.description %>"/>
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title %></title>
+    <%= partial './partials/scripts/google-tag-manager-head' %>
     <%= stylesheet_link_tag "app" %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/velocity/2.0.1/velocity.min.js"></script>
@@ -22,6 +23,7 @@
     <%= partial './partials/scripts/drift' %>
   </head>
   <body class="<%= current_page.data.pageClass %>">
+    <%= partial './partials/scripts/google-tag-manager-body' %>
     <div class="container m">
     <%= partial './partials/header/header' %>
     </div>
