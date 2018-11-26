@@ -68,6 +68,11 @@
 @import './modules/ecommerce-design/services.scss';
 @import './modules/ecommerce-design/cta.scss';
 
+// ===============SEO Page===============
+@import './modules/seo-page/intro.scss';
+@import './modules/seo-page/intro-quotes';
+@import './modules/seo-page/services.scss';
+
 // ==================What Is?????==================
 @import './modules/whatis/platform-features.scss';
 
@@ -97,4 +102,3 @@
 @import './modules/custom-app/heading-info-video.scss';
 // =====================Thank You==================
 @import './modules/thank-you/case-study-listing.scss'
-

@@ -1,0 +1,31 @@
+<div class="SEOPage__quotes">
+	<%= partial './partials/global/svg-icons', locals:{icon: 'quote'} %>
+	<div class="SEOPage__quotes--slider">
+		<% dato.seo_page.quotes.each do |slide| %>
+		<div class="SEOPage__quotes--slide">
+			<q><%= slide.quote %></q>
+			<cite><%= slide.source %></cite>
+		</div>
+		<% end %>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('.SEOPage__quotes--slider').slick({
+		fade: true,
+		autoplay: true,
+		arrows: false,
+		autoplaySpeed: 5000,
+		speed: 1000,
+		dots: true
+	});
+
+	var logos = [];
+	<% dato.seo_page.quotes.each do |slide| %>
+	logos.push('<%= slide.quote_logo.url %>');
+	<% end %>
+	$('.SEOPage__quotes--slider button').each(function(index){
+		var slideIndex = parseInt($(this).text());
+		$(this).html('<img src="'+ logos[index] +'" alt="logo">');
+	});
+</script>

@@ -1,0 +1,76 @@
+.SEOPage__intro {
+	overflow: hidden;
+	padding: 110px 0 184px;
+	.container {
+		position: relative;
+	}
+	&--left {
+		width: 778px;
+		@include maxQuery(1108px){
+			width: 580px;
+		}
+		h1 {
+			margin: 0 0 47px; 
+		}
+		img {
+			display: block;
+			max-width: 477px;
+			margin-bottom: 60px;
+		}
+		a {
+			display: block;
+			width: 151px;
+			height: 48px;
+			color: #fff;
+			background-color: $btn-pfc;
+			box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+			border-radius: 4px;
+			font-weight: 800;
+			font-size: 1.125rem;
+			text-align: center;
+			line-height: 48px;
+			position: relative;
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: -12px;
+				left: 13px;
+				width: 0;
+				height: 0;
+				border-top: 12px solid transparent;
+				border-left: 17px solid $btn-pfc;
+				border-bottom: 12px solid transparent;
+			}
+		}
+	}
+	&--right {
+		position: absolute;
+		top: 0;
+		right: -243px;
+	}
+	@include maxQuery(950px) {
+		padding: 30px 0 56px;
+		.SEOPage__intro--left {
+			width: 100%;
+			h1 {
+				font-size: 1.5rem;
+				text-align: center;
+				margin-bottom: 36px;
+			}
+			img {
+				width: 90%;
+				margin: 0 auto;
+			}
+			a {
+				margin: 53px auto 64px;
+			}
+		}
+		.SEOPage__intro--right {
+			position: static;
+			img {
+				width: 113%;
+				max-width: unset;
+			}
+		}
+	}
+}
