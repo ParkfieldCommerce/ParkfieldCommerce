@@ -45,11 +45,11 @@ configure :development do
   activate :dato, live_reload: true
   activate :pagination
   dato.tap do |dato|
-    dato.case_studies.each do |caseStudy|
-      proxy "/case-studies/#{caseStudy.handle}/index.html", "case-study.html", 
-      locals: { caseStudy: caseStudy },
-      ignore: true
-    end
+    # dato.case_studies.each do |caseStudy|
+    #   proxy "/case-studies/#{caseStudy.handle}/index.html", "case-study.html", 
+    #   locals: { caseStudy: caseStudy },
+    #   ignore: true
+    # end
 
     dato.super_case_studies.each do |caseStudy|
       proxy "/case-studies+/#{caseStudy.handle}/index.html", "super-case-study.html", 
@@ -86,11 +86,11 @@ configure :build do
   activate :pagination
   #activate :minify_javascript
   dato.tap do |dato|
-    dato.case_studies.each do |caseStudy|
-      proxy "/case-studies/#{caseStudy.handle}/index.html", "case-study.html", 
-      locals: { caseStudy: caseStudy },
-      ignore: true
-    end
+    # dato.case_studies.each do |caseStudy|
+    #   proxy "/case-studies/#{caseStudy.handle}/index.html", "case-study.html", 
+    #   locals: { caseStudy: caseStudy },
+    #   ignore: true
+    # end
 
     dato.super_case_studies.each do |caseStudy|
       proxy "/case-studies+/#{caseStudy.handle}/index.html", "super-case-study.html", 

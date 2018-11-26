@@ -20,7 +20,6 @@
     <%= partial './partials/scripts/google-tracking' %>
     <%= partial './partials/scripts/hotjar' %>
     <%= partial './partials/scripts/mailchimp' %>
-    <%= partial './partials/scripts/drift' %>
   </head>
   <body class="<%= current_page.data.pageClass %>">
     <%= partial './partials/scripts/google-tag-manager-body' %>
@@ -30,5 +29,6 @@
     <%= yield %>
     <%= javascript_include_tag "app" %>
     <%= partial './partials/scripts/adroll' %>
+    <%= partial './partials/scripts/hubspot' %>
   </body>
 </html>
