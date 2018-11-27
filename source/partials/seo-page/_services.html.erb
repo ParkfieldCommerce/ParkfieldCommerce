@@ -1,37 +1,45 @@
 <div class="SEOPage__services">
-	<div class="SEOPage__services--left">
-		<h2><%= dato.seo_page.services_heading %></h2>
-		<p><%= dato.seo_page.services_text %></p>
-		<div class="singleService">
-			<div class="iconImg">
-				<%= image_tag dato.seo_page.service_1_image.url, alt: dato.seo_page.service_1_image.alt %>
-			</div>
-			<div class="serviceText">
-				<h3><%= dato.seo_page.service_1_heading %></h3>
-				<p><%= dato.seo_page.service_1_text %></p>
+	<%= partial './partials/seo-page/intro-quotes' %>
+	<div class="container m topSection">
+		<div class="serviceImage--mobile">
+			<%= image_tag dato.seo_page.services_image_mobile.url, alt: dato.seo_page.services_image_mobile.alt %>	
+		</div>
+		<div class="SEOPage__services--left">
+			<h2><%= dato.seo_page.services_heading %></h2>
+			<p><%= dato.seo_page.services_text %></p>
+			<div class="Services">
+				<div class="singleService">
+					<div class="iconImg">
+						<%= image_tag dato.seo_page.service_1_image.url, alt: dato.seo_page.service_1_image.alt %>
+					</div>
+					<div class="serviceText">
+						<h3><%= dato.seo_page.service_1_heading %></h3>
+						<p><%= dato.seo_page.service_1_text %></p>
+					</div>
+				</div>
+				<div class="singleService">
+					<div class="iconImg">
+						<%= image_tag dato.seo_page.service_2_image.url, alt: dato.seo_page.service_2_image.alt %>
+					</div>
+					<div class="serviceText">
+						<h3><%= dato.seo_page.service_2_heading %></h3>
+						<p><%= dato.seo_page.service_2_text %></p>
+					</div>
+				</div>
+				<div class="singleService">
+					<div class="iconImg">
+						<%= image_tag dato.seo_page.service_3_image.url, alt: dato.seo_page.service_3_image.alt %>
+					</div>
+					<div class="serviceText">
+						<h3><%= dato.seo_page.service_3_heading %></h3>
+						<p><%= dato.seo_page.service_3_text %></p>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="singleService">
-			<div class="iconImg">
-				<%= image_tag dato.seo_page.service_2_image.url, alt: dato.seo_page.service_2_image.alt %>
-			</div>
-			<div class="serviceText">
-				<h3><%= dato.seo_page.service_2_heading %></h3>
-				<p><%= dato.seo_page.service_2_text %></p>
-			</div>
-		</div>
-		<div class="singleService">
-			<div class="iconImg">
-				<%= image_tag dato.seo_page.service_3_image.url, alt: dato.seo_page.service_3_image.alt %>
-			</div>
-			<div class="serviceText">
-				<h3><%= dato.seo_page.service_3_heading %></h3>
-				<p><%= dato.seo_page.service_3_text %></p>
-			</div>
+		<div class="SEOPage__services--right">
+			<%= image_tag dato.seo_page.services_image.url, alt: dato.seo_page.services_image.alt, class: "serviceImage" %>	
 		</div>
 	</div>
-	<div class="SEOPage__services--right">
-		<%= image_tag dato.seo_page.services_image.url, alt: dato.seo_page.services_image.alt, class: "serviceImage" %>
-		<%= image_tag dato.seo_page.services_image_mobile.url, alt: dato.seo_page.services_image_mobile.alt, class: "serviceImage--mobile" %>		
-	</div>
+	<%= partial './partials/seo-page/content' %>
 </div>
