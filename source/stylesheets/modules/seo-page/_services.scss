@@ -1,6 +1,9 @@
 .SEOPage__services {
 	.topSection {
 		padding-bottom: 194px;
+		@include maxQuery(1000px) {
+			padding-bottom: 60px;
+		}
 	}
 	overflow: hidden;
 	.serviceImage--mobile { display: none; }
@@ -51,7 +54,6 @@
 		}
 	}
 	@include maxQuery(1018px) {
-		padding-bottom: 60px;
 		.serviceImage--mobile {
 			display: block;
 			img {

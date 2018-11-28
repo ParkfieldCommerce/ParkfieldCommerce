@@ -1,0 +1,37 @@
+<div class="SEOPage__testimonials">
+	<div class="SEOPage__testimonials--slider--wrap">
+		<div class="SEOPage__testimonials--slider">
+			<% dato.seo_page.testimonial_slider.each do |slide| %>
+				<div class="SEOPage__testimonials--slide">
+					<div class="SEOPage__testimonials--slideWrap">
+						<%= image_tag slide.testimonial.url, alt: slide.testimonial.alt, class:"textImg" %>
+						<%= image_tag slide.capture.url, alt: slide.capture.alt, class:"captureImg" %>
+					</div>
+				</div>
+			<% end %>
+		</div>
+		<div class="SEOPage__testimonials--slider--prev"><%= partial './partials/global/svg-icons', locals:{icon: 'left-arrow'} %></div>
+		<div class="SEOPage__testimonials--slider--next"><%= partial './partials/global/svg-icons', locals:{icon: 'right-arrow'} %></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$('.SEOPage__testimonials--slider').slick({
+		fade: true,
+		autoplay: true,
+		prevArrow: '.SEOPage__testimonials--slider--prev',
+		nextArrow: '.SEOPage__testimonials--slider--next',
+		autoplaySpeed: 10000,
+		speed: 1000,
+		dots: true
+	});
+
+	var testimonialLogos = [];
+	<% dato.seo_page.testimonial_slider.each do |slide| %>
+	testimonialLogos.push('<%= slide.logo.url %>');
+	<% end %>
+	$('.SEOPage__testimonials--slider button').each(function(index){
+		var slideIndex = parseInt($(this).text());
+		$(this).html('<img src="'+ testimonialLogos[index] +'" alt="logo">');
+	});
+</script>
