@@ -1,10 +1,17 @@
 .SEOPage__form {
 	padding-bottom: 120px;
-	position: relative;
+	overflow: hidden;
 	.container {
 		background-color: $footer-bg;
 		box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.1);
 		padding: 53px 0 61px; 
+		position: relative;
+	}
+	.formDots {
+		position: absolute;
+		bottom: -119px;
+		left: -121px;
+		z-index: -1;
 	}
 	h3 {
 		text-align: center;

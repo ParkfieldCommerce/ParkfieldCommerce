@@ -1,6 +1,13 @@
 .SEOPage__intro {
 	overflow: hidden;
 	padding: 150px 0 184px;
+	position: relative;
+	svg {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 30px;
+	}
 	.container {
 		position: relative;
 	}
@@ -50,6 +57,7 @@
 	}
 	@include maxQuery(950px) {
 		padding: 30px 0 56px;
+		svg { display: none; }
 		.SEOPage__intro--left {
 			width: 100%;
 			h1 {

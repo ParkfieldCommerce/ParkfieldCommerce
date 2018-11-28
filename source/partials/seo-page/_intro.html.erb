@@ -3,10 +3,11 @@
 		<div class="SEOPage__intro--left">
 			<h1><%= dato.seo_page.heading %></h1>
 			<%= image_tag dato.seo_page.logos.url, alt: dato.seo_page.logos.alt %>
-			<a href="#">Let's talk</a>
+			<a class="scrollToContact">Let's talk</a>
 		</div>
 		<div class="SEOPage__intro--right">
 			<%= image_tag dato.seo_page.image.url, alt: dato.seo_page.image.alt %>
 		</div>
 	</div>
+	<%= partial './partials/global/svg-icons', locals:{icon: 'chevron-down'} %>
 </div>
