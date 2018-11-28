@@ -1,0 +1,106 @@
+<div class="SEOPage__form ">
+	<form class="container m" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://shopifybuilder.wufoo.com/forms/ziz2aih17gylbx/#public">
+	<h3><%= dato.seo_page.form_title %></h3>
+	<%= image_tag dato.seo_page.form_image.url, alt: dato.seo_page.form_image.alt, class: "SEOPage__form--person" %>
+	<fieldset>
+		<div class="inputContainer">
+			<div class="SEOPage__form--input">
+				<input id="Field3" name="Field3" type="text" class="field text medium" value="" maxlength="255" tabindex="1" onkeyup="" required placeholder="" />
+				<label class="desc" id="title3" for="Field3">Full Name</label>
+			</div>
+			<div class="SEOPage__form--input">
+				<input id="Field4" name="Field4" type="email" spellcheck="false" class="field text medium" value="" maxlength="255" tabindex="2" placeholder="" required />
+				<label class="desc" id="title4" for="Field4">Email</label>
+			</div>
+			<div class="SEOPage__form--input">
+				<input id="Field5" name="Field5" type="text" class="field text medium" value="" maxlength="255" tabindex="3" onkeyup="" placeholder="" />
+				<label class="desc" id="title5" for="Field5">Phone</label>
+			</div>
+			<div class="SEOPage__form--input">
+				<input id="Field6" name="Field6" type="url" class="field text medium" value="" maxlength="255" tabindex="4" placeholder="" />
+				<label class="desc" id="title6" for="Field6">Website URL</label>
+			</div>
+		</div>
+	</fieldset>
+	<h3><%= dato.seo_page.form_subtitle %></h3>
+	<fieldset>
+		<div class="checkboxContainer">
+			<div class="inputCheckbox">
+				<input id="Field7" name="Field7" type="checkbox" class="field checkbox" value="Content Marketing" tabindex="5"     />
+				<div class="fakeCheckBox"><i class="fas fa-check"></i></div>
+		        <label class="choice" for="Field7">Content<br> Marketing</label>
+			</div>
+			<div class="inputCheckbox">
+				<input id="Field8" name="Field8" type="checkbox" class="field checkbox" value="Search Engine Optimization (SEO)" tabindex="6"/>
+				<div class="fakeCheckBox"><i class="fas fa-check"></i></div>
+				<label class="choice" for="Field8">Search Engine<br> Optimization (SEO)</label>
+			</div>
+			<div class="inputCheckbox">
+				<input id="Field9" name="Field9" type="checkbox" class="field checkbox" value="Conversion Rate Optimization (CRO)" tabindex="7"     />
+				<div class="fakeCheckBox"><i class="fas fa-check"></i></div>
+				<label class="choice" for="Field9">Conversion Rate<br> Optimization (CRO)</label>
+			</div>
+			<div class="inputCheckbox">
+				<input id="Field10" name="Field10" type="checkbox" class="field checkbox" value="Social Media Marketing" tabindex="8"     />
+				<div class="fakeCheckBox"><i class="fas fa-check"></i></div>
+				<label class="choice" for="Field10">Social Media<br> Marketing</label>
+			</div>
+			<div class="inputCheckbox">
+				<input id="Field11" name="Field11" type="checkbox" class="field checkbox" value="Paid  Marketing" tabindex="9"     />
+				<div class="fakeCheckBox"><i class="fas fa-check"></i></div>
+				<label class="choice" for="Field11">Paid<br> Marketing</label>
+			</div>
+			<div class="inputCheckbox">
+				<input id="Field12" name="Field12" type="checkbox" class="field checkbox" value="Email Marketing" tabindex="10"     />
+				<div class="fakeCheckBox"><i class="fas fa-check"></i></div>
+				<label class="choice" for="Field12">Email<br> Marketing</label>
+			</div>
+		</div>
+	</fieldset>
+	<button type="submit" id="SubmitMarketingForm">Let's get started</button>
+	<div class="hidden">
+		<label for="comment">Do Not Fill This Out</label>
+		<textarea name="comment" id="comment" rows="1" cols="1"></textarea>
+		<input type="hidden" id="idstamp" name="idstamp" value="MVBi5fZQpo6eqJYiairIViEIKp7tT0bxqQMBnSvWIrA=" />
+	</div>
+		<img src="../../images/about_dots_left_desktop.png" class="formDots">
+	</form>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	$('input[type="text"],input[type="email"],input[type="url"]').on('change', function(){
+      if ($(this).val().length > 1) {
+        $(this).addClass('input-focus');
+      }
+      if ($(this).val().length == 0) {
+        $(this).removeClass('input-focus');
+      }
+    });
+
+    $('#SubmitMarketingForm').click(function(e){
+    	var name = $('#Field3').val();
+      	var email = $('#Field4').val();
+      	var emailTest = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      	var nameTest = /^[A-Za-z\s]+$/;
+    	if (!nameTest.test(name)){
+        e.preventDefault();
+        $('#Field3').css('border-bottom', '1px solid red');
+        $('label[for="Field3"]').css("color", "red");
+      } else {
+        $('#Field3').css('border-bottom', '1px solid #979797');
+        $('label[for="Field3"]').css("color", "#fff");
+      }
+
+      if (!emailTest.test(String(email).toLowerCase())){
+        e.preventDefault();
+        $('#Field4').css('border-bottom', '1px solid red');
+        $('label[for="Field4"]').css("color", "red");
+      } else {
+        $('#Field4').css('border-bottom', '1px solid #979797');
+        $('label[for="Field4"]').css("color", "#fff");
+      }
+    });
+
+	});
+</script>

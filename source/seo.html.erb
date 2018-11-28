@@ -1,0 +1,29 @@
+---
+title: Design & Dev
+pageClass: SEOPage DarkNav
+---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.seo_page) %>
+<% end %>
+
+<div class="background-gray">
+	<%= partial './partials/seo-page/intro' %>
+</div>
+<%= partial './partials/seo-page/services' %>
+<div class="SEOPage__banner">
+	<div class="SEOPage__banner--container">
+		<h2><%= dato.seo_page.banner_text %></h2>
+		<a class="scrollToContact">Start growing today</a>
+	</div>
+</div>
+<%= partial './partials/seo-page/testimonial-slider' %>
+<%= partial './partials/seo-page/form' %>
+
+<script type="text/javascript">
+	$('.scrollToContact').click(function(){
+		$('html, body').animate({
+			scrollTop: ($('.SEOPage__form').first().offset().top)
+		}, 500);
+	});
+</script>

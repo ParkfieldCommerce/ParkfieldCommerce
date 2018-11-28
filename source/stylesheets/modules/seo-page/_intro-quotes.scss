@@ -1,0 +1,46 @@
+.SEOPage__quotes {
+	padding: 90px 0 150px;
+	svg {
+		display: block;
+		margin: 0 auto;
+	}
+	&--slider {
+		.slick-dots {
+			width: 100%;
+			max-width: 832px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 0 auto;
+		}
+		button {
+			background: none;
+			border: none;
+			outline: none;
+			padding: 0;
+			img {
+    			opacity: 0.3;
+			}
+		}
+		li.slick-active button img { opacity: 1; }
+	}
+	&--slide {
+		padding: 31px 0 75px;
+		text-align: center;
+		q {
+			display: block;
+			font-weight: 800;
+			font-size: 1.5rem;
+			margin-bottom: 14px;
+		}
+		cite {
+			display: block;
+			font-size: 1.125rem;
+			font-weight: 400;
+  			font-style: oblique;
+		}
+	}
+	@include maxQuery(1000px) {
+		display: none;
+	}
+}

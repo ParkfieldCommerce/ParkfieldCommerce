@@ -1,0 +1,56 @@
+.SEOPage__testimonials {
+	width: 100%;
+	max-width: 1070px;
+	margin: 120px auto 131px;
+	&--slider--wrap {
+		position: relative;
+	}
+	&--slider--prev, &--slider--next {
+		position: absolute;
+		top: 50%;
+		font-size: 28px;
+		color: #D5D5D5;
+		cursor: pointer;
+	}
+	&--slider--prev {
+		left: 0;
+	}
+	&--slider--next {
+		right: 0;
+	}
+	&--slider {
+		display: flex;
+		flex-direction: column-reverse;
+		.slick-dots {
+			width: 100%;
+			max-width: 991px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin: 0 auto;
+		}
+		button {
+			background: none;
+			border: none;
+			outline: none;
+			padding: 0;
+			img {
+    			opacity: 0.3;
+			}
+		}
+		li.slick-active button img { opacity: 1; }
+	}
+	&--slideWrap {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-top: 68px;
+		.textImg { 
+			margin-right: -60px;
+			z-index: 1;
+		}
+	}
+	@include maxQuery(1000px) {
+		display: none;
+	}
+}
