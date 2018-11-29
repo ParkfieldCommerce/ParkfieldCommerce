@@ -1,38 +1,29 @@
 ---
-layout: layout
-pageClass: MarketingPage
+title: Design & Dev
+pageClass: SEOPage DarkNav
 ---
 
 <% content_for(:head) do %>
-  <%= dato_meta_tags(dato.marketing_page) %>
+  <%= dato_meta_tags(dato.seo_page) %>
 <% end %>
 
-<%= partial './partials/global/hero', 
-  locals:{
-    type:'generic',
-    mobile_image: dato.marketing_page.banner[0],
-    med_image: dato.marketing_page.banner[1],
-    large_image: dato.marketing_page.banner[2],
-    heading: dato.marketing_page.banner_heading,
-    subHeadingImage: dato.marketing_page.banner_subheading_image
-  } 
-%> 
-
-<div class="container m">
-	<div class="padding-90 mobile-space-padding-60 space-bottom-120 mobile-space-bottom-60">
-		<%= partial './partials/global/title-and-text',
-	    locals: {
-	      heading: dato.marketing_page.description_heading,
-	      body: dato.marketing_page.description_body,
-	      modifier: '--marketing'
-	    }
-	   %>
+<div class="background-gray">
+	<%= partial './partials/seo-page/intro' %>
+</div>
+<%= partial './partials/seo-page/services' %>
+<div class="SEOPage__banner">
+	<div class="SEOPage__banner--container">
+		<h2><%= dato.seo_page.banner_text %></h2>
+		<a class="scrollToContact">Start growing today</a>
 	</div>
 </div>
+<%= partial './partials/seo-page/testimonial-slider' %>
+<%= partial './partials/seo-page/form' %>
 
-<%= partial './partials/marketing/heading-info-image.html' %>
-<div class="space-200 space-bottom-150 mobile-space-bottom-0">
-  <div class="container m">
-    <%= partial './partials/homepage/download-section' %>
-  </div>
-</div>
+<script type="text/javascript">
+	$('.scrollToContact').click(function(){
+		$('html, body').animate({
+			scrollTop: ($('.SEOPage__form').first().offset().top)
+		}, 500);
+	});
+</script>

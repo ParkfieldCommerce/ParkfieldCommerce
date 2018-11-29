@@ -17,15 +17,15 @@
 		arrows: false,
 		autoplaySpeed: 5000,
 		speed: 1000,
-		dots: true
+		dots: false
 	});
 
 	var logos = [];
 	<% dato.seo_page.quotes.each do |slide| %>
 	logos.push('<%= slide.quote_logo.url %>');
 	<% end %>
-	$('.SEOPage__quotes--slider button').each(function(index){
-		var slideIndex = parseInt($(this).text());
-		$(this).html('<img src="'+ logos[index] +'" alt="logo">');
-	});
+	// $('.SEOPage__quotes--slider button').each(function(index){
+	// 	var slideIndex = parseInt($(this).text());
+	// 	$(this).html('<img src="'+ logos[index] +'" alt="logo">');
+	// });
 </script>

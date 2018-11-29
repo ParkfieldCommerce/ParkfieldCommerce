@@ -7,6 +7,15 @@
 		padding: 53px 0 61px; 
 		position: relative;
 	}
+	.formArrow {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translatex(-50%);
+	}
+	.mobileArrow {
+		display: none;
+	}
 	.formDots {
 		position: absolute;
 		bottom: -119px;
@@ -131,6 +140,8 @@
 		}
 	}
 	@include maxQuery(1000px) {
+		.mobileArrow { display: block; }
+		.desktopArrow { display: none; }
 		fieldset {
 			width: 83%;
 		}

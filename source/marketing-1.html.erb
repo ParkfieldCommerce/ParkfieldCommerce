@@ -1,0 +1,38 @@
+---
+layout: layout
+pageClass: MarketingPage
+---
+
+<% content_for(:head) do %>
+  <%= dato_meta_tags(dato.marketing_page) %>
+<% end %>
+
+<%= partial './partials/global/hero', 
+  locals:{
+    type:'generic',
+    mobile_image: dato.marketing_page.banner[0],
+    med_image: dato.marketing_page.banner[1],
+    large_image: dato.marketing_page.banner[2],
+    heading: dato.marketing_page.banner_heading,
+    subHeadingImage: dato.marketing_page.banner_subheading_image
+  } 
+%> 
+
+<div class="container m">
+	<div class="padding-90 mobile-space-padding-60 space-bottom-120 mobile-space-bottom-60">
+		<%= partial './partials/global/title-and-text',
+	    locals: {
+	      heading: dato.marketing_page.description_heading,
+	      body: dato.marketing_page.description_body,
+	      modifier: '--marketing'
+	    }
+	   %>
+	</div>
+</div>
+
+<%= partial './partials/marketing/heading-info-image.html' %>
+<div class="space-200 space-bottom-150 mobile-space-bottom-0">
+  <div class="container m">
+    <%= partial './partials/homepage/download-section' %>
+  </div>
+</div>

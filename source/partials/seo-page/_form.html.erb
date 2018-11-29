@@ -1,5 +1,11 @@
 <div class="SEOPage__form ">
 	<form class="container m" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://shopifybuilder.wufoo.com/forms/ziz2aih17gylbx/#public">
+		<div class="desktopArrow formArrow">
+			<%= partial './partials/global/svg-icons', locals:{icon: 'dtFormArrow'} %>
+		</div>
+		<div class="mobileArrow formArrow">
+			<%= partial './partials/global/svg-icons', locals:{icon: 'mobFormArrow'} %>
+		</div>
 	<h3><%= dato.seo_page.form_title %></h3>
 	<%= image_tag dato.seo_page.form_image.url, alt: dato.seo_page.form_image.alt, class: "SEOPage__form--person" %>
 	<fieldset>

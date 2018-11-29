@@ -122,7 +122,7 @@ end
 proxy "_redirects", "netlify-redirects", ignore: true
 proxy "googlebe0c108108bc72d8.html.erb", "googlebe0c108108bc72d8.html", ignore: true
 redirect "pages/ecommerce-web-design.html", to: "/ecommerce-web-design"
-redirect "pages/marketing.html", to: "/marketing"
+# redirect "pages/marketing.html", to: "/marketing"
 redirect "pages/merida-studio.html", to: "/case-studies/merida"
 redirect "pages/new-york-shopify-experts.html", to: "/long-island-shopify-experts"
 redirect "pages/long-island-shopify-expert.html", to: "/long-island-shopify-experts"
@@ -191,14 +191,8 @@ redirect "case-studies/eldridge-and-orchard.html", to: "/portfolio"
 redirect "case-studies/etonic.html", to: "/portfolio"
 redirect "case-studies/7-artisan-street.html", to: "/portfolio"
 redirect "homeware-textiles.html", to: "/long-island-shopify-experts"
-redirect "marketing.html", to: "/ecommerce-web-design"
+# redirect "marketing.html", to: "/ecommerce-web-design"
 redirect "portfolio-list.html", to: "/case-studies"
 redirect "portfolio.html", to: "/case-studies"
 redirect "ecommerce-web-design.html", to: "/shopify-design-and-development"
-
-
-
-
-
-
-
+redirect "seo.html", to: "/marketing"
