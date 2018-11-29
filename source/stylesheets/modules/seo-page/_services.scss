@@ -44,6 +44,7 @@
 		position: absolute;
 		top: -150px;
 		right: -94px;
+		z-index: -1;
 	}
 	@include maxQuery(1100px) {
 		&--left {
