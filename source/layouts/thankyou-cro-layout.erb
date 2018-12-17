@@ -15,6 +15,10 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title><%= current_page.data.title %></title>
     <%= partial './partials/scripts/google-tag-manager-head' %>
+   <!-- Event snippet for Marketing contact form conversion page -->
+    <script>
+      gtag('event', 'conversion', {'send_to': 'AW-862344041/EFGACI2WzpEBEOmmmZsD'});
+    </script>
     <%= stylesheet_link_tag "app" %>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <%= javascript_include_tag "/javascripts/vendor/slick.min" %>
