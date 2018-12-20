@@ -24,6 +24,7 @@
     <script src="../../javascripts/vendor/sharon-1.6.0.min.js"></script>
     <%= partial './partials/scripts/google-listing' %>
     <%= partial './partials/scripts/google-tracking' %>
+    <%= yield_content :gtagtrack %>
     <%= partial './partials/scripts/hotjar' %>
     <%= partial './partials/scripts/mailchimp' %>
   </head>

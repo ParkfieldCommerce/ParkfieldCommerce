@@ -7,6 +7,25 @@ pageClass: SEOPage DarkNav
   <%= dato_meta_tags(dato.seo_page) %>
 <% end %>
 
+<% content_for(:gtagtrack) do %>
+  <!-- Event snippet for Marketing contact form conversion page
+In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-862344041/EFGACI2WzpEBEOmmmZsD',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+<% end %>
+
 <div class="background-gray">
 	<%= partial './partials/seo-page/intro' %>
 </div>
