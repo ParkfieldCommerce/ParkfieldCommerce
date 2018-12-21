@@ -28,7 +28,7 @@
 		display: flex;
 		flex-direction: column;
 		//justify-content: center;
-		padding-top: 50px;
+		padding-top: 79px;
 		h3, p, a {
 			color: #fff;
 		}
@@ -37,6 +37,9 @@
 		}
 		.Link--underline:after {
 			background-color: #fff;
+		}
+		@include maxQuery(1240px) {
+			padding-top: 110px;
 		}
 	}
 	&__item--1--wrap {
