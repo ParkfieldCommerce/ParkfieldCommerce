@@ -7,14 +7,10 @@
 
 <div class="BlogGrid BlogGrid--desktop space-150 mobile-space-60">
 	<div class="BlogGrid__container BlogGrid__container--1">
-		<video autoplay nocontrols loop muted>
-			<source src="<%= dato.homepage_blog_section.blog_video.url %>" type="video/mp4">
-		</video>
+		<%= image_tag dato.homepage_blog_section.blog_video.url, alt: dato.homepage_blog_section.blog_video.alt %>
 		<div class="BlogGrid__item--1">
 			<div class="BlogGrid__item--1--wrap">
-				<div class="BlogGrid__item__date--1">
-					<p><%= dato.homepage_blog_section.video_header %></p>
-				</div>
+				
 				<div class="BlogGrid__item__heading BlogGrid__item__heading--1">
 					<h3><%= link_to dato.homepage_blog_section.article_1_title, "/articles/#{dato.homepage_blog_section.article_1_url}" %></h3>		
 				</div>
